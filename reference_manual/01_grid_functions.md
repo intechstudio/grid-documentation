@@ -27,12 +27,17 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 ### LED
 
+#### page_default_red()
+
 - glr
 
   - **How:** `glr()` or `glr(red)`
     - $red: integer, ranging 0...255
   - **What:** This function returns the red RGB LED value default for the page when called. If called with a a parameter, the `red` parameter will set the default red color for that page.
   - **Example:** `glr()` will return `0` on a control element where the LED color is set to `(0,255,60)`.
+
+
+#### page_default_green()
 
 - glg
 
