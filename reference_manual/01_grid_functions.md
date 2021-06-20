@@ -1,9 +1,3 @@
----
-title:  Grid Functions
-slug:   grid-functions
----
-
-
 ### Default Function Parameters
 
 - lnum | LED # number
