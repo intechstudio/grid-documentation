@@ -16,7 +16,7 @@ In Grid Editor 1.2 all syntax uses the 'short' terms for functions (e.g. `gln` f
 
 These descriptions will use the following format:
 
-- name: *The name of a variable or function you can use in your Code Blocks.*
+- human readable name | short name: *The name of a variable or function you can use in your Code Blocks.*
   - **How**: *'How to use', this gives you the definite parameter of the function, as used in the Grid Editor syntax.*
   - **What**: *'What does it do?', detailing the function and its capabilities, often explaining some of the parameters used in 'How'.*
   - **Example**: *Giving you an example function with defined parameters you can use to learn and tweak stuff in your own Code Blocks.*
