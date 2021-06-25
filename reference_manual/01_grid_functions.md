@@ -21,33 +21,28 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 ### LED
 
-#### page_default_red()
-
-- glr
+- **led_default_red** | glr
 
   - **How:** `glr()` or `glr(red)`
     - $red: integer, ranging 0...255
   - **What:** This function returns the red RGB LED value default for the page when called. If called with a a parameter, the `red` parameter will set the default red color for that page.
   - **Example:** `glr()` will return `0` on a control element where the LED color is set to `(0,255,60)`.
 
-
-#### page_default_green()
-
-- glg
+- **led_default_green** | glg
 
   - **How:** `glg()` or `glg(green)`
     - $green: integer, ranging 0...255
   - **What:** This function returns the green RGB LED value default for the page when called. If called with a a parameter, the `green` parameter will set the default green color for that page.
   - **Example:** `glg()` will return `255` on a control element where the LED color is set to `(0,255,60)`.
 
-- glb
+- **led_default_blue** | glb
 
   - **How:** `glb()` or `glb(blue)`
     - $blue: integer, ranging 0...255
   - **What:** This function returns the blue RGB LED value default for the page when called. If called with a a parameter, the `blue` parameter will set the default blue color for that page.
   - **Example:** `glb()` will return `60` on a control element where the LED color is set to `(0,255,60)`.
 
-- glp
+- **led_value** | glp
 
   - **How:** `glp()` or `glp(lnum,layer,phase)`
     - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
@@ -56,7 +51,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
   - **What:** This function sets the LED light intensity according to the parameter called `phase`. When this function is called without a parameter, it returns the `phase` value of the control element.
   - **Example:** Inputting the `glp(num,1,128-val)` into a Code Block makes the LED light intensity on let's say a potentiometer control element change opposite of value, as it will have maximum light intensity at minimum value and maximum light intensity at minimum value. 
 
-- glt <!-- will be setter getter -->
+- **led_timeout** | glt <!-- will be setter getter -->
 
   - **How:** `glt(lnum,layer,timeout)`
     - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
@@ -65,7 +60,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
   - **What:** This function sets a timeout for the `glf` function. The timeout field sets the end of the `glf` frequency change, given in frames. Timeout will count down each frame from the the `timeout` parameter given and when it reaches 0, it changes the frequency to 0. <!-- amikor a timeout értéke 0ra csökken akkor automatikusan 0-ra áll a frequency, phase marad ott ahol éppen volt -->
   - **Example:** `glf(num,1,1)` and `glt(num,1,257)` will set a pulsing LED phase change that will increase LED light intensity to the max and then reset is to minimum intensity (when the timeout variable overflows from 256 to 257).
 
-- gln
+- **led_color_min** | gln
 
   - **How:** `gln(num,layer,red,green,blue)`
     - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
@@ -77,7 +72,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
   - **Example:** Inputting the `gln(num,1,255,0,0)` function in a Code Block makes the given control element have the color red, when on minimum value.
     This red value is a small fraction of the color set for the control element, but not 0 red.<!-- nem zéro hanem nagyon halvány értéke a maxnak -->
 
-- gld
+- **led_color_mid** | gld
 
   - **How**: `gld(num,layer,red,green,blue)`
     - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
@@ -88,7 +83,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
   - **What**: This function sets the color for the medium value set for a control element
   - **Example**: Inputting the `gld(num,1,255,0,0)` function in a Code Block makes the given control element have the color red, when on minimum value, which by default equals 63.
 
-- glx
+- **led_color_max** | glx
 
   - **How**: `glx(num,layer,red,green,blue)`
     - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
@@ -99,7 +94,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
   - **What**: This function sets the color for the maximum value set for a control element.
   - **Example**: Inputting the `gld(num,1,255,0,0)` function in a Code Block makes the given control element have the color red, when on maximum value, which by default equals 127.
 
-- glc
+- **led_color** | glc
 
   - **How:** `glc(num,layer,reg,green,blue)`
 
@@ -123,7 +118,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
   
 
-- glf
+- **led_animation_rate** | glf
 
   - **How:** `glf(num,layer,frequency)`
     - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
@@ -132,7 +127,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
   - **What:** This function assigns a pulse-like animation to the LED when called. The `frequency` parameter adjusts the speed of the animation e.g.: `1` is the default speed, where one period will take 256 frames to play, `2` is double that so half of the frames 128, or you could assign a `-` in front of the frequency value to make the animation play backwards.
   - **Example:** Inputting `glf(num,1,1)` in a Code Block makes the animation play on its slowest speed the the LED indefinitely. With a `glt` function you can assign a timeout to this animation.
 
-- gls
+- **led_animation_type** | gls
 
   - **How:** `gls(num,layer,shape)`
     - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
@@ -141,7 +136,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
   - **What:** This function changes the type of animation the LED will play. The `shape` variable has values ranging from `0` to `3` each representing a different animation type.
   - **Example:**
 
-- glpfs
+- **led_animation_phase_rate_type** | glpfs
 
   - **How:** `glpfs(num,layer,phase,frequency,shape)`
     - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
@@ -154,7 +149,8 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 ### MIDI
 
-- gms
+- **midi_send** | gms
+
   - **How: **`gms(channel,command,parameter1,parameter2)`
     - channel: integer, ranging 0...15
     - command: integer, ranging 128...255
@@ -166,7 +162,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 ### Keyboard Macro
 
-- gks
+- **keyboard_send** | gks
 
   - **How:** `gks(default delay between keys,ismodifier,keystate 1..2..3,HID key code...)`
 
@@ -189,7 +185,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 ### Random
 
-- grnd
+- **random** | grnd
 
   - **How:** `grnd()`
   - **What:** Returns the value of a random number from 0 to 255, so this function is an 8bit random number gen.
@@ -199,7 +195,8 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 ### HWCFG
 
-- ghwcfg
+- **hardware_configuration** | ghwcfg
+
   - **How:** `ghwcfg()`
   - **What:** Returns the hardware revision value. This value is a constant for the module.
   - **Example:** It's use is mainly for debugging and customer service, but you can check your hardware revision value by printing it out on the debugging window using `print(ghwcfg())`.
@@ -208,15 +205,19 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 <!-- semantic version of the firmware!!! this should match editor's -->
 
-- gvmaj
+- **version_major** | gvmaj
+
   - **How:** `gvmaj()`
   - **What:** Returns number of major firmware version.
   - **Example:** Inputting `print(gvmaj(),gvmin(),gvpat())` in a Code Block will result in Grid Editor outputting the software version number into the debugger text field (at the time of writing it outputs 1.2.0).
-- gvmin
+
+- **version_minor** | gvmin
+
   - **How:** `gvmin()`
   - **What:** Returns number of minor firmware version.
   - **Example:** Inputting `print(gvmaj(),gvmin(),gvpat())` in a Code Block will result in Grid Editor outputting the software version number into the debugger text field (at the time of writing it outputs 1.2.0).
-- gvpat
+
+- **version_patch** | gvpat
   - **How:** `gvpat()`
   - **What:** Returns number of patch firmware version.
   - **Example:** Inputting `print(gvmaj(),gvmin(),gvpat())` in a Code Block will result in Grid Editor outputting the software version number into the debugger text field (at the time of writing it outputs 1.2.0).
@@ -225,15 +226,20 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 <!-- egy kép többet ér száz szánál ezért majd rakunk ide! -->
 
-- gmx
+- **module_position_x** | gmx
+
   - **How:** `gmx()`
   - **What:** Returns the value of module position on the x axis. In the zero position there is the module connected to the host computer.<!-- x a left-right-->
   - **Example:**
-- gmy
+
+- **module_position_y** | gmy
+
   - **How:** `gmy()`<!-- y a up-down-->
   - **What:** Returns the value of module position on the y axis. In the zero position there is the module connected to the host computer.
   - **Example:**
-- gmr
+
+- **module_rotation** | gmr
+
   - **How:** `gmr()`
   - <!-- 0 usb side up, 1: -90°2: -180° stb-->
   - **What:** Returns the value of module rotation compared to the module connected by a USB cable to the host computer. The values returned are between `0` and `3`, with `0` representing the same module rotation as the connected module .
@@ -241,30 +247,37 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 ### Page
 
-- gpl
+- **page_load** | gpl
+
   - **How:** `gpl(page_number)`
     - page_number: integer, ranging 0...3 
   - **What:** This function loads the page associated with the inputted `page_number` parameter.
 - **Example:** Using the command `gpl(2)` will load the second page as set up in Grid Editor. You can also use the functions `gpn()`and`gpp()` as described below to switch to the next and previous pages by using the commands `gpl(gpn())`and`gpl(gpp())` respectively.
-- gpn
+
+- **page_next** | gpn
+
   - **How:** `gpn()`
   - **What:** This function returns the number of the next active page. Next in this case meaning the page with the number `X+1` where `X` is the number of the currently active page. If the currently active page is also the last one, this function will return `0`.
   - **Example:** Writing `print(gpn())` into a Code Block.
-- gpp
+
+- **page_prev** | gpp
+
   - **How:** `gpp()`
   - **What:**  This function returns the number of the previous active page. Previous in this case meaning the page with the number `X-1` where `X` is the number of the currently active page.<!-- or lastpage when the activepage is page 0-->
   - **Example:**
 
 ### Print
 
-- print
+- **print**
+
   - **How:** `print(functions)`<!-- only return value of functions!!! -->
   - **What:** The `print` function outputs the values of functions between the parentheses in the debugger window, in the order you asked for them. If you're trying to print out multiple values you have to use `,` as a divider. 
   - **Example:** Inputting the `print(this.bva())` in the Code Block will print each value change on a button press into the debugger window on the left.
 
 ### Element
 
-- ind
+- **ind**
+
   - **How:** `this.ind()`
   - **What:** Returns the value of the element # number.
   - **Example:** Inputting the code `print(this.ind())` into a Code Block will output the # number of the control element into the debug field. E.g. this Code Block on the top left button will output the message `0`.
