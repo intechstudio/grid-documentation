@@ -12,7 +12,7 @@ We recommend starting with basic naming, LEDs and local variables and then movin
 
 ### Naming and syntax
 
-In Grid Editor 1.2 all syntax uses the 'short' terms for functions (e.g. `gln` for led color minimum). In the following sections you will find descriptions and examples on using the new syntax in Code Blocks.
+In Grid Editor 1.2 all syntax uses the 'human readable' terms for functions (e.g. `led_color_min()` for led color minimum). In the following sections you will find descriptions and examples on using the new syntax in Code Blocks.
 
 These descriptions will use the following format:
 
@@ -21,5 +21,5 @@ These descriptions will use the following format:
   - **What**: *'What does it do?', detailing the function and its capabilities, often explaining some of the parameters used in 'How'.*
   - **Example**: *Giving you an example function with defined parameters you can use to learn and tweak stuff in your own Code Blocks.*
 
-Sometimes there will be functions you can call with no parameters like this `this.function()`, in this case the function will return a value (called a getter function). Or when given parameter(s) like this `this.function(value)` it will usually set something to the given value (called a setter).
-Usually these functions are called like this: `this.function()`.  If the function is able to work both as a setter or getter function, then both ways will be explained.
+Sometimes there will be functions you can call with no parameters like this `self:function()`, in this case the function will return a value (called a getter function). Or when given parameter(s) like this `self:function(value)` it will usually set something to the given value (called a setter).
+Usually these functions are called like this: `self:function()`.  If the function is able to work both as a setter or getter function, then both ways will be explained.
