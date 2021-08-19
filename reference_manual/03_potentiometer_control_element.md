@@ -16,21 +16,21 @@ slug:   potentiometer-control-element
   
 - **potmeter_value** | pva
 - **How:** `self:potmeter_value()` or `self:potmeter_value(value)`
-    -  <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:** This function returns the value of the potentiometer state. By default, this value is `0` when the potentiometer is set in the minimum position, and tops out at `127`.
     When this function is given a parameter, it will set the value associated with the potentiometer state according to the parameter given and will output that `value` on each trigger.
   - **Example:** 
   
 - **potmeter_min** | pmi
   - **How:** `self:potmeter_min()` or `self:potmeter_min(value)`
-    -  <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:** This function returns the minimum value configured to the potentiometer minimum state. This is `0` by default.
     When given a parameter, this function changes the minimum value of the potentiometer state according to the `value` given as parameter.
   - **Example:** The code `self:potmeter_min(30)` will set the potentiometer value minimum to `30`.
 
 - **potmeter_max** | pma
 - **How:** `self:potmeter_max()` or `self:potmeter_max(value)`
-    -  <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:** This function returns the maximum value configured to the potentiometer maximum state. This is `127` by default.
     When given a parameter, this function changes the maximum value of the potentiometer state according to the `value` given as parameter.
   - **Example:** The code `self:potmeter_max(100)` will set the potentiometer value maximum to `100`.

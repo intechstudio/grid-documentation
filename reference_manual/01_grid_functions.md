@@ -11,7 +11,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 - num | `self:element_index()` function
   - `num` is used by default, in place of the `self:element_index()` function, which calls the number of the given control element. 
-- <a href="#val">val</a> | `self:button_value()`, `self:potmeter_value()` or `self:encoder_value()` functions
+- val | `self:button_value()`, `self:potmeter_value()` or `self:encoder_value()` functions
   - `val` is used by default in place of the `self:button_value()`, `self:potmeter_value()` or `self:encoder_value()` functions, all of which call the current value of the given control element (e.g. a button pressed down has the value of 127 by default).
 - layer | 
   - It's not a function, but used as a variable by many functions. It refers to the two layers - named layer 1 and 2 - and is used two layer colors over each other in LED specific functions. Layers can be used to overlay a static color over a changing one based on input to achieve a gradient while adjusting values.

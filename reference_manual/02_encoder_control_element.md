@@ -16,21 +16,21 @@ slug:   encoder-control-element
   
 - **button_value** | bva
 - **How:** `self:button_value()` or `self:button_value(value)`
-    - <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:** This function returns the value of the button state. By default, this value is `127` when the button is pressed down and `0` when released.
     When this function is given a parameter, it will set the value associated with the button state according to the parameter given.
   - **Example:** Inputting the code `self:button_value(127)` will make all button press and  button release event return the value `127`.
   
 - **button_min** | bmi
 - **How:** `self:button_min()` or `self:button_min(value)`
-    -  <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:** This function returns the minimum value of the button state. This is `0` by default.
     When given a parameter, this function changes the minimum value of the button state according to the `value` given as parameter.
   - **Example:** The code `self:button_min(20)` will set the value of the button to `20` when released.
   
 - **button_max** | bma
 - **How:** `self:button_max()` or `self:button_max(value)`
-    -  <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:** This function returns the maximum value of the button state. This is `127` by default.
     When given a parameter, this function changes the maximum value of the button state according to the `value` given as parameter.
   - **Example:** The code `self:button_max(110)` will set the value of the button to `110` when pressed down.
@@ -61,19 +61,19 @@ slug:   encoder-control-element
   - **Example:**
 - **encoder_value** | eva
 - **How:** `self:encoder_value() `or `self:encoder_value(value)`
-    -  <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:**  This function returns the value of the encoder state. By default, this value is `0` when the encoder is turned and tops out at `127`.
     When this function is given a parameter, it will set the value associated with the encoder state according to the parameter given and will output that `value` on each trigger.
   - **Example:** 
 - **encoder_min** | emi
 - **How:** `self:encoder_min()` or `self:encoder_min(value)`
-    -  <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:** This function returns the minimum value configured to the encoder minimum state. This is `0` by default.
     When given a parameter, this function changes the minimum value of the encoder state according to the `value` given as parameter.
   - **Example:** The code `self:encoder_min(20)` will set the starting value of the encoder to `20` when rotated.
 - **encoder_max** | ema
 - **How:** `self:encoder_max()` or `self:encoder_max(value)`
-    -  <a href="#val">value</a>: integer, ranging 0...127
+    - value: integer, ranging 0...127
   - **What:** This function returns the maximum value configured to the encoder maximum state. This is `127` by default.
     When given a parameter, this function changes the maximum value of the encoder state according to the `value` given as parameter.
   - **Example:** The code `self:encoder_max(110)` will set the end value of the encoder to `110` when turned.
