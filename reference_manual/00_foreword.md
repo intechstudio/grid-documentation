@@ -2,7 +2,7 @@
 
 In Grid Editor 1.2 most commands and functions become programmable. Compared to previous versions this gives you extensive control over your modules functionality, but regrettably this change requires some learning on the side of the user.
 
-Keep in mind that there is much more here, than the average user needs. All previous software functions are still accessible within Grid Editor 1.2 in a traditional interface as well, so you can set up everything as you could earlier with no coding needed.
+Keep in mind that there is much more here than the average user needs. All previous software functions are still accessible within Grid Editor 1.2 in a traditional interface as well, so you can set up everything as you could earlier with no coding needed.
 
 In this document we have compiled all useful concepts and basic knowledge you need for unlocking the potential this new update brings to the table. 
 

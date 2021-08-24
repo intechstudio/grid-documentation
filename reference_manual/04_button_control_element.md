@@ -9,7 +9,7 @@ slug:   button-control-element
 
 - **button_number** | bnu
 - **How:** `self:button_number()` or `self:button_number(number)`
-    - $number: signed integer
+    - number: signed integer
   - **What:** This function when given no parameter, returns the # number of the control element. These numbers are from the top left, read left to right, top to bottom `0` to `15` OR in the case of the PBF4 from `0` to `11`. 
     When this function is given a parameter, it will set the # number of the control element to the `number` given.
   - **Example:**
