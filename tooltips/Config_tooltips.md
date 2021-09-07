@@ -3,11 +3,11 @@
 ## Header
 ### 18 Clear
 
-Clear all configurations of the currently active page from Grid module memory
+Clear all configurations of the currently active Page from Grid module memory.
 
 ### 19 Store
 
-Store the configuration of the currently active page into Grid module memory
+Store the configuration of the currently active Page into Grid module memory.
 
 ## Configuration panel
 
@@ -15,23 +15,23 @@ Store the configuration of the currently active page into Grid module memory
 
 #### Short version
 
-Pages store configuration data independently for all your modules, providing quick access to 4 different configurations.
+Pages store configuration data independently for all your Grid modules, providing quick access to 4 different configurations.
 
 #### Long version
 
-Pages store configuration data for all your modules. Pages can be configured independently from each other so that different pages can serve different control purposes. Only one page can be active at a time, but you can have up to 4 pages configured at all times. Switching between pages can be done here in the Editor by clicking the Page Number below OR by pressing the utility button on the side of any one of the Grid modules in the control surface.
+Pages store configuration data for all your modules. Pages can be configured independently from each other so that different Pages can serve different control purposes. Only one Page can be active at a time, but you can have up to 4 Pages configured at all times. Switching between these 4 Pages can be done here in the Editor by clicking the Page Number below OR by pressing the utility button on the side of any one of the Grid modules in the control surface.
 
 ### 2 UI Events
 
-UI Events can be triggered by interacting with the control elements on the Grid modules (e.g. turning a knob or pressing a button)
+UI Events can be triggered by interacting with the control elements on the Grid modules (e.g. turning a knob or pressing a button).
 
 ### 3 System Events
 
-System Events are shared by all Grid modules and Each System Event serves a specific purpose (see the specific system event descriptions)
+System Events are shared by all Grid modules and Each System Event serves a specific purpose (see the specific system event descriptions).
 
 ### 4 Event
 
-An event describes a real-life interaction that triggers a reaction from a Grid module (e.g. plugging in the module triggers the init event)
+An event describes a real-life interaction that triggers a reaction from a Grid module (e.g. plugging in the module triggers the init event).
 
 ### 5 Init Event
 
