@@ -13,7 +13,7 @@ Declare and set the value of a Member Variables. | Member variables can be acces
 - Value :: Number or expression to calculate the initial value of the variable.
 - Commit :: Changes must be committed in order to take effect on the Grid.
 ### Global
-Declare and set the value of a Global Variables. | Global variables can be accessed from any action chain on the module.
+Declare and set the value of a Global Variables. | Global variables can be accessed from any action chain on the Grid module.
 
 - Name :: Name of the variable (e.g. Var1, my_variable etc)
 - Value :: Number or expression to calculate the initial value of the variable.
@@ -24,7 +24,7 @@ Declare and set the value of a Global Variables. | Global variables can be acces
 Set the base color of an LED on the module. | The base color is displayed when the given LED's intensity is set to the maximum value of 255.
 
 - LED Number :: Physical indentifier of the LED. Valid values are 0...15 (0...11 on the PBF4)
-- Layer :: Identifier of the layer to be modified. Valid values are 1 or 2, number or local variable. (By default Layer1 is used for Button and Potmeter events while Layer2 is used by the Encoder event)
+- Layer :: Identifier of the layer to be modified. Valid values are 1 or 2, number or local variable. (By default Layer1 is used for Button and Potentiometer events while Layer2 is used by the Encoder event)
 - Red :: Red component of the LED's base color. Valid values are 0...255, number or local variable. 
 - Green :: Green component of the LED's base color. Valid values are 0...255, number or local variable. 
 - Blue :: Blue component of the LED's base color. Valid values are 0...255, number or local variable. 
@@ -32,7 +32,7 @@ Set the base color of an LED on the module. | The base color is displayed when t
 ### Intensity
 Set the intensity of an LED on the module.
 - LED Number :: Physical indentifier of the LED. Valid values are 0...15 (0...11 on the PBF4)
-- Layer :: Identifier of the layer to be modified. Valid values are 1 or 2, number or local variable. (By default Layer1 is used for Button and Potmeter events while Layer2 is used by the Encoder event)
+- Layer :: Identifier of the layer to be modified. Valid values are 1 or 2, number or local variable. (By default Layer1 is used for Button and Potentiometer events while Layer2 is used by the Encoder event)
 - Intensity :: The intensity parameter sets the given layer's color proportional to the base color. Valid values are 0...255, number or local variable. 
 ## Midi
 ### Midi
@@ -47,7 +47,7 @@ Send a combination of keyboard messages to the host device.
 
 ## Mouse
 ### Button
-Send a button change messages to the host device.
+Send mouse button change messages to the host device.
 ### Move
 Send a mouse move or scroll wheel message to the host device.
 
@@ -56,25 +56,25 @@ Send a mouse move or scroll wheel message to the host device.
 Set the button mode to Momentary, Toggle or n-step.
 ### Encoder
 Set the velocity sensitivity and the Absolute/Relative mode of the encoder.
-### Potmeter
-Set the effective digital resolution of the potenciometer.
+### Potentiometer
+Set the effective digital resolution of the potentiometer.
 
 ## Condition
 ### If
-Create a conditional action branch. | Order the conditional blocks can be: If [Elseif] ... [Elseif] [Else] End
+Create a conditional action branch. | Order the conditional blocks should be: If [Elseif] ... [Elseif] [Else] End
 ### Elseif
-Create a conditional action branch. | Order the conditional blocks can be: If [Elseif] ... [Elseif] [Else] End
+Create a conditional action branch. | Order the conditional blocks should be: If [Elseif] ... [Elseif] [Else] End
 ### Else
-Create a conditional action branch. | Order the conditional blocks can be: If [Elseif] ... [Elseif] [Else] End
+Create a conditional action branch. | Order the conditional blocks should be: If [Elseif] ... [Elseif] [Else] End
 ### End
-Create a conditional action branch. | Order the conditional blocks can be: If [Elseif] ... [Elseif] [Else] End
+Create a conditional action branch. | Order the conditional blocks should be: If [Elseif] ... [Elseif] [Else] End
 
 ## Codeblock
 ### Codeblock
-Use the Codeblock to create a custom action block that can run any Lua code.
+Use the Codeblock to create a custom action block that can run any form of lua code.
 
 ## Timer
 ### Timer Start
-Start the timer of the given control element. | Once the given timeout period is passed, the timer event of the given controll element will be triggered.
+Start the timer of the selected control element. | Once the given timeout period is passed, the timer event of the given control element will be triggered.
 ### Timer Stop
-Stop the timer of the given control element. | The timer event will not be triggered until the timer is restarted.
+Stop the timer of the selected control element. | The timer event will not be triggered until the timer is restarted.
