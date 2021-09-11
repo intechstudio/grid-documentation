@@ -1,0 +1,67 @@
+export const tooltip_content = {
+    "profile_select_local_folder": "This will be the save destination of your profiles on your hard drive.",
+    "profile_selection": "Here are your saved profiles listed.",
+    "profile_load_to_module": "Don't know.",
+    "configuration_ui_events": "UI Events can be triggered by interacting with the control elements on the Grid modules (e.g. turning a knob or pressing a button).",
+    "configuration_system_events": "System Events are shared by all Grid modules and Each System Event serves a specific purpose (see the specific system event descriptions).",
+    "configuration_selected_element": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_selected_events": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_actions": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_events": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_copy_all": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_overwrite": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_cut_one": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_copy_one": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_paste_one": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "configuration_remove_one": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "event_init": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "event_button": "Set the button mode to Momentary, Toggle or n-step.
+",
+    "event_encoder": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "event_timer": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "event_potmeter": "Set the effective digital resolution of the potentiometer.",
+    "action_local_variables": "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "action_button_settings": "Set the button mode to Momentary, Toggle or n-step.
+",
+    "action_encoder_settings" : "Set the velocity sensitivity and the Absolute/Relative mode of the encoder.",
+    "action_potmeter_settings": "Set the effective digital resolution of the potentiometer.",
+    "action_code_block" : "Use the Codeblock to create a custom action block that can run any form of lua code.",
+    "action_condition" : "## Condition
+### If
+Create a conditional action branch. | Order the conditional blocks should be: If [Elseif] ... [Elseif] [Else] End
+### Elseif
+Create a conditional action branch. | Order the conditional blocks should be: If [Elseif] ... [Elseif] [Else] End
+### Else
+Create a conditional action branch. | Order the conditional blocks should be: If [Elseif] ... [Elseif] [Else] End
+### End
+Create a conditional action branch. | Order the conditional blocks should be: If [Elseif] ... [Elseif] [Else] End",
+
+    "action_led_color" : "Set the base color of an LED on the module. | The base color is displayed when the given LED's intensity is set to the maximum value of 255.",
+    "action_led_color_0" : "LED NUM",
+    "action_led_color_1" : "Layer",
+    "action_led_color_2" : "RED",
+    "action_led_color_3" : "GREEM",
+    "action_led_color_4" : "BLU",
+    "action_led_color_5" : "beautify",
+
+    "action_led_value" : "Set the intensity of an LED on the module.",
+    "action_led_color_0" : "LED NUM",
+    "action_led_color_1" : "Layer",
+    "action_led_color_2" : "brightness 0-127",
+
+
+    "action_lookup" : "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "action_keyboard" : "Send a combination of keyboard messages to the host device.",
+    "action_midi" : "Send a midi message to the host device.
+- Channel :: Set the MIDI channel of the message. Valid values are 0...15, number or local variable. 
+- Command :: Set the MIDI command of the message. Valid values are 128...255, number or local variable. 
+- Parameter 1 :: Set the MIDI parameter 1 (note or control number) of the message. Valid values are 0...127, number or local variable. 
+- Parameter 2 :: Set the MIDI parameter 1 (velocity or value) of the message. Valid values are 0...127, number or local variable. ",
+    "action_button_settings" : "Egy kedves béka mindig felvidítja az embert a tóparton.",
+    "action_timer_start" : "Start the timer of the selected control element. | Once the given timeout period is passed, the timer event of the given control element will be triggered.",
+    "action_timer_stop" : "Stop the timer of the selected control element. | The timer event will not be triggered until the timer is restarted.",
+    "action_mouse_move" : "Send a mouse move or scroll wheel message to the host device.",
+    "action_mouse_button" : "Send mouse button change messages to the host device.",
+    
+
+}
