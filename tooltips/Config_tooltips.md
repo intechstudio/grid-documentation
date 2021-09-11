@@ -83,7 +83,7 @@ Paste the marked Action(s) from the clipboard to the cursor OR to the bottom of 
 
 ### 17 Remove
 
-Remove the marked Action(s) permanently.
+Remove the marked Action(s) from the Action Chain permanently.
 
 ### 20 Export
 
