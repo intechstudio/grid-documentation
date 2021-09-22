@@ -156,7 +156,6 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
     - parameter1: integer, ranging 0...127
     - parameter2 integer, ranging 0...127
   - **What:** This function sends a MIDI command when called. Channel specifies the MIDI channel the command is sent on and parameters 1 (value ranges from 0 to 127) and 2 (value ranges from 0 to 127).
-  - Egész számok mint paraméter. Channnel 0-15. Command 128-255. Param1 0-127. Param2 0-127.
   - **Example:** 
 
 ### Keyboard Macro
@@ -182,12 +181,28 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
   - Try it with Codeblock <?lua --[[@cb]] gks(5,1,1,8,0,1,8,1,0,8,0,0,8) ?>
 
+### Timer
+
+- **timer_start** | gtt
+- **How: **`timer_start(element_index[element_number], timer)` 
+    - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
+    - timer: integer, ranging 0...65535
+    - **What:** This function starts a timer when called, when the timer runs out (defined by the `timer` parameter, given apx. in milliseconds) the Timer UI event will run.
+    - **Example:** Using the code `timer_start(num, 500)` on a BU16 button will start the timer when the button is pressed down and the defined Action Chain under the Timer event on this Control Element will run after ~ 500 ms have passed. This is useful if you want to have effects timeout independent from
+
+- **timer_stop** | gtp
+- **How: **`timer_stop(element_index[element_number])` 
+    - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
+    - **What:** When this function is called, the timer function (if there is one running) will stop immediately and the defined Action Chain will run under the Timer event.
+    - **Example:** This function is useful as a way to break a more complex logical timer code where you have different kind of outcomes and depending on the outcome the timer event should end immediately when that outcome is achieved.
+
+
 ### Random
 
 - **random** | grnd
 
   - **How:** `random()`
-  - **What:** Returns the value of a random number from 0 to 255, so this function is an 8bit random number gen.
+  - **What:** Returns the value of a random number from 0 to 255, so this function is an 8bit random number generator.
   - **Example:** Inputting `led_color(num,1,random(),random(),random())` will set the LED color of the control element, each time a value change happens, the LED color of each button press will be randomized.
 
   
