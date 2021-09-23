@@ -9,14 +9,14 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
 *Important! If you'd like to define a local variable based on another local variable, you have to define them in a separate Local Variables blocks.*
 
-- num | `self:element_index()` function
+- **num** | `self:element_index()` function
   - `num` is used by default, in place of the `self:element_index()` function, which calls the number of the given control element. 
-- val | `self:button_value()`, `self:potmeter_value()` or `self:encoder_value()` functions
+- **val** | `self:button_value()`, `self:potmeter_value()` or `self:encoder_value()` functions
   - `val` is used by default in place of the `self:button_value()`, `self:potmeter_value()` or `self:encoder_value()` functions, all of which call the current value of the given control element (e.g. a button pressed down has the value of 127 by default).
-- layer | 
+- **layer** | 
   - It's not a function, but used as a variable by many functions. It refers to the two layers - named layer 1 and 2 - and is used two layer colors over each other in LED specific functions. Layers can be used to overlay a static color over a changing one based on input to achieve a gradient while adjusting values.
   - Colors and LED phases on different layers get added together, for example having the color blue (255,0,0) on layer 1, and the color red (0,0,255) set on layer 2 will result in the LED lighting up as purple (255,0,255) as the two colors get added  together. The same thing happens when using phase changes on the two layers, for example using two different animation types on two layers, but on the same LED, will result in the two animation types playing together, strengthening each other.
-- red, gre, blu | 
+- **red, gre, blu** | 
   - Red, green and blue are used in many LED functions, separated by commas like this: `255,0,0` means the color red.
 
 ### LED
@@ -150,7 +150,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 ### MIDI
 
 - **midi_send** | gms
-    - **How: **`midi_send(channel,command,parameter1,parameter2)`
+    - **How:** `midi_send(channel,command,parameter1,parameter2)`
       - channel: integer, ranging 0...15
       - command: integer, ranging 128...255
       - parameter1: integer, ranging 0...127
