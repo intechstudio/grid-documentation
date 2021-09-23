@@ -121,42 +121,42 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 - **led_animation_rate** | glf
 
   - **How:** `led_animation_rate(num,layer,frequency)`
-    - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
-    - $layer: integer, ranging 1...2
-    - $frequency: integer, ranging -255..255
+    - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
+    - layer: integer, ranging 1...2
+    - frequency: integer, ranging -255..255
   - **What:** This function assigns a pulse-like animation to the LED when called. The `frequency` parameter adjusts the speed of the animation e.g.: `1` is the default speed, where one period will take 256 frames to play, `2` is double that so half of the frames 128, or you could assign a `-` in front of the frequency value to make the animation play backwards.
   - **Example:** Inputting `led_animation_rate(num,1,1)` in a Code Block makes the animation play on its slowest speed the the LED indefinitely. With a `glt` function you can assign a timeout to this animation.
 
 - **led_animation_type** | gls
 
   - **How:** `led_animation_type(num,layer,type)`
-    - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
-    - $layer: integer, ranging 1...2
-    - $shape: integer, ranging 0...3 (0: ramp up, 1: ramp reversed, 2: square, 3: sine)
+    - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
+    - layer: integer, ranging 1...2
+    - shape: integer, ranging 0...3 (0: ramp up, 1: ramp reversed, 2: square, 3: sine)
   - **What:** This function changes the type of animation the LED will play. The `type` variable has values ranging from `0` to `3` each representing a different animation type.
   - **Example:**
 
 - **led_animation_phase_rate_type** | glpfs
 
   - **How:** `led_animation_phase_rate_type(num,layer,phase,frequency,type)`
-    - $lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
-    - $layer: integer, ranging 1...2
-    - $phase: integer, ranging 0...255
-    - $frequency: integer, ranging -255..255
-    - $shape: integer, ranging 0...3 (0: ramp up, 1: ramp reversed, 2: square, 3: sine)
+    - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
+    - layer: integer, ranging 1...2
+    - phase: integer, ranging 0...255
+    - frequency: integer, ranging -255..255
+    - shape: integer, ranging 0...3 (0: ramp up, 1: ramp reversed, 2: square, 3: sine)
   - **What:** This function combines the LED phase change type functions into one.
   - **Example:** Inputting the `led_animation_phase_rate_type(num,1,val,1,1)` into a Code Block will play the given animation on layer 1.
 
 ### MIDI
 
 - **midi_send** | gms
-- **How: **`midi_send(channel,command,parameter1,parameter2)`
-    - channel: integer, ranging 0...15
-    - command: integer, ranging 128...255
-    - parameter1: integer, ranging 0...127
-    - parameter2 integer, ranging 0...127
-  - **What:** This function sends a MIDI command when called. Channel specifies the MIDI channel the command is sent on and parameters 1 (value ranges from 0 to 127) and 2 (value ranges from 0 to 127).
-  - **Example:** 
+    - **How: **`midi_send(channel,command,parameter1,parameter2)`
+      - channel: integer, ranging 0...15
+      - command: integer, ranging 128...255
+      - parameter1: integer, ranging 0...127
+      - parameter2 integer, ranging 0...127
+    - **What:** This function sends a MIDI command when called. Channel specifies the MIDI channel the command is sent on and parameters 1 (value ranges from 0 to 127) and 2 (value ranges from 0 to 127).
+    - **Example:** 
 
 ### Keyboard Macro
 
@@ -184,15 +184,14 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 ### Timer
 
 - **timer_start** | gtt
-- **How: **`timer_start(element_index[element_number], timer)` 
-    - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
-    - timer: integer, ranging 0...65535
+    - **How: **`timer_start(element_index[element_number], timer)`
+        - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
+        - timer: integer, ranging 0...65535
     - **What:** This function starts a timer when called, when the timer runs out (defined by the `timer` parameter, given apx. in milliseconds) the Timer UI event will run.
     - **Example:** Using the code `timer_start(num, 500)` on a BU16 button will start the timer when the button is pressed down and the defined Action Chain under the Timer event on this Control Element will run after ~ 500 ms have passed. This is useful if you want to have effects timeout independent from
-
 - **timer_stop** | gtp
-- **How: **`timer_stop(element_index[element_number])` 
-    - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
+    - **How: **`timer_stop(element_index[element_number])` 
+        - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
     - **What:** When this function is called, the timer function (if there is one running) will stop immediately and the defined Action Chain will run under the Timer event.
     - **Example:** This function is useful as a way to break a more complex logical timer code where you have different kind of outcomes and depending on the outcome the timer event should end immediately when that outcome is achieved.
 
@@ -210,7 +209,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 ### HWCFG
 
 - **hardware_configuration** | ghwcfg
-- **How:** `hardware_configuration()`
+  - **How:** `hardware_configuration()`
   - **What:** Returns the hardware revision value. This value is a constant for the module.
   - **Example:** It's use is mainly for debugging and customer service, but you can check your hardware revision value by printing it out on the debugging window using `print(hardware_configuration())`.
 
@@ -219,15 +218,15 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 <!-- semantic version of the firmware!!! this should match editor's -->
 
 - **version_major** | gvmaj
-- **How:** `version_major()`
+  - **How:** `version_major()`
   - **What:** Returns number of major firmware version.
   - **Example:** Inputting `print(version_major(),gvmin(),version_patch())` in a Code Block will result in Grid Editor outputting the software version number into the debugger text field (at the time of writing it outputs 1.2.0).
-  
+
 - **version_minor** | gvmin
-- **How:** `version_minor()`
+  - **How:** `version_minor()`
   - **What:** Returns number of minor firmware version.
   - **Example:** Inputting `print(version_major(),version_minor(),version_patch())` in a Code Block will result in Grid Editor outputting the software version number into the debugger text field (at the time of writing it outputs 1.2.0).
-  
+
 - **version_patch** | gvpat
   - **How:** `version_patch()`
   - **What:** Returns number of patch firmware version.
@@ -238,17 +237,17 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 <!-- egy kép többet ér száz szánál ezért majd rakunk ide! -->
 
 - **module_position_x** | gmx
-- **How:** `module_position_x()`
+  - **How:** `module_position_x()`
   - **What:** Returns the value of module position on the x axis. In the zero position there is the module connected to the host computer.<!-- x a left-right-->
   - **Example:**
-  
+
 - **module_position_y** | gmy
-- **How:** `module_position_y()`<!-- y a up-down-->
+  - **How:** `module_position_y()`<!-- y a up-down-->
   - **What:** Returns the value of module position on the y axis. In the zero position there is the module connected to the host computer.
   - **Example:**
-  
+
 - **module_rotation** | gmr
-- **How:** `module_rotation()`
+  - **How:** `module_rotation()`
   - <!-- 0 usb side up, 1: -90°2: -180° stb-->
   - **What:** Returns the value of module rotation compared to the module connected by a USB cable to the host computer. The values returned are between `0` and `3`, with `0` representing the same module rotation as the connected module .
   - **Example:**
@@ -256,32 +255,31 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 ### Page
 
 - **page_load** | gpl
-- **How:** `page_load(page_number)`
+    - **How:** `page_load(page_number)`
     - page_number: integer, ranging 0...3 
-  - **What:** This function loads the page associated with the inputted `page_number` parameter.
-- **Example:** Using the command `page_load(2)` will load the second page as set up in Grid Editor. You can also use the functions `page_next()`and`page_prev()` as described below to switch to the next and previous pages by using the commands `page_load(page_next())`and`page_load(page_prev())` respectively.
+    - **What:** This function loads the page associated with the inputted `page_number` parameter.
+    - **Example:** Using the command `page_load(2)` will load the second page as set up in Grid Editor. You can also use the functions `page_next()`and`page_prev()` as described below to switch to the next and previous pages by using the commands `page_load(page_next())`and`page_load(page_prev())` respectively.
 
 - **page_next** | gpn
-- **How:** `page_next()`
-  - **What:** This function returns the number of the next active page. Next in this case meaning the page with the number `X+1` where `X` is the number of the currently active page. If the currently active page is also the last one, this function will return `0`.
-  - **Example:** Writing `print(page_next())` into a Code Block.
-  
+    - **How:** `page_next()`
+    - **What:** This function returns the number of the next active page. Next in this case meaning the page with the number `X+1` where `X` is the number of the currently active page. If the currently active page is also the last one, this function will return `0`.
+    - **Example:** Writing `print(page_next())` into a Code Block.
+
 - **page_prev** | gpp
-- **How:** `page_prev()`
-  - **What:**  This function returns the number of the previous active page. Previous in this case meaning the page with the number `X-1` where `X` is the number of the currently active page.<!-- or lastpage when the activepage is page 0-->
-  - **Example:**
+    - **How:** `page_prev()`
+    - **What:**  This function returns the number of the previous active page. Previous in this case meaning the page with the number `X-1` where `X` is the number of the currently active page.<!-- or lastpage when the activepage is page 0-->
+    - **Example:**
 
 ### Print
 
 - **print**
-
-  - **How:** `print(functions)`<!-- only return value of functions!!! -->
+- **How:** `print(functions)`<!-- only return value of functions!!! -->
   - **What:** The `print` function outputs the values of functions between the parentheses in the debugger window, in the order you asked for them. If you're trying to print out multiple values you have to use `,` as a divider. 
   - **Example:** Inputting the `print(self:button_value())` in the Code Block will print each value change on a button press into the debugger window on the left.
 
 ### Element
 
 - **element_index** | ind
-- **How:** `self:element_index()`
+  - **How:** `self:element_index()`
   - **What:** Returns the value of the element # number.
   - **Example:** Inputting the code `print(self:element_index())` into a Code Block will output the # number of the control element into the debug field. E.g. this Code Block on the top left button will output the message `0`.
