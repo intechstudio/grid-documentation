@@ -175,11 +175,9 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
   - **Example:** The File Explorer macro (Win key + E) on Windows 10 looks like this when inputted in a Code Block: 
 
-  - <!-- lehetnének ilyen konkrét bemásolós example-k -->
-
-  - Try it with UI: <?lua --[[@gks]] gks(5,1,1,8,0,1,8,1,0,8,0,0,8) ?>
-
-  - Try it with Codeblock <?lua --[[@cb]] gks(5,1,1,8,0,1,8,1,0,8,0,0,8) ?>
+    ```lua
+   <?lua --[[@gks]] gks(5,1,1,8,0,1,8,1,0,8,0,0,8) ?>
+    ```
 
 ### Timer
 
@@ -188,12 +186,12 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
         - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
         - timer: integer, ranging 0...65535
     - **What:** This function starts a timer when called, when the timer runs out (defined by the `timer` parameter, given apx. in milliseconds) the Timer UI event will run.
-    - **Example:** Using the code `timer_start(num, 500)` on a BU16 button will start the timer when the button is pressed down and the defined Action Chain under the Timer event on this Control Element will run after ~ 500 ms have passed. This is useful if you want to have effects timeout independent from
+    - **Example:** Using the code `timer_start(num, 500)` on a BU16 button will start the timer when the button is pressed down and the defined Action Chain under the Timer event on this Control Element will run after ~ 500 ms have passed. This is useful if you want to have effects timeout independent from physically triggered events, like a button being pushed.
 - **timer_stop** | gtp
     - **How: **`timer_stop(element_index[element_number])` 
         - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
     - **What:** When this function is called, the timer function (if there is one running) will stop immediately and the defined Action Chain will run under the Timer event.
-    - **Example:** This function is useful as a way to break a more complex logical timer code where you have different kind of outcomes and depending on the outcome the timer event should end immediately when that outcome is achieved.
+    - **Example:** This function is useful as a break kind of function. Where a timer code with complex logic would have different kind of outcomes and depending on the outcome the timer event should end immediately when that outcome is achieved.
 
 
 ### Random
