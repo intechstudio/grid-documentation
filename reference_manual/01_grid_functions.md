@@ -25,9 +25,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
   - **How:** `led_default_red()` or `led_default_red(red)`
     - red: integer, ranging 0...255
-
   - **What:** This function returns the red RGB LED value default for the page when called. If called with a a parameter, the `red` parameter will set the default red color for that page.
-
   - **Example:** `led_default_red()` will return `0` on a control element where the LED color is set to `(0,255,60)`.
 
 - **led_default_green** | glg
@@ -104,9 +102,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
     - red: integer, ranging 0...255
     - green: integer, ranging 0...255
     - blue: integer, ranging 0...255
-
   - **What:** This function sets the default LED color for a control element.
-
   - **Example:** Inputting the `led_color(num,1,255,0,0)` function into a Code Block makes the given control element's LED color red.
 
     <!-- ezt csinálja alapból, ezért nem nulla a min értéke, hanem csak nagyon halványan ugyan az a szín -->
