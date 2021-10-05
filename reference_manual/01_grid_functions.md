@@ -25,7 +25,9 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 
   - **How:** `led_default_red()` or `led_default_red(red)`
     - red: integer, ranging 0...255
+
   - **What:** This function returns the red RGB LED value default for the page when called. If called with a a parameter, the `red` parameter will set the default red color for that page.
+
   - **Example:** `led_default_red()` will return `0` on a control element where the LED color is set to `(0,255,60)`.
 
 - **led_default_green** | glg
@@ -97,7 +99,6 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 - **led_color** | glc
 
   - **How:** `led_color(num,layer,reg,green,blue)`
-
     - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
     - layer: integer, ranging 1...2
     - red: integer, ranging 0...255
@@ -182,7 +183,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
 ### Timer
 
 - **timer_start** | gtt
-    
+  
     - **How: **`timer_start(element_index[element_number], timer)`
         - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
         - timer: integer, ranging 0...65535
@@ -190,7 +191,7 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
     - **Example:** Using the code `timer_start(num, 500)` on a BU16 button will start the timer when the button is pressed down and the defined Action Chain under the Timer event on this Control Element will run after ~ 500 ms have passed. This is useful if you want to have effects timeout independent from physically triggered events, like a button being pushed.
 - **timer_stop** | gtp
     - **How: **`timer_stop(element_index[element_number])` 
-        
+      
         - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4
         
     - **What:** When this function is called, the timer function (if there is one running) will stop immediately and the defined Action Chain will run under the Timer event.
