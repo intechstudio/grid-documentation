@@ -113,8 +113,6 @@ Base local variables exist in the *Local Definitions* Config Block. They are pre
         
           grid_led_set_max(mod, num, layer, r, g, b);
 
-  
-
 - **led_animation_rate** | glf
 
   - **How:** `led_animation_rate(num,layer,frequency)`
