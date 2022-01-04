@@ -1,4 +1,11 @@
-### Foreword
+---
+title:  Grid Functions
+slug:   grid-functions
+layout: reference_manual
+group:  Grid Functions
+---
+
+## Foreword
 
 In Grid Editor 1.2 most commands and functions became programmable. Compared to previous versions this gives you extensive control over your modules functionality, but regrettably this change requires some learning on the side of the user.
 
@@ -12,7 +19,7 @@ For ease of learning, we included examples you could just insert into your own G
 
 We recommend starting with basic naming, LEDs and local variables and then moving on to the modules chapters relevant to you. We also recommend learning the Print function for troubleshooting.
 
-### Naming and syntax
+## Naming and syntax
 
 In Grid Editor 1.2 all syntax uses the 'human readable' terms for functions (e.g. `led_color_min()` for led color minimum). In the following sections you will find descriptions and examples on using the new syntax in Code Blocks.
 
@@ -30,15 +37,15 @@ Usually these functions are called like this: `self:function()`.  If the functio
 
 When starting to type any of the functions into a Code Block, available functions will show up for convenience.
 
-### Disclaimers
+## Disclaimers
 
-#### About this document
+### About this document
 
 The following document is updated irregularly, usually when new functions are implemented. Because of this there might be some mistakes in this document that are yet to be fixed or changes to functions not yet updated. 
 
 If you find any of these errors or mistakes, please don't hesitate to notify us either at support@intech.studio or in our official Discord server. 
 
-#### About mentions of timers in the manual
+### About mentions of timers in the manual
 
 Timers in Grid are not exact milliseconds. The way time is calculated by the device is different from how we perceive it. Please consider this when using functions that have parameters alluding to time or timers.
 
