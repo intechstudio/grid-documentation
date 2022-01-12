@@ -13,18 +13,18 @@ description: 'Hub for general know-how documentation.'
 
   <LinkCard 
     title={'Taking care of your modules'} 
-    link={{url: '/support/docs/cleaning-kit', target: '', rel: 'prefetch'}}
+    link={{url: '/support/docs/guides/cleaning-kit', target: '', rel: 'prefetch'}}
     subtitle={'Package contents · Cleaning the modules'}
   />
 
   <LinkCard 
     title={'Updating the Firmware'} 
-    link={{url: '/support/docs/firmware-update', target: '', rel: 'prefetch'}}
+    link={{url: '/support/docs/guides/firmware-update', target: '', rel: 'prefetch'}}
     subtitle={'Firmware update process · Reset the module'}
   />
 
   <LinkCard 
     title={'Troubleshooting'} 
-    link={{url: '/support/docs/troubleshooting', target: '', rel: 'prefetch'}}
+    link={{url: '/support/docs/guides/troubleshooting', target: '', rel: 'prefetch'}}
     subtitle={'Windows issues · Mac OS issues · Linux issues'}
   />

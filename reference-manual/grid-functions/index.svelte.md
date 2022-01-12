@@ -1,7 +1,7 @@
 ---
 title:  Grid Functions
 slug:   grid-functions
-layout: reference_manual
+layout: reference_index
 group:  Grid Functions
 ---
 

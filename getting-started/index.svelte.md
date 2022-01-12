@@ -19,12 +19,11 @@ Grid modules are programmable devices for your control needs in creative applica
 Grid Editor is the free configuration tool for your modules. To ensure your module is working correctly after plugging it into your system, please install Grid Editor:
 
 
-
 <div class="grid grid-rows-3 gap-2 pb-4">
   <LinkCard 
     imageUrl={'/icons/os_logo/macos.svg'} 
     light={true}
-    link={{url: '/support/getting-started/install-editor-on-macos'}}
+    link={{url: '/support/docs/getting-started/install-editor-on-macos'}}
     subtitle={'Signed .zip and .dmg formats are available to use with Mac OS systems.'}
     title={'Mac OS Install Guide'}
   />
@@ -32,7 +31,7 @@ Grid Editor is the free configuration tool for your modules. To ensure your modu
   <LinkCard 
     imageUrl={'/icons/os_logo/windows.svg'} 
     light={true}
-    link={{url: '/support/getting-started/install-editor-on-windows'}}
+    link={{url: '/support/docs/getting-started/install-editor-on-windows'}}
     subtitle={'Windows .exe installer for Windows 10+ systems.'}
     title={'Windows Install Guide'}
   />
@@ -40,7 +39,7 @@ Grid Editor is the free configuration tool for your modules. To ensure your modu
   <LinkCard 
     imageUrl={'/icons/os_logo/linux.svg'} 
     light={true}
-    link={{url: '/support/getting-started/install-editor-on-linux'}}
+    link={{url: '/support/docs/getting-started/install-editor-on-linux'}}
     subtitle={'We provide .snap builds for Linux, tested with xubuntu.'}
     title={'Linux Install Guide'}
   />
@@ -74,7 +73,7 @@ After installing the Grid Editor, connect your Grid module directly to your comp
 Tweak some of the control elements on your controller to see the Grid module interact with the Grid Editor.
 
 <div class="bg-black bg-opacity-20 p-4 border-l-8 border-red-500 rounded-lg shadow">
-  Do you see a red firmware update notification? <a href="/support/docs/firmware-update" sveltekit:prefetch style="color:rgb(97, 157, 255)" class="text-blue-500  cursor-pointer hover:underline"> Click here for update instructions!</a>
+  Do you see a red firmware update notification? <a href="/support/docs/guides/firmware-update" sveltekit:prefetch style="color:rgb(97, 157, 255)" class="text-blue-500  cursor-pointer hover:underline"> Click here for update instructions!</a>
 </div>
 
 ## :rocket: Next steps
