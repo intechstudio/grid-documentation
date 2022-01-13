@@ -85,7 +85,7 @@ You can deeply customize each of our pre-made profiles or create your own from s
   <LinkPage
     imageUrl={'/images/links/information.png'} 
     style={"mr-4"}
-    link={{url: 'https://github.com/intechstudio/grid-documentation/tree/main/reference_manual', rel: 'external'}}
+    link={{url: '/support/docs/reference-manual', rel: 'external'}}
     subtitle={'Browse actions, events and configuration logic to customize your Grid experience.'}
     title={'Reference Manual'}
   />

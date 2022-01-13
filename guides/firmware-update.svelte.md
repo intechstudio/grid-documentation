@@ -45,7 +45,7 @@ Follow carefully the steps below, connect your Grid module directly to your comp
 <LinkCard
   imageUrl={''} 
   light={false}
-  link={{url: '/support/docs/troubleshooting#firmware', rel: 'prefetch'}}
+  link={{url: '/support/docs/guides/troubleshooting#firmware', rel: 'prefetch'}}
   subtitle={'Serial driver problems in various operating systems'}
   title={'Grid does not show up'}
 />
