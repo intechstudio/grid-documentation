@@ -1,8 +1,8 @@
 ---
-title:  Element Referencing
-slug:   element
-layout: reference_manual
-group:  Grid Functions
+title:      Element Referencing
+slug:       element
+layout:     reference_manual
+category:   reference-manual
 ---
 
 ### element

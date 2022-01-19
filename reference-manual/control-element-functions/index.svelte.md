@@ -1,8 +1,8 @@
 ---
-title:  Control Element Functions
-slug:   ''
-layout: reference_index
-group:  Event Functions
+title:      Control Element Functions
+slug:       ''
+layout:     reference_index
+category:   reference-manual
 ---
 
 <script>

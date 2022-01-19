@@ -1,8 +1,8 @@
 ---
-title:  Print
-slug:   print
-layout: reference_manual
-group:  Grid Functions
+title:      Print
+slug:       print
+layout:     reference_manual
+category:   reference-manual
 ---
 
 

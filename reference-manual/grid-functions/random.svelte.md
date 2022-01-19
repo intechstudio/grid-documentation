@@ -2,7 +2,7 @@
 title:  Random
 slug:   random
 layout: reference_manual
-group:  Grid Functions
+group:  reference-manual
 ---
 
 

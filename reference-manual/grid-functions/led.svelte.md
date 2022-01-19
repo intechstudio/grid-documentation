@@ -1,8 +1,8 @@
 ---
-title:  LED
-slug:   led
-layout: reference_manual
-group:  Grid Functions
+title:      LED
+slug:       led
+layout:     reference_manual     
+category:   reference-manual
 ---
 
 ## LED intensity

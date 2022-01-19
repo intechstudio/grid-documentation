@@ -1,8 +1,8 @@
 ---
-title:  Grid Functions
-slug:   grid-functions
-layout: reference_index
-group:  Grid Functions
+title:      Grid Functions
+slug:       grid-functions
+layout:     reference_index      
+category:   reference-manual
 ---
 
 ## Foreword

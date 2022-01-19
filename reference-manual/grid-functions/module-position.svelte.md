@@ -1,8 +1,8 @@
 ---
-title:  Module Position
-slug:   module-position
-layout: reference_manual
-group:  Grid Functions
+title:      Module Position
+slug:       module-position
+layout:     reference_manual   
+category:   reference-manual
 ---
 
 <!-- egy kép többet ér száz szánál ezért majd rakunk ide! -->

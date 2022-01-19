@@ -3,6 +3,7 @@ layout: reference_index
 title: Reference Manual
 date: 2021-12-17
 description: Learning material for using the Grid API.
+group:  reference-manual
 ---
 
 <script>

@@ -1,8 +1,8 @@
 ---
-title:  Button
-slug:   button-control-element
-layout: reference_manual
-group:  Control Element Functions
+title:    Button
+slug:     button-control-element
+layout:   reference_manual
+category: reference-manual
 ---
 
 

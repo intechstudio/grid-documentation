@@ -1,8 +1,8 @@
 ---
-title:  Timer
-slug:   timer
-layout: reference_manual
-group:  Grid Functions
+title:      Timer
+slug:       timer
+layout:     reference_manual
+category:   reference-manual
 ---
 
 

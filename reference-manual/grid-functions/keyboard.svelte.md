@@ -1,8 +1,8 @@
 ---
-title:  Keyboard Functions
-slug:   keyboard-functions
-layout: reference_manual
-group:  Grid Functions
+title:      Keyboard Functions
+slug:       keyboard-functions
+layout:     reference_manual  
+category:   reference-manual
 ---
 
 ### keyboard_send

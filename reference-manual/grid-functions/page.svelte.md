@@ -1,8 +1,8 @@
 ---
-title:  Page
-slug:   page
-layout: reference_manual
-group:  Grid Functions
+title:      Page
+slug:       page
+layout:     reference_manual    
+category:   reference-manual
 ---
 
 

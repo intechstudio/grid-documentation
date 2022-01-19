@@ -1,8 +1,8 @@
 ---
-title:  Encoder
-slug:   encoder-control-element
-layout: reference_manual
-group:  Control Element Functions
+title:      Encoder
+slug:       encoder-control-element
+layout:     reference_manual
+category:   reference-manual
 ---
 
 ## Encoder Button

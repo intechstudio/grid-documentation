@@ -1,8 +1,8 @@
 ---
-title:  MIDI
-slug:   midi
-layout: reference_manual
-group:  Grid Functions
+title:      MIDI
+slug:       midi
+layout:     reference_manual    
+category:   reference-manual
 ---
 
 ### midi_send

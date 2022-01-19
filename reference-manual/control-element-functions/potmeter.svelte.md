@@ -1,8 +1,8 @@
 ---
-title:  Potmeter
-slug:   potmeter-control-element
-layout: reference_manual
-group:  Control Element Functions
+title:      Potmeter
+slug:       potmeter-control-element
+layout:     reference_manual
+category:   reference-manual
 ---
 
 
