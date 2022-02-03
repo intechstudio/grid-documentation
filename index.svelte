@@ -21,10 +21,17 @@
     />
 
     <LinkCard 
-        title={'Guides'} 
-        imageUrl={''} 
-        link={{url: '/support/docs/guides', target: '', rel: 'prefetch'}}
+        title={'Tutorials'} 
+        imageUrl={'/icons/docs/tutorial-2.svg'} 
+        link={{url: '/support/docs/tutorials', target: '', rel: 'prefetch'}}
         subtitle={'Updating the firmware · Taking care of the modules · Troubleshooting'}
+    />
+
+    <LinkCard 
+        title={'Guides'} 
+        imageUrl={'/icons/docs/documents.svg'} 
+        link={{url: '/support/docs/guides', target: '', rel: 'prefetch'}}
+        subtitle={'Ableton Setup Tutorial · Grid Editor Actions'}
     />
 
     </div>

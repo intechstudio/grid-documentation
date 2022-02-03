@@ -83,7 +83,7 @@ You can deeply customize each of our pre-made profiles or create your own from s
 <div class="items-start justify-between flex flex-row">
 
   <LinkPage
-    imageUrl={'/images/links/information.png'} 
+    imageUrl={'/icons/docs/ref_manual.svg'} 
     style={"mr-4"}
     link={{url: '/support/docs/reference-manual', rel: 'external'}}
     subtitle={'Browse actions, events and configuration logic to customize your Grid experience.'}
@@ -91,7 +91,7 @@ You can deeply customize each of our pre-made profiles or create your own from s
   />
 
   <LinkPage
-    imageUrl={'/images/links/profiles.png'}   
+    imageUrl={'/icons/docs/profiles.svg'}   
     style={"ml-4"}
     link={{url: 'https://github.com/intechstudio/grid-profiles', rel: 'external'}}
     subtitle={'See available profiles for your creative use case. Profiles are .json files, which can be uploaded onto Grid through the Grid Editor.'}
