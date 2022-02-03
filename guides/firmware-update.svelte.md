@@ -16,7 +16,35 @@ Grid Firmware is often updated. We introduce new features, stability improvement
 
 > All your modules must have the same firmware version installed!
 
-## ⬇️ Downloading the firmware
+## Updating the firmware using Grid Editor
+
+Whenever you're prompted with the 'Oops, firmware mismatch detected' message while running Grid Editor means you have a module plugged in with an outdated firmware version compared to Editor.
+
+The mismatched module will be highlighted with red color, like this:
+
+![firmware_mismatch](C:\Users\lenovo\Documents\GitHub\grid-documentation\guides\firmware_mismatch.png)
+
+Gird Editor can update your module firmware automatically if you follow the on-screen messages at the top.
+
+Reconnect the mismatched module (and that module only) while holding down the utility button on the side of the module.
+
+<img style="max-width:400px" src="/images/docs/utility_conn.gif">
+
+After connecting you'll be prompted with a message in blue, asking whether you want to start the update. Press 'Update Firmware'.
+
+![bootloader_detected_update_start](C:\Users\lenovo\Documents\GitHub\grid-documentation\guides\bootloader_detected_update_start.png)
+
+Don't disconnect the module while the update is running or the update will fail.
+
+When the update is complete, you will be prompted with a message in green color and the module will show up again in the Editor.
+
+![update_success](C:\Users\lenovo\Documents\GitHub\grid-documentation\guides\update_success.png)
+
+Congratulations! You've successfully updated the firmware of your module.
+
+If you have multiple modules with firmware mismatches, you'll have to repeat this process one-by-one from the beginning.
+
+## ⬇️ Updating the firmware manually
 
 You can find the firmware versions hosted on GitHub. Click the button below to download the **latest** version.
 
