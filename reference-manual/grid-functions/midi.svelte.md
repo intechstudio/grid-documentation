@@ -3,6 +3,7 @@ title:      MIDI
 slug:       midi
 layout:     reference_manual    
 category:   reference-manual
+description: The midi_send() function is used to send MIDI data.
 ---
 
 ### midi_send
