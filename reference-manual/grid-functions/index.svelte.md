@@ -3,6 +3,7 @@ title:      Grid Functions
 slug:       grid-functions
 layout:     reference_index      
 category:   reference-manual
+description: Foreword and disclaimers about this reference manual.
 ---
 
 ## Foreword

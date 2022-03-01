@@ -3,6 +3,7 @@ title:    Button
 slug:     button-control-element
 layout:   reference_manual
 category: reference-manual
+description: How to set up button-type control elements.
 ---
 
 

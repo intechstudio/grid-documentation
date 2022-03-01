@@ -3,6 +3,7 @@ title:      Element Referencing
 slug:       element
 layout:     reference_manual
 category:   reference-manual
+description: How to refer to a Control Element by number.
 ---
 
 ### element

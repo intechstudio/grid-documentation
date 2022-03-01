@@ -3,6 +3,7 @@ title:      Page
 slug:       page
 layout:     reference_manual    
 category:   reference-manual
+description: How to navigate and switch Pages within Code Blocks.
 ---
 
 

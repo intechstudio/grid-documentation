@@ -3,6 +3,7 @@ title:      Keyboard Functions
 slug:       keyboard-functions
 layout:     reference_manual  
 category:   reference-manual
+description: How to send keyboard messages in a Code Block.
 ---
 
 ### keyboard_send
@@ -23,5 +24,5 @@ category:   reference-manual
   - **Example:** The File Explorer macro (Win key + E) on Windows 10 looks like this when inputted in a Code Block: 
 
     ```lua
-   <?lua --[[@gks]] gks(5,1,1,8,0,1,8,1,0,8,0,0,8) ?>
+      <?lua --[[@gks]] gks(5,1,1,8,0,1,8,1,0,8,0,0,8) ?>
     ```

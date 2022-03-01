@@ -3,6 +3,7 @@ title:      Encoder
 slug:       encoder-control-element
 layout:     reference_manual
 category:   reference-manual
+description: How to set up encoder-type control elements.
 ---
 
 ## Encoder Button

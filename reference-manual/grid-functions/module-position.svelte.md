@@ -3,6 +3,7 @@ title:      Module Position
 slug:       module-position
 layout:     reference_manual   
 category:   reference-manual
+description: How to utilize module positioning in Code Blocks.
 ---
 
 <!-- egy kép többet ér száz szánál ezért majd rakunk ide! -->

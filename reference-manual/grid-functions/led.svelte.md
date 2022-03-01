@@ -3,6 +3,7 @@ title:      LED
 slug:       led
 layout:     reference_manual     
 category:   reference-manual
+description: How to set LED parameters in Code Blocks.
 ---
 
 ## LED intensity
