@@ -3,6 +3,7 @@ layout:   reference_manual
 title:    MIDI setup with Ableton Live
 slug:     grid-editor
 category: tutorials
+description: How to get MIDI out from Ableton to Grid.
 ---
 
 ## Overview 

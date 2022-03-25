@@ -3,6 +3,7 @@ layout:   reference_manual
 title:    LED Intensity Change On MIDI RX
 slug:     change-led-intensity-with-midi-out
 category: tutorials
+description: How to control values on Grid from Ableton.
 ---
 
 ## LED Value controlled by Ableton

@@ -3,6 +3,7 @@ layout:   reference_manual
 title:    Change Colors
 slug:     change-colors
 category: tutorials
+description: How to customize LED color.
 ---
 
 ## Set custom color

@@ -3,6 +3,7 @@ layout:   reference_manual
 title:    LED Beautify
 slug:     change-led-beautify-mode
 category: tutorials
+description: How to dim LED brightness.
 ---
 
 ## Set the minimum LED brightness
