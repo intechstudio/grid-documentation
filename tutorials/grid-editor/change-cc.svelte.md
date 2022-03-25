@@ -16,16 +16,16 @@ In this guide, I will walk trough setting custom CC messages on a control elemen
 
 1.) When it comes to sending custom MIDI data to the host, you have to select the appropriate *Event* first. 
 In this example, you will need the **potmeter** Event: a fader aka slide potentiometer's event is triggered every time you interact with the control element. Each time an Event is triggered, all Actions defined under that Event are going to happen.
-![ev](https://intech.studio/_cms/2021-07-13/select_event.gif)
+![](https://intech.studio/_cms/2021-07-13/select_event.gif)
 
 The *init* Event on the other hand is only triggered when a Page is initialized. This happens when Grid is powered up and when you switch the active Page.
 
 Under the potmeter Event you can see the `self:potmeter_value()` called under the Local Variables action. Every time you interact with the fader this function runs, so the actions using the `val` variable will have their values refreshed.
-![local variables](https://intech.studio/_cms/2021-07-13/local_value.png)
+![](https://intech.studio/_cms/2021-07-13/local_value.png)
 
 2.) On the potmeter event open up the MIDI action. From the Param 1 input field, select the needed CC type or just type in the desired CC as numbers.
 > There are no more separate MIDI Dynamic and MIDI Static actions from Grid Editor v1.2+, the dynamic behavior used with multiple modules is managed by the variable declarations in the Local Variables action. When using only one module, there is no change from expected behavior.
 
-![change cc](https://intech.studio/_cms/2021-07-13/change_cc.gif)
+![](https://intech.studio/_cms/2021-07-13/change_cc.gif)
 
 3.) Select a different control element and follow the above steps for further configuration.

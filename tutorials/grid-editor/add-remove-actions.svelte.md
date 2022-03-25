@@ -12,4 +12,4 @@ You can put actions in between other actions, when hovering over the action pane
 Click on it, to open up the Add Action menu. To add, double click on a preset or after selection, hit the *Add Action* button.
 
 The left colorful square on an action block with the icon is draggable. Drag it and you can remove an action when released over the red remove area.
-![change_color](https://intech.studio/_cms/2021-07-13/add_remove.gif)
+![](https://intech.studio/_cms/2021-07-13/add_remove.gif)

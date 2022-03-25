@@ -22,7 +22,7 @@ Whenever you're prompted with the 'Oops, firmware mismatch detected' message whi
 
 The mismatched module will be highlighted with red color, like this:
 
-![firmware_mismatch](C:\Users\lenovo\Documents\GitHub\grid-documentation\guides\firmware_mismatch.png)
+![](C:\Users\lenovo\Documents\GitHub\grid-documentation\guides\firmware_mismatch.png)
 
 Gird Editor can update your module firmware automatically if you follow the on-screen messages at the top.
 
@@ -32,13 +32,13 @@ Reconnect the mismatched module (and that module only) while holding down the ut
 
 After connecting you'll be prompted with a message in blue, asking whether you want to start the update. Press 'Update Firmware'.
 
-![bootloader_detected_update_start](C:\Users\lenovo\Documents\GitHub\grid-documentation\guides\bootloader_detected_update_start.png)
+![](/images/docs/bootloader_detected_update_start.png)
 
 Don't disconnect the module while the update is running or the update will fail.
 
 When the update is complete, you will be prompted with a message in green color and the module will show up again in the Editor.
 
-![update_success](C:\Users\lenovo\Documents\GitHub\grid-documentation\guides\update_success.png)
+![](/images/docs/update_success.png)
 
 Congratulations! You've successfully updated the firmware of your module.
 

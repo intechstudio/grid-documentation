@@ -4,5 +4,3 @@ slug:     grid-editor
 layout:   reference_index
 category: tutorials
 ---
-
-## supp
