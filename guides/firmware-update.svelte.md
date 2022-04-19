@@ -22,7 +22,7 @@ Whenever you're prompted with the 'Oops, firmware mismatch detected' message whi
 
 The mismatched module will be highlighted with red color, like this:
 
-![](C:\Users\lenovo\Documents\GitHub\grid-documentation\guides\firmware_mismatch.png)
+![](/images/docs/firmware_mismatch.png)
 
 Gird Editor can update your module firmware automatically if you follow the on-screen messages at the top.
 
