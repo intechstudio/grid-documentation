@@ -26,27 +26,27 @@ description: Grid Editor installation requirements, downloads, steps and general
 
 The executable files for the Windows installer are hosted on GitHub. Throughout the download process, your browser may prompt a warning. Choose to keep the file.
 
-<img class="" src="/images/docs/editor-install-error-0.jpg">
+<img class="" src="/images/docs/editor-install-error-0.webp">
 
 ## Installation
 The installer is an executable file, double click on it to start the installation.
 
-<img class="" src="/images/docs/windows-editor-install-exe.png">
+<img class="" src="/images/docs/windows-editor-install-exe.webp">
 
 Windows may prompt an alert, depending on your Windows Defender security settings. In this case you must directly specify that you accept to run the installer. Click **more info**, then **run anyway** to finish install.
 
 <div class="flex w-full">
-  <img class="w-1/2 pl-0 pr-2 py-2" src="/images/docs/windows-editor-install-error-1.jpg">
-  <img class="w-1/2 pr-0 pl-2 py-2" src="/images/docs/windows-editor-install-error-2.png">
+  <img class="w-1/2 pl-0 pr-2 py-2" src="/images/docs/windows-editor-install-error-1.webp">
+  <img class="w-1/2 pr-0 pl-2 py-2" src="/images/docs/windows-editor-install-error-2.webp">
 </div>
 
 The installation takes few seconds.
 
-<img src="/images/docs/windows-editor-install-load.png">
+<img src="/images/docs/windows-editor-install-load.webp">
 
 The application will open up once finished. A similar view should be on your desktop.
 
-<img src="/images/docs/windows-editor-install-finish.png">
+<img src="/images/docs/windows-editor-install-finish.webp">
 
 ## Install Location
 

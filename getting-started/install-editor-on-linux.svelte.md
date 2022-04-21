@@ -31,11 +31,11 @@ The executable files for Linux install are hosted on GitHub.
 The installer is a .AppImage file, right click on it and select **Properties**. 
 Choose the **Permissons** tab and allow execution of the file as program.
 
-<img src="/images/docs/linux-editor-install-allow.png">
+<img src="/images/docs/linux-editor-install-allow.webp">
 
 The application will open up once it finished loading. A similar view should be on your desktop.
 
-<img src="/images/docs/windows-editor-install-finish.png">
+<img src="/images/docs/windows-editor-install-finish.webp">
 
 ## Allow Serial Port
 

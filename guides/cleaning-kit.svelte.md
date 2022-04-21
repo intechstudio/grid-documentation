@@ -34,7 +34,7 @@ The electronic cleaner is suitable to remove manufacturing (soldering) residue f
     <span class="py-2"><span class="pr-2">2.</span>Plug in and out the USB cable 10 times (the other side of the USB should be unplugged during this!).</span>
   </div>
   <div class="w-2/5 px-2 bg-white bg-opacity-90 rounded-lg">
-    <img class="w-full p-4" src="/images/docs/black_cleaning_process_usb.png" alt="application of the vial content">
+    <img class="w-full p-4" src="/images/docs/black_cleaning_process_usb.webp" alt="application of the vial content">
   </div>
 </div>
 
@@ -44,7 +44,7 @@ The electronic cleaner is suitable to remove manufacturing (soldering) residue f
     <span class="py-2"><span class="pr-2">4.</span>Use a the alcoholic wipe and/or the cleaning sticks to rub the connectors</span>
   </div>
   <div class="w-2/5 px-2 bg-white bg-opacity-90 rounded-lg">
-    <img class="w-full p-4" src="/images/docs/black_cleaning_process_pogo.png" alt="application of the vial content">
+    <img class="w-full p-4" src="/images/docs/black_cleaning_process_pogo.webp" alt="application of the vial content">
   </div>
 </div>
 
@@ -54,5 +54,5 @@ The electronic cleaner is suitable to remove manufacturing (soldering) residue f
 This is a video about the knob inserts and how one should clean the USB C connector and pogo pins, if the connected modules are acting up.
 
 <a target="_blank" href="https://www.youtube.com/watch?v=IsMNa4NI7DA">
-  <img src="http://img.youtube.com/vi/IsMNa4NI7DA/0.jpg" alt="Taking care of Grid modules">
+  <img src="http://img.youtube.com/vi/IsMNa4NI7DA/0.webp" alt="Taking care of Grid modules">
 </a>

@@ -54,7 +54,7 @@ Grid Editor is the free configuration tool for your modules. To ensure your modu
 
 After installing the Grid Editor, connect your Grid module directly to your computer with the provided USB cable (even if you'd like to use a USB hub later, for the first startup we strongly recommend using a direct connection). Open up Grid Editor and you should see your connected modules on your screen.
 
-<img class="w-full rounded-t-lg shadow-lg drop-shadow-xl bg-black" src="/images/docs/grid_first_connect.png" alt="grid module first connection">
+<img class="w-full rounded-t-lg shadow-lg drop-shadow-xl bg-black" src="/images/docs/grid_first_connect.webp" alt="grid module first connection">
 
 <!--
 
