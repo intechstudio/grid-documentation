@@ -34,6 +34,22 @@ For debugging sessions:<br>
 
 Extensions are located in `/System/Library/Extensions` or `/Library/Extensions`. Go there and e.g. `kextunload /System/Library/Extensions/de.novamedia.driver.NMUSBCDCACMData.kext`<br> before deleting the .kext directory.
 
+## Linux Issues
+
+List of possible Mac OS issues and their resolution.
+
+### User has no access to serial ports, and therefore to serial devices like Grid | Grid not visible in Editor on Linux
+
+If you're using a Linux system, it might be possible you have no access to serial ports and this is why when connecting a Grid module to your system it still isn't visible in Grid Editor.
+
+To enable serial access, try the following steps:
+
+- Close Grid Editor if you still have it open.
+- Open up terminal and type in the following command: `sudo adduser $whoami dialout` 
+- This will add the current user to the dialout group which you'll need to have access to serial ports on Linux.
+- Log out and the log in again.
+- Relaunch Grid Editor and the module should be showing up now.
+
 ## Firmware
 
 List of possible firmware update issues and their resolution.
