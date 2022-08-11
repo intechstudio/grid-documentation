@@ -6,7 +6,7 @@ category:   reference-manual
 description: How to utilize module positioning in Code Blocks.
 ---
 
-<!-- egy kép többet ér száz szánál ezért majd rakunk ide! -->
+<!-- egy kép többet ér száz szónál ezért majd rakunk ide! -->
 
 ### module_position_x
   - shortname: gmx

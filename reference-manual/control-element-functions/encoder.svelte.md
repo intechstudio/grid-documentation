@@ -19,9 +19,10 @@ description: How to set up encoder-type control elements.
 ### button_value
     - shortname: bva
     - **How:** `self:button_value()` or `self:button_value(value)`
-        - value: integer, ranging 0...127
-    - **What:** This function returns the value of the button state. By default, this value is `127` when the button is pressed down and `0` when released.
+      - value: integer, ranging 0...127
+    - **What:** This function returns the value associated to the button. By default, this value is `127` when the button is pressed down and `0` when released.
       When this function is given a parameter, it will set the value associated with the button state according to the parameter given.
+      When using other types of button modes, described later in this chapter, the button values are evenly spread across the steps: eg. spilt 3 was would be values `0` `63` `127` split 4-way would be `0` `47` `95` and `127`.
     - **Example:** Inputting the code `self:button_value(127)` will make all button press and  button release event return the value `127`.
 
 ### button_min
@@ -38,14 +39,14 @@ description: How to set up encoder-type control elements.
         - value: integer, ranging 0...127
     - **What:** This function returns the maximum value of the button state. This is `127` by default.
       When given a parameter, this function changes the maximum value of the button state according to the `value` given as parameter.
-    - **Example:** The code `self:button_max(110)` will set the value of the button to `110` when pressed down.
+    - **Example:** The code `self:button_max(110)` will set the value of the button to `110` when pressed down. This can be useful to set easy to use values for a switch, like `self:button_max(1)` will make it so that there are only two values this button can send out `0` and `1`.
 
 ### button_mode
     - shortname: bmo
-    - **How:** `self:button_mode()` or `self:button_mode(resolution)`
-        - resolution: integer, ranging 0...127
-    - **What:** This function returns the value of the button mode. This is `0` by default. Button mode means how many 'steps' the button has between its maximum and minimum value. For example when the function is used to set this value like this: `self:button_mode(resolution)` the resolution parameter will govern the number of steps.
-    - **Example:** The code `self:button_mode(2)` will make the default button a 3-step switch. The three states will be `0` , `63` and `127`.
+    - **How:** `self:button_mode()` or `self:button_mode(mode)`
+        - mode: integer, ranging 0...127
+    - **What:** This function returns the value of the button mode. This is `0` by default. Button mode means how many 'steps' the button has between its maximum and minimum value. For example when the function is used to set this value like this: `self:button_mode(mode)` the resolution parameter will govern the number of steps.
+    - **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `127`.
 
 ### button_elapsed_time
     - shortname: bel
@@ -101,7 +102,7 @@ description: How to set up encoder-type control elements.
   - **How:** `self:encoder_velocity()` or `self:encoder_velocity(velocity)`
     - velocity: integer, ranging 0...100
   - **What:** This function returns the value of the encoder velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set  the encoder velocity to that value. Velocity increases the steps the encoder value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off encoder velocity completely.
-  - **Example:**  The code `self:encoder_velocity(0)` will turn off the velocity increase function of the encoder.
+  - **Example:**  The code `self:encoder_velocity(0)` will turn off the velocity increase function of the encoder. In this case turning the encoder by one tick, will increase the value of the encoder by 1. 
 ### encoder_elapsed_time
     - shortname: eel
     - **How:** `self:encoder_elapsed_time()`

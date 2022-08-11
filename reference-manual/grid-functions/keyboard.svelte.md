@@ -26,3 +26,24 @@ description: How to send keyboard messages in a Code Block.
     ```lua
       <?lua --[[@gks]] gks(5,1,1,8,0,1,8,1,0,8,0,0,8) ?>
     ```
+
+
+
+### mouse button send
+
+    - shortname: gmbs
+    - **How:** `mouse_button_send(state, button)`
+      - state: integer, ranging 0...1
+      - button: integer, ranging 1=leftclick 2=rightclick 4=middle click
+    - **What:** This function sends a mouse click of the defined button to the host.
+    - **Example:** 
+
+### mouse move send
+
+    - shortname: gmms
+    - **How:** `mouse_move_send(position, axis)`
+      - position: integer
+      - axis: integer, ranging 1...3 where 3=mousewheel
+    - **What:** This function sends a mouse move message to the host. Where the movement equals to the position parameter in screensspace.
+    - **Example:** 
+

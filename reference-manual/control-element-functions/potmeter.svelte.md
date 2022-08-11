@@ -39,13 +39,14 @@ description: How to set up potentiometer-type control elements.
       When given a parameter, this function changes the maximum value of the potentiometer state according to the `value` given as parameter.
     - **Example:** The code `self:potmeter_max(100)` will set the potentiometer value maximum to `100`.
 
-### potmeter_resolution
+### potmeter_resolution	
     - shortname: pmo
     - **How:** `self:potmeter_resolution()` or `self:potmeter_resolution(bitdepth)`
         - bitdepth: integer, ranging 4...12
     - **What:** This function returns the value of the potentiometer mode. This is`7` by default. This means that the number of steps between maximum and minimum values will be `2 to the power of 7` or `128`.
       When given a parameter, this function sets the 'steps' between the minimum and maximum value according to the `bitdepth` given. For example setting it to `2` makes the potentiometer have `2 to the power of 4` or `16` steps.
     - **Example:** The code `self:potmeter_resolution(11)` will make the potentiometer have `2048` steps. But be careful, if you don't increase the minimum and maximum potentiometer values, this "resolution" increase won't really show in usage.
+    Increasing potmeter resolution could be useful for using 14-bit MIDI usage.
 
 ### potmeter_elapsed_time
     - shortname: pel
