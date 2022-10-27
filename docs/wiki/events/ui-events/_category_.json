@@ -1,0 +1,8 @@
+{
+    "label": "UI Events",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "UI Events are all of the Events caused by the interaction with one of the Control Elements of a Grid module"
+    }
+  }

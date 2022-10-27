@@ -1,0 +1,9 @@
+{
+    "label": "Events",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Events are the little programs that run in consequence of the interaction with a Grid module. There are two types of Event groups:"
+    }
+  }
+  

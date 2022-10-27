@@ -1,0 +1,9 @@
+{
+    "label": "Control Element Setting Actions",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "With Control Element Setting Blocks you can change the behavior of Control Elements, for example to change a Button to behave like a toggle switch."
+    }
+  }
+  

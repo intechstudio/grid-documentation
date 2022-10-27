@@ -1,0 +1,16 @@
+services:
+  # merlin grid docs site
+  - type: web
+    name: docs-merlin
+    env: static
+    buildCommand: yarn install; yarn build
+    staticPublishPath: ./build
+    buildFilter:
+      paths:
+      - src/**/*.js
+      ignoredPaths:
+      - src/**/*.test.js
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin

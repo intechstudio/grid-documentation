@@ -1,0 +1,9 @@
+{
+    "label": "MIDI Actions",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "With MIDI Action Blocks you can send MIDI messages from Grid to the host device through."
+    }
+  }
+  

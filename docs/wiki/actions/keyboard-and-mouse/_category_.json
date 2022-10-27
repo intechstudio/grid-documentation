@@ -1,0 +1,9 @@
+{
+    "label": "Keyboard and Mouse Actions",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Utilizing keyboard and mouse actions, Grid is able to send keyboard and mouse messages to the host computer. This way it's possible to create keyboard shortcuts or encoders for zooming in applications."
+    }
+  }
+  

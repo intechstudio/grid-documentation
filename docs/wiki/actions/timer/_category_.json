@@ -1,0 +1,9 @@
+{
+    "label": "Timer Actions",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "With Timer Actions it's possible to trigger Timer Events, that are independent from Control Element interactions."
+    }
+  }
+  

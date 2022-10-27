@@ -1,0 +1,9 @@
+{
+    "label": "Conditions",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Conditions are used to create logic operations within an Action Chain, to create a sequence of Actions or conditional Actions."
+    }
+  }
+  

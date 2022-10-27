@@ -1,0 +1,9 @@
+{
+    "label": "Code Actions",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Actions in the Code group generally use the code editor and require dealing with lua code."
+    }
+  }
+  

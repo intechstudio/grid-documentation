@@ -1,0 +1,9 @@
+{
+    "label": "System Events",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "System Events concern the last numbered control element of a Grid module, the System Element. System Events are very different however from UI Events, more aimed towards advanced users with complex needs."
+    }
+  }
+  

@@ -1,0 +1,9 @@
+{
+    "label": "LED Actions",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "LED Actions change the way the LED lights behave on Grid, it's possible to change the colors, light intensity or to add animation to LED lights."
+    }
+  }
+  

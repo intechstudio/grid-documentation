@@ -1,0 +1,8 @@
+{
+  "label": "Setup",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Grid Editor is the free configuration tool for your modules. To ensure your module is working correctly after plugging it into your system, please install Grid Editor."
+  }
+}

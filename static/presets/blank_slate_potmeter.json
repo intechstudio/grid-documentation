@@ -1,0 +1,27 @@
+{
+  "name": "Blank Slate potmeter",
+  "description": "",
+  "type": "potentiometer",
+  "isGridPreset": true,
+  "version": {
+      "major": "1",
+      "minor": "2",
+      "patch": "27"
+  },
+  "configs": {
+      "events": [
+          {
+              "event": "0",
+              "config": "<?lua --[[@l]] local num,val,red,gre,blu=self:ind(),self:pva(),glr(),glg(),glb()--[[@glc]] glc(num,1,red,gre,blu)--[[@glp]] glp(num,1,val) ?>"
+          },
+          {
+              "event": "1",
+              "config": "<?lua --[[@l]] local num,val=self:ind(),self:pva()--[[@gms]] gms(0,176,32,val)--[[@glp]] glp(num,1,val) ?>"
+          },
+          {
+              "event": "6",
+              "config": "<?lua --[[@cb]] print('tick') ?>"
+          }
+      ]
+  }
+}
