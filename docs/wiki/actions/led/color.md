@@ -1,6 +1,6 @@
 ---
-slug: led-color-block
-title: Color Block
+slug: led-color
+title: Color
 tags: [Action Block, LED Block, Feedback, Workflow]
 ---
 
@@ -16,6 +16,6 @@ The Block has a couple of fields you can configure:
 - rgb values: you can type your own rbg value, pick a color or just roll the dice for a random color
 - beautify switch: this setting turned off allows the LEDs to go completely dark when intensity is zero
 
-LED numbers are independent from control element numbers, but in the out of the box configurations we use the default local variable named [num](/docs/wiki/actions/variables/local-variables) to address the LEDs, this way binding each LED to its respectable Control Element pair.
+LED numbers are independent from control element numbers, but in the out of the box configurations we use the default local variable named [num](../variables/local-variables.md) to address the LEDs, this way binding each LED to its respectable Control Element pair.
 
 There exist two layers of color and intensity per each LED. The reason for this is so that Control Elements like an encoder have a layer for both button and encoder events to display values independently from each other. But especially on Control Elements that only use one layer by default you are free to use the second layer for a lot of other things.

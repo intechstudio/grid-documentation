@@ -1,6 +1,6 @@
 ---
-slug: comment-block
-title: Comment Block
+slug: comment
+title: Comment
 tags: [Action Block, LUA, Workflow]
 ---
 

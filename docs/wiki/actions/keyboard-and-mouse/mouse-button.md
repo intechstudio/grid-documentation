@@ -1,6 +1,6 @@
 ---
-slug: mouse-button-block
-title: Mouse Button Block
+slug: mouse-button
+title: Mouse Button
 tags: [Action Block, Workflow]
 ---
 

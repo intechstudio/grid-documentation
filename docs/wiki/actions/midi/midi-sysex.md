@@ -1,6 +1,6 @@
 ---
-slug: midi-sysex-block
-title: MIDI SysEx Block
+slug: midi-sysex
+title: MIDI SysEx
 subtitle: System Exclusive MIDI messages
 tags: [Action Block, MIDI]
 ---

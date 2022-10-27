@@ -1,6 +1,6 @@
 ---
-slug: mouse-move-block
-title: Mouse Move Block
+slug: mouse-move
+title: Mouse Move
 tags: [Action Block, Workflow]
 ---
 

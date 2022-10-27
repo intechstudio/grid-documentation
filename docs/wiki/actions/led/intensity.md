@@ -1,6 +1,6 @@
 ---
-slug: led-intensity-block
-title: Intensity Block
+slug: led-intensity
+title: Intensity
 tags: [Action Block, LED Block, Feedback, Workflow]
 ---
 
@@ -13,4 +13,4 @@ The Block has a couple of fields you can configure:
 - layer: either 1 or 2, the final color is based on the mixed colors of the two layers
 - intensity value: how strong should the LED light intensity be
 
-Both the LED number and the intensity value is by default bound to the Control Element number and the Control Element Value through the local variables [num and val](/docs/wiki/actions/variables/local-variables). This way is to support the out of the box experience, but you can change this however you'd like.
+Both the LED number and the intensity value is by default bound to the Control Element number and the Control Element Value through the local variables [num and val](../variables/local-variables.md). This way is to support the out of the box experience, but you can change this however you'd like.

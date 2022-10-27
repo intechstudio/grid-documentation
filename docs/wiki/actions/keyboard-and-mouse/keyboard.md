@@ -1,6 +1,6 @@
 ---
-slug: keyboard-block
-title: Keyboard Block
+slug: keyboard
+title: Keyboard
 tags: [Action Block, Workflow]
 ---
 

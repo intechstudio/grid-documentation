@@ -1,6 +1,6 @@
 ---
-slug: midi-14bit-block
-title: 14-bit MIDI Block
+slug: midi-14bit
+title: 14-bit MIDI
 tags: [Action Block, MIDI]
 ---
 

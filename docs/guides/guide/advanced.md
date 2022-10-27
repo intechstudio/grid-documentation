@@ -18,7 +18,7 @@ For Grid to be able to control your hardware instrument you'll need **either one
 
 **Host functionality.** With a host-capable instrument, you can just plug Grid directly into the host USB slot, usually a USB-A type slot. Then you can follow this Advanced guide for MIDI configuration in Grid Editor or the Beginner's guide [here](./beginners) if the device has MIDI learn available such as the 1010music Blackbox.
 
-**USB MIDI Host.** With a dedicated USB MIDI Host device, the only things you'll need are cables. For KNOT you'll probably need some TRS to 5-pin DIN MIDI adaptors (type-A or B it doesn't matter) and the cable itself. You'll also need a phone charger or another type of power source like a power bank or a computer to power the device. If you have all these, you're ready.
+**USB MIDI Host.** With a dedicated USB MIDI Host device, the only things you'll need are cables. For KNOT you'll probably need some 3.5 mm TRS to 5-pin DIN MIDI adaptors (type-A or B it doesn't matter) and the cable itself. You'll also need a phone charger or another type of power source like a power bank or a computer to power the device. If you have all these, you're ready.
 
 Want to use Grid with hardware instruments, but lack all of the above?
 Intech Studio KNOT is for you! For more details visit the Intech Studio website [here](https://intech.studio/shop/knot).
@@ -68,11 +68,11 @@ When you have the control element selected, click the load preset to control ele
 Here's what the control element does now (we're using the potentiometer one in this article as an example):
 
 - When you turn it, it has **128 "steps" of internal values** under the internal `self:button_value()` function.
-- It uses this function to define a **local variable named `val`** on each potmeter turning event (under the potmeter event) and this variable stores the values of the **128 "steps" in `val` from 0 to 127**.
+- It uses this function to define a [local variable](/docs/wiki/actions/variables/local-variables.md) **named `val`** on each potmeter turning event (see [potmeter event](/docs/wiki/events/ui-events/potmeter-event.md)) and this variable stores the values of the **128 "steps" in `val` from 0 to 127**.
 - These 128 values can be used by the MIDI messages Grid can send out.
 - In this Blank Slate control element preset the potentiometer is configured to send MIDI messages out on **MIDI channel 0** (called channel 0 in Editor, but it's the first channel in other applications like a DAW).
 - And it sends these values as a **Control Change message (commonly a CC) named CC 32 and sets their value to `val`.**
-- The intensity of the corresponding LED is indicative of the potentiometer value, as its intensity uses the same `val` variable.
+- The [intensity](/docs/wiki/actions/led/intensity.md) of the corresponding LED is indicative of the potentiometer value, as its intensity uses the same `val` variable.
 - So in essence you have a potmeter that reacts to your knob-turning efforts and **sends out the corresponding MIDI messages as a CC 32 message on MIDI channel 1 or 0**(depending on what software you're using).
 
 Here comes the part where we'll change up the above described behavior to suit our needs.
@@ -91,13 +91,15 @@ Alright so in your case, you'll have your own device with it's own implementatio
 
 ## Understanding MIDI messages and our goal
 
-There is one thing we have to set first and foremost: **the MIDI channel**. Most devices accept MIDI messages for a voice only on one MIDI channel at any given time. Information about changing the MIDI channel is found in the devices manual. In our case, we set our MIDI channel to 1 on the Volca FM, which is channel 0 in Grid Editor.
+Let's understand what we have to send and where.
+
+There is one thing we have to set first and foremost: **the MIDI channel**. Most devices only accept MIDI messages on one MIDI channel per voice at any given time. Information about changing the MIDI channel is found in the devices manual. In our case, the Volca FM has only one voice, so we set our MIDI channel to 1 on the Volca FM, which will correspond to channel 0 in Grid Editor. Progress:
 
 `MIDI Channel 1`
 
 Our specific goal here was to make a bass sound on the Korg Volca FM a bit more dynamic, so we wanted to create a control element that can change the whole sound into something different, but we'll take it one step at a time.
 
-So let's start with something that's easily noticeable: the **envelope decay**. Here on the Volca FM MIDI implementation chart we'll look for Control Change messages and within those, we'll look for the one named **'Carrier Decay'**. Carrier Decay makes our sound amplitude changes slower or faster as the sound decays. In here, we can see that 'Carrier Decay' has a number associated with it in the column named 'Function'. That number will be **our CC number and we can see it's 45**. Cool, let's note this down.
+So let's start with something that's easily noticeable: the **envelope decay**. Here, on the [Volca FM MIDI implementation chart](#understanding-the-midi-implementation-chart) we'll look for Control Change messages and within those, we'll look for the one named **'Carrier Decay'**. Carrier Decay makes our sound amplitude changes slower or faster as the sound decays. In here, we can see that 'Carrier Decay' has a number associated with it in the column named 'Function'. That number will be **our CC number and we can see it's 45**. Cool, let's note this down.
 
 `MIDI Channel 1, MIDI CC 45`
 
@@ -117,7 +119,7 @@ In Grid Editor choose the **potmeter event** on our Blank Slate potentiometer an
 - **A red one named MIDI**, controlling the MIDI messages we're sending out.
 - **A brown one named Intensity**, controlling the intensity of LED light of that Control Element.
 
-**We'll only need to use the red one, named MIDI right now.** Opening up that **MIDI Block** as it's called in Editor, we'll see a box with 4 cells we can enter values into. Our Blank Slate unmodified should look like this:
+**We'll only need to use the red one, named MIDI right now.** Opening up that [**MIDI Block**](/docs/wiki/actions/midi/midi.md) as it's called in Editor, we'll see a box with 4 cells we can enter values into. Our Blank Slate unmodified should look like this:
 
 ![midiblock](./img/midi_block.png)
 

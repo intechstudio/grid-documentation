@@ -1,6 +1,6 @@
 ---
-slug: potmeter-mode-block
-title: Potentiometer Mode Block
+slug: potmeter-mode
+title: Potentiometer Mode
 tags: [Action Block, Element Setting Block, Workflow, PO16, PBF4]
 ---
 

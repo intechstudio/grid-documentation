@@ -1,10 +1,10 @@
 ---
-slug: global-variable-block
-title: Global Variable Block
+slug: global-variables
+title: Global Variables
 tags: [Action Block, Variables Block, Logic, Workflow]
 ---
 
-Global Variable Block allows you to define Global Variables in a nice Block format, instead of doing them in the Code Block.
+Global Variables Block allows you to define Global Variables in a nice Block format, instead of doing them in the Code Block.
 
 For a quick explanation for those who are not familiar with the concept of a variable, variables are "memory slots" that do one thing: store a value. That's it.
 

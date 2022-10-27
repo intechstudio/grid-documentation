@@ -1,6 +1,6 @@
 ---
-slug: encoder-mode-block
-title: Encoder Mode Block
+slug: encoder-mode
+title: Encoder Mode
 tags: [Action Block, Element Setting Block, Workflow, EN16, EF44]
 ---
 

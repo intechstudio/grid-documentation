@@ -1,6 +1,6 @@
 ---
-slug: timer-start-block
-title: Timer Start Block
+slug: timer-start
+title: Timer Start
 tags: [Action Block, Timer Block, Dual Action, Workflow]
 ---
 
@@ -12,6 +12,6 @@ The parameters of this Block are rather simple:
 
 Timers can be ended early with the use of a [timer stop](../timer/timer-stop) action.
 
-For more about how a timer works check out the [Timer Events](/docs/wiki/events/ui-events/timer-event) in the Events section of the wiki.
+For more about how a timer works check out the [Timer Events](/docs/wiki/events/ui-events/timer-event.mdx) in the Events section of the wiki.
 
 With a timer you can create cyclical timers that trigger themselves, creating pseudo clock source for your Grid configurations.

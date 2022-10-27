@@ -1,6 +1,6 @@
 ---
-slug: led-start-animation-block
-title: Start Animation Block
+slug: led-start-animation
+title: Start Animation
 tags: [Action Block, LED Block, Dual Action, Feedback, Workflow]
 ---
 
@@ -13,7 +13,7 @@ The Block has the following paramters:
 - rate: the speed of this blinking effect 1 to 4 where 4 is the fastest
 - shape: shape of the unipolar waveform currently restricted to 1 of 4 (sawup, sawdown, sine and square)
 
-Animations are permanent overwrites to the intensity of an LED layer, they can only be "shut down" by sending a [stop animation](../led/stop-animation) action to the same LED layer.
+Animations are permanent overwrites to the intensity of an LED layer, they can only be "shut down" by sending a [stop animation](../led/stop-animation.md) action to the same LED layer.
 
 Animations are a great way to indicate that a button is "on" for example for a "solos" or "mutes" type of control setup.
 

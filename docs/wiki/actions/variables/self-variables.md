@@ -1,10 +1,10 @@
 ---
-slug: self-variable-block
-title: Self Variable Block
+slug: self-variables
+title: Self Variables
 tags: [Action Block, Variables Block, Logic, Workflow]
 ---
 
-Self Variable Block allows you to define Self Variables in a nice Block format, instead of doing them in the Code Block.
+Self Variables Block allows you to define Self Variables in a nice Block format, instead of doing them in the Code Block.
 
 For a quick explanation for those who are not familiar with the concept of a variable, variables are "memory slots" that do one thing: store a value. That's it.
 

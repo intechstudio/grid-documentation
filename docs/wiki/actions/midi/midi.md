@@ -1,6 +1,6 @@
 ---
-slug: midi-block
-title: MIDI Block
+slug: midi
+title: MIDI
 tags: [Action Block, MIDI]
 ---
 

@@ -1,6 +1,6 @@
 ---
-slug: element-name-block
-title: Element Name Block
+slug: element-name
+title: Element Name
 tags: [Action Block, Code Block, LUA, Workflow]
 ---
 

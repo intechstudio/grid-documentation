@@ -1,6 +1,6 @@
 ---
-slug: timer-stop-block
-title: Timer Stop Block
+slug: timer-stop
+title: Timer Stop
 tags: [Action Block, Timer Block, Dual Action, Workflow]
 ---
 

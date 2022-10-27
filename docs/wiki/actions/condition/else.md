@@ -1,6 +1,6 @@
 ---
-slug: else-block
-title: Else Block
+slug: else
+title: Else
 tags: [Action Block, Condition Block, Logic, LUA, Workflow]
 ---
 

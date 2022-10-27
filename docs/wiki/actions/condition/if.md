@@ -1,6 +1,6 @@
 ---
-slug: if-block
-title: If Block
+slug: if
+title: If
 tags: [Action Block, Condition Block, Logic, LUA, Workflow]
 ---
 

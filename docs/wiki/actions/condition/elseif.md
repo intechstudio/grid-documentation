@@ -1,6 +1,6 @@
 ---
-slug: elseif-block
-title: ElseIf Block
+slug: elseif
+title: ElseIf
 tags: [Action Block, Condition Block, Logic, LUA, Workflow]
 ---
 

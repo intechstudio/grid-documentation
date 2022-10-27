@@ -1,6 +1,6 @@
 ---
-slug: button-mode-block
-title: Button Mode Block
+slug: button-mode
+title: Button Mode
 tags: [Action Block, Element Setting Block, Workflow, BU16, PFB4, EN16, EF44]
 ---
 
