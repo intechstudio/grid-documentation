@@ -30,16 +30,7 @@ jobs:
         echo MEILI_INDEX=grid-documentation >> .env
         echo MEILI_ADMIN_HOST=${{secrets.MEILI_ADMIN_HOST}} >> .env
         echo MEILI_ADMIN_KEY=${{secrets.MEILI_ADMIN_KEY}} >> .env
-    
-    - name: run indexer script
-      run: |
-        npm i
-        npm run index
 
-run-scraper:
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v3
     - name: Run scraper
       env:
         HOST_URL: ${{ secrets.MEILI_ADMIN_HOST }}
