@@ -26,7 +26,7 @@ function readFilesSync(dirname){
         const { content, metadata } = parseMD(fileContent);
 
         data.push({
-          key: uuidv4(),
+          id: uuidv4(),
           path: generatePathName(dirname + filename, metadata.slug),
           ...metadata,
           body: content,
