@@ -30,15 +30,9 @@ jobs:
         echo MEILI_INDEX=grid-documentation >> .env
         echo MEILI_ADMIN_HOST=${{secrets.MEILI_ADMIN_HOST}} >> .env
         echo MEILI_ADMIN_KEY=${{secrets.MEILI_ADMIN_KEY}} >> .env
-
-    - name: Run scraper
-      env:
-        HOST_URL: ${{ secrets.MEILI_ADMIN_HOST }}
-        API_KEY: ${{ secrets.MEILI_ADMIN_KEY }}
-        CONFIG_FILE_PATH: ${{ github.workspace }}/docs-scraper-config.json
+    
+    - name: run indexer
       run: |
-        docker run -t --rm \
-          -e MEILISEARCH_HOST_URL=$HOST_URL \
-          -e MEILISEARCH_API_KEY=$API_KEY \
-          -v $CONFIG_FILE_PATH:/docs-scraper/config.json \
-            getmeili/docs-scraper:v0.12.2 pipenv run ./docs_scraper config.json
+        npm install
+        npm run build
+        npm run index
