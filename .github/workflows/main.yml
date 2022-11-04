@@ -35,4 +35,20 @@ jobs:
       run: |
         npm i
         npm run index
+
+run-scraper:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run scraper
+      env:
+        HOST_URL: ${{ secrets.MEILI_ADMIN_HOST }}
+        API_KEY: ${{ secrets.MEILI_ADMIN_KEY }}
+        CONFIG_FILE_PATH: ./docs-scraper-config.json
+      run: |
+        docker run -t --rm \
+          -e MEILISEARCH_HOST_URL=$HOST_URL \
+          -e MEILISEARCH_API_KEY=$API_KEY \
+          -v $CONFIG_FILE_PATH:/docs-scraper//config.json \
+          getmeili/docs-scraper:0.29 pipenv run ./docs_scraper /config.json
   
