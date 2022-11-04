@@ -25,7 +25,6 @@ jobs:
         
     - name: create env
       run: |
-        cd main
         touch .env
         echo PATH_TO_DOCUMENTS=../docs/ >> .env
         echo MEILI_INDEX=grid-documentation >> .env
