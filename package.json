@@ -13,7 +13,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "index": "node meili-indexer.js"
+    "index": "node meili-indexer.mjs"
   },
   "dependencies": {
     "@algolia/client-search": "4.9.1",
@@ -23,6 +23,7 @@
     "@mdx-js/react": "^1.6.22",
     "@meilisearch/instant-meilisearch": "^0.9.0",
     "clsx": "^1.2.1",
+    "dotenv": "^16.0.3",
     "meilisearch": "^0.29.1",
     "mermaid": "^9.1.7",
     "parse-md": "^3.0.3",

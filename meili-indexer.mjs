@@ -8,6 +8,8 @@ dotenv.config();
 
 let data = [];
 
+console.log(process.env.MEILI_ADMIN_KEY)
+
 const meiliClient = new MeiliSearch({
   host: process.env['MEILI_ADMIN_HOST'],
   apiKey: process.env['MEILI_ADMIN_KEY'],
