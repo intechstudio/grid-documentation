@@ -4,6 +4,14 @@
  * work well for content-centric websites.
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#hits em {
+  @apply underline decoration-blue-500 decoration-4 underline-offset-4 not-italic bg-blue-500 bg-opacity-20;
+}
+
 @font-face {
   font-family: 'Poppins';
   src: url('/static/fonts/Poppins-ExtraLight.ttf') format('truetype');
