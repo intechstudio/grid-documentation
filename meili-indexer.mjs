@@ -47,9 +47,9 @@ function generatePathName(filename, slug){
   let path = '';
   // if the slug is present, use it instead of the file path
   if(slug == undefined){
-    path = '/docs' + split[1].split('.')[0];
+    path = split[1].split('.')[0];
   } else {
-    path = '/docs' + dirname(split[1]) + '/' + slug;
+    path = dirname(split[1]) + '/' + slug;
   }
   return path;
 }
