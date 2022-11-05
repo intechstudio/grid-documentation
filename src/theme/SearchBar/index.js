@@ -12,15 +12,15 @@ const client = new MeiliSearch({
 
 export default function Component() {
   const [documents, setDocuments] = useState([]);
-   const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
+  const [searchFocus, setSearchFocus] = useState(false);
  
    useEffect(() => {
       //search documents index based on search value
       client
           .index("grid-documentation")
-          .search(search)
+          .search(search, { limit: 4, attributesToHighlight: ['*'] })
           .then((results) => {
-            console.log(results)
             setDocuments(results.hits);
           });
    }, [search]);
@@ -36,8 +36,8 @@ export default function Component() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M56.7213 58.7832C55.5127 59.9165 53.6142 59.8555 52.4809 58.6469L41.8165
               47.2738C31.1978 54.9121 16.3065 53.4956 7.34571 43.5538C-2.26801 32.8876 -1.41476
               16.4474 9.2515 6.83369C19.9177 -2.78003 36.3579 -1.92678 45.9716 8.73947C54.8795 18.6226
@@ -51,29 +51,30 @@ export default function Component() {
           className="w-full rounded-r py-2 border-none focus:outline-none bg-secondary text-black"
           type="text"
           value={search}
+          onClick={()=>{setSearchFocus(true)}}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search as you type..."
         />
 		  </div>
-
-
-
-      <div className="w-full absolute z-50">
-        <div className="mt-2 bg-gray-400 border border-black rounded shadow flex flex-col px-4 py-2
+      {(documents.length && searchFocus) &&      
+        <div className="overflow-hidden mt-2 w-96 right-0 absolute z-50 bg-white border border-black border-solid rounded shadow flex flex-col px-4 py-2
             first:pt-0 ">
+            <button onClick={()=>setSearchFocus(false)} className="my-2 rounded cursor-pointer hover:bg-gray-300 px-4 py-2 border border-solid bg-gray-100">Close</button>
             {documents?.map((doc) => (
                 <div key={doc.id}>
-                  <a href={doc.path}	className="text-white border-b border-gray-700 last:border-none ">
+                  <a href={doc.path} className="text-black border-solid border-b border-gray-700 last:border-none ">
                   <div className="my-2 hover:bg-primary-900 px-4 py-2 rounded">
                     <div className="py-2 text-base font-bold">
-                    {doc.title}
+                      {doc.title}
                     </div>
-                    <div className="text-sm py-2 text-gray-300">
-                      <span className="px-2 py-1 rounded-full bg-gray-900 mr-1">
-                        {JSON.stringify(doc.tags)}
-                      </span>
-                    </div>
-                    <div className="py-2 text-base">
+                    {doc.tags &&                    
+                      <div className="text-sm my-2 py-2 text-black">
+                        <span className="px-2 py-1 rounded-full bg-blue-400 mr-1">
+                          {JSON.stringify(doc.tags)}
+                        </span>
+                      </div>
+                    }
+                    <div className="text-base line-clamp-3">
                       {doc.body}
                     </div>
                   </div>
@@ -81,7 +82,7 @@ export default function Component() {
                 </div>
             ))}
         </div>
-      </div>
+      }
     </div>
   );
 }
