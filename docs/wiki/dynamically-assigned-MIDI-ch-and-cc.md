@@ -4,7 +4,7 @@ description: not yet
 tags: [MIDI, logic, local, variable, orientation]
 ---
 
-Dynamically assigned values is the default way Grid will behave when it comes to default MIDI block CC and CH assignment on the default preset page.
+Dynamically assigned values is the default way Grid will behave when it comes to default [MIDI block](/docs/wiki/actions/midi/midi.md) CC and CH assignment on the default preset page.
 
 So as an example here's a default MIDI Block from that module:
 
