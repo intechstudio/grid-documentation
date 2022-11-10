@@ -19,7 +19,7 @@ const FeatureList: FeatureItem[] = [
         If you're new to Grid and the Grid Editor check out our guides.
       </>
     ),
-    linkUrl: '/guides/introduction',
+    linkUrl: '/category/getting-started',
     linkTitle: 'Beginners Guide to Grid'
   },
   {

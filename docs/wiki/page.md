@@ -16,5 +16,5 @@ Each one of these Pages has a different setting by default, but you can change t
 Giving each of the Pages on a module its own designated job, e.g. Page 1 controlling the filter parameters of a synth, while Page 2 acting as a mixer on the master track, is a good way to organize your Grid-based control surface logically.
 :::
 
-Pressing the utility button on the side of the module changes the active Page by calling the `page_load(page_next())` nested functions, which first checks the index number of the next Page (0-3) and the loads it. This will switch to the next Page and [initialize its Events](/docs/wiki/events/ui-events/init-event.md). You can check this behavior by looking at the default configuration of your module under [[System]] / [[utility]].
+Pressing the utility button on the side of the module changes the active Page by calling the `page_load(page_next())` nested functions, which first checks the index number of the next Page (0-3) and the loads it. This will switch to the next Page and [initialize its Events](/docs/wiki/events/ui-events/init-event.md). You can check this behavior by looking at the default configuration of your module under `System Events/utility`.
 

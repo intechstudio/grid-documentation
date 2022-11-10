@@ -20,7 +20,7 @@ This is how a timer works: somewhere on an Event there is a Timer Start Action B
 a["Event with Timer Start gets triggered"]-->b;
 b["Grid counts down to 0"]-->c;
 c{"Is it 0 yet?"}-->|Yes|d;
-c{"Is it 0 yet?"}-->|Not yet|b;
+c{"Is it 0 yet?"}-->|Not yet|c;
 d["Timer Event is triggered"]-->e["Action Chain runs on Timer Event"];
    
 `} />
