@@ -11,7 +11,9 @@ type FeatureItem = {
 }
 
 const FeatureList: FeatureItem[] = [
-  {
+ /*  ez itten komment mert nem kell hogy kétszer szerepeljen, érdemes ezt akkor visszatenni ha a bannerből kereső lesz a figma szerint
+ 
+ {
     title: 'Get started with Grid',
     Svg: '/img/editor_icon.svg',
     description: (
@@ -21,6 +23,17 @@ const FeatureList: FeatureItem[] = [
     ),
     linkUrl: '/category/getting-started',
     linkTitle: 'Beginners Guide to Grid'
+  }, */
+  {
+    title: 'Troubleshooting',
+    Svg: '/img/trbl.svg',
+    description: (
+      <>
+        Having touble? Check out our troubleshooting articles!
+      </>
+    ),
+    linkUrl: '/guides/troubleshooting',
+    linkTitle: 'Troubleshooting'
   },
   {
     title: 'Wiki + Reference Manual',
