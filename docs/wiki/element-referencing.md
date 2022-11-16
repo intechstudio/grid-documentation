@@ -1,13 +1,10 @@
 ---
 title:      Element Referencing
-slug:       element
-layout:     reference_manual
-category:   reference-manual
+slug:       element-referencing
 description: How to refer to a Control Element by number.
 ---
 
-<!---
-## Calling functions and variables, element referencing
+# Calling functions and variables, element referencing
 
 In Grid Editor, both variables and functions have a place where they reside in, and can be called from. In practice, every function and some variables has a prefix and a suffix, where the prefix describes where the function is called. And every variable has a way they are first defined (created) and this determines where they live and how they are stored.
 
@@ -45,33 +42,3 @@ One exception from the previously described behavior: functions that set the LED
 Another notable exception are generic lua functions, such as the functions starting with  `math.`.
 
 Other exceptions are described in the reference manual as such and will have no prefix in the "**How:**" part of their description.
---->
-
-## Functions referring to elements
-
-### element
-
-  shortname: ele
-  - **How:** `self:element_index()`
-  - **What:** Returns the value of the element # number.
-  - **Example:** Inputting the code `print(self:element_index())` into a Code Block will output the # number of the control element into the debug field. E.g. this Code Block on the top left button will output the message `0`.
-    By default all Grid configurations use this function to define a local variable named `num` on each interactable event, such as a potmeter. This `num` variable is given value based on the `self:element_index()` function.
-
-### element name
-
-  shortname: gen
-
-  - **How:** `self:element_name("name")`
-      - "name": string, put between " " or ' ' symbols
-  -  **What:** This function gives a name to the control element, or when called without parameters, it returns the name of the control element as a string.
-    IMPORTANT: The name will only work, if it's put in the first place of the action chain.
-  - **Example:** The function `self:element_name("helloworld")` in a code block, put in the top of the action chain, will name the control element *helloworld*.
-
-### element name send
-
-  shortname: gens
-
-  - **How:** `self:element_name_send()`
-  - **What:** 
-  - **Example:** 
-
