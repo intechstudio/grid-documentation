@@ -5,7 +5,7 @@ tags: [Action Block, Code Block, LUA, Error, Reference Manual, Merge]
 ---
 A Code Block is a special type of Action Block that makes it possible to program complex actions with the help of lua scripting and specific Grid variables and functions. You can find a [comprehensive guide to lua 5.4](https://lua.org/manual/5.4/) and a [reference manual to Grid functions and variables](https://intech.studio/support/docs/reference-manual).
 
-When using a Code Block you should be pressing the Commit button every time you'd want to exit the code editor and you want your code to be saved. When pressing commit, Editor will try and run your code, and will report back with simplistic error messages. 
+When using a Code Block you should be pressing the Commit button every time you'd want to exit the code editor and you want your code to be saved. When pressing commit, Editor will try and run your code, and will report back with simple error messages. 
 
 The `LUA not OK` message will appear when there's something wrong with the syntax of the sobmitted code, or parts the code is referencing might not exist in the form your code is trying to call it.
 

@@ -1,7 +1,7 @@
 ---
 slug: button-mode
 title: Button Mode
-tags: [Action Block, Element Setting Block, Workflow, BU16, PFB4, EN16, EF44]
+tags: [Action Block, Element Settings, Workflow, BU16, PFB4, EN16, EF44]
 ---
 
 With a Button Mode Block it's possible to change how many 'steps' a button has to take to move from its minimum value to its maximum.

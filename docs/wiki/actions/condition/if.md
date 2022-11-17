@@ -1,7 +1,7 @@
 ---
 slug: if
 title: If
-tags: [Action Block, Condition Block, Logic, LUA, Workflow]
+tags: [Action Block, Condition, Logic, LUA, Workflow]
 ---
 
 The If Block serves as the most basic logic operator for Grid Editor. When using such a Block you're able to create additional conditions for running actions in case of an Event trigger.

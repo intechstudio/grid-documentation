@@ -1,7 +1,7 @@
 ---
 slug: local-variables
 title: Local Variables
-tags: [Action Block, Variables Block, Logic, Workflow]
+tags: [Action Block, Variables, Logic, Workflow]
 ---
 
 Local Variables Block allows you to define Local Variables in a nice Block format, instead of creating them in the Code Block.

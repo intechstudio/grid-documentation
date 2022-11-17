@@ -1,7 +1,7 @@
 ---
 slug: led-start-animation
 title: Start Animation
-tags: [Action Block, LED Block, Dual Action, Feedback, Workflow]
+tags: [Action Block, LED, Dual Action, Feedback, Workflow]
 ---
 
 The Start Animation Block allows the LED intensity to change over time, making the LED blink in some form or another. The way it blinks is best described as a waveform constantly changing the LED intensity on one layer of the LED.

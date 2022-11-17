@@ -4,7 +4,9 @@ title: MIDI
 tags: [Action Block, MIDI]
 ---
 
-This is the standard 7-bit MIDI mode. 
+This Action Block will send out a MIDI message to the host on an Event trigger. This is the standard 7-bit MIDI mode. 
+
+![standard 7bit](../../img/midi_action_standard.png)
 
 Parameters can have the following values:
 1. Channel 
@@ -31,6 +33,7 @@ Depending on the Command field, values here represent Velocity or Control Value 
 --- Command = 176, CV values
 --- Command = 144 or 128, Velocity values
 
+If you want to learn how to set up a Grid configuration for hardware MIDI devices, please check out the [Advanced Guide](/docs/guides/guide/advanced.md) in the guides section.
+
 > Follow the official MIDI specifications for learning more about configuring MIDI. 
 
-![standard 7bit](../../img/midi_action_standard.png)

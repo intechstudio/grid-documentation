@@ -1,7 +1,7 @@
 ---
 slug: self-variables
 title: Self Variables
-tags: [Action Block, Variables Block, Logic, Workflow]
+tags: [Action Block, Variables, Logic, Workflow]
 ---
 
 Self Variables Block allows you to define Self Variables in a nice Block format, instead of doing them in the Code Block.

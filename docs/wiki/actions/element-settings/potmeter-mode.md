@@ -1,7 +1,7 @@
 ---
 slug: potmeter-mode
 title: Potentiometer Mode
-tags: [Action Block, Element Setting Block, Workflow, PO16, PBF4]
+tags: [Action Block, Element Settings, Workflow, PO16, PBF4]
 ---
 
 This Potmeter Mode Block is able to make a potentiometer more sensitive by increasing the value range it's working with or by chaning the bit depth of the values the analog signal is translated to.

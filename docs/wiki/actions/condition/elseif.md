@@ -1,7 +1,7 @@
 ---
 slug: elseif
 title: ElseIf
-tags: [Action Block, Condition Block, Logic, LUA, Workflow]
+tags: [Action Block, Condition, Logic, LUA, Workflow]
 ---
 
 The ElseIf Block can be created inside an already existing If Block to specify a subspecific FALSE outcome, creating 3 logical outcomes.

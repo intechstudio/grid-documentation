@@ -11,7 +11,6 @@ The Timer Event is a special event, because its trigger is tied to no specific c
 
 On Grid you have access to X number of Timer Events, where X equals to the amount of control elements on your module, plus one. So for example a PBF4 has only 12+1=13 Timer Events, while an EN16 has access to 16+1=17 Timer Events.
 
-*would be nice to have a diagram about event/action distribution on an example module*
 
 This is how a timer works: somewhere on an Event there is a Timer Start Action Block, on that Block there is both a Control Element Index and a time given is miliseconds. When that Event triggers, the Timer Start Action runs and Grid will start counting down time. When time runs out, the Timer Event will trigger. Which Timer Event, you ask? It depends on which control element index was input into the initial Timer Start Action Block.
 

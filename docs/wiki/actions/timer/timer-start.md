@@ -1,7 +1,7 @@
 ---
 slug: timer-start
 title: Timer Start
-tags: [Action Block, Timer Block, Dual Action, Workflow]
+tags: [Action Block, Timer, Dual Action, Workflow]
 ---
 
 The Timer Start Block allows you to create a timed trigger for the Timer Event. These Blocks can be used for both the global and the ui versions of the Timer Event.

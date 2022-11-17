@@ -1,7 +1,7 @@
 ---
 slug: led-intensity
 title: Intensity
-tags: [Action Block, LED Block, Feedback, Workflow]
+tags: [Action Block, LED, Feedback, Workflow]
 ---
 
 The Intensity Block changes the light intensity the LED of your choice when this action runs.

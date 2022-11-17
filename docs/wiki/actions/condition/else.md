@@ -1,7 +1,7 @@
 ---
 slug: else
 title: Else
-tags: [Action Block, Condition Block, Logic, LUA, Workflow]
+tags: [Action Block, Condition, Logic, LUA, Workflow]
 ---
 
 The Else Block can be created inside an already existing If Block to specify the FALSE conditional outcome.

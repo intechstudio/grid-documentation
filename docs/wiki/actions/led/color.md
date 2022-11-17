@@ -1,7 +1,7 @@
 ---
 slug: led-color
 title: Color
-tags: [Action Block, LED Block, Feedback, Workflow]
+tags: [Action Block, LED, Feedback, Workflow]
 ---
 
 The Color Block changes the color the LED of your choice when this action runs.
