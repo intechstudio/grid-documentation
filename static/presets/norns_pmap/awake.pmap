@@ -1,0 +1,8 @@
+"rev_eng_input":"{dev=2, in_lo=0, accum=false, out_lo=0, cc=39, value=0, in_hi=127, out_hi=1, ch=1}"
+"amp":"{dev=2, in_lo=0, accum=false, out_lo=0, cc=32, value=0, in_hi=127, out_hi=1, ch=1}"
+"release":"{dev=2, in_lo=0, accum=false, out_lo=0, cc=34, value=0, in_hi=127, out_hi=1, ch=1}"
+"pw":"{dev=2, in_lo=0, accum=false, out_lo=0, cc=33, value=0, in_hi=127, out_hi=1, ch=1}"
+"delay":"{dev=2, in_lo=0, accum=false, out_lo=0, cc=36, value=0, in_hi=127, out_hi=1, ch=1}"
+"delay_rate":"{dev=2, in_lo=0, accum=false, out_lo=0, ch=1, value=0, in_hi=127, out_hi=1, cc=37}"
+"cutoff":"{dev=2, in_lo=0, accum=false, out_lo=0, cc=35, value=0, in_hi=127, out_hi=1, ch=1}"
+"delay_feedback":"{dev=2, in_lo=0, accum=false, out_lo=0, cc=38, value=0, in_hi=127, out_hi=1, ch=1}"
