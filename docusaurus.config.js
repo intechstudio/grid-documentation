@@ -39,7 +39,7 @@ const config = {
           lastVersion: 'current'
         },
         theme: {
-          customCss: [require.resolve('./src/css/custom.css'), require.resolve('instantsearch.css/themes/reset.css')],
+          customCss: [require.resolve('./src/css/custom.css')],
         }
       }),
     ]
