@@ -87,7 +87,7 @@ export default function Component() {
         : 
         <div className='mt-2 absolute w-96 overflow-y-scroll shadow-2xl rounded-lg max-h-[calc(100vh-100px)] right-0 z-10'>
           <div className="dark:bg-slate-700 bg-white rounded-lg shadow-xl  dark:text-white relative flex flex-col px-4 py-2 first:pt-0 ">
-            <div class="my-4">
+            <div className="my-4">
             Sorry no results.
             </div>
             <button onClick={()=>{setSearchFocus(false); setSearch('')}} className="rounded cursor-pointer  px-4 py-2 border border-solid">Close</button>
