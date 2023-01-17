@@ -2,7 +2,15 @@
 title: Using monome norns with Grid
 ---
 
+import NornsGrid from './img/norns_po16.jpg'
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+
+<ImageLightbox imageSrc={NornsGrid} styling={'w-3/5 max-h-60 object-cover'}/>
+
+<!---
 ![norns and PO16](./img/norns_po16_384px.jpg)
+--->
+
 
 For users that would like to just mess around with norns scripts and have a Grid Modular Controller (or any other MIDI controller really), we have created some MIDI maps for popular scripts for easy plug-and-play experience.
 

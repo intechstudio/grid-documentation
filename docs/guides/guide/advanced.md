@@ -4,6 +4,16 @@ title: Advanced guide
 description: For configuring MIDI hardware
 ---
 
+import cpya from './img/copy_action.png'
+import psta from './img/pasted_actions.png'
+import midiblch from './img/midi_block_change.png'
+import midibl from './img/midi_block.png'
+import peventact from './img/potmeter_event_actions.png'
+import MIDIimp from './img/implement1.png'
+import CEPreset from './img/ce_presets.png'
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+
 This section will teach you how to create a Control Element configuration from a Control Element Preset in Grid Editor for use with MIDI hardware.
 
 ## What you'll need
@@ -12,16 +22,31 @@ For Grid to be able to control your hardware instrument you'll need **either one
 
 - **A computer with a MIDI interface** (some audio interfaces have this functionality).
 - **The capability of the device to act as USB MIDI Host** (eg. devices: 1010music Blackbox, monome norns, Korg Drumlogue etc.)
-- **A dedicated USB MIDI Host device**, like our very own [KNOT](https://intech.studio/shop/knot).
+- **A dedicated USB MIDI Host device**, like our very own [Knot](https://intech.studio/shop/knot).
 
 **Computer.** With a computer you can use the Grid configuration of our [beginner's guide](./beginners), and in the DAW of your choice you can route the MIDI signal in the case of Ableton to a 'MIDI To' destination. Here you'd want to choose your interface and BAM, Grid should be transmitting data to your hardware if it's plugged into your MIDI interface with a MIDI cable.
 
 **Host functionality.** With a host-capable instrument, you can just plug Grid directly into the host USB slot, usually a USB-A type slot. Then you can follow this Advanced guide for MIDI configuration in Grid Editor or the Beginner's guide [here](./beginners) if the device has MIDI learn available such as the 1010music Blackbox.
 
-**USB MIDI Host.** With a dedicated USB MIDI Host device, the only things you'll need are cables. For KNOT you'll probably need some 3.5 mm TRS to 5-pin DIN MIDI adaptors (type-A or B it doesn't matter) and the cable itself. You'll also need a phone charger or another type of power source like a power bank or a computer to power the device. If you have all these, you're ready.
+**USB MIDI Host.** With a dedicated USB MIDI Host device, the only things you'll need are cables. For Knot you'll probably need some 3.5 mm TRS to 5-pin DIN MIDI adaptors (type-A or B it doesn't matter) and the cable itself. You'll also need a phone charger or another type of power source like a power bank or a computer to power the device. If you have all these, you're ready.
 
 Want to use Grid with hardware instruments, but lack all of the above?
-Intech Studio KNOT is for you! For more details visit the Intech Studio website [here](https://intech.studio/shop/knot).
+Intech Studio Knot is for you! For more details visit the Intech Studio website [here](https://intech.studio/shop/knot).
+
+### Setting up Knot with Grid
+
+Using Knot as a USB MIDI Host for connecting Grid with you hardware MIDI devices is straight forward. You'll need the following things to get started:
+- **1x Knot** and its respective USB-C cable for power or a DC power adapter
+- **1x Grid module** of your choice (-or more of course!) and its respective USB-C cable for power and data
+- **1x MIDI cable**, for connecting Knot with the MIDI hardware device (either a 3.5mm TRS cable or a 5-pin DIN MIDI cable with a TRS adapter)
+
+To connect the devices together:
+- Knot plugged into a power source either through the "USB-C" port or the "DC IN" port
+- Grid plugged into Knot through the "USB HOST" port
+- the MIDI hardware device plugged into the "MIDI OUT" of Knot with a MIDI cable
+
+To check if everything's working aas it should, look out for the LEDs on Knot. When Knot first receive ample power they'll light up purple for a second. When a USB device is connected it should be green with the occasional blip when a message is sent or received.
+
 
 ## Importing a preset into Grid Editor
 
@@ -51,9 +76,15 @@ Now that you have a Blank Slate control element preset, first we'll have to get 
 
 ## Loading the preset on your Grid module
 
-In Grid Editor, look for the control element preset button on the left, to bring up the control element preset sidebar. There should be a list of presets, but the one you're looking for should be called something like this 'Blank Slate controlelement' depending on which control element you downloaded.
+In Grid Editor, look for the **control element preset button on the left**, to bring up the control element preset sidebar. There should be a list of presets, but the one you're looking for should be called something like this 'Blank Slate controlelement' depending on which control element you downloaded.
 
+
+<!---
 ![presets_sidebar](./img/ce_presets.png)
+--->
+
+
+<ImageLightbox imageSrc={CEPreset} citation={'very important'}/>
 
 While your module is plugged in, choose the first control element (top-left), by either interacting with the control element physically or just simply clicking it in Editor.
 
@@ -85,7 +116,8 @@ In this guide we'll showcase how to set up your Grid module for controlling a Ko
 
 To make this part of the guide easier to follow, we included a link to this document [here](./img/volcafm_MIDI_implementation_chart.pdf). When referencing it, we'll show screenshots to illustrate what we're doing, like this.
 
-![implement_sample](./img/implement1.png)
+<ImageLightbox imageSrc={MIDIimp}/>
+
 
 Alright so in your case, you'll have your own device with it's own implementation, but our goal will be the same: creating a Grid configuration that let's us control some of the instrument's parameters.
 
@@ -111,7 +143,9 @@ Let's get into the Grid Editor once again.
 In Grid Editor we have our Blank Slate potentiometer created already. But now we want to tweak it further. [Earlier](#understanding-the-basic-configuartion-steps) we noted that the Blank Slate sent out a MIDI message on MIDI Channel 0 and it sent out a CC number 32 with the values of our potentiometer.
 Only thing we'll have to change then, is the CC number then, easy.
 
-![actions](./img/potmeter_event_actions.png)
+
+<ImageLightbox imageSrc={peventact}/>
+
 
 In Grid Editor choose the **potmeter event** on our Blank Slate potentiometer and we'll see 3 Blocks there:
 
@@ -121,13 +155,13 @@ In Grid Editor choose the **potmeter event** on our Blank Slate potentiometer an
 
 **We'll only need to use the red one, named MIDI right now.** Opening up that [**MIDI Block**](/docs/wiki/actions/midi/midi.md) as it's called in Editor, we'll see a box with 4 cells we can enter values into. Our Blank Slate unmodified should look like this:
 
-![midiblock](./img/midi_block.png)
+<ImageLightbox imageSrc={midibl}/>
 
 This means the following: this potentiometer will send out a MIDI message on Channel 1, it will be a Control Change type of message, it will be specifically CC 32 and this message will change the value of whatever it's controlling to `val`, which as we earlier said contains the 'direction' or 'state' or our potentiometer as a value from 0 to 127.
 
 A mouthful to be sure, but fortunately this time we only need to change what's in the third box, and change it from 32 to 45. After changing it, don't forget to Store the changes on the module by clicking the green button in the top right.
 
-![changed](./img/midi_block_change.png)
+<ImageLightbox imageSrc={midiblch}/>
 
 Now if we did everything right, our Blank Slate potentiometer should be controlling 'Carrier Decay' on the Volca FM when we turn it.
 
@@ -146,11 +180,11 @@ Let's put this together in Grid Editor!
 
 In Grid Editor, navigate to Blank Slate's potmeter event and click the blue circle at the end of our MIDI block to select it.
 
-![copyit](./img/copy_action.png)
+<ImageLightbox imageSrc={cpya}/>
 
 Now we can copy and paste it two times, so we end up with three MIDI Blocks like this:
 
-![pasteittwice](./img/pasted_actions.png)
+<ImageLightbox imageSrc={psta}/>
 
 We have three identical messages now. So let's change them to the CC numbers we wanted: 45, 43 and 48, by typing them in the third box named parameter 1. Easy. Don't forget to store these changes on the Grid module with the Store button.
 

@@ -4,8 +4,12 @@ title: Beginner's guide
 description: For DAW configuration
 ---
 
+import mout from './img/intech_out.png'
+import moutind from './img/midi_out_ind.png'
+import midimap from './img/midimap.png'
+
+
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 Out of the box, Grid controllers are configured to effortlessly support DAW control and other applications, where the user can utilize software-side MIDI mapping or MIDI learn functionality.
@@ -30,20 +34,20 @@ Let's start up a fresh Ableton Project (we're using a default template) and open
 
 Now, what we want is to be able to send MIDI messages from Grid to Ableton Live, for this we have to enable both Track and Remote in the inputs section, like so.
 
-![ableton_midi_setting](./img/intech_out.png)
+<ImageLightbox imageSrc={mout} citation={'Live preferences: MIDI Ports'}/>
 
 
 ## MIDI mapping
 
 So after we have Grid enabled as a MIDI device in Ableton Live we can send messages to the software and for that we have to choose which settings we'd like to control. Clicking the MIDI button in the top right turns all the MIDI-mappable settings to a slightly blueish color.
 
-![MIDI_button](./img/midi_out_ind.png)
-
-![MIDI_learn](./img/midimap.png)
+<ImageLightbox imageSrc={midimap} citation={'The blue hue shows the MIDI-mappable parameters'}/>
 
 Clicking on any of these elements we've enabled MIDI learn mode of Ableton Live, meaning now it will wait from a MIDI CC message from a MIDI controller enabled in Ableton. Now if we press/turn/slide any of the control elements on our module the MIDI assignment should show up on the left side in Ableton and we can safely exit MIDI learn mode.
 
 Now when we press/turn/slide our mapped control element we should see Ableton react in the way we told it to.
+
+<ImageLightbox imageSrc={moutind} citation={'The flashing icon indicates MIDI data being received'}/>
 
 Map all the other control elements to parameters in Ableton the same way and voilá you're all configured.
 

@@ -6,7 +6,7 @@ tags: [Action Block, Element Settings, Workflow, BU16, PFB4, EN16, EF44]
 
 With a Button Mode Block it's possible to change how many 'steps' a button has to take to move from its minimum value to its maximum.
 
-This has the most basic use-case of creating switch-type buttons, meaning one click of a button moves the value up but it stays there on a release, and only when the cycle is correct does it fall back down again to 0.
+This has the most basic use-case of creating switch-type buttons, meaning the first click of a button moves the value up but it stays there on a release, and only when the cycle is complete does it fall back down again to 0.
 
 This Block has a field with a dropdown menu. The options are as follows:
 - 0 momentary: the default button behavior, two values, each press switches to max value, each release switches to minimum value 

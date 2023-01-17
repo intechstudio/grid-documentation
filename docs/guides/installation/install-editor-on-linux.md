@@ -5,6 +5,13 @@ date: 2021-11-26
 description: Grid Editor installation requirements, downloads, steps and general know-how under Linux.
 ---
 
+import img1 from './img/linux-editor-install-allow.png'
+import img2 from './img/windows-editor-install-finish.png'
+
+
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+
 ## Install requirements
 - Internet access
 - ~150MB disk space
@@ -20,11 +27,11 @@ The executable files for Linux install are hosted on GitHub.
 The installer is a .AppImage file, right click on it and select **Properties**. 
 Choose the **Permissons** tab and allow execution of the file as program.
 
-![linux editor allow install](./img/linux-editor-install-allow.png)
+<ImageLightbox imageSrc={img1}/>
 
 The application will open up once it finished loading. A similar view should be on your desktop.
 
-![linux editor allow install](./img/windows-editor-install-finish.png)
+<ImageLightbox imageSrc={img2} citation={'A fresh Editor install'}/>
 
 ## Allow Serial Port
 

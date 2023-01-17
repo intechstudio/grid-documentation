@@ -8,7 +8,7 @@ A Page is the user facing 'memory slot' of the Grid hardware.
 
 Pages are fully defined configurations stored in permanent memory on the Grid modules.
 
-Each Grid module has 4 of these individual 'memory slots' for storing configuration informationwe call them Pages in Grid terminology.
+Each Grid module has 4 of these individual Pages for storing configuration information.
 
 Each one of these Pages has a different setting by default, but you can change them however you like.
 
