@@ -5,7 +5,7 @@ title: Using monome norns with Grid
 import NornsGrid from './img/norns_po16.jpg'
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
-<ImageLightbox imageSrc={NornsGrid} styling={'w-3/5 max-h-60 object-cover'}/>
+<ImageLightbox imageSrc={NornsGrid} styling={'w-4/5 max-h-60 object-contain'}/>
 
 <!---
 ![norns and PO16](./img/norns_po16_384px.jpg)
