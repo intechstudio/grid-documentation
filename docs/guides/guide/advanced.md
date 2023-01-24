@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-title: Advanced guide
+sidebar_position: 2
+title: Grid - An Advanced guide
 description: For configuring MIDI hardware
 ---
 
@@ -35,7 +35,7 @@ Intech Studio Knot is for you! For more details visit the Intech Studio website 
 
 ### Setting up Knot with Grid
 
-Using Knot as a USB MIDI Host for connecting Grid with you hardware MIDI devices is straight forward. You'll need the following things to get started:
+Using Knot as a USB MIDI Host for connecting Grid with you hardware MIDI devices is straightforward. You'll need the following things to get started:
 - **1x Knot** and its respective USB-C cable for power or a DC power adapter
 - **1x Grid module** of your choice (-or more of course!) and its respective USB-C cable for power and data
 - **1x MIDI cable**, for connecting Knot with the MIDI hardware device (either a 3.5mm TRS cable or a 5-pin DIN MIDI cable with a TRS adapter)
@@ -48,11 +48,11 @@ To connect the devices together:
 To check if everything's working aas it should, look out for the LEDs on Knot. When Knot first receive ample power they'll light up purple for a second. When a USB device is connected it should be green with the occasional blip when a message is sent or received.
 
 
-## Importing a preset into Grid Editor
+## Importing a preset into Grid Editor (legacy)
 
 From here on out, we'll use Grid Editor for our configuration needs. You can learn more about how to install and navigate Grid Editor here. If you haven't installed Grid Editor yet, please do so now before proceeding further.
 
-[How to download Grid Editor.](/category/setup)
+[How to download Grid Editor.](/category/installing-grid-editor)
 
 We've prepared for you a couple of control element presets for starting out. These were made with the intention of being so called blank slates for a new configuration.
 
@@ -74,7 +74,7 @@ On Windows it should look something like this: `...\user\Documents\grid-userdata
 
 Now that you have a Blank Slate control element preset, first we'll have to get it onto the Grid module of your choice.
 
-## Loading the preset on your Grid module
+## Loading the preset on your Grid module (legacy)
 
 In Grid Editor, look for the **control element preset button on the left**, to bring up the control element preset sidebar. There should be a list of presets, but the one you're looking for should be called something like this 'Blank Slate controlelement' depending on which control element you downloaded.
 
@@ -84,7 +84,7 @@ In Grid Editor, look for the **control element preset button on the left**, to b
 --->
 
 
-<ImageLightbox imageSrc={CEPreset} citation={'very important'}/>
+<ImageLightbox imageSrc={CEPreset} citation={'The control element preset menu on the left sidebar'}/>
 
 While your module is plugged in, choose the first control element (top-left), by either interacting with the control element physically or just simply clicking it in Editor.
 
@@ -144,7 +144,7 @@ In Grid Editor we have our Blank Slate potentiometer created already. But now we
 Only thing we'll have to change then, is the CC number then, easy.
 
 
-<ImageLightbox imageSrc={peventact}/>
+<ImageLightbox imageSrc={peventact} citation={'Each potentiometer/fader has its own potmeter event'}/>
 
 
 In Grid Editor choose the **potmeter event** on our Blank Slate potentiometer and we'll see 3 Blocks there:
@@ -155,13 +155,13 @@ In Grid Editor choose the **potmeter event** on our Blank Slate potentiometer an
 
 **We'll only need to use the red one, named MIDI right now.** Opening up that [**MIDI Block**](/docs/wiki/actions/midi/midi.md) as it's called in Editor, we'll see a box with 4 cells we can enter values into. Our Blank Slate unmodified should look like this:
 
-<ImageLightbox imageSrc={midibl}/>
+<ImageLightbox imageSrc={midibl} citation={'The MIDI message parameters exposed in the MIDI Action Block'}/>
 
 This means the following: this potentiometer will send out a MIDI message on Channel 1, it will be a Control Change type of message, it will be specifically CC 32 and this message will change the value of whatever it's controlling to `val`, which as we earlier said contains the 'direction' or 'state' or our potentiometer as a value from 0 to 127.
 
 A mouthful to be sure, but fortunately this time we only need to change what's in the third box, and change it from 32 to 45. After changing it, don't forget to Store the changes on the module by clicking the green button in the top right.
 
-<ImageLightbox imageSrc={midiblch}/>
+<ImageLightbox imageSrc={midiblch} citation={'Chainging the parameter1 here changes the CC# of the MIDI message'}/>
 
 Now if we did everything right, our Blank Slate potentiometer should be controlling 'Carrier Decay' on the Volca FM when we turn it.
 
@@ -180,11 +180,11 @@ Let's put this together in Grid Editor!
 
 In Grid Editor, navigate to Blank Slate's potmeter event and click the blue circle at the end of our MIDI block to select it.
 
-<ImageLightbox imageSrc={cpya}/>
+<ImageLightbox imageSrc={cpya} citation={'Copy and pasting actions is very helpful for getting things done quickly'}/>
 
 Now we can copy and paste it two times, so we end up with three MIDI Blocks like this:
 
-<ImageLightbox imageSrc={psta}/>
+<ImageLightbox imageSrc={psta} citation={'Doubling up or tripling up on MIDI Blocks allows us to send out multiple MIDI messages by just moving one potentiometer'}/>
 
 We have three identical messages now. So let's change them to the CC numbers we wanted: 45, 43 and 48, by typing them in the third box named parameter 1. Easy. Don't forget to store these changes on the Grid module with the Store button.
 
