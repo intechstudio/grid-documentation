@@ -10,7 +10,7 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
 
 
-A Code Block is a special type of Action Block that makes it possible to program complex actions with the help of lua scripting and specific Grid variables and functions. You can find a [comprehensive guide to lua 5.4](https://lua.org/manual/5.4/) and a [reference manual to Grid functions and variables](https://intech.studio/support/docs/reference-manual).
+A Code Block is a special type of Action Block that makes it possible to program complex actions with the help of lua scripting and specific Grid variables and functions. You can find a [comprehensive guide to lua 5.4](https://lua.org/manual/5.4/) and a [reference manual to Grid functions and variables](https://grid-documentation.onrender.com/reference-manual/introduction).
 
 
 <ImageLightbox imageSrc={CodeBlock}/>
