@@ -57,3 +57,13 @@ List of possible firmware update issues and their resolution.
 ### Device does not show up as removable device
 
 Reboot your computer. Make sure you connect your module directly to your computer. Check if the utility side button moves freely and it is not stuck. For each time you connect the module, wait 5 seconds to see the device showing up. Repeat the connection step based on the firmware update document multiple times, it can be that it will show up after a couple tries. Try a different computer.
+
+## Other
+
+### Module doesn't initialize on connection (AKA "bricked" module)
+
+It can happen that a module stops working, whether connected directly to USB or to another working module. You can see - when connecting the defective module - that its lights flash briefly, but then turn immediately off. If using Grid Editor, the module doesn't show up in the application. Fear not! You can recover the module by doing a factory reset of the module:
+
+- Start Grid Editor and disconnect all modules
+- While keeping the defective module's page button pressed, connect it to USB directly
+- Grid Editor will show a banner saying that "Grid bootloader is detected" and offering to update the module's firmware. Follow the instructions.
