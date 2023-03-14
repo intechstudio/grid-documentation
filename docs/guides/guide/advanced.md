@@ -50,6 +50,14 @@ To check if everything's working aas it should, look out for the LEDs on Knot. W
 
 ## Importing a preset into Grid Editor (legacy)
 
+<!---:::caution 
+The control element preset sidebar is considered legacy feature from Grid Editor version 1.2.29 onward, and therefore no longer visible on the left sidebar!
+
+Users wanting to utilize control element presets can still turn it back on under preferences!
+:::
+--->
+
+
 From here on out, we'll use Grid Editor for our configuration needs. You can learn more about how to install and navigate Grid Editor here. If you haven't installed Grid Editor yet, please do so now before proceeding further.
 
 [How to download Grid Editor.](/category/installing-grid-editor)

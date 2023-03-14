@@ -55,8 +55,13 @@ You can find the firmware versions hosted on GitHub. Click the button below to d
 
 Follow carefully the steps below, connect your Grid module directly to your compute at step 4.
 
-1. Unzip the downloaded firmware file
+1. Unzip the downloaded firmware archive .zip file
 2. You will find a file named grid_release.uf2, this is the firmware file
+
+:::caution Be careful! 
+You might find multiple binary files in the .zip file, choose the one corresponding to the information in the file named "INFO_UF2.TXT" on the GRID removable device.
+:::
+
 3. Update the modules one-by-one, only plugging in only one at a time
 4. Hold down the utility side button while plugging in the USB cable
 5. All the LEDs should turn from red to green color, indicating successful enumeration
