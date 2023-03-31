@@ -5,7 +5,16 @@ description: "The Timer Event, is a special event because its trigger is tied to
 tags: [Event, UI Event, Workflow, All modules]
 ---
 
-import Mermaid from '@theme/Mermaid'
+import Mermaid from '@theme/Mermaid';
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+
+<Tabs>
+  <TabItem value="About UI Timer Event" label="About UI Timer Event" default>
+
 
 The Timer Event is a special event, because its trigger is tied to no specific control element. Its trigger is instead tied to an Action Block (and subsequently the underlying `timer_start()` function) named Timer Start Block and Timer Stop Block. Let's call them together the timer.
 
@@ -26,3 +35,17 @@ d["Timer Event is triggered"]-->e["Action Chain runs on Timer Event"];
 
 
 A Timer Event is an excellent tool for creating interaction feedback for example with long press of buttons, or for creating 'resets'. In the case of a 'reset' one could program an encoder with a Timer Start Block or the function and have that trigger the Timer Event after a while, which in turn resets the value of that encoder to 0 with a short bit of code like this: `self:encoder_value(0)`.
+
+  </TabItem>
+  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+
+
+There is no Reference Manual Entry for this article.
+
+
+
+  </TabItem>
+</Tabs>
+
+
+

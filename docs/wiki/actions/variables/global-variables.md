@@ -2,7 +2,18 @@
 slug: global-variables
 title: Global Variables
 tags: [Action Block, Variables, Logic, Workflow]
+description: "Global Variables Block allows you to define Global Variables in a nice Block format, instead of doing them in the Code Block."
 ---
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+
+<Tabs>
+  <TabItem value="About Global Variables" label="About Global Variables" default>
+
 
 Global Variables Block allows you to define Global Variables in a nice Block format, instead of doing them in the Code Block.
 
@@ -23,4 +34,19 @@ In essence a Global Variable created on a Grid module Page is accessible by any 
 In Grid syntax global variables have no prefix to them and they look like this: `gvar=0`.
 
 This allows for the creation of variables that can help you create configurations faster, for example creating a variable called `globalmidich=0` on System Event Init will create a global variable, that can later be used by all MIDI Blocks on the module to send out MIDI messages on MIDI Channel `globalmidich`. If you want you could even configure it to be able to change on let's say the first encoder on the module.
+
+
+
+  </TabItem>
+  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+
+
+There is no Reference Manual Entry for this article.
+
+
+
+  </TabItem>
+</Tabs>
+
+
 

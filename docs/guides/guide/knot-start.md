@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Knot - Starter's guide
+title: "Knot: Starter's guide"
 description: For setting up Knot with Grid and other devices
 ---
 

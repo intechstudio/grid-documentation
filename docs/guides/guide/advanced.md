@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Grid - An Advanced guide
+title: "Grid: An Advanced guide"
 description: For configuring MIDI hardware
 ---
 
@@ -60,7 +60,7 @@ Users wanting to utilize control element presets can still turn it back on under
 
 From here on out, we'll use Grid Editor for our configuration needs. You can learn more about how to install and navigate Grid Editor here. If you haven't installed Grid Editor yet, please do so now before proceeding further.
 
-[How to download Grid Editor.](/category/installing-grid-editor)
+[How to download Grid Editor.](/category/editor-how-to-install-editor)
 
 We've prepared for you a couple of control element presets for starting out. These were made with the intention of being so called blank slates for a new configuration.
 

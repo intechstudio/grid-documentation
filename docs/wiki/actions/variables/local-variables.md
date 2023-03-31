@@ -2,7 +2,19 @@
 slug: local-variables
 title: Local Variables
 tags: [Action Block, Variables, Logic, Workflow]
+description: "Local Variables Block allows you to define Local Variables in a nice Block format, instead of creating them in the Code Block."
 ---
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+
+<Tabs>
+  <TabItem value="About Local Variables" label="About Local Variables" default>
+
+
 
 Local Variables Block allows you to define Local Variables in a nice Block format, instead of creating them in the Code Block.
 
@@ -22,3 +34,17 @@ Local Variables are very useful for creating  variables that are only needed by 
 One of these is the often used `val`, which is usually defined as being equal to the `controlelement_value()` function. This way, whenever a function or Block asks for the current value of the Control Element, you can just use `val` Local Variable for this purpose instead of calling the above mentioned function each time. Doing this saves characters and makes configurations more structured.
 
 In Grid syntax local variables have no prefix to them, same as global ones and they look like this: `lvar=0`.
+
+
+  </TabItem>
+  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+
+
+There is no Reference Manual Entry for this article.
+
+
+
+  </TabItem>
+</Tabs>
+
+

@@ -56,10 +56,20 @@ You can find the firmware versions hosted on GitHub. Click the button below to d
 Follow carefully the steps below, connect your Grid module directly to your compute at step 4.
 
 1. Unzip the downloaded firmware archive .zip file
-2. You will find a file named grid_release.uf2, this is the firmware file
+2. You will find files named grid_release.uf2, these are files you'll need for the firmware update process
 
 :::caution Be careful! 
+Choosing the incorrect binary will cause the FW update to fail, so please follow the instructions outlined below!
+:::
+
+:::info How to choose the correct binary
 You might find multiple binary files in the .zip file, choose the one corresponding to the information in the file named "INFO_UF2.TXT" on the GRID removable device.
+
+You can check the file when Grid is connected in bootloader mode.
+
+It will tell you if it's either SAMD51 or ESP32. 
+
+Use the binary for the firmware update matching the name of the MCU in the module you're updating.
 :::
 
 3. Update the modules one-by-one, only plugging in only one at a time

@@ -2,7 +2,20 @@
 slug: led-start-animation
 title: Start Animation
 tags: [Action Block, LED, Dual Action, Feedback, Workflow]
+description: "The Start Animation Block allows the LED intensity to change over time, making the LED blink in some form or another."
 ---
+
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+
+<Tabs>
+  <TabItem value="About Animations" label="About Animations" default>
+
+
 
 The Start Animation Block allows the LED intensity to change over time, making the LED blink in some form or another. The way it blinks is best described as a waveform constantly changing the LED intensity on one layer of the LED.
 
@@ -18,4 +31,46 @@ Animations are permanent overwrites to the intensity of an LED layer, they can o
 Animations are a great way to indicate that a button is "on" for example for a "solos" or "mutes" type of control setup.
 
 In contrary to LED intensity and color settings, animations are not set up by default under UI Init Events, but some of our configurations uses them for the use cases described above.
+
+
+  </TabItem>
+  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+
+## LED animations
+
+### led_animation_rate 
+  - shortname: glf
+  - **How:** `led_animation_rate(num,layer,frequency)`
+    - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
+    - layer: integer, ranging 1...2
+    - frequency: integer, ranging -255..255
+  - **What:** This function assigns a pulse-like animation to the LED when called. The `frequency` parameter adjusts the speed of the animation e.g.: `1` is the default speed, where one period will take 256 frames to play, `2` is double that so half of the frames 128, or you could assign a `-` in front of the frequency value to make the animation play backwards.
+  - **Example:** Inputting `led_animation_rate(num,1,1)` in a Code Block makes the animation play on its slowest speed the the LED indefinitely. With a `glt` function you can assign a timeout to this animation.
+
+### led_animation_type
+  - shortname: gls
+  - **How:** `led_animation_type(num,layer,type)`
+    - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
+    - layer: integer, ranging 1...2
+    - shape: integer, ranging 0...3 (0: ramp up, 1: ramp reversed, 2: square, 3: sine)
+  - **What:** This function changes the type of animation the LED will play. The `type` variable has values ranging from `0` to `3` each representing a different animation type.
+  - **Example:**
+
+### led_animation_phase_rate_type
+  - shortname: glpfs
+  - **How:** `led_animation_phase_rate_type(num,layer,phase,frequency,type)`
+    - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
+    - layer: integer, ranging 1...2
+    - phase: integer, ranging 0...255
+    - frequency: integer, ranging -255..255
+    - shape: integer, ranging 0...3 (0: ramp up, 1: ramp reversed, 2: square, 3: sine)
+  - **What:** This function combines the LED phase change type functions into one.
+  - **Example:** Inputting the `led_animation_phase_rate_type(num,1,val,1,1)` into a Code Block will play the given animation on layer 1.
+
+
+
+
+  </TabItem>
+</Tabs>
+
 

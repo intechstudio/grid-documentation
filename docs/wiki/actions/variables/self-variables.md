@@ -2,7 +2,20 @@
 slug: self-variables
 title: Self Variables
 tags: [Action Block, Variables, Logic, Workflow]
+description: "Self Variables Block allows you to define Self Variables in a nice Block format, instead of doing them in the Code Block."
 ---
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+
+<Tabs>
+  <TabItem value="About Self Variables " label="About Self Variables" default>
+
+
+
 
 Self Variables Block allows you to define Self Variables in a nice Block format, instead of doing them in the Code Block.
 
@@ -22,3 +35,16 @@ Local Variables are very useful for creating  variables that all of Grid can acc
 In Grid syntax self variables have the `self.` or `element[x].` prefix to them and they look like this: `self.var=0` or `element[0].val=0`.
 
 Self variables are used in a couple of our configurations that store values for MIDI messages on the module, in these cases usually there are arrays defined as self variables on each control element. These arrays have 16 values stored within and therefore would be very cumbersome to store and call them globally. But using Self variables they can all be stored on their respective Control Element and be called by their Control Element's index in their prefix but have the same name (eg. `element[0].array[3]` and `element[3].array[3]`)
+
+
+  </TabItem>
+  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+
+
+There is no Reference Manual Entry for this article.
+
+
+
+  </TabItem>
+</Tabs>
+

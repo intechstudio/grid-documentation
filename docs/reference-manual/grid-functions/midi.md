@@ -32,6 +32,7 @@ description: How to set up MIDI messages sent from Grid.
   - 
 - **What:** This function enables or disables MIDI RX functionality of Grid.
 - **Example:** 
+
 ### midirx sync
 - shortname: mrs
 - **How:** `midirx_sync()`
@@ -39,6 +40,7 @@ description: How to set up MIDI messages sent from Grid.
 - **What:** This function enables or disables whether Grid sends out a MIDI Clock sync signal to the host device.
 This function is overriden, when MIDI RX is disabled as a whole.
 - **Example:** 
+
 ### lookup
 
 - shortname: glut

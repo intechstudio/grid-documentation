@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Grid - Beginner's guide
+title: "Grid: Beginner's guide"
 description: For DAW configuration
 ---
 

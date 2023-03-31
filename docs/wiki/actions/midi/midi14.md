@@ -2,7 +2,19 @@
 slug: midi-14bit
 title: 14-bit MIDI
 tags: [Action Block, MIDI]
+description: "This Action Block will send out a MIDI message to the host on an Event trigger. This is the highres 14-bit MIDI mode. "
 ---
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+
+<Tabs>
+  <TabItem value="About 14bit MIDI" label="About 14bit MIDI" default>
+
+
 
 ### 14 bit MIDI - High resolution MIDI message format.
 To use this feature, **you must change the control element's resolution and maximum possible value**. 
@@ -20,3 +32,16 @@ Due to the noisy nature of high resolution signal reads from control elements, w
 Please note, as the least significant bit (LSB) and most significant bit (MSB) calculations happen in the background with a CC offset of 32, the second parameter CC number can't be larger than 95.
 
 ![14bit midi](../../img/midi_action_14bit.png)
+
+  </TabItem>
+  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+
+
+There is no Reference Manual Entry for this article.
+
+
+
+  </TabItem>
+</Tabs>
+
+

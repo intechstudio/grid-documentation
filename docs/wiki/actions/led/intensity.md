@@ -2,7 +2,18 @@
 slug: led-intensity
 title: Intensity
 tags: [Action Block, LED, Feedback, Workflow]
+description: "The Intensity Block changes the light intensity the LED of your choice when this action runs."
 ---
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+
+<Tabs>
+  <TabItem value="About LED Intensity" label="About LED Intensity" default>
+
 
 The Intensity Block changes the light intensity the LED of your choice when this action runs.
 
@@ -14,3 +25,35 @@ The Block has a couple of fields you can configure:
 - intensity value: how strong should the LED light intensity be
 
 Both the LED number and the intensity value is by default bound to the Control Element number and the Control Element Value through the local variables [num and val](../variables/local-variables.md). This way is to support the out of the box experience, but you can change this however you'd like.
+
+
+
+  </TabItem>
+  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+
+## LED intensity
+
+### led_value
+  - shortname: glp
+  - **How:** `led_value()` or `led_value(lnum,layer,value)`
+    - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
+    - layer: integer, ranging 1...2
+    - phase: integer, ranging 0...255
+  - **What:** This function sets the LED light intensity according to the parameter called `value`. When this function is called without a parameter, it returns the `value` value of the control element.
+  - **Example:** Inputting the `led_value(num,1,128-val)` into a Code Block makes the LED light intensity on let's say a potentiometer control element change opposite of value, as it will have maximum light intensity at minimum value and maximum light intensity at minimum value. 
+
+### led_timeout
+  - shortname: glt <!-- will be setter getter -->
+  - **How:** `led_timeout(lnum,layer,timeout)`
+    - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
+    - layer: integer, ranging 1...2
+    - timeout: integer, ranging 0...65535
+  - **What:** This function sets a timeout for the `led_animation_rate` function. The timeout field sets the end of the `led_animation_rate` frequency change, given in frames. Timeout will count down each frame from the the `timeout` parameter given and when it reaches 0, it changes the frequency to 0. <!-- amikor a timeout értéke 0ra csökken akkor automatikusan 0-ra áll a frequency, phase marad ott ahol éppen volt -->
+  - **Example:** `led_animation_rate(num,1,1)` and `led_timeout(num,1,257)` will set a pulsing LED phase change that will increase LED light intensity to the max and then reset is to minimum intensity (when the timeout variable overflows from 256 to 257).
+
+
+
+  </TabItem>
+</Tabs>
+
+

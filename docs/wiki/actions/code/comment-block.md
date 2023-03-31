@@ -2,7 +2,17 @@
 slug: comment
 title: Comment
 tags: [Action Block, LUA, Workflow]
+description: "Comment blocks are used to create comments in Editor for creating notes and general comments. These comments are saved onto Grid when the configuration is stored."
 ---
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+
+<Tabs>
+  <TabItem value="About Comments" label="About Comments" default>
 
 Comment blocks are used to create comments in Editor for creating notes and general comments. These comments are saved onto Grid when the configuration is stored.
 
@@ -11,3 +21,14 @@ Comments are useful for making notes about functionality within a configuration 
 :::caution
 Comments used inside of Code Blocks with the generic `---comment` lua syntax will be deleted on a commit.
 :::
+
+  </TabItem>
+  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+    
+There is no Reference Manual Entry for this article.
+
+
+  </TabItem>
+</Tabs>
+
+
