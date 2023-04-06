@@ -55,6 +55,13 @@ It's useful to put Mode-type Blocks under the Init Event of the given Control El
 - **What:** This function returns the value of the button mode. This is `0` by default. Button mode means how many 'steps' the button has between its maximum and minimum value. For example when the function is used to set this value like this: `self:button_mode(mode)` the resolution parameter will govern the number of steps.
 - **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `127`.
 
+### encoder_velocity
+- shortname: ev0
+- **How:** `self:encoder_velocity()` or `self:encoder_velocity(velocity)`
+  - velocity: integer, ranging 0...100
+- **What:** This function returns the value of the encoder velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set  the encoder velocity to that value. Velocity increases the steps the encoder value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off encoder velocity completely.
+- **Example:**  The code `self:encoder_velocity(0)` will turn off the velocity increase function of the encoder. In this case turning the encoder by one tick, will increase the value of the encoder by 1. 
+
 
 
   </TabItem>

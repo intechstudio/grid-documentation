@@ -40,9 +40,15 @@ It's useful to put Mode-type Blocks under the Init Event of the given Control El
 - **Example:** The code `self:potmeter_resolution(11)` will make the potentiometer have `2048` steps. But be careful, if you don't increase the minimum and maximum potentiometer values, this "resolution" increase won't really show in usage.
 Increasing potmeter resolution could be useful for using 14-bit MIDI usage.
 
+### potmeter_max 
+- shortname: pma
+- **How:** `self:potmeter_max()` or `self:potmeter_max(value)`
+    - value: integer, ranging 0...127
+- **What:** This function returns the maximum value configured to the potentiometer maximum state. This is `127` by default.
+  When given a parameter, this function changes the maximum value of the potentiometer state according to the `value` given as parameter.
+- **Example:** The code `self:potmeter_max(100)` will set the potentiometer value maximum to `100`.
 
-
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
