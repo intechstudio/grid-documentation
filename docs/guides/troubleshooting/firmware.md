@@ -24,7 +24,7 @@ Whenever you're prompted with the 'Oops, firmware mismatch detected' message whi
 
 The mismatched module will be highlighted with red color, like this:
 
-<ImageLightbox imageSrc={img1} citation={'A fresh Editor install'}/>
+<ImageLightbox imageSrc={img1} citation={'Modules running outdated firmware versions are highlighted in red'}/>
 
 Gird Editor can update your module firmware automatically if you follow the on-screen messages at the top.
 
@@ -33,13 +33,13 @@ Reconnect the mismatched module (and that module only) while holding down the ut
 
 After connecting you'll be prompted with a message in blue, asking whether you want to start the update. Press 'Update Firmware'.
 
-<ImageLightbox imageSrc={img2} citation={'A fresh Editor install'}/>
+<ImageLightbox imageSrc={img2} citation={'Updating the firmware using Editor'}/>
 
 Don't disconnect the module while the update is running or the update will fail.
 
 When the update is complete, you will be prompted with a message in green color and the module will show up again in the Editor.
 
-<ImageLightbox imageSrc={img3} citation={'A fresh Editor install'}/>
+<ImageLightbox imageSrc={img3} citation={'A freshly updated module'}/>
 
 Congratulations! You've successfully updated the firmware of your module.
 
@@ -76,7 +76,7 @@ Use the binary for the firmware update matching the name of the MCU in the modul
 4. Hold down the utility side button while plugging in the USB cable
 5. All the LEDs should turn from red to green color, indicating successful enumeration
 
-<ImageLightbox imageSrc={img4} citation={'A fresh Editor install'}/>
+<ImageLightbox imageSrc={img4} citation={'Hold down the utility side button while plugging in the USB cable and wait for the LEDs to turn green'}/>
 
 
 6. You should see GRID removable device on your desktop

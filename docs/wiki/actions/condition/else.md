@@ -14,6 +14,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="About Else" label="About Else" default>
 
+## Description
 
 
 The Else Block can be created inside an already existing If Block to specify the FALSE conditional outcome.

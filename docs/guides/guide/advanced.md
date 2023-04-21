@@ -10,7 +10,7 @@ import midiblch from './img/midi_block_change.png'
 import midibl from './img/midi_block.png'
 import peventact from './img/potmeter_event_actions.png'
 import MIDIimp from './img/implement1.png'
-import CEPreset from './img/ce_presets.png'
+import CEPreset from './img/celement_preset_new.png'
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 

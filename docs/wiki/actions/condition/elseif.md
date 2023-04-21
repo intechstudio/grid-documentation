@@ -15,6 +15,8 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="About Elseif" label="About Elseif" default>
 
+## Description
+
 
 The ElseIf Block can be created inside an already existing If Block to specify a subspecific FALSE outcome, creating 3 logical outcomes.
 

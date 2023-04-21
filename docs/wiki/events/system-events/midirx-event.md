@@ -6,6 +6,7 @@ description: "The MIDI RX Event is used for recieving MIDI messages from the Hos
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import midirxlocals from './img/midirx_locals.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -14,8 +15,42 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="About MIDI RX Event" label="About MIDI RX event" default>
 
+## Description
 
 The MIDI RX Event is used for recieving MIDI messages from the Host device (computer).
+
+This Event runs when MIDI information is received form the Host device, making this event necessary for setting up bi-directional commnication between devices.
+
+:::caution Disclaimer: Feature currently under construction!
+On current FW version Grid will turn off MIDI Receive communication completely if it receives too many messages under a short period of time. The MIDI Receive functionality will only turn back on after a full Grid restart.
+:::
+
+MIDI RX saves the incoming MIDI parameter values (MIDI Channel, MIDI command type, parameter 1, parameter 2) of received MIDI messages into local variables each time Grid receives a MIDI message.
+
+<ImageLightbox imageSrc={midirxlocals} citation={'Incoming MIDI parameter values get saved into local variables on the Grid side'}/>
+
+## Example
+
+So for example an incoming CC message from the Host could look like something like this: 0, 176, 32, 127. You can check incoming messages in the MIDI monitor sidebar.
+
+```lua title="MIDI RX Example"
+RX  0  176 32  127  - INCOMING MIDI MESSAGE
+
+local.ch=     0     - MIDI CHANNEL NUMBER
+local.cmd=    176   - MIDI COMMAND TYPE
+local.param1= 32    - MIDI COMMAND NUMBER
+local.param2= 127   - MIDI COMMAND VALUE
+```
+The above is how it would look when the values are received and stored as local variables.
+
+A frequent use-case for the MIDI RX event is one where the user wants the changes on the host side to be reflected on the Grid side as well. In this case the host has to send out MIDI CC messages corresponding to the change, and as the MIDI RX event runs each time a message is received, you would have to assign the received MIDI CC values to the correct knob and LED.
+
+In this case this is very simple to do with just a code block containing the following lines:
+```lua
+element[num]:encoder_value(param2)
+led_value(num, 2, param2)
+```
+Where **num** could be a specific control element you assigned the received values to.
 
 
   </TabItem>

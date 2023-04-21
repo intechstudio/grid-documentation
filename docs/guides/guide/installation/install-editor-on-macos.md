@@ -19,7 +19,7 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
 We have tested on Grid Editor on various Mac OS systems ourselves, and our user base comes currently with systems between 10.13 High Sierra and 11 (Big Sur).
 
-[Download Grid Editor Mac](https://intech.studio/grid-editor)
+[Download Grid Editor Mac](https://intech.studio/products/grid-editor)
 
 The installer files for Mac OS are hosted on GitHub. Throughout the download process, your browser may prompt a warning. Choose to keep the file.
 

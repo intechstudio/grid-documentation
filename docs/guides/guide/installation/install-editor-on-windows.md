@@ -19,7 +19,7 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 - ~150MB disk space
 - Windows 7 and up
 
-[Download Grid Editor Windows](https://intech.studio/grid-editor)
+[Download Grid Editor Windows](https://intech.studio/products/grid-editor)
 
 The executable files for the Windows installer are hosted on GitHub. Throughout the download process, your browser may prompt a warning. Choose to keep the file.
 

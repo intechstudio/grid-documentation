@@ -5,6 +5,8 @@ tags: [Action Block, Element Settings, Workflow, BU16, PFB4, EN16, EF44]
 description: "With a Button Mode Block it's possible to change how many steps a button has to take to move from its minimum value to its maximum."
 ---
 
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import buttonmode from './img/button_mode.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -13,9 +15,13 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="About Button Mode" label="About Button Mode" default>
 
+## Description
+
 With a Button Mode Block it's possible to change how many 'steps' a button has to take to move from its minimum value to its maximum.
 
 This has the most basic use-case of creating switch-type buttons, meaning the first click of a button moves the value up but it stays there on a release, and only when the cycle is complete does it fall back down again to 0.
+
+<ImageLightbox imageSrc={buttonmode} citation={'The dropdown menu of the Button Mode Action'}/>
 
 This Block has a field with a dropdown menu. The options are as follows:
 - 0 momentary: the default button behavior, two values, each press switches to max value, each release switches to minimum value 

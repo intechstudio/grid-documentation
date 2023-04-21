@@ -16,6 +16,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="About Code Blocks" label="About Code Blocks" default>
 
+## Description
 
 A Code Block is a special type of Action Block that makes it possible to program complex actions with the help of lua scripting and specific Grid variables and functions. You can find a [comprehensive guide to lua 5.4](https://lua.org/manual/5.4/) and a [reference manual to Grid functions and variables](https://intech.studio/support/docs/reference-manual).
 
@@ -36,8 +37,12 @@ Any Action Block in Grid Editor can be reduced back to a Code Block using the Me
 :::caution Be careful!
 Using the Merge to Code function of Grid Editor will irreversibly change all the selected Action Blocks into a Code Block, with no way to change them back.
 :::
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+
+On the Reference Manual Entry tab for Code Block, you can find a variety of Grid Editor functionality only accessible with lua code in a Code Block.
+
+
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
 Code Blocks are the playground for lua code in Grid Editor. Below you can find some functions that belong to no specific action, but could be very useful regardless:

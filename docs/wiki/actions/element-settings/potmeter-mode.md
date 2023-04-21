@@ -6,6 +6,7 @@ description: "This Potmeter Mode Block is able to make a potentiometer more sens
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import potmetermode from './img/potmeter_mode.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -14,7 +15,11 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="About Code Blocks" label="About Code Blocks" default>
 
+## Description
+
 This Potmeter Mode Block is able to make a potentiometer more sensitive by increasing the value range it's working with or by chaning the bit depth of the values the analog signal is translated to.
+
+<ImageLightbox imageSrc={potmetermode} citation={'The Potmeter Mode Action allows high-resolution modes for the potentiometers'}/>
 
 You have two fields you can change, one of them is the max value of the potentiometer which will be the value for the potentiometer when turned all the way to the right or when the fader is moved all the way towards the north of the module. For high res MIDI, depending on the bit depth or the values you'd need we recommend increasing this above the default 127.
 

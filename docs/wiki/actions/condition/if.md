@@ -12,7 +12,9 @@ import TabItem from '@theme/TabItem';
 ---
 
 <Tabs>
-  <TabItem value="About Elseif" label="About Elseif" default>
+  <TabItem value="About If" label="About If" default>
+
+## Description
 
 
 The If Block serves as the most basic logic operator for Grid Editor. When using such a Block you're able to create additional conditions for running actions in case of an Event trigger.
