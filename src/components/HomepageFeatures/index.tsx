@@ -57,7 +57,7 @@ function Feature({ title, Svg, description, linkUrl, linkTitle }: FeatureItem) {
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      <div className="text--left padding-horiz--md">
+      <div className="mb-8 text--left padding-horiz--md">
         <Link to={linkUrl} className="px-8 py-4 rounded-md hover:no-underline font-medium text-white hover:text-white bg-blue-500 hover:bg-blue-600 dark:bg-emerald-500 hover:dark:bg-emerald-600">{linkTitle}</Link>
       </div>
     </div>
@@ -67,7 +67,7 @@ function Feature({ title, Svg, description, linkUrl, linkTitle }: FeatureItem) {
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
-      <div className="container max-w-screen-4xl py-16">
+      <div className="container max-w-screen-4xl md:py-16">
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

@@ -11,7 +11,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container h-full">
-        <div className="py-8 flex items-center justify-between">
+        <div className="md:py-8 flex flex-col md:flex-row items-center justify-between">
           <div className="text-left max-w-xl w-full md:w-1/2">
             <h1>
               Welcome to the Intech Studio documentation!
