@@ -17,8 +17,10 @@
   },
   "dependencies": {
     "@algolia/client-search": "4.9.1",
-    "@docusaurus/core": "^2.1.0",
-    "@docusaurus/preset-classic": "^2.1.0",
+    "@docusaurus/core": "^2.4.0",
+    "@docusaurus/plugin-google-tag-manager": "^2.4.0",
+    "@docusaurus/preset-classic": "^2.4.0",
+    "@docusaurus/theme-classic": "^2.4.0",
     "@docusaurus/theme-search-algolia": "^2.1.0",
     "@mdx-js/react": "^1.6.22",
     "@meilisearch/instant-meilisearch": "^0.9.0",

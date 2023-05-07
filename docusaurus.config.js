@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const config = {
   title: 'Intech Studio Documentation ',
   tagline: 'A Guide for Our Products',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.intech.studio',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,12 +40,16 @@ const config = {
         },
         theme: {
           customCss: [require.resolve('./src/css/custom.css')],
+        },
+        googleTagManager: {
+          containerId: 'GTM-PZCPN6B',
         }
       }),
     ]
   ],
 
   plugins: [
+
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",
@@ -57,6 +61,13 @@ const config = {
         },
       };
     },
+
+    // [
+    //   '@docusaurus/plugin-google-tag-manager',
+    //   {
+
+    //   },
+    // ],
   ],
 
   themeConfig:
@@ -70,7 +81,7 @@ const config = {
       },
 
       navbar: {
-        title: 'Intech Studio Documentation',
+        title: 'Home',
         logo: {
           alt: 'Intech Studio Documentation Logo',
           src: 'img/logo.svg',
@@ -105,7 +116,7 @@ const config = {
             href: 'https://intech.studio/',
             label: 'Intech Studio',
             position: 'right',
-          },     
+          },
         ],
       },
       footer: {

@@ -1,6 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import styles from './styles.module.css'
+import Link from '@docusaurus/Link'
 
 type FeatureItem = {
   title: string
@@ -11,29 +12,28 @@ type FeatureItem = {
 }
 
 const FeatureList: FeatureItem[] = [
- /*  ez itten komment mert nem kell hogy kétszer szerepeljen, érdemes ezt akkor visszatenni ha a bannerből kereső lesz a figma szerint
- 
- {
-    title: 'Get started with Grid',
+
+  {
+    title: 'Get started',
     Svg: '/img/editor_icon.svg',
     description: (
       <>
-        If you're new to Grid and the Grid Editor check out our guides.
+        If you're new to Grid, Grid Editor or Knot check out our getting started guides.
       </>
     ),
     linkUrl: '/category/getting-started',
-    linkTitle: 'Beginners Guide to Grid'
-  }, */
+    linkTitle: 'Getting started'
+  },
   {
-    title: 'Troubleshooting',
+    title: 'Updating the firmware',
     Svg: '/img/trbl.svg',
     description: (
       <>
-        Having touble? Check out our troubleshooting articles!
+        Checkout the automatic and manual firmware update methods for Grid controllers.
       </>
     ),
-    linkUrl: '/guides/troubleshooting',
-    linkTitle: 'Troubleshooting'
+    linkUrl: '/guides/troubleshooting/firmware',
+    linkTitle: 'Firmware update'
   },
   {
     title: 'Wiki + Reference Manual',
@@ -52,16 +52,13 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ title, Svg, description, linkUrl, linkTitle }: FeatureItem) {
   return (
-    <div className={clsx('col col--6')}>
-      <div className="text--center">
-        <img className={styles.featureSvg} src={Svg}/>
-      </div>
-      <div className="text--center padding-horiz--md">
+    <div className={clsx('col col--4 justify-between flex flex-col')}>
+      <div className="text--left padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      <div className="text--center padding-horiz--md">
-        <a href={linkUrl}>{linkTitle}</a>
+      <div className="text--left padding-horiz--md">
+        <Link to={linkUrl} className="px-8 py-4 rounded-md hover:no-underline font-medium text-white hover:text-white bg-blue-500 hover:bg-blue-600 dark:bg-emerald-500 hover:dark:bg-emerald-600">{linkTitle}</Link>
       </div>
     </div>
   )
@@ -70,7 +67,7 @@ function Feature({ title, Svg, description, linkUrl, linkTitle }: FeatureItem) {
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
-      <div className="container">
+      <div className="container max-w-screen-4xl py-16">
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
