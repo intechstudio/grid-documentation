@@ -26,24 +26,26 @@ Even so, if you encounter any unexpected behavior, please drop us a mail to supp
 
 ## Bootloader update step-by-step
 
-1. Download the new bootloader release from our Git [here](https://github.com/intechstudio/uf2-samdx1/releases) or from a direct link to the file [here](https://github.com/intechstudio/uf2-samdx1/releases/download/v1.23.4/grid_uf2_release.zip.).
-2. Decompress the archive and find the file named "update-bootloader-intech_grid-v1.23.4.uf2".
-3. Connect a module you want to update to your computer as if you were doing a manual firmware update explained [here](https://grid-documentation.onrender.com/guides/troubleshooting/firmware#%EF%B8%8F-updating-the-firmware-manually); by following the steps from point 3 to point 6 (plug in the module while holding the utility button on the side and wait for it to boot with green LEDs).
+1. Download the new bootloader update <a target="_blank" href="/presets/update-bootloader-intech_grid-v1.23.4.uf2" download="update-bootloader-intech_grid-v1.23.4.uf2"> by clicking here</a> (release on GitHub [here](https://github.com/intechstudio/uf2-samdx1/releases)).
+<!---2. Decompress the archive and find the file named "update-bootloader-intech_grid-v1.23.4.uf2".--->
+2. Plug in the module **while holding the small button** on the side and wait for it to boot with **green LEDs**
 
 <ImageLightbox imageSrc={img4} citation={'Hold down the utility side button while plugging in the USB cable and wait for the LEDs to turn green'}/>
 
-4. If you've done everything correctly so far, the module should show up in your computer's explorer as a removable device named "GRID".
-5. Drag and drop the file we've located earlier named "update-bootloader-intech_grid-v1.23.4.uf2" to the removable device named "GRID". This will start the update process, don't disconnect the module during this time!
-6.  If the update finished successfully, the module should still be connected to your computer in bootloader mode, but it device name should now be "GRID23".
-7.  The bootloader update process requires you to update the firmware of the module as well. Follow the guide above or use Grid Editor to update to the latest firmware version.
-8.  After the FW update the module should boot normally and you're done!
+3. The module should now show up in your computer's file explorer/finder as the device "**GRID**".
+4. **Drag and drop** or copy the bootloader file to "**GRID**".
+5. Now the **update should be completed** and after that device name should now be "**GRID23**" instead.
+6.  Grid will be missing a firmware, please use [Grid Editor update the firmware](/docs/guides/troubleshooting/firmware) of the module.
+7.  After the FW update the module should boot normally and you're done!
 
 ## Potential issues after a bootloader update
 
-Some user were reportedly not able to run the firmware update properly after the bootloader update. This caused them to arrive at a similar module state with black LEDs.
+Some users were reportedly not able to run the firmware update properly after the bootloader update. This caused them to arrive at a similar module state each time with black LEDs.
 
-For this issue the following fix should be applied before finishing **Step 7** in the previous part of this guide.
+For this issue the following fix should be applied before finishing **Step 6** in the previous part of this guide.
 
-Update the module with the **recovery firmware** found [here](https://github.com/intechstudio/grid-fw/raw/master/.archive/binary/grid_nvm_hardware_test.uf2) following the [guide here](https://grid-documentation.onrender.com/guides/troubleshooting/firmware) on updating the Grid Firmware either manually or with the use of Grid Editor.
+### Recovery firmware to clear up memory
 
-Recovery firmware boots the module into a state where colors will appear on the LEDs of the module as a sort of "demo mode". After you see this state please continue the guide above from **Step 7**.
+Update the module with the **recovery firmware** found [here](https://github.com/intechstudio/grid-fw/raw/master/.archive/binary/grid_nvm_hardware_test.uf2) following the [guide here](https://grid-documentation.onrender.com/guides/troubleshooting/firmware) on updating the Grid Firmware either manually.
+
+Recovery firmware boots the module into a state where colors (white first, then RGB) will appear on all LEDs of the module as a sort of "demo mode". After you see this state, the memory has been wiped and you can continue the guide above from **Step 6**.
