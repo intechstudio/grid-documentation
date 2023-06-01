@@ -32,9 +32,12 @@ The electronic cleaner is suitable to remove manufacturing (soldering) residue f
 
 ## :film_frames: Video Summary
 
-This is a video about the knob inserts and how one should clean the USB C connector and pogo pins, if the connected modules are acting up.
- ```
-<a target="_blank" href="https://www.youtube.com/watch?v=IsMNa4NI7DA">
-  <img src="http://img.youtube.com/vi/IsMNa4NI7DA/0.webp" alt="Taking care of Grid modules">
-</a>
-```
+[This](https://www.youtube.com/watch?v=IsMNa4NI7DA) is a video about the knob inserts and how one should clean the USB C connector and pogo pins, if the connected modules are acting up.
+
+<a target="_blank" href="https://www.youtube.com/watch?v=IsMNa4NI7DA"></a>
+
+
+
+<!---
+<img src="http://img.youtube.com/vi/IsMNa4NI7DA/0.webp" alt="Taking care of Grid modules">
+--->
