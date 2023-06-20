@@ -128,6 +128,28 @@ Code Blocks are the playground for lua code in Grid Editor. Below you can find s
 
     For troubleshooting purposes, using any kind of string in the print function can indicate for you if a programmed Action Chain is happening correctly. For example setting two different print functions such as `print("TRUE")` and `print("FALSE")` to the two parts of an  `if` and `else` function fork will help you check if the correct condition plays out when the event plays.
 
+## Trigger events remotely
+
+:::caution Be careful
+The event_trigger() function described below is useful for a lot of things, but it also has the capability to introduce infinite trigger loops in your code.
+Tread carefully!
+:::
+
+### event_trigger
+- **How:** `event_trigger(element_number, event_number)`
+  - element_number: integer, ranging 0...255
+  - event_number: integer, ranging 0...6
+- **What:**  This function triggers an event, independently from that event's trigger (e.g. press all buttons by just pressing one button). Each event has a defined reference number:
+  - 0: init
+  - 1: potmeter
+  - 2: encoder
+  - 3: button
+  - 4: utility (system event only)
+  - 5: midirx (system event only)
+  - 6: timer
+- **Example:** This function is the most useful
+
+
 ## Randomized values
 
 ### random
