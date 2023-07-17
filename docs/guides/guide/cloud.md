@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: "Editor: Profile Cloud FAQ"
+title: "Editor: Profile Cloud Basics"
 description: Uploading your Configurations to the Cloud
 ---
 
