@@ -21,8 +21,8 @@ The MIDI RX Event is used for recieving MIDI messages from the Host device (comp
 
 This Event runs when MIDI information is received form the Host device, making this event necessary for setting up bi-directional commnication between devices.
 
-:::caution Disclaimer: Feature currently under construction!
-On current FW version Grid will turn off MIDI Receive communication completely if it receives too many messages under a short period of time. The MIDI Receive functionality will only turn back on after a full Grid restart.
+:::tip Feature is now fully operational!
+From firmware version v1.2.21 MIDI RX event should not overload the device anymore. If you're experiencing crashes from receiving MIDI on Grid you should update to the latest firmware!
 :::
 
 MIDI RX saves the incoming MIDI parameter values (MIDI Channel, MIDI command type, parameter 1, parameter 2) of received MIDI messages into local variables each time Grid receives a MIDI message.
