@@ -43,10 +43,10 @@ To check if everything's working as it should, look out for the LEDs on the Knot
 
 *You can see our list of tested devices on [the Knot GitHub page here.](https://github.com/intechstudio/knot)*
 
-For example a synth will usually have one MIDI channel it receives MIDI CC or Note messages on. You can usually set this MIDI channel in the synth's menu somewhere.
+For example a synth will usually have one MIDI channel it receives MIDI CC or Note messages on. You can usually set this MIDI channel in the synth's menu.
 
 :::tip As a rule thumb
-Devices that *can* receive MIDI messages, usually do so by **default on MIDI channel 1** or on **all of them** simultaneously.
+Devices that *can* receive MIDI messages, do so by default **on MIDI channel 1 or on all channels**.
 :::
 
 Set this MIDI channel to the same one set in your Hosted Device. In the case of Grid, check the [MIDI Action Blocks](/docs/wiki/actions/midi/midi.md) in Grid Editor and configure them to the same MIDI channel set on your instrument.

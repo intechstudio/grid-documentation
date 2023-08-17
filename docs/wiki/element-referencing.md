@@ -61,11 +61,11 @@ The suffix is the name of the function: such as `button_value()` or `midi_send()
 The suffix has a parentheses at the end. If there is a value between the parentheses brackets, the function will set the values to the given value. If there is no value given, the function will return the value of the function itself. This behavior is further described for each function in this reference manual.
 
 :::caution Be careful! 
-When calling variables the one that use a prefix **will always use a full stop** inbetween and **NO parentheses** at the end:
+When calling variables with a prefix, they'll **always use a full stop** inbetween and **NO parentheses** at the end:
 
 `self.echo` <- This is a self variable.
 
-When calling functions, they **will always use a colon** inbetween and **will always use parentheses** after the suffix:
+When calling functions, they'll **always use a colon** inbetween and **will always use parentheses** after the suffix:
 
 `self:element_index()` <- This is a self function.
 :::

@@ -29,7 +29,7 @@ const FeatureList: FeatureItem[] = [
     Svg: '/img/trbl.svg',
     description: (
       <>
-        Checkout the automatic and manual firmware update methods for Grid controllers.
+        Check out the automatic and manual firmware update methods for Grid controllers.
       </>
     ),
     linkUrl: '/guides/troubleshooting/firmware',

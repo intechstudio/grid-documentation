@@ -40,8 +40,8 @@ function HomepageHeader() {
 
           </div>
           <div className='w-full md:w-1/2'>
-            <img className="rounded-lg border-2 border-black border-opacity-50" src="./img/PBF4_render_transparent_on_white_.jpg" alt="PBF4 transparent stylized render  " />
-            <div className='italic text-xs'>This is a product render. No plans for see through cases for now.</div>
+            <img className="rounded-lg border-2 border-black border-opacity-50" src="./img/2023-03-getting-started.jpg" alt="Grid is in good hands" />
+            <div className='italic text-xs'></div>
           </div>
         </div>
 
