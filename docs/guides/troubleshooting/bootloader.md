@@ -10,7 +10,10 @@ import img4 from './img/utility_conn.gif'
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox'
 
 
-:::caution Firmware Crash issue, Grid Editor disconnects, module appears dead
+:::caution Firmware Crash issue, for Grid modules purchased before May of 2023
+
+The bootloader update described below will help solve the following:  Grid Editor disconnects, D51 arch module appears dead, LEDs only flicker for a split second before turning off when module is plugged in.
+
 
 This issue arises because of an outdated bootloader version, and causes frequent firmware crashes on module boot. This results in modules booting into black LEDs as if the module was off.
 
@@ -42,10 +45,14 @@ Even so, if you encounter any unexpected behavior, please drop us a mail to supp
 
 Some users were reportedly not able to run the firmware update properly after the bootloader update. This caused them to arrive at a similar module state each time with black LEDs.
 
-For this issue the following fix should be applied before finishing **Step 6** in the previous part of this guide.
+If you're not able to finish the update successfully, please drop us a mail to support@intech.studio!
 
+
+<!--
 ### Recovery firmware to clear up memory
 
 Update the module with the **recovery firmware** found [here](https://github.com/intechstudio/grid-fw/raw/master/.archive/binary/grid_nvm_hardware_test.uf2) following the [guide here](https://grid-documentation.onrender.com/guides/troubleshooting/firmware) on updating the Grid Firmware either manually.
 
 Recovery firmware boots the module into a state where colors (white first, then RGB) will appear on all LEDs of the module as a sort of "demo mode". After you see this state, the memory has been wiped and you can continue the guide above from **Step 6**.
+
+-->

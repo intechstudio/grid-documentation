@@ -81,11 +81,14 @@ const config = {
       },
 
       navbar: {
-        title: 'Home',
+        //title: 'Home',
         logo: {
           alt: 'Intech Studio Documentation Logo',
-          src: 'img/logo.svg',
-          srcDark: 'img/icon-logo-square-white-transparent.svg',
+          //src: 'img/logo_wave_black_background.svg',
+          //srcDark: 'img/logo_wave_white_background.svg',
+          src: 'img/logo_square_512x512.png',
+          srcDark: 'img/logo_square_dark_mode_512x512.png',
+          
         },
         items: [
           {
@@ -164,14 +167,14 @@ const config = {
                 <div style="display:flex; flex-direction: column; gap:15px">
 
                   <div style="display:flex; flex-direction: column;">
-                    <strong>Email</strong>
+                    <strong>Support Email Address</strong>
                     <a href="mailto:support@intech.studio" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">support@intech.studio</a>
                   </div>
 
                   <div style="display:flex; flex-direction: column;">
                     <strong>Business Details</strong>
                       <span>Intech Studio Kft.</span>
-                      <span>6640 Csongrád, Tanya 40.</span>
+                      <span>1053 Budapest, Kecskeméti u. 13. I/2</span>
                       <span>VAT: HU-26696092</span>
                   </div>
 
@@ -182,7 +185,7 @@ const config = {
             ],
           },
           {
-            title: 'LINKS',
+            title: 'IMPORTANT LINKS',
             items: [
               {
                 label: 'Intech Studio',

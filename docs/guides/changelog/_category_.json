@@ -1,0 +1,8 @@
+{
+  "label": "Patch Notes",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Below you can find the changelogs for both Grid Firmware and Grid Editor:"
+  }
+}
