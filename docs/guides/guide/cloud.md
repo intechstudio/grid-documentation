@@ -4,12 +4,22 @@ title: "Editor: Profile Cloud Basics"
 description: Uploading your Configurations to the Cloud
 ---
 
+import ProtocolUrl from '@site/src/components/ProtocolUrl';
 
 ## Introduction: What is the Profile Cloud? 
 
-
 The Profile Cloud is a groundbreaking addition to the Grid Editor software that allows you to create, store, share, and download custom profile configurations directly to your Grid controller. Access your work from any device with Grid Editor and pick up right where you left off. The Profile Cloud allows you to collaborate with other creators, to inspire and get inspired by their unique controlling solutions. How does it work exactly? Well, first get your Grid Editor running, then let’s get started.
 
+<!-- 
+Hogyan kell videót feltenni? 
+1. go to youtube
+2. open video
+3. click "share"
+4. choose "embed"
+5. copy and paste
+-->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s9uFpXCTCSQ?si=tmJDbiiaSXPXiLnb&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### How to access the Profile Cloud?
 
@@ -72,6 +82,7 @@ Each public profile can be imported to the local profile section using the Impor
 
 
 Publicly available profiles can be directly shared with other Grid users via a unique URL link. The link automatically places the URL in the clipboard: grid-editor://?profile-link=Rk9NiKfeThttnZq6YYtD 
+<ProtocolUrl title="this is this" protocolUrl="grid-editor://?profile-link=Rk9NiKfeThttnZq6YYtD"/>
 Copying this URL into the browser, the Editor will open the linked profile under local profiles. 
 
 You can also create a shareable URL link from a private profile if you are logged into the Profile Cloud. To share these private profiles individually, without making them public to everyone, you can do so by sending the individual URL link.
