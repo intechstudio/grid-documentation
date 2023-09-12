@@ -6,6 +6,29 @@ description: Updates about new Grid Editor changes, features and bugfixes
 
 import ProtocolUrl from '@site/src/components/ProtocolUrl';
 
+### Grid Editor version 1.2.42
+
+This new version of Grid Editor arrives with Plugin Manager and Profile Cloud usability improvements, a complete rework of the user feedback/notification system and many-many bug fixes and small improvements.  
+
+#### New Features
+- The Plugin Manager now properly tracks what's in the local folders and shows already installed Packages/Plugins accordingly.
+- The Profile Cloud got a nice visual and UX overhaul, Cloud and Local Profiles are no longer separated, filtering and searching of Profile names added.
+- The Editor-Grid connection tracking and their respective systems received a complete overhaul. Editor now gives better feedback when a connection error occurs.
+- Added new behind-the-scenes systems for future feature support.
+
+#### Bugfixes
+- Fixed a bug where Editor would clear the clipboard after each paste.
+- Fixed a bug where Action Block text boxes would break visually in certain layouts.
+
+
+
+
+
+
+
+
+---
+
 ### Grid Editor version 1.2.41
 
 This new version of Grid Editor arrives with a couple of new and exciting features and some bug fixes and changes under the hood. Preferences have been shuffled around as we're preparing Editor for an upcoming visual overhaul.
