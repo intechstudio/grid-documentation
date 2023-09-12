@@ -19,7 +19,9 @@ Hogyan kell videót feltenni?
 5. copy and paste
 -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s9uFpXCTCSQ?si=tmJDbiiaSXPXiLnb&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+<iframe width="100%" height="315" style={{maxWidth:'560px'}} src="https://www.youtube.com/embed/s9uFpXCTCSQ?si=tmJDbiiaSXPXiLnb&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### How to access the Profile Cloud?
 
@@ -81,9 +83,10 @@ Each public profile can be imported to the local profile section using the Impor
 ### How to share any Cloud profile as a URL link?
 
 
-Publicly available profiles can be directly shared with other Grid users via a unique URL link. The link automatically places the URL in the clipboard: grid-editor://?profile-link=Rk9NiKfeThttnZq6YYtD 
-<ProtocolUrl title="this is this" protocolUrl="grid-editor://?profile-link=Rk9NiKfeThttnZq6YYtD"/>
-Copying this URL into the browser, the Editor will open the linked profile under local profiles. 
+Profiles stored in the CLoud can be directly shared with other Grid users via a unique URL link. For example this link leads to an EN16 Demo profile:<ProtocolUrl title="Example Profile" protocolUrl="grid-editor://?profile-link=Rk9NiKfeThttnZq6YYtD"/>
+
+
+By clicking the link above, the Editor will open the linked profile under local profiles. 
 
 You can also create a shareable URL link from a private profile if you are logged into the Profile Cloud. To share these private profiles individually, without making them public to everyone, you can do so by sending the individual URL link.
 

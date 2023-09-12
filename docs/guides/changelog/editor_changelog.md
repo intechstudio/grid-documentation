@@ -3,6 +3,9 @@ title: Grid Editor changelog
 description: Updates about new Grid Editor changes, features and bugfixes
 ---
 
+
+import ProtocolUrl from '@site/src/components/ProtocolUrl';
+
 ### Grid Editor version 1.2.41
 
 This new version of Grid Editor arrives with a couple of new and exciting features and some bug fixes and changes under the hood. Preferences have been shuffled around as we're preparing Editor for an upcoming visual overhaul.
@@ -26,15 +29,19 @@ This new version of Grid Editor arrives with a couple of new and exciting featur
 
 The most exciting of all should be the newly added Clock Source Action which allows for easy syncing between a Grid Timer event and your DAW. Below you can find 5 links for 5 profiles which showcase the new feature:
 
+<div style={{margin: '2em'}}>
 
+| GRID | Editor Profile Cloud link (click it with Editor running)|
+| ---- | ---------- |
+| PO16 | <ProtocolUrl title="MIDI Sync Demo" protocolUrl="grid-editor://?profile-link=q8UZFp8iVXDXHQoKWKM3"/>  |
+| BU16 | <ProtocolUrl title="MIDI Sync Demo" protocolUrl="grid-editor://?profile-link=ZJWuoN2CVC4GimzV2Ddc"/>  |
+| PBF4 | <ProtocolUrl title="MIDI Sync Demo" protocolUrl="grid-editor://?profile-link=WbDCNOeOQT09ulnAHw2s"/>  |
+| EN16 | <ProtocolUrl title="MIDI Sync Demo" protocolUrl="grid-editor://?profile-link=HTq8ZSkvFJKehvv7gOFU"/>  |
+| EF44 | <ProtocolUrl title="MIDI Sync Demo" protocolUrl="grid-editor://?profile-link=ZaDqnPkLbMkWR9G4vu3m"/>  |
 
-| GRID | Editor Profile Cloud link (copy and paste URL into your browser) |
-| ---- | --- |
-| PO16 | grid-editor://?profile-link=q8UZFp8iVXDXHQoKWKM3 |
-| BU16 | grid-editor://?profile-link=ZJWuoN2CVC4GimzV2Ddc |
-| PBF4 | grid-editor://?profile-link=WbDCNOeOQT09ulnAHw2s |
-| EN16 | grid-editor://?profile-link=HTq8ZSkvFJKehvv7gOFU |
-| EF44 | grid-editor://?profile-link=ZaDqnPkLbMkWR9G4vu3m |
+</div>
+
+[More about how to use the Profile Cloud here](/docs/guides/guide/cloud.md)
 
 All Demos function the same way: when Grid is configured with the profile above, the  first LED of the module will sync its blinking to the DAW MIDI clock.
 When you press Play in your DAW the LED should start blinking and turn green.
