@@ -29,6 +29,7 @@ This new version of Grid Editor arrives with Plugin Manager and Profile Cloud us
 
 ---
 
+
 ### Grid Editor version 1.2.41
 
 This new version of Grid Editor arrives with a couple of new and exciting features and some bug fixes and changes under the hood. Preferences have been shuffled around as we're preparing Editor for an upcoming visual overhaul.
