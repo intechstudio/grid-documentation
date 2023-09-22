@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: "Editor: Profile Cloud Basics"
 description: Uploading your Configurations to the Cloud
 ---

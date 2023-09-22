@@ -1,6 +1,7 @@
 ---
 slug: action-chain
 title: Action Chain
+description: Actions under an Event in Grid are collectively referred to as an Action Chain of that Event.
 tags: [Workflow, Logic]
 ---
 <!---

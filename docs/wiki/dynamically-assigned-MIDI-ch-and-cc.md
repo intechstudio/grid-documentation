@@ -1,6 +1,6 @@
 ---
 title: Dynamically Assigned MIDI parameters
-description: not yet
+description: Dynamically assigned values is the default way Grid will behave when it comes to default MIDI blockCC and CH assignment on the default preset page.
 tags: [MIDI, Logic, Local, Variables, Workflow]
 ---
 

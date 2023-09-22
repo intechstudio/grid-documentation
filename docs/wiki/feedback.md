@@ -1,6 +1,7 @@
 ---
 slug: feedback
 title: Creating Visual Feedback
+description: How to create meaningful visual interaction feedback for Grid
 tags: [Logic, Workflow, Feedback, LED]
 ---
 
