@@ -1,7 +1,7 @@
 ---
 slug: char-limit
-title: Configuration Character Limit
-description: Actions can be freely added to an Action Chain of any Event up to a certain point..
+title: "More about: Character limit"
+description: How many Actions can I add to an Action Chain?
 tags: [Workflow, LUA, Reference Manual]
 ---
 

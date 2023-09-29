@@ -1,7 +1,7 @@
 ---
 slug: action-chain
-title: Action Chain
-description: Actions under an Event in Grid are collectively referred to as an Action Chain of that Event.
+title: "More about: Action Chain"
+description: Actions under each Event in Grid are called the Action Chain.
 tags: [Workflow, Logic]
 ---
 <!---

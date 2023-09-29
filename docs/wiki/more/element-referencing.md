@@ -1,11 +1,10 @@
 ---
-title:      Element Referencing
-slug:       element-referencing
+title: "More about: Variables"
+slug: element-referencing
 description: How to refer to a Control Element by number.
 tags: [Logic, Local, Global, Self, Function, Variables]
 ---
 
-# Calling functions and variables, element referencing
 
 In Grid Editor, both variables and functions have a **place** where they are stored/called, and a way they can be called upon, a **name**.
 

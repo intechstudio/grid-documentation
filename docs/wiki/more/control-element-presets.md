@@ -1,7 +1,7 @@
 ---
 slug: control-element-presets
-title: Control Element Presets
-description: It's possible to save a control element as a whole such as a button or fader as a local .JSON file on the computer running Grid Editor. This function can also create a saved version of the System Element as well.
+title: "More about: Presets"
+description: Saving only part of a configuration as a Preset.
 
 tags: [JSON, Workflow, Control Element, Logic]
 ---
