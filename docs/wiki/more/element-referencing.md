@@ -35,7 +35,7 @@ Self variables exist on the Control Element, and their data is stored with the C
 They can be called in the following manner: `self.variable` where "variable" is the name of the self variable. You can also call them with `element[x].variable` referring to a self variable of a certain element.
 
 :::tip Good practice
-It is good practice to define the self variables of a Control Element on their Init Event in the [Self Block](/docs/wiki/actions/variables/self-variables.md), this can help you save some [characters](/docs/wiki/char-limit.md) on Events such as a Control Element Event.
+It is good practice to define the self variables of a Control Element on their Init Event in the [Self Block](/docs/wiki/actions/variables/self-variables.md), this can help you save some [characters](/docs/wiki/more/char-limit.md) on Events such as a Control Element Event.
 :::
 
 #### Global Variables
