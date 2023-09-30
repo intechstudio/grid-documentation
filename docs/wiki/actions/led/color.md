@@ -26,6 +26,8 @@ If you want to use coloring for value feedback, you should probably do that on t
 The Block has a couple of fields you can configure:
 - LED number: which LED should the Block affect
 - layer: either 1 or 2, the final color is based on the mixed colors of the two layers
+  - 1: button and potmeter event layer
+  - 2: encoder event layer
 - rgb values: you can type your own rbg value, pick a color or just roll the dice for a random color
 - beautify switch: this setting turned off allows the LEDs to go completely dark when intensity is zero
 
