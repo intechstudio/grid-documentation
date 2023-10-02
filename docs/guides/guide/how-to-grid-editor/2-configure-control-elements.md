@@ -43,10 +43,14 @@ On a selected event, hovering between the actions on the action chain area will 
 
 <ImageLightbox imageSrc={open_add_action} citation={"1. Hover with the cursor between actions<br>2. Use the button on the bottom"} styling={'w-4/5 object-contain'}/>
 
-<!-- ## Next steps
+## Next steps
 
-In the next articles we will go through the different control elements and their primary customization options. After learning about the indidual elements - and their options -, you can start to mix them. The table below should help you find the right starting point for you.
+In the next articles we will go through the different control elements and their primary customization options. After learning about the indidual elements - and their options -, you can start to mix them. 
 
+*Coming soon!*
+
+<!-- 
+The table below should help you find the right starting point for you.
 | Controller  | Primary events |
 | ----------- | ----------- |
 | PO16 | [potmeter](/guides/how-to-grid-editor/potmeter) |
