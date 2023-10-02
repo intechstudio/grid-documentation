@@ -19,8 +19,6 @@ import profile_cloud_panel from './img/profile_cloud_panel.png';
 import profiles_vs_presets from './img/profiles_vs_presets.png';
 
 
-## Navigating the Editor
-
 Grid Editor has 3 main sections:
 - Left panel for Profile Cloud, MIDI Monitor, Debug Monitor and Packages
 - Center panel for the pages and Grid control surface
@@ -191,6 +189,6 @@ A profile is a collection of all actions configured on a single page, on a modul
 
 ## Next steps
 
-After navigating around the app, in the next article we'll change the control element modes and get to know more tools.
+After navigating around the app, in the next article we'll learn more about the configuration tools in the Configuration panel.
 
 
