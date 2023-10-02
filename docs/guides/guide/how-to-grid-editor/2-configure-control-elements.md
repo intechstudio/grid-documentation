@@ -49,8 +49,8 @@ In the next articles we will go through the different control elements and their
 
 | Controller  | Primary events |
 | ----------- | ----------- |
-| EN16 | [encoder](/guides/how-to-grid-editor/encoder) |
-| EF44 | [encoder](/guides/how-to-grid-editor/encoder) |
+| EN16 | [encoder](/guides/guide/how-to-grid-editor/encoder) |
+| EF44 | [encoder](/guides/guide/how-to-grid-editor/encoder) |
 
 <!-- | PO16 | [potmeter](/guides/how-to-grid-editor/potmeter) |
 | BU16 | [button](/guides/how-to-grid-editor/button) | -->
