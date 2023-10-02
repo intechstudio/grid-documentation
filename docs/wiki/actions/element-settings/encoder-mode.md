@@ -48,12 +48,14 @@ It's useful to put Mode-type Blocks under the Init Event of the given Control El
   </TabItem>
   <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
-### button_mode
-- shortname: bmo
-- **How:** `self:button_mode()` or `self:button_mode(mode)`
-    - mode: integer, ranging 0...127
-- **What:** This function returns the value of the button mode. This is `0` by default. Button mode means how many 'steps' the button has between its maximum and minimum value. For example when the function is used to set this value like this: `self:button_mode(mode)` the resolution parameter will govern the number of steps.
-- **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `127`.
+### encoder_mode
+- shortname: emo
+- **How:** `self:encoder_mode()` or `self:encoder_mode(mode)`
+    - resolution: integer, ranging 0...2
+- **What:** This function returns the value of the encoder mode. This is `0`  or "absolute mode" by default.
+  When function is given `1` as a value, it will change the encoder to "relative mode binary offset". In this mode turning the encoder 'backwards' or counterclockwise will always result in the value `63` and turning it 'forwards' or clockwise will always result in the value `65` .
+  When the function is given `2` as a value, it will change the encoder to "relative mode 2's comp". In this mode turning the encoder 'backwards' or counterclockwise will always result in the value `1` and turning it 'forwards' or clockwise will always result in the value `127` .
+- **Example:** The code `self:encoder_mode(1)` will change the encoder into relative mode. 
 
 ### encoder_velocity
 - shortname: ev0

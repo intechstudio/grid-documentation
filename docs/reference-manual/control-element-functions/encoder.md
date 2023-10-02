@@ -101,9 +101,10 @@ description: How to set up encoder-type control elements.
 ### encoder_mode
 - shortname: emo
 - **How:** `self:encoder_mode()` or `self:encoder_mode(mode)`
-    - resolution: integer, ranging 0...1
+    - resolution: integer, ranging 0...2
 - **What:** This function returns the value of the encoder mode. This is `0`  or "absolute mode" by default.
-  When function is given `1` as a value, it will change the encoder to "relative mode". In this mode turning the encoder 'backwards' or counterclockwise will always result in the value `63` and turning it 'forwards' or clockwise will always result in the value `64` .
+  When function is given `1` as a value, it will change the encoder to "relative mode binary offset". In this mode turning the encoder 'backwards' or counterclockwise will always result in the value `63` and turning it 'forwards' or clockwise will always result in the value `65` .
+  When the function is given `2` as a value, it will change the encoder to "relative mode 2's comp". In this mode turning the encoder 'backwards' or counterclockwise will always result in the value `1` and turning it 'forwards' or clockwise will always result in the value `127` .
 - **Example:** The code `self:encoder_mode(1)` will change the encoder into relative mode. 
 
 
