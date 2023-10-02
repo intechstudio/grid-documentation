@@ -124,7 +124,7 @@ Looking at the system events, *utility* event is triggered by pressing the side 
 
 ### The configured actions run on these events
 
-Each Event can have multiple Actions configured. These Actions are executed in the order they are configured, from top to bottom. At the moment there is a [400 character limit](/wiki/char-limit) for each ACtion Chain for configuration length.
+Each Event can have multiple Actions configured. These Actions are executed in the order they are configured, from top to bottom. At the moment there is a [400 character limit](/wiki/more/char-limit) for each ACtion Chain for configuration length.
 
 The Actions are combinations of Lua functions under the hood on Grid. To learn about action types, check out the [Actions](/category/actions) section. 
 
@@ -136,7 +136,7 @@ Opening up the MIDI Action block shows (found on each Control Element Event by d
 
 ### The Locals Action block
 
-The **Locals** Action block is the first Action block under each event in the default configuration. This block can be seen as *very intimidating* at first, as it holds variable assignments which are made to keep a multi module setup of the same module type unique in a common DAW + Grid setup. To learn more about the default Grid configuration, please check out the [Default MIDI layout article](/wiki/dynamically-assigned-MIDI-ch-and-cc).
+The **Locals** Action block is the first Action block under each event in the default configuration. This block can be seen as *very intimidating* at first, as it holds variable assignments which are made to keep a multi module setup of the same module type unique in a common DAW + Grid setup. To learn more about the default Grid configuration, please check out the [Default MIDI layout article](/wiki/more/dynamically-assigned-MIDI-ch-and-cc).
 
 Let's change this default to a common configuration, where we want to specifiy the channel to be **2** and the CC to be **99**.
 
