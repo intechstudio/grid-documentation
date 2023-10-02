@@ -1,7 +1,7 @@
 ---
 slug: feedback
-title: Creating Visual Feedback
-description: How to create meaningful visual interaction feedback for Grid
+title: "More about: Visual feedback"
+description: How to create visual feedback for Grid and the how the defaults work.
 tags: [Logic, Workflow, Feedback, LED]
 ---
 

@@ -6,6 +6,41 @@ description: Updates about new Grid Editor changes, features and bugfixes
 
 import ProtocolUrl from '@site/src/components/ProtocolUrl';
 
+
+You can see written patch notes released here for Grid Editor, the configuration software for Grid Controllers.  
+[(Editor changes can always be found on our GitHub here.)](https://github.com/intechstudio/grid-editor/releases)
+
+
+---
+
+
+
+### Grid Editor version 1.2.44
+
+This new version of Grid Editor arrives with a big haul of fixes an UX improvements. This patch notes combines the changes of version 1.2.43 and the 1.2.44 hotfix patch released on September 25, 2023.
+
+No real star features this time, mostly under the hood changes and bugs getting fixed. But alongside the Editor patch, you can now see the updated Cloud, where all configs are now stored both Profiles and control element Presets.
+
+
+#### New Features
+- Now Editor can be navigated by using the keyboard buttons.
+- When dragging an Action Block, the Action Chain window will now automatically scroll up and down in the matching direction. 
+
+#### Bugfixes
+- Fixed a bug where profile and preset load overlays would be displayed incorrectly when using rotated module orientations.
+- Fixed a bug where Merge to Code would freeze Editor on merging Blocks with incorrect syntax. Now Merge to Code displays an error in this case and aborts the merge as expected.
+- Reworked the Actions panel to keep previously opened Blocks open. New blocks now appear as already opened.
+- Event button highlighting fixed from previous version where highlighting wouldn't appear.
+- Local Profile overwrites now work as expected.
+
+
+
+
+
+
+
+---
+
 ### Grid Editor version 1.2.42
 
 This new version of Grid Editor arrives with Plugin Manager and Profile Cloud usability improvements, a complete rework of the user feedback/notification system and many-many bug fixes and small improvements.  

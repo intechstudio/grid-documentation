@@ -1,14 +1,17 @@
 ---
-title: Dynamically Assigned MIDI parameters
-description: Dynamically assigned values is the default way Grid will behave when it comes to default MIDI blockCC and CH assignment on the default preset page.
+title: "More about: Default MIDI layout"
+description: Out-of-the-box MIDI values sent by Grid and why.
 tags: [MIDI, Logic, Local, Variables, Workflow]
 ---
+
+
+
 
 Dynamically assigned values is the default way Grid will behave when it comes to default [MIDI block](/docs/wiki/actions/midi/midi.md) CC and CH assignment on the default preset page.
 
 So as an example here's a default MIDI Block from that module:
 
-![midiblock](../wiki/img/midiblock.png)
+![midiblock](./img/midiblock.png)
 
 What does this mean? If you check the MIDI monitor within Grid Editor, you'll see that if you interact with the control element, Grid will send out messages normally, but then how did all these variables become CC messages?
 
@@ -19,7 +22,7 @@ To try and understand how this works, let's dissect this image to see what these
 
 So we have three names instead of numbers in our block, let's see what they do and how:
 
-![localblock](../wiki/img/local.png)
+![localblock](./img/local.png)
 
 - **ch** is the MIDI Channel the message is being sent on and since it's dynamic, it's not a set value (although it could be one from 0-15) but a [[variable]] named "ch". - This **ch** variable is has a way it behaves and how it behaves is set by the place it's first mentioned, the [[Local Block]]. - In there, as you can see on the picture above **ch** is defined as a complicated line of code: `(module_position_y()*4+page_current())%16`. - The outcome of the **ch** varible depends on which position is our module in on the y axis AND which Page we're using.
 
@@ -39,7 +42,7 @@ Finally a quick example:
 
 Let's say we have three modules connected in an "L"-like shape. Lets number them according to the image below just to make it easier to explain.
 
-![orientation](../wiki/img/orientation.png)
+![orientation](./img/orientation.png)
 
 This means that module number 3 will have a different channel AND a CC offset.
 
