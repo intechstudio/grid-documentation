@@ -21,9 +21,10 @@ description: How to use timers to trigger events independently from user input.
 - **How:** `timer_stop(element_index[element_number])` 
   
   - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4 or 0...7 if using EF44
-    - if you call 16 for the timer it will stop the global timer
+    - if you call `-1` for the timer it will stop the system timer
   
-- **What:** When this function is called, the timer function (if there is one running) will stop immediately and the defined Action Chain will run under the Timer event.
+- **What:** When this function is called, the timer function (if there is one running) will stop immediately.
   
 - **Example:** This function is useful as a break kind of function. Meaning you can immediately end a timer running when a certain condition is met like:
+
 

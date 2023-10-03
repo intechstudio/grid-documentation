@@ -1,6 +1,7 @@
 ---
-title: Configure control elements
-description: Change the encoder to relative, buttons to toggle and potmeters to different range
+title: "The Configuration panel"
+description: Often used practices and tools explained
+slug: editor-102
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
@@ -9,9 +10,17 @@ import action_manipulation from './img/action_manipulation.png'
 import copyall_overwrite from './img/copyall_overwrite.png'
 import open_add_action from './img/open_add_action.png'
 
-The available tools above the action blocks can be used to make adjustments to the action chain quickly and also to reorganize configurations. Beside altering the default configurations, you can also add new action blocks to the action chain.
+*Below you'll find a lot of useful information about creating your own Grid configuration in Editor, with examples and explanations detailing every move.*
+
+
+---
+
+
 
 ## Change the selected event's action chain
+
+
+The available tools above the Action blocks can be used to make adjustments to the Action chain quickly and also to reorganize configurations. Beside altering the default configurations, you can also add new Action blocks to the Action chain.
 
 1. Change the order with drag area
 2. Select actions

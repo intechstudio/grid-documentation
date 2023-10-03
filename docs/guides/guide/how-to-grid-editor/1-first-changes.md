@@ -1,6 +1,7 @@
 ---
-title: App overview and first changes
-description: Editor and basic configuration overview.
+title: "Editor overview and tutorial"
+description: Editor overview and creating a basic Grid configuration .
+slug: editor-101
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
