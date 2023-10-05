@@ -102,7 +102,7 @@ There are 3 special action blocks are available for encoders:
 - **Push & Rotate**
 - **Push & Rotate Left/Right**
 
-These special action blocks are utilising the encoder's rotation and button state with **if** statements. You can learn more about **if** statements [here](/wiki/actions/code/if-statement).
+These special action blocks are utilising the encoder's rotation and button state with **if** statements. You can learn more about **if** statements [here](/wiki/actions/condition/if).
 
 If you want to build other special state checking actions, you can use the *merge as code* function to see how these action blocks are built and tune them to your liking via [condition](/category/conditions) action blocks or coding.
 
