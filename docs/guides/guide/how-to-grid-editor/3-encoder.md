@@ -147,5 +147,7 @@ You can use the *merge as code* function to see how this action block is built a
 
 ## Next steps
 
-We've started to go over common encoder states. Before moving towards more advanced configurations, check out the [button](/guides/guide/how-to-grid-editor/button) guide.
+Coming soon!
+
+<!-- We've started to go over common encoder states. Before moving towards more advanced configurations, check out the [button](/guides/guide/how-to-grid-editor/button) guide. -->
 
