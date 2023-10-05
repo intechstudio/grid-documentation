@@ -24,7 +24,7 @@ function HomepageHeader() {
                 For new <b>Grid</b> or <b>Knot</b> users we recommend starting with the <Link to={'category/getting-started'}>Getting Started</Link> section!
               </li>
               <li>
-                For installing the <b>Grid Editor</b>, check out the <Link to={'category/editor-how-to-install-editor'}>Setup</Link> guide!
+                For installing the <b>Grid Editor</b>, check out the <Link to={'category/editor-installing-editor'}>Setup</Link> guide!
               </li>
               <li>
                 For learning Grid Editor and Grid configuration, we recommend browsing the <Link to={'wiki/introduction'}>Wiki</Link>.

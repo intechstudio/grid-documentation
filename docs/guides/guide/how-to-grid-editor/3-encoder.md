@@ -1,6 +1,7 @@
 ---
-title: Encoder (EN16, EF44)
-description: Change the encoder to relative, buttons to toggle and potmeters to different range
+title: "Customizing Encoders"
+description: "About Encoder Modes and more for EN16 and EF44."
+slug: editor-103-encoder
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
@@ -18,20 +19,26 @@ import spec_push_rot from './img/spec_push_rot.png'
 import spec_push_not_push_l_r from './img/spec_push_not_push_l_r.png'
 import merge_spec_l_r from './img/merge_spec_l_r.png'
 
-An encoder can be set to 3 different modes:
-- Absolute (default), acts like a potentiometer 0-127 CC values
-- Relative Bin Offset, 63-65 CC values
-- Relative 2's Complement, 1-127 CC values
+*This article details all settings and adjustments to the default Encoder behavior on Grid modules.*
 
-Let's add an **Encoder Mode** action block to the *init* event of the encoder control element. We could put it onto the *encoder* event as well, but pay attention to the order of execution on an action chain. 
+---
+
+# Encoder modes explained
+
+All encoders can be set to 3 different modes:
+- **Absolute** (default), acts like a potentiometer 0-127 CC values
+- **Relative Bin Offset**, 63-65 CC values
+- **Relative 2's Complement**, 1-127 CC values
+
+Let's add an **Encoder Mode Action** block to the *init* event of the encoder control element. We could put it onto the *encoder* event as well, but pay attention to the order of execution on an action chain. 
 
 <ImageLightbox imageSrc={encoder_mode_init} citation={""} styling={'w-4/5 object-contain'}/>
 
 ## Absolute mode
 
-This is the default mode of the encoder. In this mode, the encoder acts like a potentiometer, with a MIDI value CC range 0-127.
+This is the default mode of the encoder. In this mode, the encoder acts like a potentiometer, with a MIDI value CC range of 0-127.
 
-Opening the MIDI Monitor panel will show the values sent by the encoder. When you continue a right rotating motion, the values will gradually change up until to the encoder's maximum value. Rotating the encoder to the left will gradually decrease the value until it reaches the minimum value.
+Opening the MIDI Monitor panel will show the values sent by the encoder. If you keep rotating the encoder clockwise, the values will gradually increase until reaching the encoder's maximum value, 127. Rotating the encoder to counterclockwise will gradually decrease the value until it reaches the minimum value, zero.
 
 <ImageLightbox imageSrc={absolute_enc_change} citation={"Encoder set to absolute mode behaves like a potmeter"} styling={'w-4/5 object-contain'}/>
 
