@@ -15,17 +15,6 @@ import TabItem from '@theme/TabItem';
   <TabItem value="About Keyboard" label="About Keyboard" default>
 
 
-:::caution Caution Grid 2.0 Users!
-At the moment of release, no Grid 2.0 modules support Keyboard/Mouse messages natively!
-This will change in the future, but the feature is not ready yet.
-
-We apologize for the inconvenience.
-:::
-
-:::tip A Workaround
-If you have an orginal Grid module, you can use that to translate Keyboard messages even from 2.0 modules. Just be sure that the module connected to the computer with USB is the "old" one and keyboard messages should be received properly.
-:::
-
 With the use of a Keyboard Block Grid is able to send keystrokes to the host computer as a physical keyboard would. This is useful for creating keyboard shortcuts (like ctrl+v or pressing Space for transport in Ableton) or just for general productivity purposes (only one keypress for Excel to press F2, then type a function in and then move along to the next row).
 
 The Keyboard Block contains an input field for keys. You can input your desired keystrokes here with the keyboard or by using the dropdown menu below the input field.

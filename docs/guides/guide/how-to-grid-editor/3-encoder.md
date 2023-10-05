@@ -12,6 +12,11 @@ import config_already_applied from './img/config_already_applied.png'
 import bin_offset_l_r from './img/bin_offset_l_r.png'
 import twos_comp_l_r from './img/twos_comp_l_r.png'
 import enc_vel from './img/enc_vel.png'
+import spec_left_right from './img/spec_left_right.png'
+import spec_left_right_2 from './img/spec_left_right_2.png'
+import spec_push_rot from './img/spec_push_rot.png'
+import spec_push_not_push_l_r from './img/spec_push_not_push_l_r.png'
+import merge_spec_l_r from './img/merge_spec_l_r.png'
 
 An encoder can be set to 3 different modes:
 - Absolute (default), acts like a potentiometer 0-127 CC values
@@ -93,9 +98,9 @@ Encoders have a velocity variable built in, which can be changed with the Encode
 
 There are 3 special action blocks are available for encoders:
 
-- **Left/Right Rotate** - This action block will trigger when the encoder is rotated to the left or to the right.
-- **Push & Rotate** - This action block will trigger when the encoder is rotated while the button is pressed down or just rotated.
-- **Push & Rotate Left/Right** - This action block will trigger when the encoder is rotated to the left or to the right, while the button is pressed down or not.
+- **Left/Right Rotate**
+- **Push & Rotate**
+- **Push & Rotate Left/Right**
 
 These special action blocks are utilising the encoder's rotation and button state with **if** statements. You can learn more about **if** statements [here](/wiki/actions/code/if-statement).
 
@@ -103,16 +108,44 @@ If you want to build other special state checking actions, you can use the *merg
 
 ### Left/Right Rotate
 
-example here
+This block has two branches. Actions put in the first branch are executed, when the encoder is rotated to the left. Actions put in the second branch are executed, when the encoder is rotated to the right.
+
+Grid can be programmed to send keyboard messages. For example, you can use the fine encoder tweaks to change timeline position, zoom setting or other parameter available through keyboard shortcuts.
+
+You can learn more about the [**Keyboard** action block here](/wiki/actions/keyboard-and-mouse/keyboard).
+
+<ImageLightbox imageSrc={spec_left_right_2} citation={"Send 'A' when rotating left, send 'B' rotating right"} styling={'w-4/5 object-contain'}/>
+
+:::note Store before using keyboard messages
+Before using your keyboard macros, you must Store your configuration to the hardware. Otherwise the keyboard messages won't be sent out.
+:::
+
+An other example here with the MIDI action block messages, sending different CC messages based on rotation direction:
+<ImageLightbox imageSrc={spec_left_right} citation={"Rotating left sends CC 8, rotating right sends CC 44"} styling={'w-4/5 object-contain'}/>
 
 ### Push & Rotate
 
-example here
+This block has also two branches. Utilizing the button state of an encoder, this action differentiates between a simple encoder turn and a push & turn action.
 
-### Push & Rotate Left/Right
+Utilising the relative encoder mode, we can setup the encoder to control two parameters.
 
-example here
+<ImageLightbox imageSrc={spec_push_rot} citation={"While encoder is pushed, relative CC 40 messages are sent out, when simply turned then CC 30"} styling={'w-3/5 max-h-60 object-contain'}/>
+
+:::note Relative encoder mode
+For the sake of demonstration, we've put the **Encoder Mode** action on the encoder event. Normally, you would put this action to the init event of the encoder control element. This setup also works, but this action must be executed first.
+:::
+
+### Push & rotate right or left + just rotate left or right
+
+This special action holds most of the common states together. To make this look like this action block, it uses a lot of characters in the background, making it a [character heavy](/wiki/more/char-limit) action.
+
+<ImageLightbox imageSrc={spec_push_not_push_l_r} citation={"As character limit is tight here, "} styling={'w-4/5 object-contain'}/>
+
+You can use the *merge as code* function to see how this action block is built and use the code version of it to get better control over it. We can further opzimize the merged code, by assigning the `self:encoder_state()` and `self:button_state()` functions to local variables.
+
+<ImageLightbox imageSrc={merge_spec_l_r} citation={"The bottom left code block's character length is only 167/400 characters"} styling={'w-4/5 object-contain'}/>
 
 ## Next steps
 
-coming soon.
+We've started to go over common encoder states. Before moving towards more advanced configurations, check out the [button](/guides/guide/how-to-grid-editor/button) guide.
+
