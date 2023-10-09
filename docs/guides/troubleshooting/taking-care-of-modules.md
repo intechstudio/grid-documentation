@@ -1,5 +1,5 @@
 ---
-title: "Grid: Taking Care Of Your Modules"
+title: "Grid: Taking care of your modules"
 sidebar_position: 3
 ---
 
