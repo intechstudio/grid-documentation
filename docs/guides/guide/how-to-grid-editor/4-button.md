@@ -1,6 +1,7 @@
 ---
-title: Button (BU16, EN16, EF44, PBF4)
+title: Customizing Buttons
 description: Change the button to toggle mode and learn about button states.
+slug: editor-104-button
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
@@ -10,6 +11,12 @@ import btn_toggle from './img/btn_toggle.png'
 import min_max_reflected from './img/min_max_reflected.png'
 import btn_press_release from './img/btn_press_release.png'
 import btn_long_press from './img/btn_long_press.png'
+
+*This article details most settings and adjustments to the default Button behavior on Grid modules.*
+
+---
+
+# Button modes explained
 
 The button events can be found on most Grid controllers. Buttons have the following modes:
 - Momentary (default), sends a value 127 on press, and value 0 on release
@@ -31,7 +38,7 @@ The `button_value()` will always represent the current *value* of the button. Th
 
 ## Momentary mode
 
-In momentary mode - Button Mode set to 0 -, when you *press* the element down, the **button value** will be 127. When you *release* the button, the **button value** will change to 0.
+In momentary mode - button mode set to 0 -, when you *press* the element down, the **button value** will be 127. When you *release* the button, the **button value** will change to 0.
 
 <ImageLightbox imageSrc={btn_momentary} citation={"Momentary button setting is 0."} styling={'w-4/5 max-h-60 object-contain'}/>
 
@@ -61,19 +68,21 @@ Setting button maximum is a great way to change the **velocity** of MIDI interac
 
 ## Button presses are sent out twice
 
-When a button is in momentary mode, this behaviour doesn't struck the user, but it's good to keep in mind that button events are running both on the *press* and *release* of the button.
+When a button is in momentary mode, this behaviour doesn't stand out, but it's good to keep in mind that button events are running both on the *press* and *release* of the button.
 
 This "double trigger" might not be what you are lookin for, specially if you are using the buttons to send out singular messages.
 
-To avoid this, you can use the `button_state()` function to check if the button is *pressed* or *released*.
+To avoid this, you can use the `button_state()` function to check if the button is:
+- pressed: state is larger than 0,
+- released: state is 0.
 
-An other way is to use the button special **Press/Release** action block.
+An other way is to use the button special **Press/Release** action block. This action block has two branches, where you can put your actions.
 
 <ImageLightbox imageSrc={btn_press_release} citation={"1. You can define the press release check in a code block, utilising the button_state() function<br/>2. The other quick option is to use the special Press/Release action block"} styling={'w-4/5 object-contain'}/>
 
 ## Long press 
 
-You can achieve a long press button behaviour by checking the button state and the elapsed time since the button has been used. For this, we utilize the `button_state()` and `button_elapsed_time()` functions with some condition logic, to trigger the **timer** event on the button. When the button is not held down for the specified time, the timer is stopped.
+You can achieve a long press button behaviour by checking the button state and the elapsed time since the button has been used. For this, we utilize the `button_state()` and `button_elapsed_time()` functions with some condition logic, to trigger the **timer** event on the button. When the button is not held down for the specified time, the timer is stopped. Check out [how timer works here](/wiki/events/ui-events/timer-event).
 
 In the following long press configuration example, when the button is held down for more than 1000 miliseconds, the button's color will change to green, and the LED intensity will be set to 127.
 
@@ -91,6 +100,10 @@ The *timer* event runs when the press is longer than 1000 miliseconds:
 2. LED intensity is also set to 127 to make the result visible
 
 <ImageLightbox imageSrc={btn_long_press} citation={"By checking the button state and the elapsed time since the button has been used, you can trigger long press functions with the timer"} styling={'w-4/5 object-contain'}/>
+
+:::tip Elapsed Time
+All control elements have access to the control element's `button/potmeter/encoder_elapsed_time()` function. This function returns the elapsed time since the last interaction with the given control element.
+:::
 
 ## Next steps
 
