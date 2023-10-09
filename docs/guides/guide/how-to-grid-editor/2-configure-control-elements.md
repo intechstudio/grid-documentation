@@ -55,16 +55,16 @@ On a selected event, hovering between the actions on the action chain area will 
 ## Next steps
 
 
-In the next articles we will go through the different control elements and their primary customization options. After learning about the indidual elements - and their options -, you can start to mix them. The table below should help you find the right starting point for you.
+In the next articles we will go through the different control elements and their primary customization options. After learning about the indidual elements - and some their options -, you can start to mix them. The table below should help you find the right starting point for you.
 
 
 <div style={{margin: '2em'}}>
 
 | Controller  | Primary events |
 | ----------- | ----------- |
-| EN16 | [encoder](/guides/guide/how-to-grid-editor/editor-103-encoder) |
-| EF44 | [encoder](/guides/guide/how-to-grid-editor/editor-103-encoder) |
-
+| EN16 | [encoder](/guides/guide/how-to-grid-editor/editor-103-encoder), [button](/guides/guide/how-to-grid-editor/editor-104-button) |
+| EF44 | [encoder](/guides/guide/how-to-grid-editor/editor-103-encoder), [button](/guides/guide/how-to-grid-editor/editor-104-button) |
+| BU16 | [button](/guides/guide/how-to-grid-editor/editor-104-button) |
 </div>
 
 

@@ -19,7 +19,7 @@ import spec_push_rot from './img/spec_push_rot.png'
 import spec_push_not_push_l_r from './img/spec_push_not_push_l_r.png'
 import merge_spec_l_r from './img/merge_spec_l_r.png'
 
-*This article details all settings and adjustments to the default Encoder behavior on Grid modules.*
+*This article details most settings and adjustments to the default Encoder behavior on Grid modules.*
 
 ---
 
@@ -154,7 +154,5 @@ You can use the *merge as code* function to see how this action block is built a
 
 ## Next steps
 
-Coming soon!
-
-<!-- We've started to go over common encoder states. Before moving towards more advanced configurations, check out the [button](/guides/guide/how-to-grid-editor/button) guide. -->
+We've started to go over common encoder states. Before moving towards more advanced configurations, check out the [button](/guides/guide/how-to-grid-editor/button) guide.
 
