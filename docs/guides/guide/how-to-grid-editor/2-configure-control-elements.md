@@ -30,37 +30,41 @@ The available tools above the Action blocks can be used to make adjustments to t
 
 <ImageLightbox imageSrc={action_manipulation} citation={""} styling={'w-4/5 object-contain'}/>
 
-The *merge as code* function is a very powerful tool. It converts the selected actions into a single [Code Block](/wiki/actions/code/code-block).
+The `merge as code` function is a very powerful tool. It converts the selected actions into a single [Code Block](/wiki/actions/code/code-block).
 
-If you copy or cut actions, those actions can be pasted to other control elements as well.
+If you `copy` or `cut` actions, those actions can be `pasted` to other control elements as well.
 
 :::note
-*Merge as code* is a great tool if you want to spare characters in the configuration. As every configuration is stored on the Grid hardware, we use the --[[@something]] comment syntax before code segments, to let Editor know which action blocks to render. All of these special comments can be removed from a config by using *merge as code*.
+`Merge as code` is a great tool if you want to conserve characters in the configuration to fin in the [Character Limit](/docs/wiki/more/char-limit.md) as it usually lowers the amount of used characters 10-30%.
+
+*As every configuration is stored on the Grid hardware, we use the --[[@something]] comment syntax before code segments, to let Editor know which action blocks to render. All of these special comments can be removed from a config by using `merge as code`.*
 :::
 
-## Change all event configuration under an element
+## Change all Event configuration under an element
 
-It's possible to copy all of the events with their actions, and paste them to an other control element. This is useful if you want to copy the whole configuration you made to an other control element.
+It's possible to copy all of the events with their actions, and paste them to an different control element. This is useful if you want to copy the whole configuration you made to an other control element and allows you to work quicker.
 
-Be careful, the copy all function's counterpart, the overwrite will overwrite all of the events under the selected control element.
+Be careful, the copy all function's counterpart, the overwrite will overwrite all of the events under the selected control element. Using them together is ideal for quickly filling out a module with the same control element configurations.
 
-<ImageLightbox imageSrc={copyall_overwrite} citation={"1. copy all events from selected source control element<br>2. overwrite events on target control element"} styling={'w-4/5 object-contain'}/>
+<ImageLightbox imageSrc={copyall_overwrite} citation={"1. Copy all events from selected source control element<br>2. Overwrite events on selected control element"} styling={'w-4/5 object-contain'}/>
 
-## Add a new action to the action chain
+## Add a new Action to the Action chain
 
-On a selected event, hovering between the actions on the action chain area will reveal a <span style={{color:'blue'}}>blue line with a plus icon</span>. Other option is on the bottom of the action chain marked with *Add action block...* Clicking on the blue line or the button on the bottom will open the [action](/category/actions) selection menu.
+On a selected Event, hovering between the Actions on the Action chain area will reveal a <span style={{color:'blue'}}>blue line with a plus icon</span>. Other option is on the bottom of the Action chain marked with *Add Action block...* Clicking on the blue line or the button on the bottom will open the [Action](/category/actions) selection menu.
 
 <ImageLightbox imageSrc={open_add_action} citation={"1. Hover with the cursor between actions<br>2. Use the button on the bottom"} styling={'w-4/5 object-contain'}/>
 
 ## Next steps
 
 
-In the next articles we will go through the different control elements and their primary customization options. After learning about the indidual elements - and some their options -, you can start to mix them. The table below should help you find the right starting point for you.
+In upcoming articles we'll cover the different control elements and their primary customization options.
+
+After learning about the indidual elements and some their options, we suggest starting to mix-and-match elements. The table below should help you find the right starting point for you.
 
 
 <div style={{margin: '2em'}}>
 
-| Controller  | Primary events |
+| Controller  | Interaction based Events |
 | ----------- | ----------- |
 | EN16 | [encoder](/guides/guide/how-to-grid-editor/editor-103-encoder), [button](/guides/guide/how-to-grid-editor/editor-104-button) |
 | EF44 | [encoder](/guides/guide/how-to-grid-editor/editor-103-encoder), [button](/guides/guide/how-to-grid-editor/editor-104-button) |

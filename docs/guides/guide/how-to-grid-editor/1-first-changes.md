@@ -75,7 +75,7 @@ Important notes about active changes:
 4. While active changes are present, you can not change Pages.
 5. **Storing** sets the number of active changes in Editor to 0, enabling you to change Pages freely again.
 
-<ImageLightbox imageSrc={primary_module_operations} citation={"primary module operations showing 2 active changes"} styling={'w-3/5 object-contain'}/>
+<ImageLightbox imageSrc={primary_module_operations} citation={"The top of the Central Panel showing 2 active changes"} styling={'w-3/5 object-contain'}/>
 
 <!---
 :::note What is a profile?
@@ -133,7 +133,7 @@ The Actions are combinations of Lua functions under the hood on Grid. To learn a
 
 Opening up the MIDI Action block shows (found on each Control Element Event by default), that 3 out of the 4 common MIDI parameters are configured with `words` instead of numbers. These `words` are coming defined by the first **Locals** Action block.
 
-<ImageLightbox imageSrc={midi_default} citation={"the circled values are evaluated by Grid during runtime, thanks to its Lua engine"} styling={'w-3/5 object-contain'}/>
+<ImageLightbox imageSrc={midi_default} citation={"The circled values are evaluated by Grid during runtime, thanks to its Lua engine"} styling={'w-3/5 object-contain'}/>
 
 ### The Locals Action block
 
@@ -147,7 +147,7 @@ We keep `num` and `val` intact. The `num` variable is assigned to the physical i
 Grid is a programmable control surface. You can put functions, variables under the Events of the different control elements. These functions and actions can be also referenced in other action blocks. This way you can create complex and truly unique configurations.
 :::
 
-<ImageLightbox imageSrc={change_locals} citation={"change the dynamic assingment to simple static value definitions"} styling={'w-3/5 object-contain'}/>
+<ImageLightbox imageSrc={change_locals} citation={"Change the dynamic assingment to simple static value definitions"} styling={'w-3/5 object-contain'}/>
 
 ### The MIDI action block
 
@@ -155,7 +155,7 @@ After you change these locals - and the MIDI blocks parameters aren't changed - 
 
 Within the Grid Editor, most things can be configured in multiple ways. In the end, all the configurations are transformed into Lua code, which is then executed on the module. Following this logic, we can delete the `cc` and `ch` variables from the **Locals** Action block with the "x" next to each variable declaration. Define them in the MIDI Action block and the end result will be the same.
 
-<ImageLightbox imageSrc={define_in_midi} citation={'delete the variable with the "x" and hard-code the values in the MIDI action block'} styling={'w-3/5 object-contain'}/>
+<ImageLightbox imageSrc={define_in_midi} citation={'Delete the variable with the "x" and hard-code the values in the MIDI action block'} styling={'w-3/5 object-contain'}/>
 
 :::note Why is it still good to have variable definitions in **Locals**?
 Once you get the grasp of it, the resulting configuration are easier to follow. You can also save characters if a variable is referenced in multiple Action blocks. An other important note, is that using expressions as Action parameters is **discouraged**, can lead to unexpected results and can be hard to debug.
@@ -165,7 +165,7 @@ Once you get the grasp of it, the resulting configuration are easier to follow. 
 
 To change MIDI settings on a control element, you have to change the values used by the MIDI Action block. This can happen by directly specifying values in the MIDI Action block or by changing the variables referenced by the MIDI Action block. In the end, you should check the results with the help of the MIDI Monitor.
 
-<ImageLightbox imageSrc={check_midi_monitor} citation={'delete the variable with the "x" and hard-code the values in the MIDI Action block'} styling={'w-3/5 object-contain'}/>
+<ImageLightbox imageSrc={check_midi_monitor} citation={'Delete the variable with the "x" and hard-code the values in the MIDI Action block'} styling={'w-3/5 object-contain'}/>
 
 ## LED colors and brightness
 
@@ -177,7 +177,7 @@ The `num` variable in the default configuration holds the physical index number 
 
 If you remove the **intensity** Action block from the event, the LED brightnes won't change on interactions. You might want this, if you programatically set LED brigthness.
 
-<ImageLightbox imageSrc={index_numbers} citation={'index numbers start from top left with 0'} styling={'w-2/5 max-h-60 object-contain'}/>
+<ImageLightbox imageSrc={index_numbers} citation={'Index numbers start from top left with 0'} styling={'w-2/5 max-h-60 object-contain'}/>
 
 :::tip Change a different control element's LED brightness
 Action blocks which use the `num` variable can usually change the state of the control element they are running under.
@@ -198,7 +198,7 @@ Go to the *init* Event and open up the **color** Action block, which has the lay
 
 The resulting color - as it's a layer 2 color setting - will be seen when you turn up the encoder.
 
-<ImageLightbox imageSrc={encoder_rot_color} citation={'turn up the encoder to see the layer 2 color'} styling={'w-3/5 object-contain'}/>
+<ImageLightbox imageSrc={encoder_rot_color} citation={'Turn up the encoder to see the layer 2 color'} styling={'w-3/5 object-contain'}/>
 
 If you also want to change the button press color, open up the other color block with the layer 1 parameter and change the color there. Press the button to see the color change.
 
@@ -219,7 +219,7 @@ The **Discard** button will discard the active changes and reload the configurat
 
 ⚠️ **Clear** will clear the active page on **all connected modules** and the firmware default profile will be reloaded on the module. Before clearing your configuration, it's good practice to backup your work by creating a Profile.
 
-<ImageLightbox imageSrc={store_to_module} citation={"an active configuraiton can be stored"} styling={'w-3/5 max-h-60 object-contain'}/>
+<ImageLightbox imageSrc={store_to_module} citation={"An active configuraiton can be stored"} styling={'w-3/5 max-h-60 object-contain'}/>
 
 After hitting **Store**, you can disconnect - or change the page - on the module. The configurations you applied to the module will be saved on the module's memory and it will be recalled when you connect the module again.
 
@@ -233,7 +233,7 @@ Click on the Profile Cloud tab on the left sidebar. Here you can create a new Pr
 
 Learn more about Profile Cloud and it's features a [here](/guides/guide/cloud).
 
-<ImageLightbox imageSrc={profile_cloud_panel} citation={"under the Profile Cloud panel you can create Profiles and Presets"} styling={'w-4/5 object-contain'}/>
+<ImageLightbox imageSrc={profile_cloud_panel} citation={"Under the Profile Cloud panel you can create Profiles and Presets"} styling={'w-4/5 object-contain'}/>
 
 #### Difference between a Profile and Preset
 

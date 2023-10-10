@@ -18,21 +18,22 @@ import btn_long_press from './img/btn_long_press.png'
 
 # Button modes explained
 
-The button events can be found on most Grid controllers. Buttons have the following modes:
-- Momentary (default), sends a value 127 on press, and value 0 on release
-- Toggle, sends a value 127 on press, and value 0 on press again
-- X-step toggle, sends value based on the step number on each press, 3-step will send 0, 42, 84, 126
+The button Events can be found on most Grid controllers. Buttons have the following modes:
+- **Momentary** (default), sends a value 127 on press, and value 0 on release
+- **Toggle**, sends a value 127 on press, and value 0 on press again
+- **X-step toggle**, sends value based on the step number on each press, 3-step will send 0, 42, 84, 126
 
 You can check out the button [wiki article here](/wiki/actions/element-settings/button-mode).
 
-Let's add an **Button Mode** action block to the *init* event of the button control element. We could put it onto the *button* event as well, but pay attention to the order of execution on an action chain. 
+Let's add an **Button Mode** Action block to the *init* event of the button control element. We could put it onto the *button* event as well, but pay attention to the order of execution on an Action chain. 
 :::note 
-The button event, and button presses are applicable for button control elements and encoders as well. When we mention button interaction, the control element can be either a button or an encoder.
+The button Event, and button presses are applicable for button control elements and encoders as well. When we mention button interaction, the control element can be either a button or an encoder.
 :::
 <ImageLightbox imageSrc={button_mode_init} citation={"Add the button mode "} styling={'w-4/5 object-contain'}/>
 
 ## Button state vs. button value
-Selecting different steps in the **Button Mode** action will change the calculated steps which can be read from the `self:button_value()`.
+
+Selecting different steps in the **Button Mode** Action will change the calculated steps which can be read from the `self:button_value()`.
 
 The `button_value()` will always represent the current *value* of the button. The *pressed* and *released* states can be checked with the `button_state()` function.
 
@@ -54,7 +55,7 @@ In the above momentary and toggle examples, button values were changed between 0
 
 When the button minimum and maximum values are changed, the `button_value()` will reflect those new ranges.
 
-If you want to set button minimum and maximum values, you can do so by adding a [**Code Block**](/wiki/actions/code/code-block) action to the *init* event of the button control element.
+If you want to set button minimum and maximum values, you can do so by adding a [**Code Block**](/wiki/actions/code/code-block) Action to the *init* Event of the button control element.
 
 ```lua
 self:button_min(10)
@@ -68,7 +69,7 @@ Setting button maximum is a great way to change the **velocity** of MIDI interac
 
 ## Button presses are sent out twice
 
-When a button is in momentary mode, this behaviour doesn't stand out, but it's good to keep in mind that button events are running both on the *press* and *release* of the button.
+When a button is in momentary mode, this behaviour doesn't stand out, but it's good to keep in mind that button Events are running both on the *press* and *release* of the button.
 
 This "double trigger" might not be what you are lookin for, specially if you are using the buttons to send out singular messages.
 
@@ -76,11 +77,11 @@ To avoid this, you can use the `button_state()` function to check if the button 
 - pressed: state is larger than 0,
 - released: state is 0.
 
-An other way is to use the button special **Press/Release** action block. This action block has two branches, where you can put your actions.
+An other way is to use the button special **Press/Release** Action block. This Action block has two branches, where you can put your Actions.
 
 <ImageLightbox imageSrc={btn_press_release} citation={"1. You can define the press release check in a code block, utilising the button_state() function<br/>2. The other quick option is to use the special Press/Release action block"} styling={'w-4/5 object-contain'}/>
 
-## Long press 
+## Long press
 
 You can achieve a long press button behaviour by checking the button state and the elapsed time since the button has been used. For this, we utilize the `button_state()` and `button_elapsed_time()` functions with some condition logic, to trigger the **timer** event on the button. When the button is not held down for the specified time, the timer is stopped. Check out [how timer works here](/wiki/events/ui-events/timer-event).
 
@@ -88,15 +89,15 @@ In the following long press configuration example, when the button is held down 
 
 The following steps are happening in the configuration on the *button* event:
 1. When the button is pressed down and state changes to 127
-    1. A **Timer Start** action block starts
-    2. Normal buttton color is set (which is otherwise overwritten for a short time on the timer event)
+    1. A **Timer Start** Action block starts
+    2. Normal buttton color is set (which is otherwise overwritten for a short time on the timer Event)
     3. The LED intensity is changed with the button press
 2. The *elif* branch checks if the button is released and if it's been pressed for less than 1000 miliseconds
-    1. When the button has been pressed for less than 1000 miliseconds, the **Timer Stop** action block stops the timer
+    1. When the button has been pressed for less than 1000 miliseconds, the **Timer Stop** Action block stops the timer
     2. The LED intensity is changed with the button release
 
-The *timer* event runs when the press is longer than 1000 miliseconds: 
-1. The event sets green color for the LED
+The *timer* Event runs when the press is longer than 1000 miliseconds: 
+1. The Event sets green color for the LED
 2. LED intensity is also set to 127 to make the result visible
 
 <ImageLightbox imageSrc={btn_long_press} citation={"By checking the button state and the elapsed time since the button has been used, you can trigger long press functions with the timer"} styling={'w-4/5 object-contain'}/>
