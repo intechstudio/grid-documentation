@@ -57,3 +57,15 @@ List of possible firmware update issues and their resolution.
 ### Device does not show up as removable device
 
 Reboot your computer. Make sure you connect your module directly to your computer. Check if the utility side button moves freely and it is not stuck. For each time you connect the module, wait 5 seconds to see the device showing up. Repeat the connection step based on the firmware update document multiple times, it can be that it will show up after a couple tries. Try a different computer.
+
+## OS-independent issues
+
+### How to import locally saved profile .JSON files into the Profile Cloud
+
+If you have old .JSON Grid configuration profile files saved somewhere on your computer here's how you can import into the modern profile cloud interface:
+
+1. Make sure Editor in not running.
+2. Go to your `.../grid-userdata/` folder.
+3. Create a new folder inside `.../grid-userdata/` named `profiles`.
+4. Copy and paste all your old legacy profile .JSON files into the folder named `profiles`.
+5. Start Editor and you should see your old profiles appear in Profile Cloud converted to the new system. After this if you check the folder named `profiles` should have disappeared.
