@@ -12,10 +12,7 @@ import open_add_action from './img/open_add_action.png'
 
 *Below you'll find a lot of useful information about creating your own Grid configuration in Editor, with examples and explanations detailing every move.*
 
-
 ---
-
-
 
 ## Change the selected event's action chain
 
