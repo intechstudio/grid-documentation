@@ -1,6 +1,7 @@
 ---
 title: Cubase Setup
-description: "About Encoder Modes and more for EN16 and EF44."
+slug: basic-setup
+description: "This article details a starting experience with Grid and Cubase. Tested on Cubase 11 Pro."
 ---
 
 
