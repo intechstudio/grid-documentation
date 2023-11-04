@@ -1,5 +1,5 @@
 ---
-title: Cubase Setup
+title: Cubase
 slug: basic-setup
 description: "This article details a starting experience with Grid and Cubase. Tested on Cubase 11 Pro."
 ---
