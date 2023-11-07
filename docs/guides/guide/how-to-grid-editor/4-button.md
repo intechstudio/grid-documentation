@@ -100,6 +100,8 @@ The *timer* Event runs when the press is longer than 1000 miliseconds:
 1. The Event sets green color for the LED
 2. LED intensity is also set to 127 to make the result visible
 
+Here is the link for this button preset: grid-editor://?config-link=55uhlbeKtAku6HeRcKlo
+
 <ImageLightbox imageSrc={btn_long_press} citation={"By checking the button state and the elapsed time since the button has been used, you can trigger long press functions with the timer"} styling={'w-4/5 object-contain'}/>
 
 :::tip Elapsed Time
