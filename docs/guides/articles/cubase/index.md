@@ -76,7 +76,7 @@ In Grid Editor, we pick **Relative 2's Comp** encoding algorithm which is **2** 
 
 Make sure, you have Transmit alias **T** flag activated in the Quick Controls panel, so the MIDI messages are sent back to Grid.
 
-To setup bidirectional communication between Cubase and Grid, follow the [MIDI RX mini guide](/wiki/more/midi-rx-mini-guide).
+To setup bidirectional communication between Cubase and Grid, follow the [MIDI RX mini guide](/docs/wiki/more/midi-rx.md).
 
 Testing the setup, create two channels in Cubase. Follow these hints, where your it's applicable:
 - In Cubase: Add **Volume** and **Mute** to both channel's Quick Controls

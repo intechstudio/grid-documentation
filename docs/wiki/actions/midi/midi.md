@@ -44,7 +44,7 @@ Depending on the Command field, values here represent Velocity or Control Value 
 --- Command = 176, CV values
 --- Command = 144 or 128, Velocity values
 
-If you want to learn how to set up a Grid configuration for hardware MIDI devices, please check out the [Advanced Guide](/docs/guides/guide/advanced.md) in the guides section.
+If you want to learn how to set up a Grid configuration for hardware MIDI devices, please check out the [Advanced Guide](/docs/guides/grid/grid-adv/advanced.md) in the guides section.
 
 > Follow the official MIDI specifications for learning more about configuring MIDI. 
 

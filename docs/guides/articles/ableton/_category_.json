@@ -1,3 +1,9 @@
 {
-  "label": "Ableton Live"
+  "label": "Ableton Live",
+  "position": 1,
+    "collapsed": true,
+    "link": {
+        "type": "generated-index",
+        "description": "Choose one of the articles below!"
+      }
 }

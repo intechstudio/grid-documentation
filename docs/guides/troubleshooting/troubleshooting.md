@@ -1,5 +1,5 @@
 ---
-title: "Editor: Troubleshooting"
+title: "Editor: Known issues"
 date: 2021-11-26
 sidebar_position: 5
 description: List of possible troubleshoot resolutions on Mac OS, Windows and Linux.
@@ -10,8 +10,7 @@ description: List of possible troubleshoot resolutions on Mac OS, Windows and Li
 List of possible windows issues and their resolution.
 
 ### Windows 7 does not recognize your device
-Using windows 7 in 2021 is brave! It can be that you will need to install a serial driver to get started using Grid Editor. Link is on our github.
-
+Using Windows 7 today is brave! It can be that you will need to install a serial driver to get started using Grid Editor. Link is on our github below:
 
 [Download the Drivers](https://github.com/intechstudio/grid-fw/tree/master/Drivers/intech)
 

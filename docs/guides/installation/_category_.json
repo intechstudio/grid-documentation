@@ -1,0 +1,11 @@
+{
+  "label": "Grid: Installing Editor",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Editor: Installation Guides",
+    "description": "Grid Editor is the free configuration tool for your modules. To ensure your module is working correctly after plugging it into your system, please install Grid Editor."
+  }
+}

@@ -1,5 +1,7 @@
 ---
-title:    MIDI OUT setup with Ableton Live
+title: "MIDI RX setup for Ableton"
+sidebar-position: 2
+description: "Utilizing MIDI RX to receive MIDI from Ableton"
 ---
 
 ## Overview 

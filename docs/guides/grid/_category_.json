@@ -1,0 +1,10 @@
+{
+    "label": "Grid: Getting started",
+    "position": 2,
+    
+    "link": {
+        "slug": "category/getting-started",
+        "type": "generated-index",
+        "description": "Choose one of the guides below!"
+      }
+}

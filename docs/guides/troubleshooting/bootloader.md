@@ -1,8 +1,8 @@
 ---
 layout: docs
 sidebar_position: 3
-title: "Grid: Bootloader Updating"
-description: Manual bootloader update steps for Grid Modular Controllers.
+title: "Grid: Updating the bootloader"
+description: Manual bootloader update steps for Grid controllers on the D51 architecture.
 ---
 
 import img4 from './img/utility_conn.gif'
