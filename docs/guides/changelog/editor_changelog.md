@@ -10,6 +10,48 @@ import ProtocolUrl from '@site/src/components/ProtocolUrl';
 You can see written patch notes released here for Grid Editor, the configuration software for Grid Controllers.  
 [(Editor changes can always be found on our GitHub here.)](https://github.com/intechstudio/grid-editor/releases)
 
+---
+
+### Grid Editor version 1.2.46
+
+This new version of Grid Editor arrives with a whole bunch of new features from UX improvements, to troubleshooting aides. The extensive list of features is found below. We also fixed some annoying bugs, but mostly features this time around!
+
+#### New Features
+- Added a new feature called 'UI Scale' which allows you to change the size of text in Editor. The feature is found under Preferences/Developer settings for now.
+- The MIDI Action now displays parameters even in its closed state.
+- Added note denominations under the MIDI Action's Parameter 1 drop-down menu. You can now see a list of notes when using a Note On/Off command.
+- Editor now displays unsaved changes per Event both on the module visualization and the Configuration sidebar. This way you can track what you've been working on visually.
+- Editor now displays the firmware version of the module on the module visualization.
+- Editor now handles breaking changes happening to blocks properly by allowing you to convert those old versions to a new compatible format or simple code.
+- Editor now remembers your Profile Cloud URL settings.
+
+#### Bugfixes
+- Fixed the bug that caused suggestions in the Action block drop-down menus not to render. Suggestions should now render properly.
+
+
+
+
+
+---
+
+### Grid Editor version 1.2.45
+
+This new version of Grid Editor arrives with a new Action, called a Loop and another round of fixes and reworks of basic underlying systems.
+
+The Loop Action can be used to repeat an Action or multiple Actions in just a single Event. You can set the number of repetitions or even add your own rules for counting down repeats. This block gives you the control over the underlying `for` loop from the Lua library.
+
+#### New Features
+
+- Editor now displays a prompt to add Actions when an Event has no actions added.
+- Added a new Loop Action block. This allows you to repeat actions in a single event multiple times.
+- Now expressions (e.g. adding or multiplying) can be used in all block input fields without them breaking the configuration.
+
+#### Bugfixes
+- Fixed a bug where init load order was not correct when loading Profiles.
+- Reworked config panel refreshing behavior. 
+- Fixed how the 'Tab' button is handled when switching between input fields in an Action.
+
+
 
 ---
 
