@@ -188,7 +188,7 @@ Action blocks which use the `num` variable can usually change the state of the c
 
 The colors are defined usually under the **init** Event. When the control element is initialized the LED color is set. Each 4 Page has a different color, the `red`, `gre` and `blu` variables are set by the page specific  `led_default_red()`, `led_default_green()` and `led_default_blue()` functions in the **locals** block. 
 
-The color Action block has a *layer* parameter, which is most interesting for the encoders as an encoder has 2 interactions, button presses and rotation. The *layer* parameter can be set to `1` or `2`, which will set the color for the press or rotation interaction. Learn more about the *layer* parameter in the [Color action block](wiki/actions/led/led-color) article.
+The color Action block has a *layer* parameter, which is most interesting for the encoders as an encoder has 2 interactions, button presses and rotation. The *layer* parameter can be set to `1` or `2`, which will set the color for the press or rotation interaction. Learn more about the *layer* parameter in the [Color action block](/wiki/actions/led/led-color) article.
 
 
 ### Configuring LED color for an encoder
