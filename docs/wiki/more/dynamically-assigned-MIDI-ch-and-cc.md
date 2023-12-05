@@ -28,7 +28,7 @@ So we have three names instead of numbers in our block, let's see what they do a
 
 - **cc** is the number of the Control Change message we're sending out for example number 1 is known as the Modulation Wheel message. - This **cc** variable is also defined in the [[Local Block]]. - This one is also defined with a line of code: `(32+module_position_x()*16+self:element_index())%128` - This means that the **cc** variable will have a value based on which position is the module in on the x axis AND on which control element we're interacting with.
 
-- **val** is the actual value of this MIDI CC, it will always be set by the `self:controlelement_value()` function, meaning that this value will correspond to the status of the control element at all times - minimum state should be zero and maximum state should be 127, so our **val** will by default be inbetween those values
+- **val** is the actual value of this MIDI CC, it will always be set by the `self:controlelement_value()` function, meaning that this value will correspond to the status of the control element at all times - minimum state should be 0 and maximum state should be 127, so our **val** will by default be inbetween those values
 
 So based on this, for example if we have only one module plugged in and we interact with the top left control element we should see something like this: **ch**=0, **cc**=32 and the **val** values will range from 0 to 127.
 

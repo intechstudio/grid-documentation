@@ -48,7 +48,7 @@ These button triggers and events are applicable to all encoders and buttons on a
 - shortname: bmi
 - **How:** `self:button_min()` or `self:button_min(value)`
     - value: integer, ranging 0...127
-- **What:** This function returns the minimum value of the button state. This is `0` by default.
+- **What:** This function returns the minimum value of the "released" button state. This is `0` by default.
   When given a parameter, this function changes the minimum value of the button state according to the `value` given as parameter.
 - **Example:** The code `self:button_min(20)` will set the value of the button to `20` when released.
 
@@ -57,7 +57,7 @@ These button triggers and events are applicable to all encoders and buttons on a
 - shortname: bma
 - **How:** `self:button_max()` or `self:button_max(value)`
     - value: integer, ranging 0...127
-- **What:** This function returns the maximum value of the button state. This is `127` by default.
+- **What:** This function returns the maximum value of the "pressed down" button state. This is `127` by default.
   When given a parameter, this function changes the maximum value of the button state according to the `value` given as parameter.
 - **Example:** The code `self:button_max(110)` will set the value of the button to `110` when pressed down. This can be useful to set easy to use values for a switch, like `self:button_max(1)` will make it so that there are only two values this button can send out `0` and `1`.
 
@@ -80,8 +80,10 @@ These button triggers and events are applicable to all encoders and buttons on a
 ### button_state
 - shortname: bst
 - **How:** `self:button_state()`
-- **What:** This function will return the "state" of the control element. In case of a button this is either "pressed down" `0`  OR "released" `127`. These values independent from value variable of the control element. This means that the button_state() function will always return the values associated with the "pressed" or "released" states, independently from any kind of alterations to the button value functions, such as changing the max or min values.
+- **What:** This function will return the "state" of the control element. In case of a button this is either "pressed down" `127`  OR "released" `0`. These values independent from value variable of the control element. This means that the button_state() function will always return the values associated with the "pressed" or "released" states, independently from any kind of alterations to the button value functions, such as changing the max or min values.
 - **Example:**
+
+
 
 
 
