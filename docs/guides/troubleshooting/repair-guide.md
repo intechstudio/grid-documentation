@@ -85,8 +85,12 @@ Remove the faulty Interface PCB and replace it with a replacement one you receiv
 
 Using the upgrade kit just follow the disassembly process backwards, but be careful to only use the parts provided in the Upgrade Kit and not mix them with the old ones, as they are incompatible.
 
+
+:::caution Under construction
 Pictures of an upgarde kit reassembly coming soon!
 
+In the meanwhile you can check a video of the diassembly process [HERE](https://www.instagram.com/p/Cz9FRCRq3F3/?hl=en).
+:::
 
 ## Troubleshooting
 
