@@ -67,6 +67,8 @@ Follow the image descriptions for a quick and painless disassembly process.
 <ImageLightbox imageSrc={img9} styling={'w-3/5'} citation={'Be careful not to lose your utility button!'}/>
 
 
+
+
 <ImageLightbox imageSrc={img11} styling={'w-3/5'} citation={'Disassembly is done, nice job!'}/>
 
 
