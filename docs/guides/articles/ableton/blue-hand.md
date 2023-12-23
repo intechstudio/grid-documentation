@@ -26,12 +26,12 @@ import img4 from './img/bh_set_up.png';
 
 The Blue Hand feature within Ableton will allow you to control parameters of a currently selected plugin without the need of MIDI-learning parameters every time to the connected MIDI controller.
 
-The scripts below support control for 16 parameters, and in the case of an EN16 these will all be assigned to its 16 encoders
+The scripts below support control for up to 16 plugin parameters, and in the case of an EN16 these will all be assigned to its 16 encoders.
 
 You'll need an installation of at least Ableton Live 9+, since we're going to use a newer feature of Ableton called "User Remote Scripts" [more info about how to find it here](https://help.ableton.com/hc/en-us/articles/206240184-Creating-your-own-Control-Surface-script). 
 
 
-Plug in your Grid module into your computer directly. (In this guide I'm using an EN16 built before May of 2023, or in other words a D51-based Grid)
+Plug in your Grid module into your computer directly. (In this guide I'm using an EN16 built before May of 2023, or in other words a D51-based Grid.)
 
 During this guide, there will be a couple of files you'll have to download. These will be marked at the start of each section.
 
@@ -96,7 +96,7 @@ You can find this custom script in Ableton preferences, under MIDI.
 
 <ImageLightbox imageSrc={img2}  citation={"When opening up the dropdown for a control surface both Intech scripts should show up."} />
 
-Choose one of the scripts (they are virtually identical, there's only two for recognition's sake) and assign your currently connected Grid controller to both the in- and outputs.
+Choose one of the scripts (they are virtually identical, there's twoof them only for recognition's sake) and assign your currently connected Grid controller to both the in- and outputs.
 
 After setting up your MIDI section should look something like this:
 
@@ -127,7 +127,7 @@ You can either find the Profile in the Profile Cloud under Presets within Grid E
 
 <br></br>
 
-This is a link to a Grid Editor System Event Preset, containing settings for the MIDIRX Event. The preset is made for an EN16, but you can adapt it for other modules, just change the `self:encoder_value` to the appropriate ones where applicable.
+This is a link to a Grid Editor System Event Preset, containing settings for the MIDIRX Event. The preset is made for an EN16, but you can adapt it for other modules, just change the `self:encoder_value` function to the appropriate ones where applicable.
 
 More about understanding MIDIRX [here.](/docs/wiki/more/midi-rx.md) 
 :::
