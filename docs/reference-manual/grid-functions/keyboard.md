@@ -32,18 +32,18 @@ description: How to send keyboard messages in a Code Block.
 ### mouse button send
 
 - shortname: gmbs
-- **How:** `mouse_button_send(state, button)`
-  - state: integer, ranging 0...1
+- **How:** `mouse_button_send(button, state)`
   - button: integer, ranging 1=leftclick 2=rightclick 4=middle click
+  - state: integer, ranging 0...1
 - **What:** This function sends a mouse click of the defined button to the host.
 - **Example:** 
 
 ### mouse move send
 
 - shortname: gmms
-- **How:** `mouse_move_send(position, axis)`
-  - position: integer
+- **How:** `mouse_move_send(axis, position)`
   - axis: integer, ranging 1...3 where 3=mousewheel
+  - position: integer
 - **What:** This function sends a mouse move message to the host. Where the movement equals to the position parameter in screensspace.
 - **Example:** 
 

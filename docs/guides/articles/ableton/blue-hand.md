@@ -30,6 +30,7 @@ The scripts below support control for up to 16 plugin parameters, and in the cas
 
 You'll need an installation of at least Ableton Live 9+, since we're going to use a newer feature of Ableton called "User Remote Scripts" [more info about how to find it here](https://help.ableton.com/hc/en-us/articles/206240184-Creating-your-own-Control-Surface-script). 
 
+We'll also use an advanced feature to expose non-native Ableton plugin parameters to Blue Hand. You can read more about how that works [here.](https://help.ableton.com/hc/en-us/articles/6003224107292-Options-txt-file) 
 
 Plug in your Grid module into your computer directly. (In this guide I'm using an EN16 built before May of 2023, or in other words a D51-based Grid.)
 
@@ -83,11 +84,11 @@ Make sure Ableton is not running during this section of the guide!
 
 2. Create a new folder named `User Remote Scripts` in your local preferences folder if there isn't one already.
 
-3. Open up the downloaded **bluehand.zip** and within you'll find two folders: `Intech_Studio_AC` and `Intech_Studio_Grid`.
+3. Open up the downloaded **bluehand.zip** and within you'll find **two folders**: `Intech_Studio_AC` and `Intech_Studio_Grid`.
 
-4. Place both folders in the archive in the newly created `User Remote Scripts` folder. This created the two scripts for the two types of Grid devices that exist.
+4. Place **both folders** from the archive in the newly created `User Remote Scripts` folder. This created the two scripts for the two types of Grid devices that exist.
 
-5. Finally, place the downloaded **Options.txt** file, and place it into the local Preferences directory.
+5. Finally, place the downloaded **Options.txt** file, and under Windows place it into the local Preferences directory. If using MacOS, place the file into the `Users/[username]/Library/Preferences/Ableton` folder (this folder might be hidden by default).
 
 6. Restart Ableton.
 
