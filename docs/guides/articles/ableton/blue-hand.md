@@ -55,11 +55,14 @@ Enable the modules for both In- and Output by checking the both the **Track** an
 
 ### Creating Remote Script files and the Options file
 
-:::note Downloads
+:::tip Downloads
 First, download the following files for this section of the guide:
 
-- Both Intech Studio custom Control Surface script files for Blue Hand (for each version of Grid microarchitecture). Download the <a target="_blank" href="/presets/bluehand/bluehand.zip" download="bluehand.zip"> Zip containing two folders, one for each control surface.</a> 
-- Ableton Options file for exposing hidden VST parameters. Download the <a target="_blank" href="/presets/bluehand/Options.txt" download="Options.txt"> plain text file, called Options.txt.</a> 
+- Both Intech Studio custom Control Surface script files for Blue Hand (for each version of Grid microarchitecture). 
+<a target="_blank" href="/presets/bluehand/bluehand.zip" download="bluehand.zip"> Download the Zip containing two folders, containing one script for each control surface.</a> 
+
+- Ableton Options file for exposing hidden VST parameters. 
+<a target="_blank" href="/presets/bluehand/Options.txt" download="Options.txt"> Download the plain text file, called Options.txt.</a> 
 
 :::
 
@@ -78,13 +81,13 @@ Make sure Ableton is not running during this section of the guide!
 
 **Windows:** `C:\Users\[Username]\AppData\Roaming\Ableton\Live x.x.x\Preferences\User Remote Scripts`
 
-2. Open up the downloaded **bluehand.zip** and within you'll find two folders: `Intech_Studio_AC` and `Intech_Studio_Grid`.
+2. Create a new folder named `User Remote Scripts` in your local preferences folder if there isn't one already.
 
-3. Create a new folder named `User Remote Scripts` in your local preferences folder if there isn't one already.
+3. Open up the downloaded **bluehand.zip** and within you'll find two folders: `Intech_Studio_AC` and `Intech_Studio_Grid`.
 
-4. Place both folders in the archive in the `User Remote Scripts` folder. This created the two scripts for the two types of Grid devices that exist.
+4. Place both folders in the archive in the newly created `User Remote Scripts` folder. This created the two scripts for the two types of Grid devices that exist.
 
-5. Finally, place the downloaded **Options.txt** file into the local Preferences directory.
+5. Finally, place the downloaded **Options.txt** file, and place it into the local Preferences directory.
 
 6. Restart Ableton.
 
@@ -96,7 +99,7 @@ You can find this custom script in Ableton preferences, under MIDI.
 
 <ImageLightbox imageSrc={img2}  citation={"When opening up the dropdown for a control surface both Intech scripts should show up."} />
 
-Choose one of the scripts (they are virtually identical, there's twoof them only for recognition's sake) and assign your currently connected Grid controller to both the in- and outputs.
+Choose one of the scripts (they are functionally identical, there's two of them only for recognition's sake) and assign your currently connected Grid controller to both the in- and outputs.
 
 After setting up your MIDI section should look something like this:
 
@@ -120,7 +123,7 @@ You can test it by just plugging an Ableton plugin on any of the tracks, and you
 
 ## Setting up bi-directional control with Editor (Optional)
 
-:::note Downloads
+:::tip Downloads
 You can either find the Profile in the Profile Cloud under Presets within Grid Editor by the name `en16 midirx` or just click the link here:
 
 <ProtocolUrl title="Click here to import the EN16 MIDIRX Preset in Editor" protocolUrl="grid-editor://?config-link=weNFaPglV3lnwzeKElVr"/>
