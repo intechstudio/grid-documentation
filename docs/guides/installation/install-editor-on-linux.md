@@ -35,7 +35,7 @@ The application will open up once it finished loading. A similar view should be 
 
 ## Allow Serial Port
 
-It can be that you did not used any similar serial USB device like Grid before. You must allow serial read / write for USB devices.
+It's possible that you haven't used any similar serial USB devices like Grid before. You may need to enable serial read/write for USB devices.
 
 The easy way:
 
