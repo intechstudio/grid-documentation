@@ -11,7 +11,7 @@ Actions can be freely added to an Action Chain of any Event up to a certain poin
 There one limitation on the size of Action Chains. No Action Chain can contain more than 400 characters.
 :::
 
-When you cross this limit and try to store your configuration Grid Editor will tell you in a message that you want over limit. You can also monitor your current charactercount in the debug window on the left.
+When you cross this limit and try to store your configuration or try to commit code, Grid Editor will warn you about it. You can also monitor your current charactercount in the debug window on the left.
 
 Remember this is a per Event or per Action Chain limitation, so if you run out of space there are some workarounds to help you still fit into these limitations:
 
