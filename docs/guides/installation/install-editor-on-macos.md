@@ -15,14 +15,11 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 ## Install requirements
 - Internet access
 - ~150MB disk space
-- Mac OS version 10.13+ (High Sierra and up)
+- Mac OS version 10.15+ (Catalina and up)
 
-We have tested on Grid Editor on various Mac OS systems ourselves, and our user base comes currently with systems between 10.13 High Sierra and 11 (Big Sur).
-
-[Download Grid Editor Mac](https://intech.studio/products/grid-editor)
+[Download Grid Editor Mac](https://intech.studio/support-and-downloads#editor-software)
 
 The installer files for Mac OS are hosted on GitHub. Throughout the download process, your browser may prompt a warning. Choose to keep the file.
-
 
 
 ## Installation
@@ -37,10 +34,8 @@ Mac OS may prompt an alert, depending on your Privacy Settings. In this case you
 
 Once you are able to open the disk image, the installation takes few seconds.
 
-<ImageLightbox imageSrc={img2}/>
+
+The application will open up once finished and a welcome screen should greet you.
 
 
-The application will open up once finished. A similar view should be on your desktop.
-
-<ImageLightbox imageSrc={img3} citation={'A fresh Editor install'}/>
 

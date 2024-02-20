@@ -18,7 +18,7 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 - Ubuntu distribution
 
 
-[Download Grid Editor Linux](https://intech.studio/products/grid-editor)
+[Download Grid Editor Linux](https://intech.studio/support-and-downloads#editor-software)
 
 The executable files for Linux install are hosted on GitHub.
 
