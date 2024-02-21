@@ -5,14 +5,12 @@ title: "Grid: Updating the firmware"
 date: 2021-11-25
 description: Manual firmware update steps for Grid controllers.
 ---
-
 import img1 from './img/firmware_mismatch.png'
 import img2 from './img/bootloader_detected_update_start.png'
 import img3 from './img/update_success.png'
 import img4 from './img/utility_conn.gif'
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
-
 
 Grid Firmware is often updated. We introduce new features, stability improvements and bug fixes in each update. We highly recommend keeping your modules up-to-date, to ensure best performance and workflow compatibility. When you connect the modules while Grid Editor is running it will warn you if you are using an outdated firmware version.
 
@@ -29,7 +27,6 @@ The mismatched module will be highlighted with red color, like this:
 Gird Editor can update your module firmware automatically if you follow the on-screen messages at the top.
 
 Reconnect the mismatched module (and that module only) while holding down the utility button on the side of the module.
-
 
 After connecting you'll be prompted with a message in blue, asking whether you want to start the update. Press 'Update Firmware'.
 
@@ -58,7 +55,7 @@ Follow carefully the steps below, connect your Grid module directly to your comp
 1. Unzip the downloaded firmware archive .zip file
 2. You will find files named grid_release.uf2, these are files you'll need for the firmware update process
 
-:::caution Be careful! 
+:::caution Be careful!
 Choosing the incorrect binary will cause the FW update to fail, so please follow the instructions outlined below!
 :::
 
@@ -67,7 +64,7 @@ You might find multiple binary files in the .zip file, choose the one correspond
 
 You can check the file when Grid is connected in bootloader mode.
 
-It will tell you if it's either SAMD51 or ESP32. 
+It will tell you if it's either SAMD51 or ESP32.
 
 Use the binary for the firmware update matching the name of the MCU in the module you're updating.
 :::
@@ -78,8 +75,7 @@ Use the binary for the firmware update matching the name of the MCU in the modul
 
 <ImageLightbox imageSrc={img4} citation={'Hold down the utility side button while plugging in the USB cable and wait for the LEDs to turn green'}/>
 
-
 6. You should see GRID removable device on your desktop
-2. Drag and drop the firmware file onto the removable device or copy and paste it
-3. Wait for the upload, the module should reboot and light up in default page color (blue)
-4. Repeat this step for all your modules
+7. Drag and drop the firmware file onto the removable device or copy and paste it
+8. Wait for the upload, the module should reboot and light up in default page color (blue)
+9. Repeat this step for all your modules
