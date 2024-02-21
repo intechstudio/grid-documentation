@@ -1,10 +1,18 @@
 ---
 layout: docs
-sidebar_position: 6
-title: "Controller: Factory reset"
+sidebar_position: 3
+title: "Grid: Factory reset"
 date: 2021-11-25
 description: Factory reset for Grid controllers.
 ---
+
+import img1 from './img/nvm_erase.gif'
+
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+
+
+
+
 Sometimes, when we upload code to a Grid module, it can lead to unexpected behavior. In such instances, we may find it necessary to perform a factory reset on our Grid module to restore it to its default settings.
 
 
@@ -17,7 +25,7 @@ Sometimes, when we upload code to a Grid module, it can lead to unexpected behav
 
 :::
 
----
+
 
 ### Steps:
 
@@ -27,3 +35,5 @@ Sometimes, when we upload code to a Grid module, it can lead to unexpected behav
 4. Module memory will be erased.
 
 <!-- GIF -->
+
+<ImageLightbox imageSrc={img1} styling={'w-5/5'}/>

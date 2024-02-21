@@ -1,6 +1,6 @@
 ---
 layout: docs
-sidebar_position: 2
+sidebar_position: 1
 title: "Grid: Updating the firmware"
 date: 2021-11-25
 description: Manual firmware update steps for Grid controllers.

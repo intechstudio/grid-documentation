@@ -56,7 +56,7 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext()
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Welcome!`}
       description="Documentation site for Grid, Knot and other Intech Studio projects."
     >
       <HomepageHeader />

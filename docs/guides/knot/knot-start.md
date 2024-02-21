@@ -5,14 +5,69 @@ description: For setting up Knot with Grid and other devices
 ---
 
 
-*Knot is a general purpose MIDI USB Host device. In this article you'll find a basic list of features and use-case examples.*
+*Knot is a general purpose MIDI USB Host device.*  
+*In this article you'll find a basic list of features and use-case examples.*
 
 ---
 
-### Setting up Knot with Grid
+## First setup and troubleshooting
+
+regular mode/through mode
+
+### status leds and what do they mean
+
+<div style={{margin: '2em'}}>
+
+
+| Status | LED color | LED |
+| ---- | ---- | ---- |
+| device connected | dim green | all |
+| no connected device | white pulse | all |
+| booting process | purple | all |
+|  | white flicker | left |
+|  | white flicker | center |
+|  | white flicker | right |
+
+
+| Status | LED color | LED |
+| ---- | ---- | ---- |
+| device connected | dim blue | all |
+| no connected device | white pulse | all |
+| booting process | purple | all |
+|  | white flicker | left |
+|  | white flicker | center |
+|  | white flicker | right |
+
+
+| Status | LED color | LED |
+| ---- | ---- | ---- |
+| bootloader ready | bright green | all |
+| bootloader not ready | bright red | all |
+| booting process | purple | all |
+| firmware update in progress | orange blinking | all |
+
+</div>
+
+### firmware update - 
+
+bright red leds
+
+bright green leds
+
+
+
+### troubleshooting
+
+no signal at midi ports
+
+
+
+## Use-case examples
+
+### Knot hosting Grid
 
 Using Knot as a USB MIDI Host for connecting Grid with you hardware MIDI devices is straightforward. You'll need the following things to get started:
-- **1x Knot** and its respective USB-C cable for power or a DC power adapter
+- **Knot**
 - **1x Grid module** of your choice (-or more of course!) and its respective USB-C cable for power and data
 - **1x MIDI cable**, for connecting Knot with the MIDI hardware device (either a 3.5mm TRS cable or a 5-pin DIN MIDI cable with a TRS adapter)
 
@@ -30,7 +85,7 @@ Valamint későbbiekhez egy example setup a MIDI eszköz + Knot kombóhoz
 --->
 
 
-### Setting up Knot with other USB MIDI devices with Knot as the Host
+### Knot hosting other MIDI devices
 
 Using Knot as a USB MIDI Host for connecting Grid with you hardware MIDI devices is straightforward. You'll need the following things to get started:
 - **1x Knot** and its respective USB-C cable for power or a DC power adapter
@@ -44,7 +99,7 @@ To connect the devices together:
 
 To check if everything's working as it should, look out for the LEDs on the Knot frontplate. When Knot first receives ample power the 3 LEDs will light up in purple for a second. After boot, while a USB device is connected it should be green with the occasional white blip indicating when a message is being sent or received.
 
-### Setting up Knot with an instrument for MIDI control - Example
+### Knot TRS MIDI output
 
 *You can see our list of tested devices on [the Knot GitHub page here.](https://github.com/intechstudio/knot)*
 
