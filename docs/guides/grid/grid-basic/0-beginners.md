@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-title: "0: Using the defaults"
+title: "0: Plug-and-Play"
 description: "Configuring your DAW for Grid"
 slug: editor-100
 ---

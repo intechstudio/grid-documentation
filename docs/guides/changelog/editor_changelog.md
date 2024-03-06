@@ -12,7 +12,96 @@ You can see written patch notes released here for Grid Editor, the configuration
 
 ---
 
-### Grid Editor version 1.2.46
+## Grid Editor version 1.2.49
+
+This new version of Grid Editor arrives with shiny new features and useful bug fixes.
+The extensive list of changes are as follows:
+
+
+### Profile Cloud Rework
+- Updated the look and functionality of Profile Cloud with the aim of visual clarity and general usability.
+- You can now name your profiles and presets before actually saving them.
+- Added 3 categories that all configurations now fall under: my configurations, recommended configurations and community configurations. This way, your own configurations will always be visible at the top, regardless of naming or date of creation.
+- Updated the look of the configuration list for visual clarity.
+- Details of a selected configuration are now visible in the bottom panel.
+
+<!-- link to the video from Greg -->
+
+#### New Features
+- Added Virtual Modules to Editor. You can add a Virtual Module to Editor when you have no module plugged in after launching Editor. Virtual modules are fully featured, allow you to work on configurations while not having a module plugged in or even create configurations for modules you don't own.
+- Code editor panel now appears in the middle of the UI, instead of over it. This allows for better visibility for the side panels while editing.
+- Fixed a bug where indentations would not render correctly.
+- Previously plugins are now Packages.
+- Updated the design of every single button to have a consistent design.
+
+
+#### Bugfixes
+- Fixed a bug where the Package Manager would freeze in certain specific cases.
+- Fixed the 'Unhandled Device Lost' error.
+- Profile Cloud now properly warns the user when inputting incorrect email address or password on the login screen.
+- Fixed a bug where the Action-picker panel would be cut off by the edge of the Editor window.
+- Fixed a bug where Editor would not display warning messages in Logger.
+- Fixed a bug where plugging in a real module while a Virtual module was visible could cause a crash.
+- Fixed several bugs related to UI scaling.
+- Fixed a bug where NVM erase wouldn't cause Editor to correctly display the erased state of the controller.
+- Editor now prompts the user to update when Grid is running a firmware version below 1.2.29.
+
+
+---
+
+## Grid Editor version 1.2.48
+
+This new version of Grid Editor arrives with shiny new features and useful bug fixes.
+The extensive list of changes are as follows:
+
+### Changes to Mouse functions
+- Changed how Grid handles all functions and therefore all Actions related to Mouse Actions.
+
+:::caution Be careful!
+The two parameters of all Mouse functions have been swapped from Grid Firmware version 1.2.28 onwards.  
+The [Wiki](/category/keyboard-and-mouse-actions) now displays the new version, under the Reference Manual Entry tab.
+:::
+
+#### New Features
+- Changed the Profile/Preset Load buttons from text to icons for better visual feedback.
+- When System Element is selected, Editor now displays a representation of the PCB underneath. You can turn this option on and off under Preferences.
+- Added System Element to the Element selection list at the top of the Configuration side panel.
+- Rearranged the position of some items on the Configuration panel.
+- Editor Packages are now able to supply Editor with new types of Action blocks for future expandibility.
+- Active changes are now visible while the Profile Load overlay is engaged. 
+
+#### Bugfixes
+- Fixed suggested options in Local Action blocks to correctly display available options.
+- Fixed bugs regarding the internal logic of the If, Else and Elseif blocks.
+- Fixed a bug where text would appear cut off in some cases within block textboxes.
+- Fixed a bug where pressing the Enter key wouldn't select and perform auto-complete on suggestions.
+- Fixed a bug where moving the cursor near the bottom or top of the Action Chain would cause the list of Actions to automatically scroll up and down.
+- Fixed bugs related to Active Changes.
+- Fixed a visual bug related to Variable Action blocks.
+
+---
+
+## Grid Editor version 1.2.47
+
+This new version of Grid Editor arrives with shiny new features and useful bug fixes.
+The extensive list of changes are as follows:
+
+#### New Features
+- You can now select and edit the System Element by clicking on the southern middle part of the modules, where the firmware number and architecture code is visible.
+- System Element is now added to the Active Changes highlighting.
+- When creating arrays in code, each value now appears in a single line, even after closing the code editor.
+- Reworked the overlay system to better handle the case of conflicting overlays.
+- Page selection got a new look and now appears under the module in the center of the layout.
+
+#### Bugfixes
+- Loading Profile Cloud when offline now throws a proper error instead of failing silently.
+- Bitwise operators now work properly inside of Action block textboxes.
+- Fixed a bug where on Linux, reseting User Preferences to defaults would case Editor to crash.
+
+
+---
+
+## Grid Editor version 1.2.46
 
 This new version of Grid Editor arrives with a whole bunch of new features from UX improvements, to troubleshooting aides. The extensive list of features is found below. We also fixed some annoying bugs, but mostly features this time around!
 
@@ -34,7 +123,7 @@ This new version of Grid Editor arrives with a whole bunch of new features from 
 
 ---
 
-### Grid Editor version 1.2.45
+## Grid Editor version 1.2.45
 
 This new version of Grid Editor arrives with a new Action, called a Loop and another round of fixes and reworks of basic underlying systems.
 
@@ -57,7 +146,7 @@ The Loop Action can be used to repeat an Action or multiple Actions in just a si
 
 
 
-### Grid Editor version 1.2.44
+## Grid Editor version 1.2.44
 
 This new version of Grid Editor arrives with a big haul of fixes an UX improvements. This patch notes combines the changes of version 1.2.43 and the 1.2.44 hotfix patch released on September 25, 2023.
 
@@ -83,7 +172,7 @@ No real star features this time, mostly under the hood changes and bugs getting 
 
 ---
 
-### Grid Editor version 1.2.42
+## Grid Editor version 1.2.42
 
 This new version of Grid Editor arrives with Plugin Manager and Profile Cloud usability improvements, a complete rework of the user feedback/notification system and many-many bug fixes and small improvements.  
 
@@ -107,7 +196,7 @@ This new version of Grid Editor arrives with Plugin Manager and Profile Cloud us
 ---
 
 
-### Grid Editor version 1.2.41
+## Grid Editor version 1.2.41
 
 This new version of Grid Editor arrives with a couple of new and exciting features and some bug fixes and changes under the hood. Preferences have been shuffled around as we're preparing Editor for an upcoming visual overhaul.
 
@@ -162,7 +251,7 @@ Remember that the above requires the latest Grid Firmware as well, but Editor sh
 
 ---
 
-### Grid Editor version 1.2.40
+## Grid Editor version 1.2.40
 
 This version of Grid Editor arrives with a new Plugin system, which allows us to add small features developed separately from Editor. The first example of this is the Active Window plugin (earier a dev-feature), which allows Editor to change the ative Page of the connected module based on which window is in focus.
 We added some more convenience features and fixed a whole lot of bugs and crashes.
@@ -185,7 +274,7 @@ We added some more convenience features and fixed a whole lot of bugs and crashe
 
 ---
 
-### Grid Editor version 1.2.38
+## Grid Editor version 1.2.38
 
 This version of Grid Editor arrives with loads of bugfixes for annoying bugs, UX improvements and some improvements to transparency.
 
