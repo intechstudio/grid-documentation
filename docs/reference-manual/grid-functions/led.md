@@ -64,12 +64,13 @@ description: How to set LED parameters in Code Blocks.
 
 ### led_color
   - shortname: glc
-  - **How:** `led_color(num,layer,reg,green,blue)`
+  - **How:** `led_color(num,layer,red,green,blue,beautify)`
     - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
     - layer: integer, ranging 1...2
     - red: integer, ranging 0...255
     - green: integer, ranging 0...255
     - blue: integer, ranging 0...255
+    - beautify: integer, ranging 0...1 (optional arguement, if not included behaves as 0)
   - **What:** This function sets the default LED color for a control element.
   - **Example:** Inputting the `led_color(num,1,255,0,0)` function into a Code Block makes the given control element's LED color red.
 
