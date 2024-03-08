@@ -26,7 +26,7 @@ export default class ImageLightbox extends Component {
     return (
       <div
         className='w-full flex flex-col items-center justify-center '>
-        <img style={{...this.props.style}} className={" shadow-xl"} src={this.props.imageSrc} onClick={() => this.setState({ isOpen: true })} />
+        <img style={this.props.style} className={" shadow-xl"} src={this.props.imageSrc} onClick={() => this.setState({ isOpen: true })} />
         <div dangerouslySetInnerHTML={{ __html: this.props.citation }} className='italic py-1 mt-2 mb-4 text-sm'>
         </div>
         {isOpen && (
@@ -49,4 +49,4 @@ export default class ImageLightbox extends Component {
     );
   }
 }
-ImageLightbox.defaultProps = { style: {'max-height':50+'em'} }
+ImageLightbox.defaultProps = { style: { 'max-height': 50 + 'em' } }

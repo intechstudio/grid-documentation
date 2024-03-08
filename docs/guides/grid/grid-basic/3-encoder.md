@@ -155,5 +155,5 @@ You can use the *merge as code* function to see how this Action block is built a
 
 ## Next steps
 
-We've started to go over common encoder states. Before moving towards more advanced configurations, check out the [button](/docs/guides/grid/grid-basic/3-button.md) guide.
+We've started to go over common encoder states. Before moving towards more advanced configurations, check out the [button](/docs/guides/grid/grid-basic/3-button.md) guide. Do you have a module with potentiometers or faders? Check out the [potmeter](/docs/guides/grid/grid-basic/3-potmeter.md) guide.
 

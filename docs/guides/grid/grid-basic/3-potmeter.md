@@ -5,103 +5,74 @@ slug: editor-103-potmeter
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import pot101_pmo from './img/pot101_pmo.png'
+import pot101_pmin_pmax from './img/pot101_pmin_pmax.png'
+import pot101_cc_change from './img/pot101_cc_change.gif'
+import pot101_14bit_midi from './img/pot101_14bit_midi.png'
 
-*This article details most settings and adjustments to the default Button behavior on Grid modules.*
+*This article details most settings and adjustments to the default Potentiometer and Fader (aka slide potentiometer) behavior on Grid modules.*
 
 ---
 
-# Button modes explained
+## Potmeter modes explained
 
-The button Events can be found on most Grid controllers. Buttons have the following modes:
-- **Momentary** (default), sends a value 127 on press, and value 0 on release
-- **Toggle**, sends a value 127 on press, and value 0 on press again
-- **X-step toggle**, sends value based on the step number on each press, 3-step will send 0, 42, 84, 126
+The potmeter Event can be found on Grid controllers, where either potentiometers or faders can be found. The potmeter modes are essentially bit-depth setting of the analog value reads from the hardware. The modes are:
+- **7-bit** (default), which has the value `7`, *this is the standard MIDI range, 0-127 (2^7)*
+- **8-bit**, value `8` is an extended range, 0-255 (2^8), often used in lightning and color controls
+- **9 and 10-bit**, value `9` or `10` is an even higher range, best used in combination with 14-bit NRPN MIDI configuration. 9-bit is 0-512 (2^9), 10-bit is 0-1024 (2^10)
+- **11-bit and over**, value `11` or higher is a very high resolution and it is not recommended to use these settings without additional noise filtering. We suggest to give it a try, but be aware of the noise and jitter that can come with it.
 
-You can check out the button [wiki article here](/wiki/actions/element-settings/button-mode).
+<ImageLightbox imageSrc={pot101_pmo} citation={"Potmeter Mode action block on init event"}/>
 
-Let's add an **Button Mode** Action block to the *init* event of the button control element. We could put it onto the *button* event as well, but pay attention to the order of execution on an Action chain. 
-:::note 
-The button Event, and button presses are applicable for button control elements and encoders as well. When we mention button interaction, the control element can be either a button or an encoder.
-:::
-<ImageLightbox imageSrc={button_mode_init} citation={"Add the button mode "} styling={'w-4/5 object-contain'}/>
+## Potmeter minimum and maximum
 
-## Button state vs. button value
+By default, the potmeter minimum value is 0, and the maximum value is 127. These values can be changed with the `potmeter_min()` and `potmeter_max()` functions.
 
-Selecting different steps in the **Button Mode** Action will change the calculated steps which can be read from the `self:button_value()`.
+When the potmeter minimum and maximum values are changed, the `potmeter_value()` will reflect those new ranges.
 
-The `button_value()` will always represent the current *value* of the button. The *pressed* and *released* states can be checked with the `button_state()` function.
-
-## Momentary mode
-
-In momentary mode - button mode set to 0 -, when you *press* the element down, the **button value** will be 127. When you *release* the button, the **button value** will change to 0.
-
-<ImageLightbox imageSrc={btn_momentary} citation={"Momentary button setting is 0."} styling={'w-4/5 max-h-60 object-contain'}/>
-
-## Toggle mode
-
-While using toggle mode - button mode set to 1 -, when you *press* the element down once, the **button value** will be 127. Upon you *release* the button, the button value will stay 127. When you *press* the button again, the **button value** will change to 0.
-
-<ImageLightbox imageSrc={btn_toggle} citation={"Toggle button setting is 1."} styling={'w-4/5 max-h-60 object-contain'}/>
-
-## Button minimum and maximum
-
-In the above momentary and toggle examples, button values were changed between 0 and 127.
-
-When the button minimum and maximum values are changed, the `button_value()` will reflect those new ranges.
-
-If you want to set button minimum and maximum values, you can do so by adding a [**Code Block**](/wiki/actions/code/code-block) Action to the *init* Event of the button control element.
+If you want to set potmeter minimum and maximum values, you can do so by adding a [**Code Block**](/wiki/actions/code/code-block) Action to the *init* Event of the button control element.
 
 ```lua
-self:button_min(10)
-self:button_max(100)
+self:potmeter_min(10)
+self:potmeter_max(100)
 ```
 
-:::tip Set velocity
-Setting button maximum is a great way to change the **velocity** of MIDI interactions. You can set the button maximum to 100 and using the 144 MIDI Command (Note-On messages), messages will be identified as velocity 100 messages.
+The [**Potmeter Mode**](wiki/actions/element-settings/potmeter-mode) Action block - which was made to help 14-bit MIDI setup - also has the option to set the potmeter maximum from the drop-down to either 127 for standard and 16383 for high resolution MIDI. In the Potmeter Mode action block the maximum can be set to a different maximum as well.
+
+<ImageLightbox imageSrc={pot101_pmin_pmax} citation={"Potmeter minimum and maximum setting in Code Block"} styling={'w-4/5 max-h-60 object-contain'}/>
+
+
+:::tip Set CV to max 110
+Different hardware instruments and DAWs use logarithmic adjustments to MIDI input values. Setting volume and gain staging to 0 db is often around control value 110. If you set the `potmeter_max()` to 110, you can be sure that the control value will be 110 when the potmeter is turned all the way to the right, or if it's a slider all the way to the top. This can help avoid clipping and get more control over your instruments.
 :::
-<ImageLightbox imageSrc={min_max_reflected} citation={"In the different button modes, the min max values are reflected"} styling={'w-4/5 object-contain'}/>
 
-## Button presses are sent out twice
+## Set CC 1 Modulation, CC 7 Volume, CC 11 Expression
 
-When a button is in momentary mode, this behaviour doesn't stand out, but it's good to keep in mind that button Events are running both on the *press* and *release* of the button.
+Potentiometers, specially the faders are often used to control the dynamics, volume and expression of instruments in audio libraries and VSTs. On Grid controllers, the default CC MIDI settings are [calculated dynamically](/wiki/more/dynamically-assigned-MIDI-ch-and-cc), but it's easy to overwrite them.
 
-This "double trigger" might not be what you are lookin for, specially if you are using the buttons to send out singular messages.
+1. Select a control element you want to change
+2. Select the potmeter event
+3. Open up the Locals action block, change the cc value to 1, 7 or 11
+4. Commit the changes
+5. Repeat above steps, then Store your configuration
 
-To avoid this, you can use the `button_state()` function to check if the button is:
-- pressed: state is larger than 0,
-- released: state is 0.
+<ImageLightbox imageSrc={pot101_cc_change} citation={"Potmeter minimum and maximum setting in Code Block"} style={{maxHeight:400+'px'}}/>
 
-An other way is to use the button special **Press/Release** Action block. This Action block has two branches, where you can put your Actions.
-
-<ImageLightbox imageSrc={btn_press_release} citation={"1. You can define the press release check in a code block, utilising the button_state() function<br/>2. The other quick option is to use the special Press/Release action block"} styling={'w-4/5 object-contain'}/>
-
-## Long press
-
-You can achieve a long press button behaviour by checking the button state and the elapsed time since the button has been used. For this, we utilize the `button_state()` and `button_elapsed_time()` functions with some condition logic, to trigger the **timer** event on the button. When the button is not held down for the specified time, the timer is stopped. Check out [how timer works here](/wiki/events/ui-events/timer-event).
-
-In the following long press configuration example, when the button is held down for more than 1000 miliseconds, the button's color will change to green, and the LED intensity will be set to 127.
-
-The following steps are happening in the configuration on the *button* event:
-1. When the button is pressed down and state changes to 127
-    1. A **Timer Start** Action block starts
-    2. Normal buttton color is set (which is otherwise overwritten for a short time on the timer Event)
-    3. The LED intensity is changed with the button press
-2. The *elif* branch checks if the button is released and if it's been pressed for less than 1000 miliseconds
-    1. When the button has been pressed for less than 1000 miliseconds, the **Timer Stop** Action block stops the timer
-    2. The LED intensity is changed with the button release
-
-The *timer* Event runs when the press is longer than 1000 miliseconds: 
-1. The Event sets green color for the LED
-2. LED intensity is also set to 127 to make the result visible
-
-<ImageLightbox imageSrc={btn_long_press} citation={"By checking the button state and the elapsed time since the button has been used, you can trigger long press functions with the timer"} styling={'w-4/5 object-contain'}/>
-
-:::tip Elapsed Time
-All control elements have access to the control element's `button/potmeter/encoder_elapsed_time()` function. This function returns the elapsed time since the last interaction with the given control element.
+:::note Variables in Locals action block are used in the MIDI action block
+By default, the variables created in the Locals action block are used in the MIDI action block. This way you can easily change the MIDI settings of your control elements, by just changing the values in the Locals. But you can also open up the MIDI action block and type in your own settings there.
 :::
+
+## 14-bit high resolution MIDI
+
+Let's add an **Potmeter Mode** Action block to the *init* event of the potentiometer control element. We could put it onto the *potmeter* event as well, but pay attention to the order of execution on an Action chain. 
+
+1. Change the bit depth to 10, and set the maximum to 16383. This way you can use the potentiometer to send 14-bit MIDI messages.
+2. Navigate to the *potmeter* event and change the MIDI action block from "MIDI" to "14-bit MIDI".
+3. Open up the MIDI monitor and see your potentiometer sending out 14-bit MIDI messages.
+
+<ImageLightbox imageSrc={pot101_14bit_midi} citation={"Set the Potmeter Mode on init even and change the MIDI action block on the potmeter event to 14-bit"}/>
+
 
 ## Next steps
 
-After the buttons and encoders, let's check out the potmeter configurations.
-
-*Coming soon*
+There is a side utility button on Grid controllers called utility button. This is the +1 control element on Grid, where system events are also configured. Tutorial coming soon!
