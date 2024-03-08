@@ -64,8 +64,9 @@ After learning about the indidual elements and some their options, we suggest st
 | Controller  | Interaction based Events |
 | ----------- | ----------- |
 | EN16 | [encoder](/docs/guides/grid/grid-basic/3-encoder.md), [button](/docs/guides/grid/grid-basic/3-button.md) |
-| EF44 | [encoder](/docs/guides/grid/grid-basic/3-encoder.md), [button](/docs/guides/grid/grid-basic/3-button.md) |
+| EF44 | [encoder](/docs/guides/grid/grid-basic/3-encoder.md), [button](/docs/guides/grid/grid-basic/3-button.md) | [potmeter](/docs/guides/grid/grid-basic/3-potmeter.md) |
 | BU16 | [button](/docs/guides/grid/grid-basic/3-button.md) |
+| PBF4 | [potmeter](/docs/guides/grid/grid-basic/3-potmeter.md), [button](/docs/guides/grid/grid-basic/3-button.md) |
 </div>
 
 
