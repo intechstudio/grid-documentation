@@ -1,5 +1,5 @@
 ---
-title: "2.5: Configuring Encoders"
+title: "2.1: Encoders"
 description: "About Encoder Modes and more for EN16 and EF44."
 slug: editor-103-encoder
 ---
@@ -23,7 +23,7 @@ import merge_spec_l_r from './img/merge_spec_l_r.png'
 
 ---
 
-# Encoder modes explained
+# Encoder Modes explained
 
 All encoders can be set to 3 different modes:
 - **Absolute** (default), acts like a potentiometer 0-127 CC values

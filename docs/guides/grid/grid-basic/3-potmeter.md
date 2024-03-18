@@ -1,5 +1,5 @@
 ---
-title: "2.5: Configuring Potentiometers and Faders"
+title: "2.1: Potmeters and Faders"
 description: Change the common MIDI settings like commands and CCs. Set minimum and maximum range for your controls. Define resolution for 14-bit NRPN MIDI messages. Get into SySex commands and more.
 slug: editor-103-potmeter
 ---
@@ -10,17 +10,18 @@ import pot101_pmin_pmax from './img/pot101_pmin_pmax.png'
 import pot101_cc_change from './img/pot101_cc_change.gif'
 import pot101_14bit_midi from './img/pot101_14bit_midi.png'
 
-*This article details most settings and adjustments to the default Potentiometer and Fader (aka slide potentiometer) behavior on Grid modules.*
+*This article details most settings and adjustments to the default Potentiometer and Fader (i. e. slide potentiometer) behavior on Grid modules.*
 
 ---
 
-## Potmeter modes explained
+## Potmeter Modes explained
 
-The potmeter Event can be found on Grid controllers, where either potentiometers or faders can be found. The potmeter modes are essentially bit-depth setting of the analog value reads from the hardware. The modes are:
-- **7-bit** (default), which has the value `7`, *this is the standard MIDI range, 0-127 (2^7)*
-- **8-bit**, value `8` is an extended range, 0-255 (2^8), often used in lightning and color controls
-- **9 and 10-bit**, value `9` or `10` is an even higher range, best used in combination with 14-bit NRPN MIDI configuration. 9-bit is 0-512 (2^9), 10-bit is 0-1024 (2^10)
-- **11-bit and over**, value `11` or higher is a very high resolution and it is not recommended to use these settings without additional noise filtering. We suggest to give it a try, but be aware of the noise and jitter that can come with it.
+The Potmeter Event can be found on Grid controllers equipped with either potentiometers or faders.  
+The Mode block allows for the bit-depth setting of the analogue value reads from the hardware, it's settings are as follows:
+- **7-bit** (default), which has the value `7`, this is the standard MIDI range, 0-127 (2^7);
+- **8-bit**, value `8` is an extended range, 0-255 (2^8), often used in lightning and color controls;
+- **9 and 10-bit**, value `9` or `10` is an even higher range, best used in combination with 14-bit NRPN MIDI configuration. 9-bit is 0-512 (2^9), 10-bit is 0-1024 (2^10);
+- **11-bit and over**, value `11` or higher is a very high resolution and it is not recommended to use these settings without additional noise filtering as it might introduce jitter. 
 
 <ImageLightbox imageSrc={pot101_pmo} citation={"Potmeter Mode action block on init event"}/>
 

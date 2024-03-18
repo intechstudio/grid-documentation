@@ -1,5 +1,5 @@
 ---
-title: "2: Editor tutorial"
+title: "2.0: Editor tutorial"
 description: Often used practices and tools explained
 slug: editor-102
 ---

@@ -1,5 +1,5 @@
 ---
-title: "2.5: Configuring Buttons"
+title: "2.1: Buttons"
 description: Change the button to toggle mode and learn about button states.
 slug: editor-103-button
 ---
@@ -16,7 +16,7 @@ import btn_long_press from './img/btn_long_press.png'
 
 ---
 
-# Button modes explained
+# Button Modes explained
 
 The button Events can be found on most Grid controllers. Buttons have the following modes:
 - **Momentary** (default), sends a value 127 on press, and value 0 on release
