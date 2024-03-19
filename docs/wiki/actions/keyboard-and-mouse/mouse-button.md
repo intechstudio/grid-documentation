@@ -7,6 +7,7 @@ description: "This Mouse Button Block allows Grid to send mouse click messages t
 
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import MouseBlock from './img/mouse_block_crop.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -31,6 +32,8 @@ If you have an orginal Grid module, you can use that to translate Mouse messages
 This Mouse Button Block allows Grid to send mouse click messages to the host computer.
 
 In the Block input fields you can define the type of mouse button message: which button to press or release.
+
+<ImageLightbox imageSrc={MouseBlock} style={{width:300+'px'}} citation={'Mouse Button Block in Press Release Block in Grid Editor'}/>
 
 
   </TabItem>

@@ -6,6 +6,7 @@ description: "This Mouse Move Block allows Grid to send mouse move messages to t
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import MouseMove from './img/mouse_move_crop.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -28,6 +29,8 @@ If you have an orginal Grid module, you can use that to translate Mouse messages
 --->
 
 This Mouse Move Block allows Grid to send mouse move messages to the host computer, letting you send even scrollwheel messages.
+
+<ImageLightbox imageSrc={MouseMove} style={{width:300+'px'}} citation={'Mouse Move Block, eg.: move the mousewheel'}/>
 
 
   </TabItem>
