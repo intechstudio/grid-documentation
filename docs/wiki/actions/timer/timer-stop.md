@@ -6,6 +6,7 @@ description: "The Timer Stop Block allows you to end a Timer early, before its c
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import TimerStop from './img/timer_stop.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -20,6 +21,8 @@ The Timer Stop Action allows you to end a Timer early, canceling/aborting a runn
 This will result in the Timer Event and its Action chain never running.
 
 The Timer Stop is mostly useful for turning off cyclical timers like clocks for sequencers, as these type of timers would run infinitely
+
+<ImageLightbox imageSrc={TimerStop} style={{width:350+'px'}} citation={'Stops the Timer on Element number 10'}/>
 
 :::note A Cyclical timer
 A cyclical timer is what we call such a Timer Event that is countinuously retriggered by its own Action chain. 
