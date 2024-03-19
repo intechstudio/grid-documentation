@@ -1,7 +1,8 @@
 ---
+sidebar_position: 4
 title: "2.1: Buttons"
 description: Change the button to toggle mode and learn about button states.
-slug: editor-103-button
+slug: editor-121-button
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';

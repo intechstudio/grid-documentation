@@ -1,7 +1,8 @@
 ---
+sidebar_position: 1
 title: "1.0: Editor overview"
 description: Editor overview and creating a basic Grid configuration
-slug: editor-101
+slug: editor-110
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
@@ -231,7 +232,7 @@ The Editor is crucial while configuring the unit, but after the configurations a
 
 Click on the Profile Cloud tab on the left sidebar. Here you can create a new Profile or Preset. Beside storing your changes to the module, it's highly encouraged to keep copies of your configurations in this Profile Cloud panel. You can name these Profiles and Presets and also make them public for others to use and learn from.
 
-Learn more about Profile Cloud and it's features [here](/docs/guides/grid/grid-adv/cloud.md).
+Learn more about Profile Cloud and it's features [here](/docs/guides/grid/grid-basic/cloud.md).
 
 <ImageLightbox imageSrc={profile_cloud_panel} citation={"Under the Profile Cloud panel you can create Profiles and Presets"} styling={'w-4/5 object-contain'}/>
 

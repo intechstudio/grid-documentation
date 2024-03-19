@@ -1,7 +1,8 @@
 ---
+sidebar_position: 3
 title: "2.0: Editor tutorial"
 description: Often used practices and tools explained
-slug: editor-102
+slug: editor-120
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';

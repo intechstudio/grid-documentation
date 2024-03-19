@@ -64,11 +64,12 @@ Reboot your computer. Make sure you connect your module directly to your compute
 If you have old .JSON Grid configuration profile files saved somewhere on your computer here's how you can import into the modern profile cloud interface:
 
 1. Make sure Editor in not running.
-2. Go to your `.../grid-userdata/` folder.
-3. Create a new folder inside `.../grid-userdata/` named `profiles`.
+2. Go to your `...\grid-userdata\` folder.
+3. Create a new folder inside `...\grid-userdata\` named `profiles`.
 4. Copy and paste all your old legacy profile .JSON files into the folder named `profiles`.
 5. Start Editor and you should see your old profiles appear in Profile Cloud converted to the new system. After this if you check the folder named `profiles` should have disappeared.
 
+Grid configurations are all stored in `...\grid-userdata\configs\` in new Editor versions and the above process will migrate your old configurations there as well.
 
 ### Grid module is stuck in a bootloop with a faulty configuration, how to fix it
 

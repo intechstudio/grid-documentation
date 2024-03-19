@@ -1,7 +1,8 @@
 ---
+sidebar_position: 5
 title: "2.1: Encoders"
 description: "About Encoder Modes and more for EN16 and EF44."
-slug: editor-103-encoder
+slug: editor-121-encoder
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';

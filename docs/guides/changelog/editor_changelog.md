@@ -233,7 +233,7 @@ The most exciting of all should be the newly added Clock Source Action which all
 
 
 
-[More about how to use the Profile Cloud here](/docs/guides/grid/grid-adv/cloud.md)
+[More about how to use the Profile Cloud here](/docs/guides/grid/grid-basic/cloud.md)
 
 All Demos function the same way: when Grid is configured with the profile above, the  first LED of the module will sync its blinking to the DAW MIDI clock.
 When you press Play in your DAW the LED should start blinking and turn green.

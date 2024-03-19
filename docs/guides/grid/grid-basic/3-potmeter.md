@@ -1,7 +1,8 @@
 ---
+sidebar_position: 6
 title: "2.1: Potmeters and Faders"
 description: Change the common MIDI settings like commands and CCs. Set minimum and maximum range for your controls. Define resolution for 14-bit NRPN MIDI messages. Get into SySex commands and more.
-slug: editor-103-potmeter
+slug: editor-121-potmeter
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
