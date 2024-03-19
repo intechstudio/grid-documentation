@@ -7,6 +7,7 @@ description: "The Start Animation Block allows the LED intensity to change over 
 
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import AnimationExample from './img/animation_example.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -18,6 +19,8 @@ import TabItem from '@theme/TabItem';
 
 
 The Start Animation Block allows the LED intensity to change over time, making the LED blink in some form or another. The way it blinks is best described as a waveform constantly changing the LED intensity on one layer of the LED.
+
+<ImageLightbox imageSrc={AnimationExample} style={{width:300+'px'}} citation={'When button pressed, fast sine wave LED animation starts'}/>
 
 The Block has the following paramters:
 - LED number: the number of the LED the animation should affect

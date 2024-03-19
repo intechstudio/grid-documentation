@@ -6,6 +6,7 @@ description: "This Block simply stops an already playing animation on an LED lay
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import StopAnimationExample from './img/stop_animation_example.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -19,6 +20,8 @@ import TabItem from '@theme/TabItem';
 
 
 This Block simply stops an already playing animation on an LED layer. Works similarly to its pair, the [Start Animation Block](../led/start-animation.md).
+
+<ImageLightbox imageSrc={StopAnimationExample} style={{width:300+'px'}} citation={'When button pressed, LED animation starts, when released animation stops'}/>
 
 
   </TabItem>

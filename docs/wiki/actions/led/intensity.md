@@ -6,6 +6,8 @@ description: "The Intensity Block changes the light intensity the LED of your ch
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import IntensityInit from './img/intensity_init_block.png'
+import IntensityExample from './img/intensity_example.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -19,6 +21,9 @@ The Intensity Block changes the light intensity the LED of your choice when this
 
 Intensity Blocks by default are found on the Init Event of each Control Element. This is to give a default light intensity to each module on startup. If you just want to change how your module looks, we advise to change things here.
 
+<ImageLightbox imageSrc={IntensityInit} style={{width:350+'px'}} citation={'Intensity on Init Event with custom intensity value'}/>
+
+
 The Block has a couple of fields you can configure:
 - LED number: which LED should the Block affect
 - layer: either 1 or 2, the final color is based on the mixed colors of the two layers
@@ -27,6 +32,8 @@ The Block has a couple of fields you can configure:
 - intensity value: how strong should the LED light intensity be
 
 Both the LED number and the intensity value is by default bound to the Control Element number and the Control Element Value through the local variables [num and val](../variables/local-variables.md). This way is to support the out of the box experience, but you can change this however you'd like.
+
+<ImageLightbox imageSrc={IntensityExample} style={{width:350+'px'}} citation={'Example: If the potmeter value below 64 then Intensity is low, else Intensity is max'}/>
 
 
 
