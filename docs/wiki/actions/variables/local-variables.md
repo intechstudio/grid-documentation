@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Local Variables" label="About Local Variables" default>
 
 

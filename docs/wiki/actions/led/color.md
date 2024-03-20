@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About LED Color" label="About LED Color" default>
 
 The Color Block changes the color the LED of your choice when this action runs.

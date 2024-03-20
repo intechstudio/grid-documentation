@@ -31,7 +31,7 @@ For users using **maiden** however, you should follow these steps:
 
 #### Download one of the .pmap files from the selection below that corresponds to a norns script that you have installed on your norns.
 
-<Tabs>
+<Tabs queryString="current-sctipt">
   <TabItem value="awake" label="awake" default>
     
 

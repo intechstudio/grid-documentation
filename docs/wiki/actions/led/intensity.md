@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About LED Intensity" label="About LED Intensity" default>
 
 

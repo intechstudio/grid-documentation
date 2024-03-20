@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About System Init Event" label="About System Init Event" default>
 
 

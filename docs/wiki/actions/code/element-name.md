@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Element Names" label="About Element Names" default>
 
 Element Name Blocks are used to name the Control Element configuration in Grid Editor. These names are stored with the configuration and therefore are saved in both Presets or when Store is pressed.

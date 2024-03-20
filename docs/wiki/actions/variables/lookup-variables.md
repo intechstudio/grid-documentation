@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Lookup" label="About Lookup" default>
 
 ## Description

@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Button Mode" label="About Button Mode" default>
 
 ## Description

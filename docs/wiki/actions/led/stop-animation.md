@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Stopping Animations" label="About Stopping Animations" default>
 
 

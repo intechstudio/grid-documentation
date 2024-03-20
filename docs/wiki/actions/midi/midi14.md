@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About 14bit MIDI" label="About 14bit MIDI" default>
 
 

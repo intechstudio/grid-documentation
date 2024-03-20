@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Comments" label="About Comments" default>
 
 Comment blocks are used to create comments in Editor for creating notes and general comments. These comments are saved onto Grid when the configuration is stored.

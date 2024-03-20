@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About MIDI RX Event" label="About MIDI RX event" default>
 
 ## Description

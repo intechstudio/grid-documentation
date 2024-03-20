@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Timer Start" label="About Timer Start" default>
 
 

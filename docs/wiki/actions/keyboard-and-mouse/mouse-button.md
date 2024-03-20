@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Mouse Button" label="About Mouse Button" default>
 
 <!--

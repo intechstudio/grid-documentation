@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Keyboard" label="About Keyboard" default>
 
 With the use of a Keyboard Block Grid is able to send keystrokes to the host computer as a physical keyboard would. This is useful for creating keyboard shortcuts (like ctrl+v or pressing Space for transport in Ableton) or just for general productivity purposes (only one keypress for Excel to press F2, then type a function in and then move along to the next row).

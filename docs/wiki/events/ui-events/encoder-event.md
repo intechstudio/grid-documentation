@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Encoder Event" label="About Encoder Event" default>
 
 The Encoder Event is a UI Event, which means it triggers on user interaction. Specifically when the user turns the encoder, each click on a 'clicky' encoder equals to one trigger of the Encoder Event.

@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-<Tabs>
+<Tabs queryString="tab">
   <TabItem value="About Encoder Mode" label="About Encoder Mode" default>
 
 ## Change relative encoding
