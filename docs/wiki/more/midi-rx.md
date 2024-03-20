@@ -28,7 +28,7 @@ The below example shows how to set the LED value on a relative encoder, so it wi
 1. First control element (element index 0), **Init** event
     - Set the Encoder Mode to relative
     - The encoder intensity will be set by midi rx, which is layer **2**
-    - It's also possible to turn off the default dimmed LED brightness by switching the *beutify* off
+    - It's also possible to turn off the default dimmed LED brightness by switching the *beautify* off
 2. First control element (element index 0), **Encoder** event
     - Remove the LED Intensity block - we set it through midi rx
 3. Select System Events, **Midi Rx** event
