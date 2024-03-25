@@ -10,6 +10,11 @@ import moutind from './img/midi_out_ind.png'
 import midimap from './img/midimap.png'
 import bitwingC from './img/bitwing_connect.png'
 import bitwingL from './img/bitwing_learn.png'
+import cubaseC from './img/cubase_connect.png'
+import flEnable from './img/fl_enable.png'
+import flMidi1 from './img/fl_midimap1.png'
+import flMidi2 from './img/fl_midimap2.png'
+import cubaseQuickControls from './img/cubase_quick_controls.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -50,13 +55,27 @@ Now, what we want is to be able to send MIDI messages from Grid to your DAW, for
   ...
   </TabItem>
   <TabItem value="FL" label="FL Studio" default>
-  ...
+ 
+   
+  and open up Options/MIDI Settings and under MIDI we'll find all our MIDI gear that's connected to the computer.
+
+  Here we should find our Grid module named 'Grid' or 'Intech Studio: AC'.
+
+  Select the Grid module under Input and click Enable. Once enabled, the Grid can send MIDI messages to FL Studio.
+
+  <ImageLightbox imageSrc={flEnable} style={{height:600+'px'}} citation={'MIDI Settings, Enabled Grid module'}/>
+  
   </TabItem>
       <TabItem value="ProTools" label="ProTools" default>
   ...
   </TabItem>
     <TabItem value="Cubase" label="Cubase" default>
-  ...
+
+select **Studio -> Studio Setup...**, to upen up the Studio Setup panel, where general MIDI configurations can be viewed.
+
+Select the **MIDI Port Setup** tab, and check if your Grid controller is listed under **MIDI Input**. If you don't see Grid listed there, check the [troubleshooting](/guides/troubleshooting) articles.
+
+<ImageLightbox imageSrc={cubaseC} style={{height:400+'px'}} citation={"Grid controllers shown under MIDI Port setup"}/>
   </TabItem>
     <TabItem value="Studio One" label="Studio One" default>
   ...
@@ -66,7 +85,8 @@ Now, what we want is to be able to send MIDI messages from Grid to your DAW, for
   </TabItem>
     <TabItem value="Bitwing" label="Bitwing" default>
     
-and navigate to Settings/Controllers, then click on "+Add Controller" under the Controllers section. Choose "Generic" under Hardware Vendor, and proceed to add the Grid module named 'Grid' or 'Intech Studio: AC'.
+  and navigate to Settings/Controllers, then click on "+Add Controller" under the Controllers section. Choose "Generic" under Hardware Vendor, and proceed to add the Grid module named 'Grid' or 'Intech Studio: AC'.  
+
 
   <ImageLightbox imageSrc={bitwingC} style={{width:650+'px'}} citation={'Connected Grid controller'}/>
 
@@ -101,13 +121,28 @@ So after we have Grid enabled as a MIDI device we can send messages to the softw
   ...
   </TabItem>
   <TabItem value="FL" label="FL Studio" default>
-  ...
+
+  First, enable Multilink and move the parameters you wish to control. Once you've moved, click Multilink once more. 
+  
+  <ImageLightbox imageSrc={flMidi1} style={{height:100+'px'}} citation={'Multilink button Enable'}/>
+
+  This action will prompt the Remote Control Settings window to appear. Simply move the Grid knobs or faders, and they will automatically map to the displayed destination.
+
+  <ImageLightbox imageSrc={flMidi2} style={{height:500+'px'}} citation={'Remote Control Settings with kick fader waiting to assign'}/>
   </TabItem>
       <TabItem value="ProTools" label="ProTools" default>
   ...
   </TabItem>
     <TabItem value="Cubase" label="Cubase" default>
-  ...
+
+Cubase has a feature called Quick Controls, which allows 8 control elements to be mapped. It allows you to select specific parameters on a channel which you want to control. You can assign MIDI messages to these parameters, and control them with your Grid controller.
+
+Tick in the **Learn** checkbox, and move a knob on your Grid controller. The **Learn** checkbox will enable MIDI learn in Cubase, so your interaction with the control elements are recorded. Click on a row, tweak a control element, repeat.
+
+In each Quick Control row, under the flags the **R** should be activated, so the MIDI messages are received by Cubase. If we want to send MIDI messages back to Grid, the **T** flag should be activated too.
+
+<ImageLightbox imageSrc={cubaseQuickControls} citation={"Left: MIDI learn values for a PBF4 potentiometers and faders  <br> Right: Transmit and Receive are activated, so MIDI values can be received and sent back to Grid"}/>
+
   </TabItem>
     <TabItem value="Studio One" label="Studio One" default>
   ...
@@ -124,15 +159,6 @@ So after we have Grid enabled as a MIDI device we can send messages to the softw
   Now you have a generic configuration.
   </TabItem>
   </Tabs>
-
-
-## Tips and tricks
-
-Below you can find some advice on how to create your own workspace:
-
-- Save MIDI mapping settings in Ableton. These settings are stored in the Project file for easy access to favorite configurations.
-
-- Control non-mappable Ableton functions using keyboard commands. Utilize keyboard shortcuts, such as 'Tab', to perform actions like switching between arrangement and session views. [Keyboard Action Block](/docs/wiki/actions/keyboard-and-mouse/keyboard.md)
 
 
 
