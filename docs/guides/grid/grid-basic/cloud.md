@@ -113,12 +113,13 @@ Only configurations set to Public will be accessible by others. If you share a c
 
 :::
 
-
+<!---
 ### Can I migrate my profile configurations from the earlier Grid Editor version to the Profile Cloud?
 
 
-Yes, you can. If you have existing profiles (session profiles or profiles under a user folder), you can migrate them to the new feature set. Before migrating, we recommend saving a backup archive of your grid-userdata. Like this, we can help restore configs, in case anything goes sideways. 
 
+Yes, you can. If you have existing profiles (session profiles or profiles under a user folder), you can migrate them to the new feature set. Before migrating, we recommend saving a backup archive of your grid-userdata. Like this, we can help restore configs, in case anything goes sideways. 
+--->
 
 ## Future developments
 
