@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-title: "1: Grid and MIDI devices"
+title: "1.0: Grid and MIDI devices"
 description: For configuring MIDI hardware
 slug: editor-201
 ---

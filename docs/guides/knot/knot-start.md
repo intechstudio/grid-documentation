@@ -10,13 +10,16 @@ description: For setting up Knot with Grid and other devices
 
 ---
 
+<!---
+
 ## First setup and troubleshooting
 
 regular mode/through mode
 
 ### status leds and what do they mean
 
-<div style={{margin: '2em'}}>
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+
 
 
 | Status | LED color | LED |
@@ -28,6 +31,9 @@ regular mode/through mode
 |  | white flicker | center |
 |  | white flicker | right |
 
+</div>
+
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
 | Status | LED color | LED |
 | ---- | ---- | ---- |
@@ -38,13 +44,17 @@ regular mode/through mode
 |  | white flicker | center |
 |  | white flicker | right |
 
+</div>
+
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+
 
 | Status | LED color | LED |
 | ---- | ---- | ---- |
 | bootloader ready | bright green | all |
 | bootloader not ready | bright red | all |
 | booting process | purple | all |
-| firmware update in progress | orange blinking | all |
+| firmware update | orange blink | all |
 
 </div>
 
@@ -60,7 +70,7 @@ bright green leds
 
 no signal at midi ports
 
-
+--->
 
 ## Use-case examples
 

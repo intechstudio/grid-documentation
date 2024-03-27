@@ -8,8 +8,8 @@ slug: editor-100
 import mout from './img/intech_out.png'
 import moutind from './img/midi_out_ind.png'
 import midimap from './img/midimap.png'
-import bitwingC from './img/bitwing_connect.png'
-import bitwingL from './img/bitwing_learn.png'
+import bitwigC from './img/bitwig_connect.png'
+import bitwigL from './img/bitwig_learn.png'
 import cubaseC from './img/cubase_connect.png'
 import flEnable from './img/fl_enable.png'
 import flMidi1 from './img/fl_midimap1.png'
@@ -32,19 +32,19 @@ This guide explains how to connect the Grid module(s) to your DAW and configure 
 Out of the box, Grid controllers are set up for seamless DAW control and other applications. Users can easily utilize software-side MIDI mapping or MIDI learn functionality. 
 This default setup allows you to connect multiple Grid modules and immediately configure pots, knobs, sliders, and buttons in your preferred DAW without needing to open Grid Editor.
 
-:::tip Not quite enough for you?
-For anything more complex than just the plug and play experience in a DAW, please take a look at our [Grid Editor](/category/grid-installing-editor)!
+:::tip Want to know more?
+For anything more complex than just the plug-and-play experience please take a look at [Grid Editor!](/docs/guides/grid/grid-basic/1-first-changes.md)
 :::
 
 
 ---
 
-## Connect to DAW
+## Connect Grid to your DAW
 
 
 So in the DAW we'll first have to enable our modules to be able to use them for MIDI mapping.
 
-Let's start up a fresh project in
+Let's start up a fresh project in your DAW of choice:
 
 <Tabs queryString="DAW" groupId="DAW">
   <TabItem value="Ableton" label="Ableton" default>
@@ -104,12 +104,12 @@ and open Preferences/External Devices and click on "Add...". Then, choose "New C
 
   <ImageLightbox imageSrc={rpEnable} style={{height:400+'px'}} citation={'Enabled Grid'}/>
   </TabItem>
-    <TabItem value="Bitwing" label="Bitwing" default>
+    <TabItem value="Bitwig" label="Bitwig" default>
     
   and navigate to Settings/Controllers, then click on "+Add Controller" under the Controllers section. Choose "Generic" under Hardware Vendor, and proceed to add the Grid module named 'Grid' or 'Intech Studio: AC'.  
 
 
-  <ImageLightbox imageSrc={bitwingC} style={{width:650+'px'}} citation={'Connected Grid controller'}/>
+  <ImageLightbox imageSrc={bitwigC} style={{width:650+'px'}} citation={'Connected Grid controller'}/>
 
 
 
@@ -171,6 +171,7 @@ In each Quick Control row, under the flags the **R** should be activated, so the
   1. Open the Mixer view by clicking on the button located in the lower right corner under the browser.
   2. On the left side, select "Show External Devices" and open up the Grid interface.
   3. Click on "MIDI Learn" and manipulate the faders, potentiometers, or buttons as needed, then close the MIDI Learn function.
+  
   <ImageLightbox imageSrc={soFader} style={{height:300+'px'}} citation={'Show External Devices'}/>
   
   - To assign a parameter eg: volume fader, to control with the Grid: move a control on Grid then right click on a fader and choose "Assign 'Volume' to Controlx on Grid".
@@ -193,11 +194,11 @@ In each Quick Control row, under the flags the **R** should be activated, so the
 
   <ImageLightbox imageSrc={rpMIDI} style={{height:350+'px'}} citation={'Mapped Faders'}/>
   </TabItem>
-        <TabItem value="Bitwing" label="Bitwing" default>
+        <TabItem value="Bitwig" label="Bitwig" default>
 
-  When click on "Learn" you activate MIDI learn mode. This mode waits for a MIDI CC message from the controller. After interacting with any control element on your module, Bitwing displays the MIDI assignment.
+  When click on "Learn" you activate MIDI learn mode. This mode waits for a MIDI CC message from the controller. After interacting with any control element on your module, Bitwig displays the MIDI assignment.
 
-  <ImageLightbox imageSrc={bitwingL} style={{width:650+'px'}} citation={'The blue hue shows the MIDI-mappable parameters'}/>
+  <ImageLightbox imageSrc={bitwigL} style={{width:650+'px'}} citation={'The blue hue shows the MIDI-mappable parameters'}/>
 
   Now you have a generic configuration.
   </TabItem>
