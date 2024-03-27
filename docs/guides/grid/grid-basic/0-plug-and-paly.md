@@ -1,8 +1,8 @@
 ---
-sidebar_position: 10
-title: "0.0: Plug-and-Play V2"
+sidebar_position: 0
+title: "0.0: Plug-and-Play"
 description: "Configuring your DAW for Grid"
-slug: editor-500
+slug: editor-100
 ---
 
 import mout from './img/intech_out.png'
@@ -14,6 +14,12 @@ import cubaseC from './img/cubase_connect.png'
 import flEnable from './img/fl_enable.png'
 import flMidi1 from './img/fl_midimap1.png'
 import flMidi2 from './img/fl_midimap2.png'
+import rpMIDI from './img/rp_midi.png'
+import rpEnable from './img/rp_enabled.png'
+import soMidi from './img/so_midi.png'
+import soFader from './img/so_fader.png'
+import soFader2 from './img/so_fader2.png'
+import soSynth from './img/so_synth.png'
 import cubaseQuickControls from './img/cubase_quick_controls.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -78,10 +84,25 @@ Select the **MIDI Port Setup** tab, and check if your Grid controller is listed 
 <ImageLightbox imageSrc={cubaseC} style={{height:400+'px'}} citation={"Grid controllers shown under MIDI Port setup"}/>
   </TabItem>
     <TabItem value="Studio One" label="Studio One" default>
-  ...
+  
+and open Preferences/External Devices and click on "Add...". Then, choose "New Control Surface" from the options. In the 'Receive From' dropdown menu, select either 'Grid' or 'Intech Studio: AC'. Next, provide a name for the device, such as "Grid", and click OK.
+
+  <ImageLightbox imageSrc={soMidi} style={{height:450+'px'}} citation={'External Devices, Grid module'}/>
+
+
   </TabItem>
       <TabItem value="Reaper" label="Reaper" default>
-  ...
+  
+  open Settings/Midi Devices, Here we should find our Grid module named 'Intech Studio - Grid' or 'Intech Studio: AC'.
+
+
+  If not, click "Reset all MIDI devices".
+  On Midi inputs, right click the Grid module and enable input for control messages.
+
+
+
+
+  <ImageLightbox imageSrc={rpEnable} style={{height:400+'px'}} citation={'Enabled Grid'}/>
   </TabItem>
     <TabItem value="Bitwing" label="Bitwing" default>
     
@@ -145,10 +166,32 @@ In each Quick Control row, under the flags the **R** should be activated, so the
 
   </TabItem>
     <TabItem value="Studio One" label="Studio One" default>
-  ...
+  
+
+  1. Open the Mixer view by clicking on the button located in the lower right corner under the browser.
+  2. On the left side, select "Show External Devices" and open up the Grid interface.
+  3. Click on "MIDI Learn" and manipulate the faders, potentiometers, or buttons as needed, then close the MIDI Learn function.
+  <ImageLightbox imageSrc={soFader} style={{height:300+'px'}} citation={'Show External Devices'}/>
+  
+  - To assign a parameter eg: volume fader, to control with the Grid: move a control on Grid then right click on a fader and choose "Assign 'Volume' to Controlx on Grid".
+    <ImageLightbox imageSrc={soFader2} style={{height:300+'px'}} citation={'Assign to fader'}/>
+
+  - Let's assign a Grid potentiometer to a parameter on a VST synth.
+  Open the synth and in the top right next to Grid, open the mapping interface. Once opened, move the Cutoff Frequency parameter, then move a potentiometer on the Grid. In the top left corner, you'll see the two parameters; click on "Assign." From now on, you can control the Cutoff frequency from the Grid module.
+
+  <ImageLightbox imageSrc={soSynth} style={{height:450+'px'}} citation={'Assign control'}/>
+
+
   </TabItem>
       <TabItem value="Reaper" label="Reaper" default>
-  ...
+  
+  For example let's midi map faders to Grid, you have to do so using Actions. 
+
+  Open the Action List (Action/Show action list...) and filter for "set volume". Select one of the "Track: Set volume for track x (MIDI CC only)" and under the "Shortcuts for selected action" click "Add...". Then move the controller you wish to use and it will assign that action, then press OK.
+  
+   Now when you move that controller, the fader moves. You can set one controller to adjust the mixer faders on any selected track, the last touched track or set multiple controllers to control multiple tracks.
+
+  <ImageLightbox imageSrc={rpMIDI} style={{height:350+'px'}} citation={'Mapped Faders'}/>
   </TabItem>
         <TabItem value="Bitwing" label="Bitwing" default>
 
@@ -157,34 +200,5 @@ In each Quick Control row, under the flags the **R** should be activated, so the
   <ImageLightbox imageSrc={bitwingL} style={{width:650+'px'}} citation={'The blue hue shows the MIDI-mappable parameters'}/>
 
   Now you have a generic configuration.
-  </TabItem>
-  </Tabs>
-
-
-
-<Tabs queryString="DAW" groupId="DAW">
-  <TabItem value="Ableton" label="Ableton" default>
-    valami
-  </TabItem>
-  <TabItem value="Logic" label="Logic" default>
-  ...
-  </TabItem>
-  <TabItem value="FL" label="FL Studio" default>
-  ...
-  </TabItem>
-      <TabItem value="ProTools" label="ProTools" default>
-  ...
-  </TabItem>
-    <TabItem value="Cubase" label="Cubase" default>
-  ...
-  </TabItem>
-    <TabItem value="Studio One" label="Studio One" default>
-  ...
-  </TabItem>
-      <TabItem value="Reaper" label="Reaper" default>
-  ...
-  </TabItem>
-        <TabItem value="Bitwing" label="Bitwing" default>
-  ...
   </TabItem>
   </Tabs>
