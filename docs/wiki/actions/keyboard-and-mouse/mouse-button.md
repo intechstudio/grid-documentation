@@ -1,6 +1,7 @@
 ---
 slug: mouse-button
 title: Mouse Button
+sidebar_position: 0
 tags: [Action Block, Workflow] 
 description: "This Mouse Button Block allows Grid to send mouse click messages to the host computer."
 ---

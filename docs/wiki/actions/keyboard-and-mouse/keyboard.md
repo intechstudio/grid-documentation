@@ -1,6 +1,7 @@
 ---
 slug: keyboard
 title: Keyboard
+sidebar_position: 3
 tags: [Action Block, Workflow]
 description: "With the use of a Keyboard Block Grid is able to send keystrokes to the host computer as a physical keyboard would."
 ---

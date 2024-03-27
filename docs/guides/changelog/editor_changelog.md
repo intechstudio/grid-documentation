@@ -8,9 +8,32 @@ import ProtocolUrl from '@site/src/components/ProtocolUrl';
 
 
 You can see written patch notes released here for Grid Editor, the configuration software for Grid Controllers.  
-[(Editor changes can always be found on our GitHub here.)](https://github.com/intechstudio/grid-editor/releases)
+[(Up-to-date changes can also be found on our GitHub here.)](https://github.com/intechstudio/grid-editor/releases)
 
 ---
+
+## Grid Editor version 1.2.51
+
+This new version of Grid Editor arrives with shiny new features and useful bug fixes.
+The extensive list of changes are as follows:
+
+#### New Features
+- Added the new **Gamepad Action** blocks (Button and Joystick), which let you send Gamepad messages to your computer. More info about the Gamepad Actions can be found on the [Wiki](/category/gamepad-actions).
+- All block operations (Copy, Paste etc.) have been visually redesigned.
+- All element operations (Copy Element, Overwrite Element) have been visually redesigned and moved above block operations.
+- Added the new **Context Menu**. Right clicking with the mouse on a control element now reveals a Context Menu. Context Menu was added to help speed up some Element worklows.
+- Holding down Cmd/Ctrl and click-and-dragging the module layout is now possible. The 'Reset View' button in the bottom right corner resets all changes to this, as does unplugging the module or restarting Editor.
+- It's now possible to disable Editor animations. This should make Editor easier to run on older computers. You can find this option under Preferences.
+
+
+
+#### Bugfixes
+- Fixed a bug where certain characters could cause an infinite loop.
+- Fixed a bug where clicking on a tooltip text would make the tooltip disappear.
+- Fixed a bug where Profile Cloud would display incorrect login status.
+- Fixed a bug where the Action picker window would clip outside of the Editor window.
+- Fixed a bug where the Keyboard Action block would refuse character input.
+
 
 ## Grid Editor version 1.2.49
 
@@ -125,7 +148,7 @@ This new version of Grid Editor arrives with a whole bunch of new features from 
 
 ## Grid Editor version 1.2.45
 
-This new version of Grid Editor arrives with a new Action, called a Loop and another round of fixes and reworks of basic underlying systems.
+This new version of Grid Editor arrives with a new Action called Loop and another round of fixes and reworks of basic underlying systems.
 
 The Loop Action can be used to repeat an Action or multiple Actions in just a single Event. You can set the number of repetitions or even add your own rules for counting down repeats. This block gives you the control over the underlying `for` loop from the Lua library.
 
