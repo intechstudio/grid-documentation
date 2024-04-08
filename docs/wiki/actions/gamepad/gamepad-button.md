@@ -8,6 +8,7 @@ description: "The Gamepad Button block allows Grid to send gamepad button press 
 
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import img2 from './img/gp_buttons_block.png';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -16,8 +17,9 @@ import TabItem from '@theme/TabItem';
 <Tabs queryString="tab">
 <TabItem value="About Gamepad Button" label="About Gamepad Button" default>
 
+Use the payout below for configuring the gameped button block. You can send the `val` parameter when using it on a button or encoder pushbutton.
 
-
+<ImageLightbox imageSrc={img2} style={{width:540+'px'}} citation={'Generic gamepad button layout.'}/>
 
 
 :::caution
