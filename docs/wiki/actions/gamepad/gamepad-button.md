@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 <Tabs queryString="tab">
 <TabItem value="About Gamepad Button" label="About Gamepad Button" default>
 
-Use the payout below for configuring the gameped button block. You can send the `val` parameter when using it on a button or encoder pushbutton.
+Use the layout below for configuring the gameped button block. You can send the `val` parameter when using it on a button or encoder pushbutton.
 
 <ImageLightbox imageSrc={img2} style={{width:540+'px'}} citation={'Generic gamepad button layout.'}/>
 
