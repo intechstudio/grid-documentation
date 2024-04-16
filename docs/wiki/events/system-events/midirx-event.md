@@ -62,7 +62,7 @@ Where **num** could be a specific control element you assigned the received valu
 - **How:** `midirx_enabled()`
   - 
 - **What:** This function enables or disables MIDI RX functionality of Grid.
-- **Example:** 
+- **Example:**  Enable - `midirx_enabled(1)` , Disable - `midirx_enabled(0)
 
 ### midirx sync
 - shortname: mrs
@@ -70,7 +70,7 @@ Where **num** could be a specific control element you assigned the received valu
   - 
 - **What:** This function enables or disables whether Grid sends out a MIDI Clock sync signal to the host device.
 This function is overriden, when MIDI RX is disabled as a whole.
-- **Example:** 
+- **Example:**  Enable - `midirx_sync(1)` , Disable - `midirx_sync(0)
 
 </TabItem>
 </Tabs>
