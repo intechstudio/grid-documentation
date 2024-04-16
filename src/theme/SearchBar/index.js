@@ -28,7 +28,7 @@ export default function Component() {
 
   return (
     <div className="relative sm:w-60 lg:w-72  ">
-      <button className="relative px-4 w-full flex justify-between rounded p-1.5 dark:bg-gray-400 bg-transparent border-none ring-2 ring-gray-400 shadow-none items-center">
+      <div className="relative px-1 sm:px-4 w-full flex justify-between rounded p-1.5 dark:bg-gray-400 bg-transparent border-none ring-2 ring-gray-400 shadow-none items-center">
         {" "}
         <svg
           className=" text-gray-700 transition-colors duration-300 w-5 h-5
@@ -75,11 +75,10 @@ export default function Component() {
             <polygon
               fill="#000000"
               points="427.314 107.313 404.686 84.687 256 233.373 107.314 84.687 84.686 107.313 233.373 256 84.686 404.687 107.314 427.313 256 278.627 404.686 427.313 427.314 404.687 278.627 256 427.314 107.313"
-              class="ci-primary"
             />
           </svg>
         </button>
-      </button>
+      </div>
       {searchFocus && documents.length > 0 ? (
         <div className="mt-2 absolute lg:w-72 sm:w-60 overflow-y-scroll shadow-2xl rounded max-h-[calc(100vh-100px)] right-0 z-10">
           <div className="dark:bg-slate-700 bg-white rounded shadow-xl  dark:text-white relative flex flex-col  py-2 first:pt-0 ">
@@ -112,15 +111,6 @@ export default function Component() {
         <div className="mt-2 absolute lg:w-72 sm:w-60 overflow-y-scroll shadow-2xl rounded max-h-[calc(100vh-100px)] right-0 z-10">
           <div className="dark:bg-slate-700 bg-white rounded shadow-xl  dark:text-white relative flex flex-col px-4 py-2 first:pt-0 ">
             <div className="my-4">Sorry no results.</div>
-            {/*             <button
-              onClick={() => {
-                setSearchFocus(false);
-                setSearch("");
-              }}
-              className="rounded cursor-pointer  px-4 py-2 border border-solid"
-            >
-              Close
-            </button> */}
           </div>
         </div>
       )}
