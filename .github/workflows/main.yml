@@ -24,7 +24,7 @@ jobs:
       - name: create env
         run: |
           touch .env
-          echo lol PATH_TO_DOCUMENTS=./docs/ >> .env
+          echo lols PATH_TO_DOCUMENTS=./docs/ >> .env
           echo MEILI_INDEX=grid-documentation >> .env
           echo MEILI_ADMIN_HOST=${{secrets.MEILI_ADMIN_HOST}} >> .env
           echo MEILI_ADMIN_KEY=${{secrets.MEILI_ADMIN_KEY}} >> .env
