@@ -44,5 +44,5 @@ if (filesWithError.length > 0) {
     `Please fix the metadata issue(s). Always include the following meta data fields: 'description', 'title', 'pageImg', 'slug'.`
   );
 
-  console.log("test");
+  console.log("testt");
 }
