@@ -33,7 +33,7 @@ jobs:
 
       - name: run metacheck
         run: |
-            echo "ERROR IN FORMATTING, PLEASE RUN PRETTIER ON THE CODEBASE BEFORE COMMITTING"
+            echo "ERROR IN FORMATTIG, PLEASE RUN PRETTIER ON THE CODEBASE BEFORE COMMITTING"
           npm install
           npm run meta-check
          
