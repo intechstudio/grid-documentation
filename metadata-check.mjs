@@ -11,7 +11,7 @@ dotenv.config();
 const fields = ["slug", "title", "pageImg", "description"];
 let filesWithError = [];
 
-export function readFilesSync(dirname) {
+function readFilesSync(dirname) {
   fs.readdirSync(dirname).forEach((filename) => {
     if (!fs.lstatSync(dirname + filename).isDirectory()) {
       const fileContent = fs.readFileSync(dirname + filename, "utf-8");
