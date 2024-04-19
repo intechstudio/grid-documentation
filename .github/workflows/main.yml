@@ -3,8 +3,8 @@ name: Meilisearch Indexer
 on:
   push:
     branches:
-      - "search-update-&-metadata-check"
-    # Allows you to run this workflow manually from the Actions tabb
+      - "**"
+    # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
 
 jobs:
