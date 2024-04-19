@@ -31,9 +31,13 @@ jobs:
           echo MEILI_ADMIN_HOST=${{secrets.MEILI_ADMIN_HOST}} >> .env
           echo MEILI_ADMIN_KEY=${{secrets.MEILI_ADMIN_KEY}} >> .env
 
-      - name: run indexer
+     - name: run meta-check
         run: |
           npm install
+          npm run meta-check
+       
 
+      - name: run indexer
+        run: |
           npm run build
           npm run index
