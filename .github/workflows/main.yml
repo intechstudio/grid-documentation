@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - "search-update-&-metadata-check"
-    # Allows you to run this workflow manually from the Actions tab
+    # Allows you to run this workflow manually from the Actions tabb
     workflow_dispatch:
 
 jobs:
