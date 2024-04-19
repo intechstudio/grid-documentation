@@ -9,11 +9,10 @@ import process from "process";
 dotenv.config();
 
 const fields = ["slug", "title", "pageImg", "description"];
+let filesWithError = [];
 
-export async function readFilesSync(dirname) {
-  let filesWithError = [];
-
-  await fs.readdirSync(dirname).forEach((filename) => {
+export function readFilesSync(dirname) {
+  fs.readdirSync(dirname).forEach((filename) => {
     if (!fs.lstatSync(dirname + filename).isDirectory()) {
       const fileContent = fs.readFileSync(dirname + filename, "utf-8");
 
@@ -36,12 +35,12 @@ export async function readFilesSync(dirname) {
       readFilesSync(dirname + filename + "/");
     }
   });
-
-  if (filesWithError.length > 0) {
-    console.error(
-      `Please fix the metadata issue(s). Always include the following meta data fields: 'description', 'title', 'pageImg', 'slug'.`
-    );
-  }
 }
 
 readFilesSync("./docs/");
+
+if (filesWithError.length > 0) {
+  console.error(
+    `Please fix the metadata issue(s). Always include the following meta data fields: 'description', 'title', 'pageImg', 'slug'.`
+  );
+}

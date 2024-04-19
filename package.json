@@ -5,8 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "run-s meta-check build-project ",
-    "build-project": "docusaurus  build",
+    "build": "docusaurus  build ",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

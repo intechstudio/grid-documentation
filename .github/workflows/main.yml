@@ -3,7 +3,7 @@ name: Meilisearch Indexer
 on:
   push:
     branches:
-      - main
+      - "**"
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
 
@@ -31,9 +31,13 @@ jobs:
           echo MEILI_ADMIN_HOST=${{secrets.MEILI_ADMIN_HOST}} >> .env
           echo MEILI_ADMIN_KEY=${{secrets.MEILI_ADMIN_KEY}} >> .env
 
-      - name: run indexer
+      - name: run metacheck
         run: |
           npm install
           npm run meta-check
+
+      - name: run indexer
+        run: |
           npm run build
+          npm run meta-check
           npm run index
