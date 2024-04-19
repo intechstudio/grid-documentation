@@ -29,11 +29,12 @@ jobs:
           echo MEILI_ADMIN_HOST=${{secrets.MEILI_ADMIN_HOST}} >> .env
           echo MEILI_ADMIN_KEY=${{secrets.MEILI_ADMIN_KEY}} >> .env
 
-     - name: run meta-check
+      - name: run metacheck
         run: |
           npm install
           npm run meta-check
-       
+
+
 
       - name: run indexer
         run: |
