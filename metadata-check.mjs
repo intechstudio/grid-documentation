@@ -8,7 +8,12 @@ import process from "process";
 
 dotenv.config();
 
-const fields = ["slug", "title", "pageImg", "description"];
+const fields = [
+  { name: "slug", stat: undefined },
+  { name: "title", stat: undefined },
+  { name: "pageImg", stat: undefined },
+  { name: "description", stat: undefined },
+];
 let filesWithError = [];
 
 function readFilesSync(dirname) {
@@ -22,12 +27,15 @@ function readFilesSync(dirname) {
         fields.forEach((field) => {
           if (!metadata.hasOwnProperty(field)) {
             console.info(
-              `${dirname}${filename}: '${field}' field is missing from metadata`
+              `${dirname}${filename}: '${field.name}' field is missing from metadata`
             );
+            field.stat = false;
             filesWithError = [
               ...filesWithError,
-              `${filename}:  ${field} field is missing fr`,
+              `${filename}:  ${field.name} field is missing fr`,
             ];
+          } else {
+            field.stat = true;
           }
         });
       }
