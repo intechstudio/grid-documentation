@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 ---
 
 <Tabs queryString="tab">
-  <TabItem value="About Mouse Button" label="About Mouse Button" default>
+<TabItem value="About Mouse Button" label="About Mouse Button" default>
 
 <!--
 :::caution Caution Grid 2.0 Users!
@@ -37,8 +37,8 @@ In the Block input fields you can define the type of mouse button message: which
 <ImageLightbox imageSrc={MouseBlock} style={{width:300+'px'}} citation={'Mouse Button Block in Press Release Block in Grid Editor'}/>
 
 
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
 
@@ -53,7 +53,7 @@ In the Block input fields you can define the type of mouse button message: which
 
 
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
