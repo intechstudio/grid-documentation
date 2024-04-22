@@ -8,13 +8,7 @@ import process from "process";
 
 dotenv.config();
 
-const fields = [
-  { name: "slug", stat: undefined },
-  { name: "title", stat: undefined },
-  { name: "pageImg", stat: undefined },
-  { name: "description", stat: undefined },
-];
-
+const fields = ["slug", "title", "pageImg", "description"];
 let filesWithError = [];
 
 function readFilesSync(dirname) {
@@ -28,15 +22,12 @@ function readFilesSync(dirname) {
         fields.forEach((field) => {
           if (!metadata.hasOwnProperty(field)) {
             console.info(
-              `${dirname}${filename}: '${field.name}' field is missing from metadata`
+              `${dirname}${filename}: '${field}' field is missing from metadata`
             );
-            field.stat = false;
             filesWithError = [
               ...filesWithError,
-              `${filename}:  ${field.name} field is missing fr`,
+              `${filename}:  ${field} field is missing fr`,
             ];
-          } else {
-            field.stat = true;
           }
         });
       }
@@ -52,4 +43,6 @@ if (filesWithError.length > 0) {
   console.error(
     `Please fix the metadata issue(s). Always include the following meta data fields: 'description', 'title', 'pageImg', 'slug'.`
   );
+
+  console.log("testt");
 }
