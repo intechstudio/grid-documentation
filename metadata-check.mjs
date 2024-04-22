@@ -14,6 +14,7 @@ const fields = [
   { name: "pageImg", stat: undefined },
   { name: "description", stat: undefined },
 ];
+
 let filesWithError = [];
 
 function readFilesSync(dirname) {
