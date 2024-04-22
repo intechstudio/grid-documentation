@@ -99,12 +99,17 @@ export default function Component() {
                 >
                   <div className="my-1 hover:bg-primary-900 px-4 py-1 rounded">
                     <div className="py-1 text-base font-bold">{doc.title}</div>
+                    <div className="text-sm w-fit text-opacity-80   dark:text-white text-black">
+                      {doc.description}
+                    </div>
                     {doc.tags && (
                       <div className=" flex flex-wrap">
                         {doc.tags.map(function (tag) {
                           return (
-                            <div className="text-sm w-fit text-opacity-80   dark:text-white text-black">
-                              <span className="px-1   mr-1">#{tag}</span>
+                            <div className=" w-fit ">
+                              <span className="px-1 text-sm font-semibold  text-opacity-60   dark:text-white text-black   mr-1">
+                                #{tag}
+                              </span>
                             </div>
                           );
                         })}
