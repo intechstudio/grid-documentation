@@ -24,6 +24,13 @@ export default function Component() {
       .then((results) => {
         setDocuments(results.hits);
       });
+
+    //close search results if click outside
+    window.addEventListener("click", function (event) {
+      if (event.target.id !== "input_box") {
+        setSearchFocus(false);
+      }
+    });
   }, [search]);
 
   return (
@@ -50,6 +57,7 @@ export default function Component() {
           />
         </svg>
         <input
+          id="input_box"
           className="w-20 p-1 sm:w-full   border-none focus:outline-none text-black dark:bg-gray-400 bg-transparent"
           type="text"
           value={search}
@@ -79,6 +87,7 @@ export default function Component() {
           </svg>
         </button>
       </div>
+
       {searchFocus && documents.length > 0 ? (
         <div className="mt-2 absolute lg:w-72 sm:w-60 overflow-y-scroll shadow-2xl rounded max-h-[calc(100vh-100px)] right-0 z-10">
           <div className="dark:bg-slate-700 bg-white rounded shadow-xl  dark:text-white relative flex flex-col  py-2 first:pt-0 ">
