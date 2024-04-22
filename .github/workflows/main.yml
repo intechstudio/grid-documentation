@@ -32,7 +32,7 @@ jobs:
       - name: run metacheck
         run: |
           npm install
-          echo "hello its me"
+          echo "hello its meee"
           npm run meta-check
           
 
