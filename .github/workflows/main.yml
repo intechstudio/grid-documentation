@@ -1,9 +1,9 @@
 name: Meilisearch Indexer
 
-on: push:ű
+on:
+  push
 
-    # Allows you to run this workflow manually from the Actions tab
-    workflow_dispatch:
+  # Allows you to run this workflow manually from the Actions tab
 
 jobs:
   build:
@@ -35,9 +35,7 @@ jobs:
           npm run meta-check
            npm run build
 
-
-
       - name: run indexer
         run: |
-         
+
           npm run index
