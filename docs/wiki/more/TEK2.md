@@ -2,6 +2,7 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
 import tek21 from './img/tek21.png'
 import tek22 from './img/tek22.png'
+import tek23 from './img/tek23.png'
 import reschange from './img/reschange.png'
 
 ### TEK2 Redefining Control with Endless Rotary Potentiometers
@@ -26,6 +27,8 @@ import reschange from './img/reschange.png'
 - Range of Motion: Encoders offer infinite rotation, while normal potentiometers have fixed endpoints.
 - Digital vs. Analog Output: Encoders provide digital signals, while normal potentiometers offer analog output.
 - Precision and Resolution: Encoders offer stepped rotation for precise adjustments, whereas potentiometers provide smooth and fine control.
+
+<ImageLightbox imageSrc={tek23} style={{width:500+'px'}}/>
 
 ### Let's break down the factory preset with tips and tricks
 
