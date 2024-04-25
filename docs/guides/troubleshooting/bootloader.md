@@ -39,7 +39,7 @@ Even so, if you encounter any unexpected behavior, please drop us a mail to supp
 4. **Drag and drop** or copy the bootloader file to "**GRID**".
 5. Now the **update should be completed** and after that device name should now be "**GRID23**" instead.
 6.  Grid will be missing a firmware, please use [Grid Editor update the firmware](/docs/guides/troubleshooting/firmware.md) of the module.
-7.  After the FW update the module should boot normally and you're done!
+7.  After the firmware update the module should boot normally and you're done!
 
 ## Potential issues after a bootloader update
 

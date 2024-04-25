@@ -12,6 +12,41 @@ You can see written patch notes released here for Grid Editor, the configuration
 
 ---
 
+## Grid Editor version 1.2.53
+
+This new version of Grid Editor arrives with shiny new features and useful bug fixes.
+The extensive list of changes are as follows:
+
+#### New Features
+- Added TEK2 default configuration to Editor with a couple extra configurations on the way.
+- It's now possible to add multiple Virtual Modules and the UI for this feature has been improved.
+- The Action and Element toolbar (copy, paste etc.) received a new look. It even received a colorscheme that you can enable under Preferences/Developer options which should make recognizing buttons easier at a glance.
+
+
+#### Bugfixes
+- Fixed a bug where Profile Cloud would incorrectly show that the user is logged in.
+- Fixed a bug where the Context Menu would not behave as expected when hovering.
+- Fixed a bug where comments in a Code Block would cause unexpected minifying of code.
+- Fixed various visual rendering inconsistencies of Action blocks.
+
+
+## Grid Editor version 1.2.52
+
+This new version of Grid Editor arrives with shiny new features and useful bug fixes.
+The extensive list of changes are as follows:
+
+#### New Features
+- Now you can hold Ctrl or Cmd and click on the Action blocks in the Configuration side panel to select them.
+
+
+#### Bugfixes
+- Fixed a major bug where the Loop Action block would behave incorrectly.
+- Fixed a bug where Grid would disconnect during a Clear operation.
+
+
+
+
+
 ## Grid Editor version 1.2.51
 
 This new version of Grid Editor arrives with shiny new features and useful bug fixes.

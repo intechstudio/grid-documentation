@@ -70,9 +70,13 @@ no signal at midi ports
 
 --->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4PMpWmHERBg?si=5lWsNrk2w_kyQikf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Use-case examples
+
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4PMpWmHERBg?si=5lWsNrk2w_kyQikf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> 
+
+
 
 ### Knot hosting Grid
 

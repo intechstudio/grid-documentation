@@ -31,8 +31,8 @@ Currently only Grid modules sold after May of 2023 support this feature.
 We apologize for the inconvenience.
 :::
 
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
 

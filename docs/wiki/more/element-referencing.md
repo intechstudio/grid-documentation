@@ -51,7 +51,7 @@ It is good practice to define these variables in the Action Chain of the System 
 
 Names of functions have two parts, *prefix* and *suffix*. Prefix tells the function where to run, suffix defines the function itself that runs.
 
-When calling a function in a Code Block, their prefix can be either `self:` or `element[x]:`. If no prefix is used, the function will run globally, like the [`module_rotation()`](/docs/reference-manual/grid-functions/module-position.md) function. 
+When calling a function in a Code Block, their prefix can be either `self:` or `element[x]:`. If no prefix is used, the function will run globally, like the [`module_rotation()`](/docs/reference-manual/grid-functions/module-position.md#module_rotation) function. 
 
 Prefixes with `self:` will always run on the Control Element the Code Block is put in with the function. Prefixes with `element[x]:`, where `x` is an integer between 0-15 will run the function on the corresponding control element (e.g. the `element[0]:button_value()` function will return the button value of the first control element). If `x`  is 16, it will call a global function. Such functions are the for example the timer, where each control element has it's own timer and there is a sixteenth, global timer as well.
 
@@ -73,6 +73,6 @@ When calling functions, they'll **always use a colon** inbetween and **will alwa
 
 One exception from the previously described behavior: functions that set the LED parameters have no prefix, but define which LED they correspond to in the function parameters defined between the parentheses. Please see the [LED part of the reference manual](/docs/reference-manual/grid-functions/led.md) for further information.
 
-Another notable exception are generic lua functions, such as the functions starting with  `math.`. You can learn more about [lua here.](https://www.lua.org/pil/contents.html).
+Another notable exception are generic lua functions, such as the functions starting with  `math.`. You can learn more about [lua here](https://www.lua.org/pil/contents.html).
 
 Other exceptions are described in the [reference manual](/docs/reference-manual/introduction.md) as such and will have no prefix in the "**How:**" part of their description.

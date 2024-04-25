@@ -1,0 +1,9 @@
+{
+    "label": "Loops",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Iterating Structures or Loops allow Grid to repeat Actions on the same Event multiple times."
+    }
+  }
+  

@@ -26,7 +26,7 @@ Sometimes, when we upload code to a Grid controller, it can lead to unexpected b
 
 
 
-### Factory Reset with Grid Editor
+### Factory Reset using Editor
 
 One of the options for performing a factory reset is through the Grid Editor. This method resets all connected controllers to their factory settings.
 
@@ -51,6 +51,10 @@ One of the options for performing a factory reset is through the Grid Editor. Th
 
 ### Factory Reset using the Utility Button on Grid
 
+:::caution
+This option is only available on modules purchased after May of 2023!
+:::
+
 Alternatively, you can perform a factory reset directly on the controller by following these steps:
 
 <ImageLightbox imageSrc={img1} style={{height:350+'px'}} citation={'Press the button right as the module boots to start the process'}/>
@@ -60,7 +64,7 @@ Alternatively, you can perform a factory reset directly on the controller by fol
 1. Power up the module by plugging in a USB cable.
 2. Press the side button immediately after it receives power.
 3. The controller should turn bright yellow and blink for a couple of seconds.
-4. Grid memory will be erased and all Page configurations will be set to default.
+4. Grid memory will be erased and all Page configurations will be set back to default.
 
 <!-- GIF -->
 

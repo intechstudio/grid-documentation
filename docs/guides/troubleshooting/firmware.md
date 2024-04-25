@@ -17,33 +17,39 @@ Grid Firmware is often updated. We introduce new features, stability improvement
 
 > All your modules must have the same firmware version installed!
 
-## Updating the firmware using Grid Editor
+## Updating the firmware using Editor
 
-Whenever you're prompted with the 'Oops, firmware mismatch detected' message while running Grid Editor means you have a module plugged in with an outdated firmware version compared to Editor.
+Whenever you're prompted with the `Oops, firmware mismatch detected` message while running Grid Editor means you have a module plugged in with an outdated firmware version compared to Editor.
+
+:::tip Firmware Mismatch
+When encountering a firmware mismatch, you could update your module firmware for each module as we believe that each firmware version is better than the last one.
+
+But the most important thing should always be that you run the same firmware version across all of your modules, even if they are outdated!
+:::
 
 The mismatched module will be highlighted with red color, like this:
 
-<ImageLightbox imageSrc={img1} citation={'Modules running outdated firmware versions are highlighted in red'}/>
+<ImageLightbox imageSrc={img1} style={{height:450+'px'}} citation={'Modules running outdated firmware versions are highlighted in red'}/>
 
 Gird Editor can update your module firmware automatically if you follow the on-screen messages at the top.
 
 Reconnect the mismatched module (and that module only) while holding down the utility button on the side of the module.
 
-After connecting you'll be prompted with a message in blue, asking whether you want to start the update. Press 'Update Firmware'.
+After connecting you'll be prompted with a message in blue, asking whether you want to start the update. Press `Update Firmware`.
 
-<ImageLightbox imageSrc={img2} citation={'Updating the firmware using Editor'}/>
+<ImageLightbox imageSrc={img2} style={{height:450+'px'}} citation={'Updating the firmware using Editor'}/>
 
 Don't disconnect the module while the update is running or the update will fail.
 
 When the update is complete, you will be prompted with a message in green color and the module will show up again in the Editor.
 
-<ImageLightbox imageSrc={img3} citation={'A freshly updated module'}/>
+<ImageLightbox imageSrc={img3} style={{height:450+'px'}} citation={'A freshly updated module'}/>
 
 Congratulations! You've successfully updated the firmware of your module.
 
 If you have multiple modules with firmware mismatches, you'll have to repeat this process one-by-one from the beginning.
 
-## ⬇️ Updating the firmware manually
+## Updating the firmware manually
 
 You can find the files for all firmware versions on GitHub.  
 Click the button below to see a list of all firmware versions, choose the latest if you're unsure about which version you want.
@@ -53,7 +59,7 @@ Click the button below to see a list of all firmware versions, choose the latest
 <ImageLightbox imageSrc={img5} citation={'The grid_release.zip archive contains all needed firmware files for the update process.'}/>
 
 
-## 💾 Install steps
+### Manual update step-by-step
 
 Follow carefully the steps below, connect your Grid module directly to your compute at step 4.
 

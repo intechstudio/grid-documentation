@@ -99,4 +99,4 @@ In the meanwhile you can check a video of the diassembly process [HERE](https://
 Regarding things that may go wrong during disassembly:
 - If a bronze nut falls out of the case or becomes loosened: try to put back in/hold it in place with a second screwdriver;
 - If plastic scraps or residue fall out of the caps when removing them for the first time: after reassembly, check if the caps touch or scratch the front panel, if they do email us at support@intech.studio;
-- If the copper connector pins on the side PCBs (interfacing PCBs) become bent or deformed: don't be afraid to bend them back into place by hand.
+- If the copper connectors on the inner side of the interfacing PCBs become bent or deformed: don't be afraid to bend them back into place by hand.
