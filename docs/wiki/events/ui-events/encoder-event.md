@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 ---
 
 <Tabs queryString="tab">
-  <TabItem value="About Encoder Event" label="About Encoder Event" default>
+<TabItem value="About Encoder Event" label="About Encoder Event" default>
 
 The Encoder Event is a UI Event, which means it triggers on user interaction. Specifically when the user turns the encoder, each click on a 'clicky' encoder equals to one trigger of the Encoder Event.
 
@@ -20,8 +20,8 @@ Encoder Events are useful in many ways, since Encoders are designed to be infini
 
 Encoders have a Velocity setting to them accessible in their [Encoder Mode Block](/docs/wiki/actions/element-settings/encoder-mode.md). This setting allows for introducing a scaling element when the Encoders are quickly turned (a lot of Encoder Events happening in succession). This makes the Encoders skip values when turned rapidly, so that the user can introduce big jumps in values when needed.
 
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
 ## Encoder Button
@@ -154,7 +154,7 @@ Encoders have a Velocity setting to them accessible in their [Encoder Mode Block
 - **Example:** 
 
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 

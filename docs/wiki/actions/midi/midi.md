@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 ---
 
 <Tabs queryString="tab">
-  <TabItem value="About MIDI" label="About MIDI" default>
+<TabItem value="About MIDI" label="About MIDI" default>
 
 
 This Action Block will send out a MIDI message to the host on an Event trigger. This is the standard 7-bit MIDI mode. 
@@ -50,8 +50,8 @@ If you want to learn how to set up a Grid configuration for hardware MIDI device
 
 
 
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
 ### midi send
@@ -65,7 +65,7 @@ If you want to learn how to set up a Grid configuration for hardware MIDI device
 - **Example:** 
 
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 

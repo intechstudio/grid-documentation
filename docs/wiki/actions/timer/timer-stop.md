@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 ---
 
 <Tabs queryString="tab">
-  <TabItem value="About Timer Stop" label="About Timer Stop " default>
+<TabItem value="About Timer Stop" label="About Timer Stop " default>
 
 
 The Timer Stop Action allows you to end a Timer early, canceling/aborting a running timer.
@@ -28,8 +28,8 @@ The Timer Stop is mostly useful for turning off cyclical timers like clocks for 
 A cyclical timer is what we call such a Timer Event that is countinuously retriggered by its own Action chain. 
 :::
 
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
 ### timer_stop | gtp
@@ -46,7 +46,7 @@ A cyclical timer is what we call such a Timer Event that is countinuously retrig
 
 
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 

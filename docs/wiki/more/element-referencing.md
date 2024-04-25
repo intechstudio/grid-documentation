@@ -62,11 +62,11 @@ The suffix has a parentheses at the end. If there is a value between the parenth
 :::caution Be careful! 
 When calling variables with a prefix, they'll **always use a full stop** inbetween and **NO parentheses** at the end:
 
-`self.echo` <- This is a self variable.
+`self.echo` &#60;- This is a self variable.
 
 When calling functions, they'll **always use a colon** inbetween and **will always use parentheses** after the suffix:
 
-`self:element_index()` <- This is a self function.
+`self:element_index()` &#60;- This is a self function.
 :::
 
 ### Notable exceptions

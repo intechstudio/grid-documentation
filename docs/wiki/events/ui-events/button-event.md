@@ -12,15 +12,15 @@ import TabItem from '@theme/TabItem';
 ---
 
 <Tabs queryString="tab">
-  <TabItem value="About Button Event" label="About Button Event" default>
+<TabItem value="About Button Event" label="About Button Event" default>
 
 
 The Button Event is a UI Event, which means it triggers on user interaction. Specifically it triggers in two cases: when a button is pushed down and it "clicks" and when a button is released, these these type of triggers are called **Press and Release** in Grid terminology.
 
 These button triggers and events are applicable to all encoders and buttons on a Grid module, aside form the utility button, which uses the [Utility Event](../system-events/utility-event).
 
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
 ## Button Press
@@ -87,7 +87,7 @@ These button triggers and events are applicable to all encoders and buttons on a
 
 
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 

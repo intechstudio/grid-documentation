@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 ---
 
 <Tabs queryString="tab">
-  <TabItem value="About Encoder Mode" label="About Encoder Mode" default>
+<TabItem value="About Encoder Mode" label="About Encoder Mode" default>
 
 ## Change relative encoding
 
@@ -44,9 +44,8 @@ When using velocity with relative encoding modes or with higher encoder resoluti
 It's useful to put Mode-type Blocks under the Init Event of the given Control Element. This way the Control Element will behave exactly as you'd want after booting up and this will also save you some characters on the Control Element Event itself for more important stuff.
 :::
 
-
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 ### encoder_mode
 - shortname: emo
@@ -66,7 +65,7 @@ It's useful to put Mode-type Blocks under the Init Event of the given Control El
 
 
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 
