@@ -4,15 +4,13 @@ slug: tek2
 description: Discover Endless possibilities within the new TEK2.
 tags: [TEK2 ,Workflow, Logic]
 ---
-
-
-
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
 import tek21 from './img/tek21.png'
 import tek22 from './img/tek22.png'
 import tek23 from './img/tek23.png'
 import reschange from './img/reschange.png'
+import wheel from './img/wheel_sm.gif'
 
 ### TEK2 Redefining Control with Endless Rotary Potentiometers
 
@@ -24,17 +22,17 @@ import reschange from './img/reschange.png'
 
 <ImageLightbox imageSrc={tek22} style={{width:450+'px'}}/>
 
-
 #### Endless Rotary Potentiometers with anodized aluminium Knobs:
+
 - Features anodized aluminium knobs that provide a tactile and ergonomic feel.
 - Designed to offer a comfortable grip and effortless rotation.
 - Allows for smooth and precise adjustments with just one finger.
 - Ensures durability and reliability, built for rigorous usage and long-term performance.
 
-<!---Ide lehetne pár fotó arról hogy hogyan regadhatja meg az ember a knobot. Egy ujjal fentről tekerve, két ujj között pörgetve stb.-->
-
+<ImageLightbox imageSrc={wheel} style={{width:300+'px'}} citation={'You can see how even small nudges and turns result in value changes.'}/>
 
 #### Differences between Encoders and Normal Potentiometers:
+
 - Range of Motion: Encoders offer infinite rotation, while normal potentiometers have fixed endpoints. But with TEK2, the Potentiometers have endless rotation, much like an Encoder.
 - Digital vs. Analog Output: Encoders provide digital signals, while normal potentiometers offer analog output.
 - Precision and Resolution: our Encoders offer stepped rotation for precise adjustments, whereas potentiometers provide smooth and fine control.
@@ -47,11 +45,9 @@ import reschange from './img/reschange.png'
 
 <!---Szerintem jöhetne ide még szöveg/kép arról hogy a normális config milyen és ehhez képest miért kell másképp működjön a TEK2-es config.--->
 
+Endless Potentiometers come factory-set to output MIDI data at 14 bits, spanning a range of 0 to 16383, allowing for precise control of parameters like volume and panning.
+However, for compatibility with software and synthesizers limited to 7-bit MIDI (0-127), you can employ the command `self:endless_max(127)` to adjust the output accordingly.
 
-Endless Potentiometers come factory-set to output MIDI data at 14 bits, spanning a range of 0 to 16383, allowing for precise control of parameters like volume and panning.   
-However, for compatibility with software and synthesizers limited to 7-bit MIDI (0-127), you can employ the command `self:endless_max(127)` to adjust the output accordingly. 
-
-<!---Or just use the preset we made--->
+You can find this Profile in Grid Editor under: `Profile cloud > Recommended configs > 'Endless 7bit (0-127) MIDI'`
 
 <ImageLightbox imageSrc={reschange} style={{width:800+'px'}} citation={'Set self:endless_max() to 127 on the Init Event then change from 14bit MIDI to MIDI on the Endless Event.'}/>
-
