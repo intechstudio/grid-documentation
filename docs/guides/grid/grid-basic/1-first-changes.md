@@ -23,9 +23,11 @@ import profiles_vs_presets from './img/profiles_vs_presets.png';
 
 *This article will guide you through the first steps of understanding Editor, our configuration software for Intech Studio products.*
 
+*Please visit [**Grid Editor Web App**](https://grid-editor-web.web.app/) -  if you would like to try Grid Editor with **virtual** module.*
 
 
 ---
+
 
 ## Navigating the Editor
 
