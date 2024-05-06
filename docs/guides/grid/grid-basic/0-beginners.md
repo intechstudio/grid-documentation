@@ -58,7 +58,7 @@ Now, what we want is to be able to send MIDI messages from Grid to your DAW, for
 <ImageLightbox imageSrc={mout} citation={'Live preferences: MIDI Ports'}/>
   </TabItem>
   <TabItem value="Logic" label="Logic" default>
-  ...
+  *Comming soon*
   </TabItem>
   <TabItem value="FL" label="FL Studio" default>
  
@@ -73,7 +73,7 @@ Now, what we want is to be able to send MIDI messages from Grid to your DAW, for
   
   </TabItem>
       <TabItem value="ProTools" label="ProTools" default>
-  ...
+  *Comming soon*
   </TabItem>
     <TabItem value="Cubase" label="Cubase" default>
 
@@ -139,7 +139,7 @@ So after we have Grid enabled as a MIDI device we can send messages to the softw
 
   </TabItem>
   <TabItem value="Logic" label="Logic" default>
-  ...
+  *Comming soon*
   </TabItem>
   <TabItem value="FL" label="FL Studio" default>
 
@@ -152,7 +152,7 @@ So after we have Grid enabled as a MIDI device we can send messages to the softw
   <ImageLightbox imageSrc={flMidi2} style={{height:500+'px'}} citation={'Remote Control Settings with kick fader waiting to assign'}/>
   </TabItem>
       <TabItem value="ProTools" label="ProTools" default>
-  ...
+  *Comming soon*
   </TabItem>
     <TabItem value="Cubase" label="Cubase" default>
 
