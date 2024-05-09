@@ -42,10 +42,10 @@ For anything more complex than just the plug-and-play experience please take a l
 
 ---
 
-## Connect Grid to your DAW
+## Connect Grid to your DAW/VJ Software
 
 
-So in the DAW we'll first have to enable our modules to be able to use them for MIDI mapping.
+So in the DAW/VJ Software we'll first have to enable our modules to be able to use them for MIDI mapping.
 
 Let's start up a fresh project in your DAW of choice:
 
