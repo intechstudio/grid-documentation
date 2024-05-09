@@ -11,6 +11,7 @@ import tek22 from './img/tek22.png'
 import tek23 from './img/tek23.png'
 import reschange from './img/reschange.png'
 import wheel from './img/wheel_sm.gif'
+import tekled from './img/tek2_led.png'
 
 ### TEK2 Redefining Control with Endless Rotary Potentiometers
 
@@ -60,3 +61,5 @@ You can find this Profile in Grid Editor under: `Profile cloud > Recommended con
 When operating with the Endless Potmeters LEDs, it's important to note that the LEDs on the left side are numbered from 10 and increase by two until reaching 18. Similarly, on the right side, the LEDs are counted from 9 to 17, also increasing by two. The LED numbering ascends from bottom to top.
 
 To effectively manage this setup, we utilize a for loop to iterate through the LED intensities based on the value of the endless potmeter.
+
+<ImageLightbox imageSrc={tekled} style={{width:300+'px'}} citation={''}/>

@@ -20,6 +20,9 @@ import soMidi from './img/so_midi.png'
 import soFader from './img/so_fader.png'
 import soFader2 from './img/so_fader2.png'
 import soSynth from './img/so_synth.png'
+import ArenaMidiIn from './img/arena_midi_input.png'
+import ArenaEditMidi from './img/arena_edit_midi.png'
+import ArenaMapped from './img/arena_mapped.png'
 import cubaseQuickControls from './img/cubase_quick_controls.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -111,9 +114,17 @@ and open Preferences/External Devices and click on "Add...". Then, choose "New C
 
   <ImageLightbox imageSrc={bitwigC} style={{width:650+'px'}} citation={'Connected Grid controller'}/>
 
+  </TabItem>
+    <TabItem value="Arena" label="Arena" default>
+    
+  and navigate to Arena/Settings/MIDI. Choose "Intech Studio: Grid" as MIDI Input   
 
+
+  <ImageLightbox imageSrc={ArenaMidiIn} style={{width:450+'px'}} citation={'Connected Grid controller'}/>
 
   </TabItem>
+
+
   </Tabs>
 
 
@@ -194,11 +205,26 @@ In each Quick Control row, under the flags the **R** should be activated, so the
 
   <ImageLightbox imageSrc={rpMIDI} style={{height:350+'px'}} citation={'Mapped Faders'}/>
   </TabItem>
-        <TabItem value="Bitwig" label="Bitwig" default>
+      <TabItem value="Bitwig" label="Bitwig" default>
 
   When click on "Learn" you activate MIDI learn mode. This mode waits for a MIDI CC message from the controller. After interacting with any control element on your module, Bitwig displays the MIDI assignment.
 
   <ImageLightbox imageSrc={bitwigL} style={{width:650+'px'}} citation={'The blue hue shows the MIDI-mappable parameters'}/>
+
+  Now you have a generic configuration.
+  </TabItem>
+
+  <TabItem value="Arena" label="Arena" default>
+
+  Then open up Midi mapping: Shortcuts/Edit MIDI
+
+  <ImageLightbox imageSrc={ArenaEditMidi} style={{width:150+'px'}} citation={'Edit MIDI'}/>
+
+  
+  To control Resolume Arena effectively, use EF44 for layer mixing and EN16 for scene triggering and parameter adjustments, as this combination provides efficient control over the software's functions. 
+
+  <ImageLightbox imageSrc={ArenaMapped} style={{width:850+'px'}} citation={'Arena mapped'}/>
+
 
   Now you have a generic configuration.
   </TabItem>
