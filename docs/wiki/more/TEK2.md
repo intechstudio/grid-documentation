@@ -63,8 +63,12 @@ When operating with the Endless Potmeters LEDs, it's important to note that the 
 
 To effectively manage this setup, we utilize a for loop to iterate through the LED intensities based on the value of the endless potmeter.
 
+<<<<<<< Updated upstream
 
 ### Relative Mode for Endless pots,
+=======
+### Relative Mode for Endless pots
+>>>>>>> Stashed changes
 
 Endless Potentiometers come factory-set to output MIDI data at 14 bits, in absolute mode. Now we can set them to 7bit to support legacy devices, but how do we switch them to Relative mode for iterating on parameters easily.
 
