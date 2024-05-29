@@ -1,26 +1,10 @@
 ---
-slug: endless-event
-title: Endless Event
-tags: [Event, UI Event, Control Element, TEK2]
-description: "The Endless Event is a UI Event, which means it triggers on user interaction. "
+title:      Endless potentiometer
+slug:       endless-control-element
+layout:     reference_manual
+category:   reference-manual
+description: How to set up endless-type control elements.
 ---
-
-import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
----
-
-<Tabs queryString="tab">
-<TabItem value="About Endless Event" label="About Endless Event" default>
-
-The Endless Potentiometer Event is a UI event that triggers upon user interaction, specifically when the user turns the endless potentiometer. Unlike a detent encoder, an endless potentiometer is smooth in its rotation and does not have distinct clicks or associated values. Each movement of the endless potentiometer triggers an Endless Potentiometer Event.
-
-Endless potentiometers are versatile and can be used in various ways. Due to their infinite nature, they can function in a relative manner, adding to or subtracting from a value. Additionally, they can perform the same role as traditional potentiometers, providing smooth and continuous adjustments.
-
-
-</TabItem>
-<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
 ## Endless Button
@@ -139,11 +123,15 @@ When using either relative mode, setting the endless potentiometer to a 7bit by 
 
 
 
-<!-- ### endless_velocity
+<!-- 
+
+### endless_velocity
 - **How:** `self:endless_velocity()` or `self:endless_velocity(velocity)`
   - velocity: integer, ranging 0...100
 - **What:** This function returns the value of the endless velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set  the endless velocity to that value. Velocity increases the steps the endless value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off endless velocity completely.
-- **Example:**  The code `self:endless_velocity(0)` will turn off the velocity increase function of the endless. In this case turning the endless by one tick, will increase the value of the endless by 1.  -->
+- **Example:**  The code `self:endless_velocity(0)` will turn off the velocity increase function of the endless. In this case turning the endless by one tick, will increase the value of the endless by 1.  
+
+-->
 
 ### endless_senitivity
 - **How:** `self:endless_senitivity()` or `self:endless_senitivity(senitivity)`
@@ -162,10 +150,6 @@ When using either relative mode, setting the endless potentiometer to a 7bit by 
 - **How:** `self:endless_state()`
 - **What:** This function will return the "state" of the control element.
 - **Example:** 
-
-
-</TabItem>
-</Tabs>
 
 
 

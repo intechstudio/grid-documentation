@@ -57,13 +57,13 @@ You can find this Profile in Grid Editor under: `Profile cloud > Recommended con
 <ImageLightbox imageSrc={reschange} style={{width:800+'px'}} citation={'Set self:endless_max() to 127 on the Init Event then change from 14bit MIDI to MIDI on the Endless Event.'}/>
 
 
-<<<<<<< Updated upstream
 #### Endless LEDs
 
 When operating with the Endless Potmeters LEDs, it's important to note that the LEDs on the left side are numbered from 10 and increase by two until reaching 18. Similarly, on the right side, the LEDs are counted from 9 to 17, also increasing by two. The LED numbering ascends from bottom to top.
 
 To effectively manage this setup, we utilize a for loop to iterate through the LED intensities based on the value of the endless potmeter.
-=======
+
+
 ### Relative Mode for Endless pots,
 
 Endless Potentiometers come factory-set to output MIDI data at 14 bits, in absolute mode. Now we can set them to 7bit to support legacy devices, but how do we switch them to Relative mode for iterating on parameters easily.
@@ -74,4 +74,3 @@ Search up `endless relative` in Profile Cloud and load the Preset on the Endless
 Magyarázat arról hogy hogyan működik az h self:endless_state() van a val-nál self:endless_value() helyett.
 
 --->
->>>>>>> Stashed changes
