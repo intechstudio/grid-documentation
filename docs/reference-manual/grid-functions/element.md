@@ -75,3 +75,29 @@ Other exceptions are described in the reference manual as such and will have no 
   - **What:** 
   - **Example:** 
 
+
+
+### Hardware version
+
+  - **How:** `hardware_configuration()`
+  - **What:** It returns a value corresponding to the module hardware version.
+  - **Example:**  Open System event Init and print out the value of your Grid module. You can see the result in the MIDI monitor Debug view: `print(hardware_configuration())`
+
+
+    "GRID_MODULE_PO16_RevB": "0",
+    "GRID_MODULE_PO16_RevC": "8",
+    "GRID_MODULE_PO16_RevD": "1",
+    "GRID_MODULE_BU16_RevB": "128",
+    "GRID_MODULE_BU16_RevC": "136",
+    "GRID_MODULE_BU16_RevD": "129",
+    "GRID_MODULE_PBF4_RevA": "64",
+    "GRID_MODULE_PBF4_RevD": "65",
+    "GRID_MODULE_EN16_RevA": "192",
+    "GRID_MODULE_EN16_RevD": "193",
+    "GRID_MODULE_EN16_ND_RevA": "200",
+    "GRID_MODULE_EN16_ND_RevD": "201",
+    "GRID_MODULE_EF44_RevA": "32",
+    "GRID_MODULE_EF44_RevD": "33",
+    "GRID_MODULE_TEK1_RevA": "225",
+    "GRID_MODULE_TEK2_RevA": "17",
+    "GRID_MODULE_PB44_RevA": "145",
