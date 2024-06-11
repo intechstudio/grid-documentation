@@ -126,7 +126,7 @@ Endless potentiometers are versatile and can be used in various ways. Due to the
 ### endless_mode
 - shortname: 
 - **How:** `self:endless_mode()` or `self:endless_mode(mode)`
-    - resolution: integer, ranging 0...1
+    - resolution: integer, ranging 0...2
 - **What:** This function returns the value of the endless mode. This is `0` or "absolute mode" by default.  
  When function is given `1` as a value, it will change the endless potentiometer to "relative mode binary offset". In this mode turning the endless 'backwards' or counterclockwise will always result in the value `8146` and turning it 'forwards' or clockwise will always result in the value `8247` .  
   When the function is given `2` as a value and self:endless_max(127), it will change the endless potentiometer to "relative mode 2's comp". In this mode turning the endless potentiometer 'backwards' or counterclockwise will always result in the value `127` and turning it 'forwards' or clockwise will always result in the value `1` .  
@@ -145,8 +145,8 @@ When using either relative mode, setting the endless potentiometer to a 7bit by 
 - **What:** This function returns the value of the endless velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set  the endless velocity to that value. Velocity increases the steps the endless value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off endless velocity completely.
 - **Example:**  The code `self:endless_velocity(0)` will turn off the velocity increase function of the endless. In this case turning the endless by one tick, will increase the value of the endless by 1.  -->
 
-### endless_senitivity
-- **How:** `self:endless_senitivity()` or `self:endless_senitivity(senitivity)`
+### endless_sensitivity
+- **How:** `self:endless_sensitivity()` or `self:endless_sensitivity(sensitivity)`
 - **What:** Returns the value of the endless sensitivity, which is 100 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
 - **Example:** Set the sensitivity to a new value `self:endless_sensitivity(1)`  > Max amount of rotation to send out the value
 
