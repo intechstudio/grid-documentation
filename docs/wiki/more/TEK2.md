@@ -11,9 +11,8 @@ import tek22 from './img/tek22.png'
 import tek23 from './img/tek23.png'
 import reschange from './img/reschange.png'
 import wheel from './img/wheel_sm.gif'
-import tekled from './img/tek2_led.png'
 
-### TEK2 Redefining Control with Endless Rotary Potentiometers
+## TEK2 Redefining Control with Endless Rotary Potentiometers
 
 #### What are Endless Rotary Potentiometers?
 
@@ -32,7 +31,7 @@ import tekled from './img/tek2_led.png'
 
 <ImageLightbox imageSrc={wheel} style={{width:300+'px'}} citation={'You can see how even small nudges and turns result in value changes.'}/>
 
-#### Differences between Encoders and Normal Potentiometers:
+### Differences between Encoders and Normal Potentiometers:
 
 - Range of Motion: Encoders offer infinite rotation, while normal potentiometers have fixed endpoints. But with TEK2, the Potentiometers have endless rotation, much like an Encoder.
 - Digital vs. Analog Output: Encoders provide digital signals, while normal potentiometers offer analog output.
@@ -40,9 +39,11 @@ import tekled from './img/tek2_led.png'
 
 <ImageLightbox imageSrc={tek23} style={{width:500+'px'}}/>
 
-### Let's break down the factory preset with tips and tricks
+## Configuring TEK2
 
 *The default TEK2 configuration differs in a lot of ways from our previously inlcluded default configurations. Most notably because it has to accomodate for 5 LEDs per control element while also staying comprehesible.*
+
+### 7bit MIDI for legacy MIDI support
 
 <!---Szerintem jöhetne ide még szöveg/kép arról hogy a normális config milyen és ehhez képest miért kell másképp működjön a TEK2-es config.--->
 
@@ -62,4 +63,18 @@ When operating with the Endless Potmeters LEDs, it's important to note that the 
 
 To effectively manage this setup, we utilize a for loop to iterate through the LED intensities based on the value of the endless potmeter.
 
-<ImageLightbox imageSrc={tekled} style={{width:300+'px'}} citation={''}/>
+<<<<<<< Updated upstream
+
+### Relative Mode for Endless pots,
+=======
+### Relative Mode for Endless pots
+>>>>>>> Stashed changes
+
+Endless Potentiometers come factory-set to output MIDI data at 14 bits, in absolute mode. Now we can set them to 7bit to support legacy devices, but how do we switch them to Relative mode for iterating on parameters easily.
+
+Search up `endless relative` in Profile Cloud and load the Preset on the Endless element on your TEK2. Now it will send 65 when turned clocwise and 63 when turned counter-clockwise.
+
+<!---
+Magyarázat arról hogy hogyan működik az h self:endless_state() van a val-nál self:endless_value() helyett.
+
+--->
