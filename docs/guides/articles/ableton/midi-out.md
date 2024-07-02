@@ -6,11 +6,16 @@ description: "Utilizing MIDI RX to receive MIDI from Ableton"
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
+import bs1 from './img/intech_out.png'
+import bs2 from './img/midi_out_ind.png'
+import bs3 from './img/ui_system_midi_rx.png'
+import bs4 from './img/print.png'
+import bs5 from './img/debug_text.png'
+
 import img1 from './img/0mapp.png';
 import img2 from './img/1rx.png';
 import img3 from './img/2Init.png';
 import img4 from './img/3encoder.png';
-
 import img5 from './img/4button.png';
 
 ## Overview
@@ -29,32 +34,32 @@ Usually the MIDI data sent out by audio software will have the MIDI message in t
 
 To enable and see MIDI OUT in action on the DAW's side:
 
-![midi preferences](./img/intech_out.png)
+<ImageLightbox imageSrc={bs1} style={{height:100+'px'}} citation={"."} />
 
 - Enable MIDI OUT for Intech Studio: AC (Grid)
 - Map a control element on a Grid controller to a parameter
 - You should see a blinking a indicator for sending MIDI OUT
 
-![midi indicator](./img/midi_out_ind.png)
+<ImageLightbox imageSrc={bs2} style={{height:25+'px'}} citation={"."} />
 
 To see results in Grid Editor here are few tips:
 
 - Select the control element which are already MIDI mapped (Ableton only sends messages from mapped elements)
 - Under _system events_ choose the _midi rx_ event
 
-![system events - midi rx](./img/ui_system_midi_rx.png)
+<ImageLightbox imageSrc={bs3} style={{height:400+'px'}} citation={"system events midi rx"} />
 
 - Add a _Codeblock_ action and call the print function on the variables found in the _Local Variables_ action
   `print(ch,cmd,param1,param2)`
 
-![print midi](./img/print.png)
+  <ImageLightbox imageSrc={bs4} style={{height:70+'px'}} citation={"Codeblock"} />
 
 The variables defined in the _Local Variables_ action are on the module by default.
 
 - Open the debug panel on the left
 - Upon interacting with the control element's mapping, you should see MIDI data.
 
-![midi debug](./img/debug_text.png)
+<ImageLightbox imageSrc={bs5} style={{height:130+'px'}} citation={"Midi monitoring"} />
 
 We will create a configuration available in the Cloud profile: 'Ableton encoder A/B sends midi rx tutorial'
 
