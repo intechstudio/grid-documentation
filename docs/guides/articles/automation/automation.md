@@ -8,8 +8,8 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
 import lfo_cc from './img/LFO cc.png'
 import lfo_cc2 from './img/LFO cc2.png'
-import ahd from './img/ahd.png'
-import ahdbutton from './img/ahdbutton.png'
+import ahr from './img/ahr.png'
+import ahrbutton from './img/ahrbutton.png'
 
 ---
 
@@ -49,10 +49,10 @@ Attack, hold, and release for the PBF4 is really nice for experimenting, live pe
 
 Instead of the button simply moving from the minimum value to the maximum, we control how fast it reaches the maximum value and returns to the minimum. If we press and hold the button, it rises to the maximum value and stays there until we release it. Once the maximum value is reached, it holds, and upon release, it gradually returns to the minimum value over a set time.
 
-<ImageLightbox imageSrc={ahd} citation={"AHD envelope"} style={{height:400+'px'}}/>
+<ImageLightbox imageSrc={ahr} citation={"AHR envelope"} style={{height:400+'px'}}/>
 
-The 'AHD' profile for the PBF4 allows you to use 4 envelopes triggered by each button. For each button, you can adjust the maximum value, the intensity of increase/decrease, and the CC number.
+The 'AHR module' profile for the PBF4 allows you to use 4 envelopes triggered by each button. For each button, you can adjust the maximum value, the intensity of increase/decrease, and the CC number.
 
-<ImageLightbox imageSrc={ahdbutton} citation={"Channels and change the parameters on Button Init"} style={{height:490+'px'}}/>
+<ImageLightbox imageSrc={ahrbutton} citation={"Channels and change the parameters on Button Init"} style={{height:490+'px'}}/>
 
 ## Guide how to create your own
