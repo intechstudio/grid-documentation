@@ -2,6 +2,7 @@
 title: "MIDI RX setup for Ableton"
 sidebar-position: 2
 description: "Utilizing MIDI RX to receive MIDI from Ableton"
+slug: midi-rx-for-ableton
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';

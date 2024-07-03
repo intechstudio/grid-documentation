@@ -6,7 +6,6 @@ description: Updates about new Grid Editor changes, features and bugfixes
 
 import ProtocolUrl from '@site/src/components/ProtocolUrl';
 
-
 You can see written patch notes released here for Grid Editor, the configuration software for Grid Controllers.  
 [(Up-to-date changes can also be found on our GitHub here.)](https://github.com/intechstudio/grid-editor/releases)
 

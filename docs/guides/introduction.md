@@ -11,7 +11,7 @@ Here, we compiled a lot of helpful information to help you to create your own Gr
 - [**Grid Editor Web App**](https://grid-editor-web.web.app/) - To explore and experiment with the Grid Editor and its capabilities.
 - [**Getting Started**](/category/getting-started) - For new **Grid** or **Knot** users we recommend starting with this section!
 - [**Setup**](/category/grid-installing-editor) - For installing the** Grid Editor**
-- [**Wiki**](/wiki/introduction) -For achieving fun and complex configurations, we recommend delving deep into this section.
+- [**Wiki**](/wiki/introduction) - For achieving fun and complex configurations, we recommend delving deep into this section.
 - **Still have more questions?** Ask us directly on our [**Community Discord server**](https://links.intech.studio/discord) or send us an email to support@intech.studio!
 
 
