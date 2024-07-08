@@ -56,3 +56,7 @@ The 'AHR module' profile for the PBF4 allows you to use 4 envelopes triggered by
 <ImageLightbox imageSrc={ahrbutton} citation={"Channels and change the parameters on Button Init"} style={{height:490+'px'}}/>
 
 ## Guide how to create your own
+
+One of the most effective ways to leverage the power of MIDI automations is through the use of the Timer function combined with Global Variables. By creating a logical loop within the timer, you can increment a global value and repeatedly restart the timer until the value reaches your desired target.
+
+https://docs.intech.studio/wiki/actions/timer/timer-start/
