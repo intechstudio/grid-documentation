@@ -1,5 +1,7 @@
 ---
 title: Using monome norns with Grid
+description: For users that would like to just mess around with norns scripts and have a Grid Modular Controller (or any other MIDI controller really), we have created some MIDI maps for popular scripts for easy plug-and-play experience.
+
 ---
 
 import NornsGrid from './img/norns_po16.jpg'
@@ -8,20 +10,18 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<ImageLightbox imageSrc={NornsGrid} styling={'w-4/5 max-h-60 object-contain'}/>
-
-<!---
-![norns and PO16](./img/norns_po16_384px.jpg)
---->
 
 
 For users that would like to just mess around with norns scripts and have a Grid Modular Controller (or any other MIDI controller really), we have created some MIDI maps for popular scripts for easy plug-and-play experience.
 
 ### Requirements
 
-- *monome norns (any version)*
-- *Intech Studio Grid Modular Controller with the default configuration (optionally multiple modules)*
-- *a computer using the same network as norns for access to the norns folders through maiden*
+- monome norns (any version)
+- Intech Studio Grid Modular Controller with the default configuration (optionally multiple modules)
+- a computer using the same network as norns for access to the norns folders through maiden
+
+<ImageLightbox imageSrc={NornsGrid} style={{width:600+'px'}}/>
+
 
 ### How to get the .pmap files from your PC to the correct norns destinations?
 
