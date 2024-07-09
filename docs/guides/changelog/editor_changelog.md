@@ -11,6 +11,57 @@ You can see written patch notes released here for Grid Editor, the configuration
 
 ---
 
+
+## Grid Editor version 1.3.3
+
+This major version of Grid Editor arrives with shiny new features and useful bug fixes.
+The extensive list of changes are as follows:
+
+### Editor updates are now opt-in
+- We completely overhauled how we handle Editor updates from Editor version 1.3 onwards.
+- Instead of the earlier version of forcing you to update, now we warn you when there is a new update for Editor, but Editor will no longer update without your explicit consent.
+- This way it will be possible to stay or to roll back to earlier versions without much hassle.
+- **We still recommend keeping Editor up-to-date as new features will require you to be on the latest versions.**
+
+#### New Features
+- Overhauled the look and feel of Virtual Modules and made it possible to build a complete setup virtually.
+- When adding a new Action to an Event, it's now possible to search within the Action picker.
+- Now it's possible to update Grid to the Nightly Firmware when a module is in bootloader mode. This feature has to be enabled in Preferences, under Developer Settings.
+- Added a new Overlay Package which lets Editor display chosen values on your computer display as an OSD.
+- Added Editor support for upcoming modules.
+- Added WebSerial support for the [web version of Grid Editor](https://grid-editor-web.web.app/). This allow users to configure their modules in Google Chrome.
+- Added support for Keyboard hotkeys. Now it's possible to copy actions or whole elements with just keyboard hotkeys.  
+The list of shortcuts are as follows:
+
+
+<div style={{margin: '2em'}}>
+
+| Shortcut | Action | Element |
+| ---- | ---------- | --- |
+| Ctrl/Cmd + C | Copy selected Action(s) to clipboard | Copy active Element to clipboard |
+| Ctrl/Cmd + P | Paste Action(s) from clipboard to active Event | Overwrite active Element from clipboard |
+| Ctrl/Cmd + X | Cut selected Action(s) to clipboard | - |
+| Ctrl/Cmd + Shift + M | Merge selected Action(s) to Code | - |
+| Delete | Deletes selected Action(s) | - |
+| Shift + Delete | - | Clears active Element |
+| Ctrl/Cmd + Shift + M | - | Discards active Element changes |
+
+
+</div>
+
+
+
+#### Bugfixes
+- Fixed a bug where resizing the code editor window would fail.
+- Fixed a bug where (dis)connecting a large number of modules would cause a runtime error.
+- Fixed some bugs relating to minifying lua code.
+- Fixed a bug where the context menu would behave unexpectedly.
+- Fixed a bug where the TEK2 virtual module would cause Editor to freeze.
+
+
+
+
+
 ## Grid Editor version 1.2.53
 
 This new version of Grid Editor arrives with shiny new features and useful bug fixes.

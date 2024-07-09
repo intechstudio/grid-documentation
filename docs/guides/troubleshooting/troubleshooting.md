@@ -34,9 +34,16 @@ Reset your controller to the defaults by following the instructions highlighted 
 List of possible windows issues and their resolution.
 
 #### Windows 7 does not recognize your device
-Using Windows 7 today is brave! It can be that you will need to install a serial driver to get started using Grid Editor. Link is on our github below:
 
-[Download the Drivers](https://github.com/intechstudio/grid-fw/tree/master/Drivers/intech)
+:::caution
+Windows 7 is not supported by Grid Editor.
+:::
+
+Using Windows 7 today is brave! It can be that you will need to install a serial driver to get started using Grid Editor. Link is on our Github below:
+
+[Download the Drivers](https://github.com/intechstudio/grid-fw/tree/master/.archive/Drivers/intech)
+
+
 
 ### Mac OS Issues
 
