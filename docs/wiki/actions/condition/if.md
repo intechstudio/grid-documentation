@@ -9,6 +9,8 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import ifelse from './img/ifelse.png'
+
 ---
 
 <Tabs queryString="tab">
@@ -51,6 +53,7 @@ An if statement tests its condition and executes its then-part or its else-part 
     end
 
 When you write nested ifs, you can use elseif. It is similar to an else followed by an if, but it avoids the need for multiple ends:
+<ImageLightbox imageSrc={ifelse} citation={"Nested ifs in Codeblock"} style={{height:400+'px'}}/>
 
     if op == 1 then
       led_value(1,1,128)
