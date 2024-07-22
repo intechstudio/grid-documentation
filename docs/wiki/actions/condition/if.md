@@ -10,11 +10,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 import ifelse from './img/ifelse.png'
+import ifcolor from './img/if_coloring.png'
 
 ---
 
 <Tabs queryString="tab">
-  <TabItem value="About If" label="About If" default>
+  <TabItem value="About If, Elseif, Else" label="About If, Elseif, Else" default>
 
 ## If
 
@@ -37,6 +38,8 @@ Actions within the ElseIf condition will only run when the event trigger happens
 The Else Block can be created inside an already existing If Block to specify the FALSE conditional outcome.
 
 Actions within the Else condition will only run when the event trigger happens AND the condition specified in the text box of the If Block is FALSE.
+
+<ImageLightbox imageSrc={ifcolor} citation={"Color changes according to the conditions"} style={{height:600+'px'}}/>
 
   </TabItem>
   <TabItem value="Reference Manual Entry" label="Reference Manual Entry">

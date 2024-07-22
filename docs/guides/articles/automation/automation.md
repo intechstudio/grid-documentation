@@ -13,7 +13,7 @@ import ahrbutton from './img/ahrbutton.png'
 
 ---
 
-## such wow
+## Intro
 
 MIDI automation is a vital tool for musicians and producers, enabling the creation of dynamic, expressive performances with ease. By automating parameters like Cutoff, VCA Decay and effects, you can add depth and movement to your music.
 
