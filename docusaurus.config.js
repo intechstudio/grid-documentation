@@ -73,7 +73,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'static/img/2023-03-getting-started.jpg',
+      image: 'img/2023-03-getting-started.jpg',
       docs: {
         sidebar: {
           hideable: true,
