@@ -4,9 +4,15 @@ slug: immediate-send-explainer
 description: How to set variables and execute functions on multiple Grid modules at the same time
 ---
 
+import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+
+import img1 from './img/im_send.gif'
+
 *Ever wanted to just press a button on one module that would change how another one behaves? Well, now you can.*
 
 ---
+
+
 
 ## The immediate_send() function
 
@@ -57,6 +63,8 @@ immediate_send('print("I am the " .. module_position_x() .. ". module on the X a
 
 We can and will have to use the ` .. ` concatenation operator where we want to string (heh) together multiple elements into a string which we send out in the end.
 
+
+
 Remember that the modules on the receiving end, will interpret everything as ONE string. Meaning when wanting to use variables in arguments of functions you will have to use the ` .. ` operator AND add commas in between as well like this:
 
 ```lua
@@ -64,4 +72,9 @@ immediate_send('led_value(0,2' .. val .. ')')
 -- this function controls the LED brightness on all connected modules, based on the state of the control element sending out the above function
 ```
 
+## Things to try 
+
+
 Try using the above function in a Code Block on a potentiometer and watch the first LED get brighter on each module in your setup!
+
+<ImageLightbox imageSrc={img1} citation={"Setting LED colors on all connected Grid modules with just one fader!"}/>
