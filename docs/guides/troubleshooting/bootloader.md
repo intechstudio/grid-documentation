@@ -52,7 +52,7 @@ If you're not able to finish the update successfully, please drop us a mail to s
 <!--
 ### Recovery firmware to clear up memory
 
-Update the module with the **recovery firmware** found [here](https://github.com/intechstudio/grid-fw/raw/master/.archive/binary/grid_nvm_hardware_test.uf2) following the [guide here](https://grid-documentation.onrender.com/guides/troubleshooting/firmware) on updating the Grid Firmware either manually.
+Update the module with the **recovery firmware** found [here](https://github.com/intechstudio/grid-fw/raw/master/.archive/binary/grid_nvm_hardware_test.uf2) following the [guide here]() on updating the Grid Firmware either manually.
 
 Recovery firmware boots the module into a state where colors (white first, then RGB) will appear on all LEDs of the module as a sort of "demo mode". After you see this state, the memory has been wiped and you can continue the guide above from **Step 6**.
 

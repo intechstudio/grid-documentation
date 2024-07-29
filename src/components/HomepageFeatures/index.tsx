@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
         Check out the automatic and manual firmware update methods for Grid controllers.
       </>
     ),
-    linkUrl: '/guides/troubleshooting/firmware',
+    linkUrl: '/guides/troubleshooting/firmware-update',
     linkTitle: 'Firmware update'
   },
   {

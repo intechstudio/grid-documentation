@@ -78,7 +78,7 @@ Select the Grid module under Input and click Enable. Once enabled, the Grid can 
 
 select **Studio -> Studio Setup...**, to upen up the Studio Setup panel, where general MIDI configurations can be viewed.
 
-Select the **MIDI Port Setup** tab, and check if your Grid controller is listed under **MIDI Input**. If you don't see Grid listed there, check the [troubleshooting](/guides/troubleshooting) articles.
+Select the **MIDI Port Setup** tab, and check if your Grid controller is listed under **MIDI Input**. If you don't see Grid listed there, check the [troubleshooting](category/troubleshooting) articles.
 
 <ImageLightbox imageSrc={cubaseC} style={{height:400+'px'}} citation={"Grid controllers shown under MIDI Port setup"}/>
 </TabItem>

@@ -140,7 +140,7 @@ Opening up the MIDI Action block shows (found on each Control Element Event by d
 
 ### The Locals Action block
 
-The **Locals** Action block is the first Action block under each event in the default configuration. This block can be seen as *very intimidating* at first, as it holds variable assignments which are made to keep a multi module setup of the same module type unique in a common DAW + Grid setup. To learn more about the default Grid configuration, please check out the [Default MIDI layout article](/wiki/more/dynamically-assigned-MIDI-ch-and-cc).
+The **Locals** Action block is the first Action block under each event in the default configuration. This block can be seen as *very intimidating* at first, as it holds variable assignments which are made to keep a multi module setup of the same module type unique in a common DAW + Grid setup. To learn more about the default Grid configuration, please check out the [Default MIDI layout article](/wiki/more/dynamic-layout).
 
 Let's change this default to a common configuration, where we want to specifiy the channel to be **2** and the CC to be **99**.
 

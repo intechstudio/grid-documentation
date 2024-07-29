@@ -50,7 +50,7 @@ Different hardware instruments and DAWs use logarithmic adjustments to MIDI inpu
 
 ## Set CC 1 Modulation, CC 7 Volume, CC 11 Expression
 
-Potentiometers, specially the faders are often used to control the dynamics, volume and expression of instruments in audio libraries and VSTs. On Grid controllers, the default CC MIDI settings are [calculated dynamically](/wiki/more/dynamically-assigned-MIDI-ch-and-cc), but it's easy to overwrite them.
+Potentiometers, specially the faders are often used to control the dynamics, volume and expression of instruments in audio libraries and VSTs. On Grid controllers, the default CC MIDI settings are [calculated dynamically](/wiki/more/dynamic-layout), but it's easy to overwrite them.
 
 1. Select a control element you want to change
 2. Select the potmeter event
