@@ -1,6 +1,7 @@
 ---
 title: Grid Editor changelog
 description: Updates about new Grid Editor changes, features and bugfixes
+pageImg: /static/img/2023-03-getting-started.jpg
 ---
 
 
