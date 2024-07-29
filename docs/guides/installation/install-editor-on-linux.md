@@ -3,6 +3,7 @@ title: Linux Guide
 sidebar_position: 3
 date: 2021-11-26
 description: Grid Editor installation requirements, downloads, steps and general know-how under Linux.
+slug: install-linux
 ---
 
 import img1 from './img/linux-editor-install-allow.png'

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 0
 title: Introduction
+slug: introduction
+description: Guides, tutorials for Intech Studio products
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: Grid Editor changelog
 description: Updates about new Grid Editor changes, features and bugfixes
-pageImg: 'https://www.iana.org/_img/2022/iana-logo-header.svg'
+slug: editor-changelog
 ---
 
 

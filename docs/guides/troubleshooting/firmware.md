@@ -3,6 +3,7 @@ layout: docs
 sidebar_position: 1
 title: "Grid: Updating the firmware"
 date: 2021-11-25
+slug: firmware-update
 description: Manual firmware update steps for Grid controllers.
 ---
 import img1 from './img/firmware_mismatch.png'

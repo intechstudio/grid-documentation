@@ -2,6 +2,7 @@
 layout: docs
 sidebar_position: 2
 title: "Grid: Updating the bootloader"
+slug: bootloader-d51
 description: Manual bootloader update steps for Grid controllers on the D51 architecture.
 ---
 

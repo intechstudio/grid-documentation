@@ -4,6 +4,7 @@ sidebar_position: 1
 
 date: 2021-11-26
 description: Grid Editor installation requirements, downloads, steps and general know-how under Mac OS.
+slug: install-macos
 ---
 
 import img1 from './img/macos-editor-install-open-error.png'

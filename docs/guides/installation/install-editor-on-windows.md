@@ -3,6 +3,7 @@ title: Windows Guide
 sidebar_position: 2
 date: 2021-11-26
 description: Grid Editor installation requirements, downloads, steps and general know-how under Windows.
+slug: install-windows
 ---
 
 import img1 from './img/windows-editor-install-exe.png'

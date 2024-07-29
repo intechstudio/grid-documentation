@@ -3,6 +3,7 @@ layout: docs
 sidebar_position: 3
 title: "Grid: Factory reset"
 date: 2021-11-25
+slug: factory-reset
 description: Factory reset for Grid controllers.
 ---
 

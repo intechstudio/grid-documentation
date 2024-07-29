@@ -1,6 +1,7 @@
 ---
 title: Using monome norns with Grid
 description: For users that would like to just mess around with norns scripts and have a Grid Modular Controller (or any other MIDI controller really), we have created some MIDI maps for popular scripts for easy plug-and-play experience.
+slug: norns-guide
 
 ---
 

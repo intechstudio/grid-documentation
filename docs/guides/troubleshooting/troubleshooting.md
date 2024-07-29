@@ -2,6 +2,7 @@
 title: "Editor: Known issues"
 date: 2021-11-26
 sidebar_position: 5
+slug: troubleshooting
 description: List of possible troubleshoot resolutions on Mac OS, Windows and Linux.
 ---
 

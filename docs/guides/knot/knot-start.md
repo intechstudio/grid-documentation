@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: "Knot: Starter's guide"
+slug: knot-start
 description: For setting up Knot with Grid and other devices
 ---
 *Knot is a general purpose MIDI USB Host device.*

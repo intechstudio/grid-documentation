@@ -1,5 +1,6 @@
 ---
 title: "More about: Default MIDI layout"
+slug: dynamic-layout
 description: Out-of-the-box MIDI values sent by Grid and why.
 tags: [MIDI, Logic, Local, Variables, Workflow]
 ---

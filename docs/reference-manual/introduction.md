@@ -1,6 +1,8 @@
 ---
 sidebar_position: 0
 title: Intro to the RefManual
+slug: introduction
+description: Reference Documentation for the lua functions used by Grid
 ---
 
 Grid controllers run <b>lua</b> scripts for their configurations. It's a Turing complete system, meaning you can come up with unique workflow improvements utilizing Grid's tactile controls. The API for configurations aka <i>grid_protocol</i> used by Grid modules can be read in this reference manual. 

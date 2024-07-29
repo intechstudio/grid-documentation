@@ -1,6 +1,8 @@
 ---
 title: "Grid: Maintaining your modules"
 sidebar_position: 3
+slug: grid-care
+description: Tips for maintaining your Grid modules
 ---
 
 Grid utilizes cool tech to let you achieve cool things. To ensure that you can use your modules for a long time, sometimes a bit of care can come a long way. For example, if the USB connection is unreliable or the connection between modules cuts out, start with cleaning the contacts (USB connector and gold pins on the side).

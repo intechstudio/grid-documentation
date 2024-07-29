@@ -1,6 +1,8 @@
 ---
 sidebar_position: 0
 title: Introduction
+slug: introduction
+description: Collection of small articles explaining Grid functions
 ---
 
 <!---If you're new to Grid and the Grid Editor and have an idea about what you want to achieve with your new Grid module(s), you're in the right place!
