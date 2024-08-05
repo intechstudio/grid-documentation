@@ -11,7 +11,7 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
 ---
 
-### Get started with a Grid
+## Get started with a Grid
 This guide will help you get started with configuring and using our TEK2 modules with popular DJ software. Our TEK2 modules offer flexibility and precision, making them perfect for DJs looking for a compact and portable solution that's easy to travel with.
 
 ### Configuring TEK2 for DJ Software
