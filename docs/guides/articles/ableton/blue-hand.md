@@ -13,14 +13,9 @@ import img2 from './img/csurfaces.png';
 import img3 from './img/set_surface.png';
 import img4 from './img/bh_set_up.png';
 
-
-
-*This article details the use of the Blue Hand feature of Ableton for controlling plugins with the default Grid profile. Tested on Ableton Live 11.*
-
+_This article details the use of the Blue Hand feature of Ableton for controlling plugins with the default Grid profile. Tested on Ableton Live 11._
 
 ---
-
-
 
 ## What can you use the Blue Hand for with Grid in Ableton
 
@@ -28,15 +23,13 @@ The Blue Hand feature within Ableton will allow you to control parameters of a c
 
 The scripts below support control for up to 16 plugin parameters, and in the case of an EN16 these will all be assigned to its 16 encoders.
 
-You'll need an installation of at least Ableton Live 9+, since we're going to use a newer feature of Ableton called "User Remote Scripts" [more info about how to find it here](https://help.ableton.com/hc/en-us/articles/206240184-Creating-your-own-Control-Surface-script). 
+You'll need an installation of at least Ableton Live 9+, since we're going to use a newer feature of Ableton called "User Remote Scripts" [more info about how to find it here](https://help.ableton.com/hc/en-us/articles/206240184-Creating-your-own-Control-Surface-script).
 
-We'll also use an advanced feature to expose non-native Ableton plugin parameters to Blue Hand. You can read more about how that works [here.](https://help.ableton.com/hc/en-us/articles/6003224107292-Options-txt-file) 
+We'll also use an advanced feature to expose non-native Ableton plugin parameters to Blue Hand. You can read more about how that works [here.](https://help.ableton.com/hc/en-us/articles/6003224107292-Options-txt-file)
 
 Plug in your Grid module into your computer directly. (In this guide I'm using an EN16 built before May of 2023, or in other words a D51-based Grid.)
 
 During this guide, there will be a couple of files you'll have to download. These will be marked at the start of each section.
-
-
 
 ## Preparing Ableton
 
@@ -50,29 +43,26 @@ Find the controller(s) in preferences under MIDI.
 Older Grid modules are called `Intech Studio:AC` while modules sold after May of 2023 should appear as `Intech Grid MIDI Device`.
 :::
 
-<ImageLightbox imageSrc={img1}  citation={"Make sure both checkboxes are ticked in the Output line if using the Profile in this guide"} />
+<ImageLightbox imageSrc={img1} citation={"Make sure both checkboxes are ticked in the Output line if using the Profile in this guide"} />
 
-Enable the modules for both In- and Output by checking the both the **Track** and **Remote** boxes. 
+Enable the modules for both In- and Output by checking the both the **Track** and **Remote** boxes.
 
 ### Creating Remote Script files and the Options file
 
 :::tip Downloads
 First, download the following files for this section of the guide:
 
-- Both Intech Studio custom Control Surface script files for Blue Hand (for each version of Grid microarchitecture). 
-<a target="_blank" href="/presets/bluehand/bluehand.zip" download="bluehand.zip"> Download the Zip containing two folders, containing one script for each control surface.</a> 
+- Both Intech Studio custom Control Surface script files for Blue Hand (for each version of Grid microarchitecture).
+  <a target="_blank" href="/presets/bluehand/bluehand.zip" download="bluehand.zip"> Download the Zip containing two folders, containing one script for each control surface.</a>
 
-- Ableton Options file for exposing hidden VST parameters. 
-<a target="_blank" href="/presets/bluehand/Options.txt" download="Options.txt"> Download the plain text file, called Options.txt.</a> 
+- Ableton Options file for exposing hidden VST parameters.
+  <a target="_blank" href="/presets/bluehand/Options.txt" download="Options.txt"> Download the plain text file, called Options.txt.</a>
 
 :::
 
 :::caution
 Make sure Ableton is not running during this section of the guide!
 :::
-
-
-
 
 #### With the files downloaded follow these steps for creating the scripts:
 
@@ -98,13 +88,13 @@ After Ableton restarted, it should now load the newly added scripts for Grid cal
 
 You can find this custom script in Ableton preferences, under MIDI.
 
-<ImageLightbox imageSrc={img2}  citation={"When opening up the dropdown for a control surface both Intech scripts should show up."} />
+<ImageLightbox imageSrc={img2} citation={"When opening up the dropdown for a control surface both Intech scripts should show up."} />
 
 Choose one of the scripts (they are functionally identical, there's two of them only for recognition's sake) and assign your currently connected Grid controller to both the in- and outputs.
 
 After setting up your MIDI section should look something like this:
 
-<ImageLightbox imageSrc={img3}  citation={"Match the connected controller to the surface."} />
+<ImageLightbox imageSrc={img3} citation={"Match the connected controller to the surface."} />
 
 :::tip For users with multiple generations of Grid controllers
 Set up two rows of Control Surfaces, with different in-and outputs (one row should have Intech Studio Grid and the other Intech Studio AC, their control surface script can be either).
@@ -116,11 +106,9 @@ We have to do this, as depending on which module you have plugged in at the time
 
 Congratulations, you've now successfully set up your Grid control surface, and Ableton will now register Grid as a Blue Hand controller.
 
-<ImageLightbox imageSrc={img4}  citation={"The Drift plugin here changes the filter frequency when I turn the first encoder on the EN16."} />
-
+<ImageLightbox imageSrc={img4} citation={"The Drift plugin here changes the filter frequency when I turn the first encoder on the EN16."} />
 
 You can test it by just plugging an Ableton plugin on any of the tracks, and you should be able to see a Blue hand, and turning the controller pots should change the values on the plugin automatically. Nice!
-
 
 ## Setting up bi-directional control with Editor (Optional)
 
@@ -133,12 +121,9 @@ You can either find the Profile in the Profile Cloud under Presets within Grid E
 
 This is a link to a Grid Editor System Event Preset, containing settings for the MIDIRX Event. The preset is made for an EN16, but you can adapt it for other modules, just change the `self:encoder_value` function to the appropriate ones where applicable.
 
-More about understanding MIDIRX [here.](/docs/wiki/more/midi-rx.md) 
+More about understanding MIDIRX [here.](/docs/wiki/more/midi-rx.md)
 :::
 
 Loading the above Grid Editor Preset to your module's MIDI RX Event, changes made in Ableton will be reflected on the controller. If you're using a controller with non-digital controls, like a PO16 or a PBF4, switching on the setting named `Takeover Mode: Value Scaling` in Ableton Preferences/MIDI is recommended to avoid parameters jumps.
 
-
 Now Blue Hand is fully set up, and should function as expected.
-
-

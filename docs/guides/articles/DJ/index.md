@@ -22,6 +22,15 @@ We typically use the **TEK2**, **PBF4**, and **PO16** modules, which together fo
 
 ## Traktor DJ
 
+1. Download and open the Grid Editor.
+2. In the Grid Editor, access the Profile Cloud where you can load and save configurations to our Modules.
+3. Search for 'TEK2 DJ setup', then load and store it to your TEK2.
+4. Open up Traktor dj, go to `Preferences` --> `Controller Manager` --> `Import` and select the 'tek2_po16_pbf4.tsi' mapping.
+
+That's it! Now you are able to use the setup in Traktor. If you change the modules or their order, you will probably need to remap them, which is easy to do in the Controller Manager!
+
+<a target="_blank" href="/presets/dj/tek2_po16_pbf4.tsi" download="tek2_po16_pbf4.tsi"> Download the tsi map file</a>
+
 ## MIXX
 
 This basic mapping provides jogwheel and scratch functionality in Mixxx.
