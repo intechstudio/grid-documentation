@@ -22,6 +22,10 @@ We typically use the **TEK2**, **PBF4**, and **PO16** modules, which together fo
 
 ## Traktor DJ
 
+This mapping provides a fully functional DJ control setup. We have connected a TEK2, PO16, and PBF4 from top to bottom. This setup allows you to mix music easily.
+
+### To make this mapping work, follow these steps:
+
 1. Download and open the Grid Editor.
 2. In the Grid Editor, access the Profile Cloud where you can load and save configurations to our Modules.
 3. Search for 'TEK2 DJ setup', then load and store it to your TEK2.
