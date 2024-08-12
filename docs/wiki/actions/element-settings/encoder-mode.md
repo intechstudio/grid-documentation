@@ -46,6 +46,18 @@ When using velocity with relative encoding modes or with higher encoder resoluti
 It's useful to put Mode-type Blocks under the Init Event of the given Control Element. This way the Control Element will behave exactly as you'd want after booting up and this will also save you some characters on the Control Element Event itself for more important stuff.
 :::
 
+:::info
+
+### Velocity
+
+Velocity refers to the rate at which the encoder or endless position changes over time. Velocity measures how quickly the encoder is being turned. This velocity is essential for applications where the speed of rotation needs to be detected and used to influence other parameters.
+
+### Sensitivity
+
+Sensitivity refers to how responsive the encoder or endless controller is to changes. It dictates how much change in the encoder or endless controller's position is needed to produce a change in the output or the controlled parameter.
+
+:::
+
 </TabItem>
 <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
@@ -72,18 +84,6 @@ It's useful to put Mode-type Blocks under the Init Event of the given Control El
 - **How:** `self:encoder_senitivity()` or `self:encoder_senitivity(senitivity)`
   - velocity: integer, ranging 0...100
 - **What:** Returns the value of the encoder sensitivity, which is 100 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the encoder. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
-
-:::info
-
-### Velocity
-
-Velocity refers to the rate at which the encoder or endless position changes over time. Velocity measures how quickly the encoder is being turned. This velocity is essential for applications where the speed of rotation needs to be detected and used to influence other parameters.
-
-### Sensitivity
-
-Sensitivity refers to how responsive the encoder or endless controller is to changes. It dictates how much change in the encoder or endless controller's position is needed to produce a change in the output or the controlled parameter.
-
-:::
 
 </TabItem>
 </Tabs>
