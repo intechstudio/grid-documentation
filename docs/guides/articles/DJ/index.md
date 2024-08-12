@@ -1,10 +1,11 @@
 ---
-title: DJ
+title: DJing with Grid
 slug: basic-setup
 description: "This article details a starting experience with Grid and DJ softwares"
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
+import banner from './img/banner.png';
 
 <!-- import midi_port_setup from '' -->
 
@@ -19,6 +20,8 @@ This guide will help you get started with configuring and using our TEK2 modules
 We have created configuration for DJ software. These profiles serve as a great starting point, and you are free to adjust and reconfigure the parameters to suit your personal preferences. Grid modules are designed to be plug and play. You can combine multiple modules to create a custom setup tailored to your needs. However, be aware that you might need to make adjustments in your DJ software to accommodate the additional controls.
 
 We typically use the **TEK2**, **PBF4**, and **PO16** modules, which together form a straightforward combination to control any DJ software.
+
+<ImageLightbox imageSrc={banner} style={{height:500+'px'}} citation={"Portable DJ setup"} />
 
 ## Traktor DJ
 
