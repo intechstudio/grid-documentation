@@ -28,7 +28,10 @@ This Block simply stops an already playing animation on an LED layer. Works simi
   <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 
-There is no Reference Manual Entry for this article.
+:::caution
+Only the specific function `led_animation_phase_rate_type(num,layer,phase,0,0)` is able to stop the animation completely. Make sure that both the type and frequency parameters are set to 0 when trying to stop the animation.
+:::
+
 
 
 

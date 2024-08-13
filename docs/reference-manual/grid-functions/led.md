@@ -138,3 +138,7 @@ description: How to set LED parameters in Code Blocks.
     - shape: integer, ranging 0...3 (0: ramp up, 1: ramp reversed, 2: square, 3: sine)
   - **What:** This function combines the LED phase change type functions into one.
   - **Example:** Inputting the `led_animation_phase_rate_type(num,1,val,1,1)` into a Code Block will play the given animation on layer 1.
+
+:::caution
+Only the specific function `led_animation_phase_rate_type(num,layer,phase,0,0)` is able to stop the animation completely. Make sure that both the type and frequency parameters are set to 0 when trying to stop the animation.
+:::

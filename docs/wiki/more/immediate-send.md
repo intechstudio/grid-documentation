@@ -25,12 +25,12 @@ immediate_send('lua code')
 
 This function immediately forces all connected modules in a Grid setup to run a **lua code** snippet given between the two apostrophes of the function argument.
 
-:::caution ***Early feature***
+:::caution **Early feature**
 
-*This function currently requires you to be running a nightly version of the Grid firmware. You might experience bugs or performance related issues, but the nightly version should not be any less stable than the release version of the firmware.*
+This function currently requires you to be running a nightly version of the Grid firmware. You might experience bugs or performance related issues, but the nightly version should not be any less stable than the release version of the firmware.
 
-*You can find the nightly firmware version here:
-[for NEW Grid modules](https://github.com/intechstudio/grid-fw/raw/preview/Preview/Firmware/grid_esp32_nightly.uf2) and [for Grid modules sold before May of 2023.](https://github.com/intechstudio/grid-fw/raw/preview/Preview/Firmware/grid_d51_nightly.uf2)*
+You can find the nightly firmware version here:
+[for NEW Grid modules](https://github.com/intechstudio/grid-fw/raw/preview/Preview/Firmware/grid_esp32_nightly.uf2) and [for Grid modules sold before May of 2023.](https://github.com/intechstudio/grid-fw/raw/preview/Preview/Firmware/grid_d51_nightly.uf2)
 
 :::
 
