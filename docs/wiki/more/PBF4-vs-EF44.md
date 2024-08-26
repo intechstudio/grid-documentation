@@ -1,5 +1,5 @@
 ---
-slug: PBF4 vs EF44
+slug: PBF4-vs-EF44
 title: "PBF4 vs EF44"
 description: Comparison of PBF4 and EF44
 tags: [PBF4, EF44, Comapre]
@@ -20,12 +20,12 @@ _Potentiometers and encoders serve similar purposes but operate differently_
 ### PBF4 Features:
 
 **Buttons**: Clicky buttons for easy control.  
-**30mm Faders**: Shorter faders for a compact module.  
+**30 mm Faders**: Shorter faders for a compact module.  
 **300-Degree Rotary Potentiometers**: Easier to see the exact position for precise adjustments.
 
 ### EF44 Features:
 
-**66mm Faders**: Longer faders offer greater travel distance, allowing for more precise and detailed control adjustments.  
+**60 mm Faders**: Longer faders offer greater travel distance, allowing for more precise and detailed control adjustments.  
 **Endless Rotary Push-Encoders with Detents**: The encoders click as you turn them, providing tactile feedback with each step, and can be pushed to function as buttons, adding versatility.
 
 ## Summary
