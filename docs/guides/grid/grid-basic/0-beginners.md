@@ -24,19 +24,20 @@ import ArenaMidiIn from './img/arena_midi_input.png'
 import ArenaEditMidi from './img/arena_edit_midi.png'
 import ArenaMapped from './img/arena_mapped.png'
 import cubaseQuickControls from './img/cubase_quick_controls.png'
+import logicC from './img/logic_midi.png'
+import logicL from './img/logic_map.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
-This guide explains how to connect the Grid module(s) to your DAW and configure them once connected.
+*This guide explains how to connect the Grid module(s) to your DAW and configure them once connected.*
+
+
 
 Out of the box, Grid controllers are set up for seamless DAW control and other applications. Users can easily utilize software-side MIDI mapping or MIDI learn functionality.
 This default setup allows you to connect multiple Grid modules and immediately configure pots, knobs, sliders, and buttons in your preferred DAW without needing to open Grid Editor.
 
-:::tip Want to know more?
-For anything more complex than just the plug-and-play experience please take a look at [Grid Editor!](/docs/guides/grid/grid-basic/1-first-changes.md)
-:::
 
 ---
 
@@ -58,7 +59,13 @@ Now, what we want is to be able to send MIDI messages from Grid to your DAW, for
 <ImageLightbox imageSrc={mout} citation={'Live preferences: MIDI Ports'}/>
 </TabItem>
 <TabItem value="Logic" label="Logic" default>
-<em>Article coming soon</em>
+
+Once within Logic, open Preferences and select **MIDI -> Inputs**. Here you should be able to see `Grid` or `Intech Studio: Grid` as an Input device. Enable it if it's not already enabled.
+
+
+<ImageLightbox imageSrc={logicC} style={{height:600+'px'}} citation={'Find Grid within Preferences'}/>
+
+
 </TabItem>
 <TabItem value="FL" label="FL Studio" default>
 
@@ -133,10 +140,22 @@ When you click on any element, you activate MIDI learn mode in. This mode waits 
 Map all the other control elements to parameters in Ableton the same way and voilá you're all configured. You can then exit MIDI learn mode safely.
 
   </TabItem>
-  <TabItem value="Logic" label="Logic" default>
-  <em>Articel coming soon</em>
-  </TabItem>
-  <TabItem value="FL" label="FL Studio" default>
+<TabItem value="Logic" label="Logic" default>
+
+Mapping a control element on Grid to a parameter in Logic is easy. 
+
+1. Select the track you want to control and pressing `B` on your keyboard to bring up the Smart Controls panel. 
+2. Click the small `(i)` button in the top left to open up Automatic Smart Controls. 
+3. Click on any of the parameters on the right you wish to control like Expression for example, then click on the Learn button under External Assignments. The representation of this parameter should now turn red along with the Learn button.
+4. Turn or slide the element on your Grid controller to map it to this parameter. Turn off Learn.
+5. Now your Grid should control this parameter.
+
+
+<ImageLightbox imageSrc={logicL} style={{height:300+'px'}} citation={'Map the controls with the Smart Controls'}/>
+
+
+</TabItem>
+<TabItem value="FL" label="FL Studio" default>
 
 First, enable Multilink and move the parameters you wish to control. Once you've moved, click Multilink once more.
 
@@ -210,3 +229,8 @@ To control Resolume Arena effectively, use EF44 for layer mixing and EN16 for sc
 Now you have a generic configuration.
 </TabItem>
 </Tabs>
+
+
+:::tip Want to know more?
+For anything more complex than just the plug-and-play experience please take a look at [Grid Editor!](/docs/guides/grid/grid-basic/1-first-changes.md)
+:::
