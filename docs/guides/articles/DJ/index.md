@@ -13,7 +13,9 @@ import banner from './img/banner.png';
 
 ## Get started with a Grid
 
-This guide will help you get started with configuring and using our TEK2 modules with popular DJ software. Our TEK2 modules offer flexibility and precision, making them perfect for DJs looking for a compact and portable solution that's easy to travel with.
+This guide will help you get started with configuring and using our TEK2 modules with popular DJ software. Our TEK2 modules offer flexibility and precision, making them perfect for DJs looking for a compact and portable solution that's easy to travel with. If your chosen DJ software isn't on the list, don't worry. All of them support MIDI mapping.
+
+To get started with TEK2, we recommend using our pre-configured 'TEK2 DJ setup' available in Profile Cloud. Once you've set it up, the next step is to map the jogwheel and other parameters.
 
 ### Configuring TEK2 for DJ Software
 
