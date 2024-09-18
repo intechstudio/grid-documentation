@@ -115,7 +115,7 @@ You can test it by just plugging an Ableton plugin on any of the tracks, and you
 :::tip Downloads
 You can either find the Profile in the Profile Cloud under Presets within Grid Editor by the name `en16 midirx` or just click the link here:
 
-<ProtocolUrl title="Click here to import the EN16 MIDIRX Preset in Editor" protocolUrl="grid-editor://?config-link=weNFaPglV3lnwzeKElVr"/>
+<ProtocolUrl title="Click here to import the EN16 MIDIRX Preset in Editor" protocolUrl="grid-editor://?config-link=mLBGirihSV2BjdZpx5fb"/>
 
 <br></br>
 
