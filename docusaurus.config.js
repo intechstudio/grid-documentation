@@ -146,6 +146,10 @@ const config = {
                         <a style="display: flex; align-items: center; gap: 0.3rem;" href="https://www.facebook.com/intechstudio/" target="_blank" rel="noreferrer noopener" aria-label="Facebook icon">
               <img src="/img/icon/facebook.svg" alt="Facebook icon" width="16"   /><span>Facebook</span>
             </a>
+
+                                 <a style="display: flex; align-items: center; gap: 0.3rem;" href="https://https://github.com/intechstudio" target="_blank" rel="noreferrer noopener" aria-label="Github icon">
+              <img src="/img/icon/github.svg" alt="Github icon" width="16"   /><span>Github</span>
+            </a>
                         <a style="display: flex; align-items: center; gap: 0.3rem;" href="https://x.com/intechstudio" target="_blank" rel="noreferrer noopener" aria-label="Twitter icon">
               <img src="/img/icon/x.svg" alt="X icon" width="16"   /><span>X</span>
             </a>
@@ -154,7 +158,7 @@ const config = {
             </a>
 
                                <a style="display: flex; align-items: center; gap: 0.3rem;" href="https://www.tiktok.com/@intechstudio" target="_blank" rel="noreferrer noopener" aria-label="TikTok icon">
-              <img src="/img/icon/tiktok.svg" alt="Youtube icon" width="16"   /><span>Tiktok</span>
+              <img src="/img/icon/tiktok.svg" alt="Tiktok icon" width="16"   /><span>Tiktok</span>
             </a>
                 </div>
 
