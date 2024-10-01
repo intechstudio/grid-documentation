@@ -13,6 +13,29 @@ You can see written patch notes released here for Grid Editor, the configuration
 ---
 
 
+## Grid Editor version 1.3.5
+
+This version of Grid Editor arrives with shiny new features and useful bug fixes.
+The extensive list of changes are as follows:
+
+#### New Features
+- A new block has been added called NRPN. This allows you to easily send customizable NRPN MIDI messages.
+- A new block has been added called Button Step. This helps you individually customize buttons steps in multiple-step buttons modes.
+- A new block has been added called Function. This new block lets you create custom functions made in Lua code.
+- All Mode-sytle blocks have upgraded. This update includes the addition of min and max values to these blocks in all cases, with additional options like Sensitivity.
+- Added new prompts to the bracket-style blocks (If/Else, Press/Release etc.) to help guiding the user when placing blocks.
+- Added the feature to be able to name blocks!
+- Added the feature to switch between the currently edited controllers in the case of multiple connected Grid setups.
+- Partially matched configuration loading is now possible (e.g. button config loaded to encoder), indicated by a yellow loading icon.
+- Suggested variable names have been updated to better indicate their function.
+- The context menu under right click has been improved.
+
+#### Bugfixes
+- Fixed a bug where Copy/Paste states were mismatched when using both context menu and toolbar.
+- Fixed a bug where typing into comment block would let the user exceed the character limit.
+
+
+
 ## Grid Editor version 1.3.3
 
 This major version of Grid Editor arrives with shiny new features and useful bug fixes.

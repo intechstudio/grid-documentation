@@ -17,10 +17,9 @@ _Ever wanted to just press a button on one module that would change how another 
 As of Grid Editor version 1.3, you'll be able to find a new function that's called:
 
 ```lua
-immediate_send(int x, int y, stirng 'lua_code')
--- int x - module position X
--- int y - module position Y
+immediate_send(target_relative_postion_x,target_relative_postion_y, 'lua code')
 -- here 'lua code' can be anything that you would normally write in the code editor of Grid Editor
+-- and the relative positions are the module you're trying to address, (0,0,'lua code') being itself, (nil,nil,'lua code') being all modules 
 ```
 
 This function executes lua_code on the module addressed by x and y. Use x = nil and y = nil to trigger on all modules.
