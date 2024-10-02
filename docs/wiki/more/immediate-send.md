@@ -67,6 +67,6 @@ immediate_send(1, 0, 'led_value(0,2' .. val .. ')')
 
 ## Things to try
 
-Try using the above function in a Code Block on a potentiometer and watch the first LED get brighter on each module in your setup!
+Try using the above function in a Code Block on a potentiometer and watch the first LED get brighter on each module in your setup! You can find it in Profile Cloud, it's called "Coloring with immediate send".
 
 <ImageLightbox imageSrc={img1} citation={"Setting LED colors on all connected Grid modules with just one fader!"}/>

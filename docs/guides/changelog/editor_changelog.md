@@ -19,6 +19,7 @@ This version of Grid Editor arrives with shiny new features and useful bug fixes
 The extensive list of changes are as follows:
 
 #### New Features
+- With the new firmware, inter-Grid communication is now possible! Each Grid now has the capability to tell another to do something or remember sometihng. You can read more about how it works [here, it's called Immediate Send](/docs/wiki/more/immediate-send.md)
 - A new block has been added called NRPN. This allows you to easily send customizable NRPN MIDI messages.
 - A new block has been added called Button Step. This helps you individually customize buttons steps in multiple-step buttons modes.
 - A new block has been added called Function. This new block lets you create custom functions made in Lua code.
