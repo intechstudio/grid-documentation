@@ -53,7 +53,7 @@ immediate_send(nil, nil, 'print("I am the " .. module_position_x() .. ". module 
 
 We can and will have to use the `..` concatenation operator where we want to string (heh) together multiple elements into a string which we send out in the end.
 
-Remember that the modules on the receiving end, will interpret everything as ONE string. Meaning when wanting to use variables in arguments of functions you will have to use the `..` operator AND add commas in between as well like this:
+The modules on the receiving end, will interpret everything as ONE string. Meaning when wanting to use variables in arguments of functions you will have to use the `..` operator AND add commas in between as well like this:
 
 ```lua
 immediate_send(nil, nil, 'led_value(0,2' .. val .. ')')
@@ -62,8 +62,14 @@ immediate_send(nil, nil, 'led_value(0,2' .. val .. ')')
 
 ```lua
 immediate_send(1, 0, 'led_value(0,2' .. val .. ')')
--- this function controls the LED brightness on the module which position is x = 1, y = 0, based on the state of the control element sending out the above function
+-- this function controls the LED brightness on the module which position is x = 1, y = 0, relative to the module position where immediate_send() is called, combined with the state of the control element sending out the above function
 ```
+
+Remember that the `led_value(index, layer, value)` function's second `layer` argument can have two values, 1 for button changes and 2 for fader, potentiometer or encoder rotation changes. While you test this out, make sure you address the correct layer.
+
+:::tip
+The `immediate_send()` function's first two arguments - x and y coordiantes - are **relative to the module where the function is called**. If you want to send a message to all modules, use `nil` for both x and y arguments.
+:::
 
 ## Things to try
 
