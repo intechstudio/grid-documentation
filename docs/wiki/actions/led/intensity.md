@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 ---
 
 <Tabs queryString="tab">
-  <TabItem value="About LED Intensity" label="About LED Intensity" default>
+<TabItem value="About LED Intensity" label="About LED Intensity" default>
 
 The Intensity Block changes the light intensity the LED of your choice when this action runs.
 
@@ -34,8 +34,8 @@ Both the LED number and the intensity value is by default bound to the Control E
 
 <ImageLightbox imageSrc={IntensityExample} style={{width:350+'px'}} citation={'Example: If the potmeter value below 64 then Intensity is low, else Intensity is max'}/>
 
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 ## LED intensity
 
@@ -59,5 +59,5 @@ Both the LED number and the intensity value is by default bound to the Control E
 - **What:** This function sets a timeout for the `led_animation_rate` function. The timeout field sets the end of the `led_animation_rate` frequency change, given in frames. Timeout will count down each frame from the the `timeout` parameter given and when it reaches 0, it changes the frequency to 0. <!-- amikor a timeout értéke 0ra csökken akkor automatikusan 0-ra áll a frequency, phase marad ott ahol éppen volt -->
 - **Example:** `led_animation_rate(num,1,1)` and `led_timeout(num,1,257)` will set a pulsing LED phase change that will increase LED light intensity to the max and then reset is to minimum intensity (when the timeout variable overflows from 256 to 257).
 
-  </TabItem>
+</TabItem>
 </Tabs>
