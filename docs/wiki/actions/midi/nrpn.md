@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 <Tabs queryString="tab">
 <TabItem value="About NRPN MIDI" label="About NRPN MIDI" default>
 
-## Desctiption
+## Description
 
 NRPN messages extend the standard MIDI Control Change (CC) messages by using a pair of CC messages to control a wide range of parameters more precisely. NRPN is commonly used to control device-specific functions that go beyond what regular Control Change (CC) messages offer.
 
