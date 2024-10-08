@@ -33,7 +33,7 @@ This flexibility exists because manufacturers generally describe one of these me
 To use this feature, **you must change the control element's resolution and maximum possible value**.
 This can be done by dropping an Action Block under the Setup event.
 
-<ImageLightbox imageSrc={element14Bit} style={{width:600+'px'}} citation={'On System event element settings cahnged max VAlue to 14Bit and Resolution to 10Bit'}/>
+<ImageLightbox imageSrc={element14Bit} style={{width:600+'px'}} citation={'On System Event Element settings changed max Value to 14bit and Resolution to 10bit'}/>
 
 Due to the noisy nature of high resolution signal reads from control elements, we recommend to stay below 11-bit resolution.
 
