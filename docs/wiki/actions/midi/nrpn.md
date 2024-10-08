@@ -13,16 +13,16 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-## NRPN - Non-Registered Parameter Number
+
 
 <Tabs queryString="tab">
 <TabItem value="About NRPN MIDI" label="About NRPN MIDI" default>
 
-### NRPN - MIDI Message Format for Precise Device Control
+## Desctiption
 
 NRPN messages extend the standard MIDI Control Change (CC) messages by using a pair of CC messages to control a wide range of parameters more precisely. NRPN is commonly used to control device-specific functions that go beyond what regular Control Change (CC) messages offer.
 
-### Multiple Options for NRPN Control
+### Parameters
 
 There are two common options when sending NRPN messages. You can either provide the MSB and LSB or use dedicated NRPN CC commands.
 
