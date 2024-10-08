@@ -20,18 +20,19 @@ import spec_push_rot from './img/spec_push_rot.png'
 import spec_push_not_push_l_r from './img/spec_push_not_push_l_r.png'
 import merge_spec_l_r from './img/merge_spec_l_r.png'
 
-*This article details most settings and adjustments to the default Encoder behavior on Grid modules.*
+_This article details most settings and adjustments to the default Encoder behavior on Grid modules._
 
 ---
 
 # Encoder Modes explained
 
 All encoders can be set to 3 different modes:
+
 - **Absolute** (default), acts like a potentiometer 0-127 CC values
 - **Relative Bin Offset**, 63-65 CC values
 - **Relative 2's Complement**, 127-1 CC values
 
-Let's add an **Encoder Mode Action** block to the *init* Event of the encoder control element. We could put it onto the *encoder* Event as well, but pay attention to the order of execution on an Action chain. 
+Let's add an **Encoder Mode Action** block to the _init_ Event of the encoder control element. We could put it onto the _encoder_ Event as well, but pay attention to the order of execution on an Action chain.
 
 <ImageLightbox imageSrc={encoder_mode_init} citation={""} styling={'w-4/5 object-contain'}/>
 
@@ -66,7 +67,7 @@ Setting encoder minimum and maximum values should be only used in **absolute enc
 
 ## Configurations stay applyed until overwritten
 
-If you apply configurations to Grid - like setting min and max values -, those changes will remain on the hardware until you explicitly change them or use Store/reboot the module. Be careful not to restart a module if you have unsaved configurations, as those will be lost on a reboot. 
+If you apply configurations to Grid - like setting min and max values -, those changes will remain on the hardware until you explicitly change them or use Store/reboot the module. Be careful not to restart a module if you have unsaved configurations, as those will be lost on a reboot.
 
 You can remove the Code block which contains the min and max value changes to see this yourself in the MIDI Monitor panel.
 
@@ -113,7 +114,7 @@ There are 3 special Action blocks are available for encoders:
 
 These special Action blocks are utilizing the encoder's rotation and button state with **if** statements. You can learn more about **if** statements [here](/wiki/actions/condition/if).
 
-If you want to build other special state checking actions, you can use the *merge as code* feature to see how these Action blocks are built and tune them to your liking via [condition](/category/conditions) Action blocks or lua coding.
+If you want to build other special state checking actions, you can use the _merge as code_ feature to see how these Action blocks are built and tune them to your liking via [condition](/category/conditions) Action blocks or lua coding.
 
 ### Left/Right Rotate
 
@@ -141,7 +142,7 @@ Utilizing the relative encoder mode, we can setup the encoder to control two par
 <ImageLightbox imageSrc={spec_push_rot} citation={"While encoder is pushed, relative CC 40 messages are sent out, when simply turned then CC 30"} styling={'w-3/5 max-h-60 object-contain'}/>
 
 :::note Relative encoder mode
-For the sake of demonstration, we've put the **Encoder Mode** Action on the encoder Event. Normally, you would put this Action to the init Event of the encoder control element. This setup also works, but this Action must be executed first.
+For the sake of demonstration, we've put the **Encoder Mode** Action on the encoder Event. Normally, you would put this Action to the Setup (formerly Init) Event of the encoder control element. This setup also works, but this Action must be executed first.
 :::
 
 ### Push & rotate right or left + just rotate left or right
@@ -150,11 +151,10 @@ This special Action holds most of the common states together. To make this look 
 
 <ImageLightbox imageSrc={spec_push_not_push_l_r} citation={"As character limit is tight here, "} styling={'w-4/5 object-contain'}/>
 
-You can use the *merge as code* function to see how this Action block is built and use the code version of it to get better control over it. We can further opzimize the merged code, by assigning the `self:encoder_state()` and `self:button_state()` functions to local variables.
+You can use the _merge as code_ function to see how this Action block is built and use the code version of it to get better control over it. We can further opzimize the merged code, by assigning the `self:encoder_state()` and `self:button_state()` functions to local variables.
 
 <ImageLightbox imageSrc={merge_spec_l_r} citation={"The bottom left code block's character length is only 167/400 characters"} styling={'w-4/5 object-contain'}/>
 
 ## Next steps
 
 We've started to go over common encoder states. Before moving towards more advanced configurations, check out the [button](/docs/guides/grid/grid-basic/3-button.md) guide. Do you have a module with potentiometers or faders? Check out the [potmeter](/docs/guides/grid/grid-basic/3-potmeter.md) guide.
-

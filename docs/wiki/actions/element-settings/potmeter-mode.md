@@ -26,7 +26,7 @@ You have two fields you can change, one of them is the max value of the potentio
 The second field is the bit depth, which translates to how sensitive the potentiometer is when sampling the voltage values from the potentiometer itself. For use with high res MIDI commands like a modwheel, we recommend setting it to 10bit as it is enough for high resolution signals, but compared to 14bit it doesn't get jittery at all.
 
 :::tip Good practice
-It's useful to put Mode-type Blocks under the Init Event of the given Control Element. This way the Control Element will behave exactly as you'd want after booting up and this will also save you some characters on the Control Element Event itself for more important stuff.
+It's useful to put Mode-type Blocks under the Setup Event of the given Control Element. This way the Control Element will behave exactly as you'd want after booting up and this will also save you some characters on the Control Element Event itself for more important stuff.
 :::
 
   </TabItem>

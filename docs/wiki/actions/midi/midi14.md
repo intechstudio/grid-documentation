@@ -14,11 +14,10 @@ import TabItem from '@theme/TabItem';
 <Tabs queryString="tab">
   <TabItem value="About 14bit MIDI" label="About 14bit MIDI" default>
 
-
-
 ### 14 bit MIDI - High resolution MIDI message format.
-To use this feature, **you must change the control element's resolution and maximum possible value**. 
-This can be done by dropping a Potmeter Mode action block under the init event.
+
+To use this feature, **you must change the control element's resolution and maximum possible value**.
+This can be done by dropping a Potmeter Mode action block under the Setup event.
 
 Due to the noisy nature of high resolution signal reads from control elements, we recommend to stay below 11-bit resolution.
 
@@ -36,12 +35,7 @@ Please note, as the least significant bit (LSB) and most significant bit (MSB) c
   </TabItem>
   <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
-
 There is no Reference Manual Entry for this article.
-
-
 
   </TabItem>
 </Tabs>
-
-

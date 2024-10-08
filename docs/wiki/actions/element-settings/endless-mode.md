@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="About Endless Mode" label="About Endless Mode" default>
 
 :::tip Good practice
-It's useful to put Mode-type Blocks under the Init Event of the given Control Element. This way the Control Element will behave exactly as you'd want after booting up and this will also save you some characters on the Control Element Event itself for more important stuff.
+It's useful to put Mode-type Blocks under the Setup Event of the given Control Element. This way the Control Element will behave exactly as you'd want after booting up and this will also save you some characters on the Control Element Event itself for more important stuff.
 :::
 
 ## Change the mode

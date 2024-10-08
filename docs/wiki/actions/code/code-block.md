@@ -100,7 +100,7 @@ shortname: gens
 
 - **How:** `hardware_configuration()`
 - **What:** It returns a value corresponding to the module hardware version.
-- **Example:** Open System event Init and print out the value of your Grid module. You can see the result in the MIDI monitor Debug view: `print(hardware_configuration())`
+- **Example:** Open System event Setup and print out the value of your Grid module. You can see the result in the MIDI monitor Debug view: `print(hardware_configuration())`
 
   "GRID_MODULE_PO16_RevB": "0",
   "GRID_MODULE_PO16_RevC": "8",

@@ -55,7 +55,7 @@ However, for compatibility with software and synthesizers limited to 7-bit MIDI 
 
 You can find this Profile in Grid Editor under: `Profile cloud > Recommended configs > 'Endless 7bit (0-127) MIDI'`
 
-<ImageLightbox imageSrc={reschange} style={{width:800+'px'}} citation={'Set self:endless_max() to 127 on the Init Event then change from 14bit MIDI to MIDI on the Endless Event.'}/>
+<ImageLightbox imageSrc={reschange} style={{width:800+'px'}} citation={'Set self:endless_max() to 127 on the Setup (formerly Init) Event then change from 14bit MIDI to MIDI on the Endless Event.'}/>
 
 #### Endless LEDs
 

@@ -11,7 +11,7 @@ import pot101_pmin_pmax from './img/pot101_pmin_pmax.png'
 import pot101_cc_change from './img/pot101_cc_change.gif'
 import pot101_14bit_midi from './img/pot101_14bit_midi.png'
 
-*This article details most settings and adjustments to the default Potentiometer and Fader (i. e. slide potentiometer) behavior on Grid modules.*
+_This article details most settings and adjustments to the default Potentiometer and Fader (i. e. slide potentiometer) behavior on Grid modules._
 
 ---
 
@@ -19,12 +19,13 @@ import pot101_14bit_midi from './img/pot101_14bit_midi.png'
 
 The Potmeter Event can be found on Grid controllers equipped with either potentiometers or faders.  
 The Mode block allows for the bit-depth setting of the analogue value reads from the hardware, it's settings are as follows:
+
 - **7-bit** (default), which has the value `7`, this is the standard MIDI range, 0-127 (2^7);
 - **8-bit**, value `8` is an extended range, 0-255 (2^8), often used in lightning and color controls;
 - **9 and 10-bit**, value `9` or `10` is an even higher range, best used in combination with 14-bit NRPN MIDI configuration. 9-bit is 0-512 (2^9), 10-bit is 0-1024 (2^10);
-- **11-bit and over**, value `11` or higher is a very high resolution and it is not recommended to use these settings without additional noise filtering as it might introduce jitter. 
+- **11-bit and over**, value `11` or higher is a very high resolution and it is not recommended to use these settings without additional noise filtering as it might introduce jitter.
 
-<ImageLightbox imageSrc={pot101_pmo} citation={"Potmeter Mode action block on init event"}/>
+<ImageLightbox imageSrc={pot101_pmo} citation={"Potmeter Mode action block on Setup (formerly Init) event"}/>
 
 ## Potmeter minimum and maximum
 
@@ -32,7 +33,7 @@ By default, the potmeter minimum value is 0, and the maximum value is 127. These
 
 When the potmeter minimum and maximum values are changed, the `potmeter_value()` will reflect those new ranges.
 
-If you want to set potmeter minimum and maximum values, you can do so by adding a [**Code Block**](/wiki/actions/code/code-block) Action to the *init* Event of the button control element.
+If you want to set potmeter minimum and maximum values, you can do so by adding a [**Code Block**](/wiki/actions/code/code-block) Action to the _init_ Event of the button control element.
 
 ```lua
 self:potmeter_min(10)
@@ -42,7 +43,6 @@ self:potmeter_max(100)
 The [**Potmeter Mode**](wiki/actions/element-settings/potmeter-mode) Action block - which was made to help 14-bit MIDI setup - also has the option to set the potmeter maximum from the drop-down to either 127 for standard and 16383 for high resolution MIDI. In the Potmeter Mode action block the maximum can be set to a different maximum as well.
 
 <ImageLightbox imageSrc={pot101_pmin_pmax} citation={"Potmeter minimum and maximum setting in Code Block"} styling={'w-4/5 max-h-60 object-contain'}/>
-
 
 :::tip Set CV to max 110
 Different hardware instruments and DAWs use logarithmic adjustments to MIDI input values. Setting volume and gain staging to 0 db is often around control value 110. If you set the `potmeter_max()` to 110, you can be sure that the control value will be 110 when the potmeter is turned all the way to the right, or if it's a slider all the way to the top. This can help avoid clipping and get more control over your instruments.
@@ -66,14 +66,13 @@ By default, the variables created in the Locals action block are used in the MID
 
 ## 14-bit high resolution MIDI
 
-Let's add an **Potmeter Mode** Action block to the *init* event of the potentiometer control element. We could put it onto the *potmeter* event as well, but pay attention to the order of execution on an Action chain. 
+Let's add an **Potmeter Mode** Action block to the _init_ event of the potentiometer control element. We could put it onto the _potmeter_ event as well, but pay attention to the order of execution on an Action chain.
 
 1. Change the bit depth to 10, and set the maximum to 16383. This way you can use the potentiometer to send 14-bit MIDI messages.
-2. Navigate to the *potmeter* event and change the MIDI action block from "MIDI" to "14-bit MIDI".
+2. Navigate to the _potmeter_ event and change the MIDI action block from "MIDI" to "14-bit MIDI".
 3. Open up the MIDI monitor and see your potentiometer sending out 14-bit MIDI messages.
 
-<ImageLightbox imageSrc={pot101_14bit_midi} citation={"Set the Potmeter Mode on init even and change the MIDI action block on the potmeter event to 14-bit"}/>
-
+<ImageLightbox imageSrc={pot101_14bit_midi} citation={"Set the Potmeter Mode on Setup (formerly Init) even and change the MIDI action block on the potmeter event to 14-bit"}/>
 
 ## Next steps
 

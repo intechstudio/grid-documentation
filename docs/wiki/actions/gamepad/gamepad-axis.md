@@ -24,7 +24,7 @@ Utilizing the gamepad joystick messages you can create a virtual joystick you ca
 
 With the Gamepad Axis block you can choose the axis you want to move the joystick on and the value you would want to move it by. The position on that axis ranges from -128 to 127 so we recommend setting the potentiometers or encoders controlling this block to a maximum value of 255 and then subtracting that from 127 when calculating the position of the control element.
 
-<ImageLightbox imageSrc={img2} citation={'Axis position controlled by a potentiometer. Mode block should be on the Init Event, this image is just illustration.'}/>
+<ImageLightbox imageSrc={img2} citation={'Axis position controlled by a potentiometer. Mode block should be on the Setup (formerly Init) Event, this image is just illustration.'}/>
 
 :::caution
 Currently only Grid modules sold after May of 2023 support this feature.  
@@ -34,11 +34,7 @@ We apologize for the inconvenience.
 </TabItem>
 <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
-
-
 ### gamepad move send
-
-
 
 - shortname: ggms
 - **How:** `gamepad_move_send(axis, position)`
@@ -51,9 +47,5 @@ Configuring the potmeter to 8bits and then limiting it to a maximum of 255, you 
 
 <ImageLightbox imageSrc={img1} citation={'Controlling movement in Vampire Survivors with two faders on a PBF4.'}/>
 
-
-
 </TabItem>
 </Tabs>
-
-

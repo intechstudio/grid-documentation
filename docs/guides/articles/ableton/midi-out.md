@@ -68,7 +68,7 @@ With this configuration, we can adjust Send A and Send B using one encoder. Send
 
 - First, we need to create global variables in the system initialization. These variables will store the incoming MIDI values (e.g., the first encoder Send B is e0B).
 
-<ImageLightbox imageSrc={img3} style={{height:350+'px'}} citation={"In the System Init event, set the global variables to store and recall the incoming values from Ableton."} />
+<ImageLightbox imageSrc={img3} style={{height:350+'px'}} citation={"In the System Setup (formerly Init) event, set the global variables to store and recall the incoming values from Ableton."} />
 
 - Let's assign two different MIDI CCs to the encoder: one MIDI CC for when the encoder is rotated, and a second CC for when it is pushed and rotated. Additionally, for visual feedback, let's assign specific colors to these actions. Make sure not to remove the Locals and Intensity action blocks, as we need those to remain intact.
   <ImageLightbox imageSrc={img4} style={{height:550+'px'}} citation={"Add two MIDI blocks and an LED color block in the Push/Rotate block."} />

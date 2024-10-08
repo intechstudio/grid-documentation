@@ -4,6 +4,7 @@ title: Color
 tags: [Action Block, LED, Feedback, Workflow]
 description: "The Color Block changes the color the LED of your choice when this action runs."
 ---
+
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 import ColorBlock from './img/color_action_crop.png'
 import ColorPRExample from './img/color_pr_example.png'
@@ -17,14 +18,13 @@ import TabItem from '@theme/TabItem';
 
 The Color Block changes the color the LED of your choice when this action runs.
 
-Color Blocks by default are found on the Init Event of each Control Element. This is to give a default coloring to each module on startup. If you just want to change how your module looks, we advise to change things here.
+Color Blocks by default are found on the Setup Event of each Control Element. This is to give a default coloring to each module on startup. If you just want to change how your module looks, we advise to change things here.
 
-<ImageLightbox imageSrc={ColorBlock} style={{width:300+'px'}} citation={'Color Block on the Init Event'}/>
+<ImageLightbox imageSrc={ColorBlock} style={{width:300+'px'}} citation={'Color Block on the Setup (formerly Init) Event'}/>
 
 If you want to use coloring for value feedback, you should probably do that on the Control Element Events, where the value changes happen. Remember, the last change to LED parameters will persist until overwritten by a restart or another change in LED params.
 
 <ImageLightbox imageSrc={ColorPRExample} style={{width:300+'px'}} citation={'Button press colors the led red, release to blue'}/>
-
 
 The Block has a couple of fields you can configure:
 
