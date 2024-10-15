@@ -56,12 +56,12 @@ We can and will have to use the `..` concatenation operator where we want to str
 The modules on the receiving end, will interpret everything as ONE string. Meaning when wanting to use variables in arguments of functions you will have to use the `..` operator AND add commas in between as well like this:
 
 ```lua
-immediate_send(nil, nil, 'led_value(0,2' .. val .. ')')
+immediate_send(nil, nil, 'led_value(0,2,' .. val .. ')')
 -- this function controls the LED brightness on all connected modules, based on the state of the control element sending out the above function
 ```
 
 ```lua
-immediate_send(1, 0, 'led_value(0,2' .. val .. ')')
+immediate_send(1, 0, 'led_value(0,2,' .. val .. ')')
 -- this function controls the LED brightness on the module which position is x = 1, y = 0, relative to the module position where immediate_send() is called, combined with the state of the control element sending out the above function
 ```
 
