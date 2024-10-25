@@ -51,11 +51,11 @@ _The default TEK2 configuration differs in a lot of ways from our previously inl
 #### 14bit MIDI to 7bit MIDI
 
 Endless Potentiometers come factory-set to output MIDI data at 14 bits, spanning a range of 0 to 16383, allowing for precise control of parameters like volume and panning.
-However, for compatibility with software and synthesizers limited to 7-bit MIDI (0-127), you can employ the command `self:endless_max(127)` to adjust the output accordingly.
+However, for compatibility with software and synthesizers limited to 7-bit MIDI (0-127), you can use the **Endless Mode Block** to adjust the output accordingly.
 
 You can find this Profile in Grid Editor under: `Profile cloud > Recommended configs > 'Endless 7bit (0-127) MIDI'`
 
-<ImageLightbox imageSrc={reschange} style={{width:800+'px'}} citation={'Set self:endless_max() to 127 on the Setup (formerly Init) Event then change from 14bit MIDI to MIDI on the Endless Event.'}/>
+<ImageLightbox imageSrc={reschange} style={{width:800+'px'}} citation={'Change from 14bit MIDI to MIDI on the Endless Event, then Set the Max to 127 and adjust the Sensitivity (to 1) on the Setup Event'}/>
 
 #### Endless LEDs
 
