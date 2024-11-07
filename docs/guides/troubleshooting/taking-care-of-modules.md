@@ -44,7 +44,7 @@ Pogo pins are the metallic pins used for connecting modules to each other. Keepi
 
 Here's how to clean them:
 
-1. urn off your module and ensure that no cables or power sources are attached.
+1. Turn off your module and ensure that no cables or power sources are attached.
 2. Dab isopropyl alcohol on a cotton swab.
 3. Gently rub each of the pogo pins with the swab to remove dirt or residue.
 4. For the connectors, clean around the pins to ensure there’s no debris blocking proper contact.
