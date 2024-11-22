@@ -31,13 +31,10 @@ import TabItem from '@theme/TabItem';
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
-*This guide explains how to connect the Grid module(s) to your DAW and configure them once connected.*
-
-
+_This guide explains how to connect the Grid module(s) to your DAW and configure them once connected._
 
 Out of the box, Grid controllers are set up for seamless DAW control and other applications. Users can easily utilize software-side MIDI mapping or MIDI learn functionality.
 This default setup allows you to connect multiple Grid modules and immediately configure pots, knobs, sliders, and buttons in your preferred DAW without needing to open Grid Editor.
-
 
 ---
 
@@ -62,9 +59,7 @@ Now, what we want is to be able to send MIDI messages from Grid to your DAW, for
 
 Once within Logic, open Preferences and select **MIDI -> Inputs**. Here you should be able to see `Grid` or `Intech Studio: Grid` as an Input device. Enable it if it's not already enabled.
 
-
 <ImageLightbox imageSrc={logicC} style={{height:600+'px'}} citation={'Find Grid within Preferences'}/>
-
 
 </TabItem>
 <TabItem value="FL" label="FL Studio" default>
@@ -77,10 +72,20 @@ Select the Grid module under Input and click Enable. Once enabled, the Grid can 
 
 <ImageLightbox imageSrc={flEnable} style={{height:600+'px'}} citation={'MIDI Settings, Enabled Grid module'}/>
 
-  </TabItem>
-      <TabItem value="ProTools" label="ProTools" default>
-  <em>Article coming soon</em>
-  </TabItem>
+</TabItem>
+  <TabItem value="ProTools" label="ProTools" default>
+
+## Connecting Grid to Pro Tools
+
+1. Connect Grid to your computer using a USB cable.
+2. Open Pro Tools and go to Setup > Peripherals.
+3. In the MIDI Controllers section, select:
+   - Type: HUI
+   - Receive From: Grid
+   - Send To: Grid
+4. Press OK to save the settings. If prompted about MIDI setup, click Don’t Show Again.
+
+</TabItem>
     <TabItem value="Cubase" label="Cubase" default>
 
 select **Studio -> Studio Setup...**, to upen up the Studio Setup panel, where general MIDI configurations can be viewed.
@@ -142,17 +147,15 @@ Map all the other control elements to parameters in Ableton the same way and voi
   </TabItem>
 <TabItem value="Logic" label="Logic" default>
 
-Mapping a control element on Grid to a parameter in Logic is easy. 
+Mapping a control element on Grid to a parameter in Logic is easy.
 
-1. Select the track you want to control and pressing `B` on your keyboard to bring up the Smart Controls panel. 
-2. Click the small `(i)` button in the top left to open up Automatic Smart Controls. 
+1. Select the track you want to control and pressing `B` on your keyboard to bring up the Smart Controls panel.
+2. Click the small `(i)` button in the top left to open up Automatic Smart Controls.
 3. Click on any of the parameters on the right you wish to control like Expression for example, then click on the Learn button under External Assignments. The representation of this parameter should now turn red along with the Learn button.
 4. Turn or slide the element on your Grid controller to map it to this parameter. Turn off Learn.
 5. Now your Grid should control this parameter.
 
-
 <ImageLightbox imageSrc={logicL} style={{height:300+'px'}} citation={'Map the controls with the Smart Controls'}/>
-
 
 </TabItem>
 <TabItem value="FL" label="FL Studio" default>
@@ -166,9 +169,36 @@ This action will prompt the Remote Control Settings window to appear. Simply mov
 <ImageLightbox imageSrc={flMidi2} style={{height:500+'px'}} citation={'Remote Control Settings with kick fader waiting to assign'}/>
 </TabItem>
 <TabItem value="ProTools" label="ProTools" default>
-<em>Article coming soon</em>
+
+## EN16 Plugin Control
+
+### Overview
+
+The EN16 now supports a plugin control feature using the HUI protocol, enabling the control of up to four parameters and the ability to select which parameters to control. Additionally, features for selecting banks, channels, and tracks have been implemented for enhanced functionality.
+
+In the Grid Editor, open the Profile Cloud and upload the `HUI Protools Plugin Control` to your EN16.
+
+### Features
+
+1. Parameter Control
+
+- The HUI protocol allows you to control up to 4 parameters at a time.
+- Switch between different banks, channels, and tracks.
+- Insert Selection
+- Assign parameter control buttons to select inserts A, B, C, and D.
+
+2. How to Activate Plugin Control
+
+- Activate Control Mode
+
+  - Press the select/switch encoder to activate plugin control.
+
+- Insert Selection
+
+  - Press the select/switch encoder again. - Use parameter control buttons to select inserts A, B, C, or D.
+
 </TabItem>
-<TabItem value="Cubase" label="Cubase" default>
+  <TabItem value="Cubase" label="Cubase" default>
 
 Cubase has a feature called Quick Controls, which allows 8 control elements to be mapped. It allows you to select specific parameters on a channel which you want to control. You can assign MIDI messages to these parameters, and control them with your Grid controller.
 
@@ -180,7 +210,6 @@ In each Quick Control row, under the flags the **R** should be activated, so the
 
   </TabItem>
     <TabItem value="Studio One" label="Studio One" default>
-
 
 1. Open the Mixer view by clicking on the button located in the lower right corner under the browser.
 2. On the left side, select "Show External Devices" and open up the Grid interface.
@@ -229,7 +258,6 @@ To control Resolume Arena effectively, use EF44 for layer mixing and EN16 for sc
 Now you have a generic configuration.
 </TabItem>
 </Tabs>
-
 
 :::tip Want to know more?
 For anything more complex than just the plug-and-play experience please take a look at [Grid Editor!](/docs/guides/grid/grid-basic/1-first-changes.md)
