@@ -26,6 +26,8 @@ import ArenaMapped from './img/arena_mapped.png'
 import cubaseQuickControls from './img/cubase_quick_controls.png'
 import logicC from './img/logic_midi.png'
 import logicL from './img/logic_map.png'
+import protoolsMidi from './img/protoolsMidi.png'
+import protoolsHUI from './img/protoolsHUI.png'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -84,6 +86,8 @@ Select the Grid module under Input and click Enable. Once enabled, the Grid can 
    - Receive From: Grid
    - Send To: Grid
 4. Press OK to save the settings. If prompted about MIDI setup, click Don’t Show Again.
+
+<ImageLightbox imageSrc={protoolsHUI} style={{height:200+'px'}} citation={'MIDI Settings, Enabled Grid module'}/>
 
 </TabItem>
     <TabItem value="Cubase" label="Cubase" default>
@@ -196,6 +200,8 @@ In the Grid Editor, open the Profile Cloud and upload the `HUI Protools Plugin C
 - Insert Selection
 
   - Press the select/switch encoder again. - Use parameter control buttons to select inserts A, B, C, or D.
+
+<ImageLightbox imageSrc={protoolsMidi} style={{height:300+'px'}} citation={'HUI Protools Plugin Control - profile'}/>
 
 </TabItem>
   <TabItem value="Cubase" label="Cubase" default>
