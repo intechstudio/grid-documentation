@@ -1,5 +1,5 @@
 ---
-title: "Loic Pro"
+title: "Logic Pro"
 sidebar-position: 1
 description: "Logic Pro MCU setup"
 slug: logic-pro-mcu-setup
