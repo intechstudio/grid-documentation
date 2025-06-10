@@ -17,6 +17,8 @@ import TabItem from '@theme/TabItem';
 
 ## Description
 
+The new mechanical button responds to both velocity and pressure, offering dynamic, expressive control for nuanced performance.
+
 With a Button Mode Block it's possible to change how many 'steps' a button has to take to move from its minimum value to its maximum.
 
 This has the most basic use-case of creating switch-type buttons, meaning the first click of a button moves the value up but it stays there on a release, and only when the cycle is complete does it fall back down again to 0.
@@ -25,6 +27,8 @@ This has the most basic use-case of creating switch-type buttons, meaning the fi
 
 This Block has a field with a dropdown menu. The options are as follows:
 
+- -2 pressure: The button senses continuous pressure for expressive real-time control.
+- -1 velocity: The button detects how fast it is pressed, enabling dynamic response based on playing speed.
 - 0 momentary: the default button behavior, two values, each press switches to max value, each release switches to minimum value
 - 1 toggle: two values, each press switches between the two values
 - 2 3-way switch: three values, each press switches up to the next value, last value switches back to first
