@@ -10,6 +10,7 @@ import pot101_pmo from './img/pot101_pmo.png'
 import pot101_pmin_pmax from './img/pot101_pmin_pmax.png'
 import pot101_cc_change from './img/pot101_cc_change.gif'
 import pot101_14bit_midi from './img/pot101_14bit_midi.png'
+import centering from './img/centering.png'
 
 _This article details most settings and adjustments to the default Potentiometer and Fader (i. e. slide potentiometer) behavior on Grid modules._
 
@@ -74,6 +75,25 @@ Let's add an **Potmeter Mode** Action block to the _init_ event of the potentiom
 
 <ImageLightbox imageSrc={pot101_14bit_midi} citation={"Set the Potmeter Mode on Setup (formerly Init) even and change the MIDI action block on the potmeter event to 14-bit"}/>
 
-## Next steps
+---
 
-There is a side utility button on Grid controllers called utility button. This is the +1 control element on Grid, where system events are also configured. Tutorial coming soon!
+## Centering the Potmeter
+
+If your potmeter’s center position is not aligned correctly (for example, in 7-bit standard MIDI the center value should be **64**), you can manually calibrate it using the following steps:
+
+1. **Manually move all potmeters to their physical center position.**
+   This is important to ensure proper calibration.
+
+2. **Open the Debug Menu** in Grid Editor.
+
+3. **Paste the following command into the code input field:**
+
+   ```
+   gpcs(gpcg())
+   ```
+
+4. **Click "Immediate" to send the command.**
+
+After this, all potmeters should snap to the middle. They are now calibrated to recognize the physical center as the correct center MIDI value. That’s it — you’re done!
+
+<ImageLightbox imageSrc={centering} citation={"Potmeter centering"} styling={'w-4/5 max-h-60 object-contain'}/>
