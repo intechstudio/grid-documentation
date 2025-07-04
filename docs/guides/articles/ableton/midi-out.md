@@ -27,7 +27,7 @@ The MIDI receive functionality can be accessed through the _midi rx_ event in th
 
 > Actions triggered by system events are unique to each module. To have a control surface where each module reacts to MIDI, you have configure each module's _midi rx_ event.
 
-## Basic Setup
+## Setting up
 
 Usually the MIDI data sent out by audio software will have the MIDI message in the following format: Command, Parameter 1 (CC or Note), Parameter 2 (CV or Velocity).
 
@@ -61,6 +61,8 @@ The variables defined in the _Local Variables_ action are on the module by defau
 - Upon interacting with the control element's mapping, you should see MIDI data.
 
 <ImageLightbox imageSrc={bs5} style={{height:130+'px'}} citation={"Midi monitoring"} />
+
+## Tutorial: Creating an A/B send encoder with RX
 
 We will create a configuration available in the Cloud profile: 'Ableton encoder A/B sends midi rx tutorial'
 
