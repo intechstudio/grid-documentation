@@ -11,6 +11,65 @@ You can see written patch notes released here for Grid Editor, the configuration
 
 ---
 
+## Grid Editor version 1.6.0
+
+This version of Grid Editor arrives with shiny new features and useful bug fixes. The extensive list of changes are as follows:
+
+### Updated Default Configuration for Grid
+
+With the new Editor version comes a **new Firmware version**. Firmware version 1.4 redefines the old default configurations of Grid to make it sleeker and easier to use. **After updating the Firmware, clearing or NVM erasing the module will set the module to this new default configuration.**  
+
+This new Configuration uses the new SimpleColor Action for easy LED color adjustment, updated Auto commands for a clean UI and a Mode block for every Element for quick access to cool new features like the Pressure mode on the new Buttons.
+
+*Keep in mind that older configurations on the cloud might behave strangely under the new firmware versions. Contact support@intech.studio for help in these cases.*
+
+### Packages and Creative Software Integrations
+
+This is the first version of Editor officially supporting Software integration Packages.
+
+- Added support for **Adobe Lightroom Classic**
+- Added support for **Adobe Photoshop**
+- Added support for **Discord**
+- Added support for **Spotify**
+
+#### New Features
+
+- Introduced a simplified **Minimalist mode** for new users to get started more easily with Grid Editor. You can check or uncheck the small switch in the right corner of the Grid Editor window to change the view. The last state of the switch will be saved in user settings as default.
+- Added a right-click context menu for Action blocks for deleting and resetting blocks.
+- Grid protocol now supports the **LCD Draw event** for VSN1 modules. You can find out [more about the Draw event here.](/category/draw)
+- Added a new way of editing colors with the **SimpleColor** block.
+- Added a new mini-map of connected modules. Editor will display multiple ports, virtual modules here all in one place.
+- Users can now select and drag multiple actions simultaneously for improved workflow efficiency.
+- Added improved visualization for pressure sensitive buttons.
+- Added confirmation modals and reworked modal logic for better user interaction experience.
+- Enhanced search functionality of the Action Picker to include category names (e.g. "midi") for easier action discovery.
+- Added quit dialog when user tries to close Editor with packages running in the background.
+- Added support for parsing AUTO values in MIDI, MIDI14, and SimpleColor components. These Auto values (called by "-1" in all cases) replicate or follow previous functionality, so there should be no change to how these Actions function.
+- Added support for VSNX variants in the virtual module modal.
+- Replaced the previous code input system with a robust Monaco-based editor for improved code editing experience with better syntax highlighting and autocomplete.
+- Modernized Package List UI with refreshed interface design.
+
+#### Bugfixes
+
+- Fixed MIDI Monitor lagging issues that caused performance problems during MIDI data monitoring.
+- Fixed SimpleColor color picker freeze issues in multi-event views.
+- Fixed LedColor color picker freezing problems.
+- Fixed Monaco modal-related bugs and added virtual button support.
+- Fixed visual bugs in MeltSelect dropdown components.
+- Fixed element selection focusing behavior for both single and multi-connection scenarios.
+- Fixed merge syntax errors that occurred during code operations.
+- Fixed issues preventing page changes when active changes are present.
+- Fixed Settings Button step value calculations.
+- Fixed problems with name changes not being committed in Monaco editor.
+- Fixed package window recreation issues.
+- Fixed profile load race condition timing issues with cloud loading.
+- Fixed a visual bug where navigation tabs had color flashing issues.
+- Fixed focusing behavior problems for element selection.
+- Fixed minimap navigation and display issues.
+
+
+
+
 ## Grid Editor version 1.3.5
 
 This version of Grid Editor arrives with shiny new features and useful bug fixes.
