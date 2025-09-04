@@ -44,7 +44,7 @@ This is the first version of Editor officially supporting Software integration P
 - Added confirmation modals and reworked modal logic for better user interaction experience.
 - Enhanced search functionality of the Action Picker to include category names (e.g. "midi") for easier action discovery.
 - Added quit dialog when user tries to close Editor with packages running in the background.
-- Added support for parsing AUTO values in MIDI, MIDI14, and SimpleColor components. These Auto values (called by "-1" in all cases) replicate or follow previous functionality, so there should be no change to how these Actions function.
+- Added support for parsing AUTO values in MIDI, and SimpleColor components. These Auto values (called by "-1" in all cases) replicate or follow previous functionality, so there should be no change to how these Actions function.
 - Added support for VSNX variants in the virtual module modal.
 - Replaced the previous code input system with a robust Monaco-based editor for improved code editing experience with better syntax highlighting and autocomplete.
 - Modernized Package List UI with refreshed interface design.
