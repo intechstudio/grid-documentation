@@ -30,13 +30,13 @@ If you want to use coloring for value feedback, you can add minimum and middle v
 - **Element** (hidden in Minimalist mode): defines which LED the Block should affect.
 - **Layer** (hidden in Minimalist mode): can be either 1 or 2. The final color is based on the mix of both layers.
   - **1**: button and potmeter event layer
-  - **2**: encoder event layer
-- **Color state picker**: you can add or remove minimum and middle LED values and choose which to color in the color picker.
--* **Color picker type dropdown**: you can use RGB, Classic, or HSL style color picker.
-- **Color Picker**: you can type in your own RGB values or pick a color and alpha value.
+  - **2**: encoder and endless event layer
+- **Color strip**: you can add or remove minimum and middle LED values and choose which to color in the color picker.
+- **Color Mixer Type dropdown**: you can use RGB, Classic, or HSL style color picker.
+- **Color Mixer**: you can type in your own RGB values or pick a color and alpha value.
 - **Update intensity** (hidden in Minimalist mode): when enabled, the intensity will update automatically.
 
-<ImageLightbox imageSrc={ColorStatePicker} style={{width:300+'px'}} citation={'Color state picker'}/>
+<ImageLightbox imageSrc={ColorStatePicker} style={{width:300+'px'}} citation={'Color strip'}/>
 
 ---
 
