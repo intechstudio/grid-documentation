@@ -58,7 +58,7 @@ There exist two layers of color and intensity per each LED. The reason for this 
   - blue: integer, ranging 0...255 or -1 for auto color
   - alfa: integer, ranging 0...1
 - **What:** Sets the LED colors for the specified layer. Only the first color set is required; the second and third are optional.
-- **Example:** `led_color(1, {255,0,0,1})` or `led_color(1, {255,0,0,1}, {0,255,0,0.5})`
+- **Example:** `self:led_color(1, {255,0,0,1})` or `element[5]:led_color(1, {255,0,0,1}, {0,255,0,0.5})`
 
 ### led_value
 
