@@ -28,11 +28,13 @@ Each one is created differently and used with different naming styles.
 
 - Exist only during a single Event (e.g. Setup, Timer)
 - Disappear after the Event ends
-- No prefix, just use the name
+- Uses the `local` prefix before the name when created, but can be referenced without it
 
 **Example:**
 ```lua
-myvar = 5
+local myvar = 5 --creating the local variable
+
+myvar = myvar + 5 --referencing the local variable
 ```
 
 **Tip:** Define them in the **Locals Block** of the Event where you use them.
@@ -43,7 +45,7 @@ myvar = 5
 
 - Stored inside the Control Element
 - Stay in memory and can be reused anytime
-- Use `self.` or `element[x].` to access
+- Use `self.` or `element[x].` to reference or create them
 
 **Example:**
 ```lua
@@ -57,11 +59,11 @@ self.counter = 0
 ### 🔵 Global Variables
 
 - Shared across the whole page
-- Use just the name like locals, but they last longer
+- Just create and reference them without a prefix, but using a Capitalized name for them is good practice
 
 **Example:**
 ```lua
-gvalue = 100
+Gvalue = 100
 ```
 
 **Tip:** Create in the **Global Block** of the **System Setup Event** to keep things organized.
@@ -86,9 +88,9 @@ The name of the function, like `button_value()` or `midi_send()`
 
 **Examples:**
 ```lua
-self:element_index()
-element[3]:button_value()
-module_rotation()
+self:element_index() --this is a self function, called on that element
+element[3]:button_value() --this is also a self function, but referenced from a different element
+module_rotation() --this is a global function
 ```
 
 ---
@@ -105,7 +107,7 @@ module_rotation()
 ## ⚠️ Special Cases
 
 - **LED functions** use no prefix. They take the LED number inside `()`.
-- **Lua functions** like `math.random()` are from Lua itself.
+- **Lua functions** like `math.random()` are from a LUA library, you can find them on the official LUA documentation page.
 - Other exceptions are noted in the [Reference Manual](/docs/reference-manual/introduction.md).
 
 ---
