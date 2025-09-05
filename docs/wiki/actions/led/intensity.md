@@ -42,7 +42,7 @@ Both the LED number and the intensity value is by default bound to the Control E
 ### led_value
 
 - shortname: glp
-- **How:** `led_value()` or `led_value(lnum,layer,value)`
+- **How:** `led_value()` or `led_value(lnum,layer,value) or element[x]:led_value(layer,value)`
   - lnum: integer, ranging 0...15 or 0...11 (if using PBF4)
   - layer: integer, ranging 1...2
   - phase: integer, ranging 0...255
