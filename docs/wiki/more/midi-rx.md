@@ -70,3 +70,13 @@ This ensures that the first encoder (element 0) LED reflects the correct state b
 
 
 <ImageLightbox imageSrc={en} citation={"LED intensity and Encoder value based on incoming MIDI values"}/>
+
+## Receiving Sysex
+
+Usually, you have a custom SysEx implementation. You can use this function, which listens to MIDI SysEx messages. From there, you can parse them and, for example, use them to update Element values.
+
+```
+self.sysexrx_cb = function(self, sysex, grid_headers)
+    print(sysex)
+end
+```
