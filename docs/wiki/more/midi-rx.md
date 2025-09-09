@@ -1,83 +1,72 @@
 ---
 title: "More about: Receiving MIDI"
-slug: midi-rx
+slug: midi-rx-new
 tags: [MIDI RX, Workflow]
 description: Listen to MIDI messages on MIDI Rx and set values on control elements.
 ---
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
-import encoder_relative_led from './img/encoder_relative_led.png'
-import button_led_and_value_setting from './img/button_led_and_value_setting.png'
-
+import bu from './img/bu_midirx.png'
+import en from './img/en_midirx.png'
 
 # Bidirectional MIDI communication
 
 Grid modules by default send out MIDI data with the MIDI action blocks, which are configured on the various events. 
 
-Listening to MIDI messages sent back to Grid happen somewhere else: under System Events, midi rx event. 
-
 In different environments - Digital Audio Workstations, VST Plugins, Host software - usually a MIDI *out*, *transmit* or a similar setting can be found. This setting will send back the changed MIDI data to the device, which has an active mapping with the changed parameter. Sometimes a parameter is not only controlled by Grid, but you change it with your keyboard or mouse. If you want to send back MIDI data to Grid, you have to find and enable this setting.
 
-## Set LED intensity on relative encoders
 
-By default in the LEDs associated with the encoders in absolute mode are using the encoder's value to represent the controlled value. This works well for absolute encoders, but for relative encoders the `self:encoder_value()` read by the LED intensity action will show the relative values transmitted by Grid, and not the controlled parameters value.
 
-The below example shows how to set the LED value on a relative encoder, so it will show the controlled parameters value. We have to make changes on the following events:
+# Using the MIDI RX Callback in the System Element Setup
 
-1. First control element (element index 0), **Init** event
-    - Set the Encoder Mode to relative
-    - The encoder intensity will be set by midi rx, which is layer **2**
-    - It's also possible to turn off the default dimmed LED brightness by switching the *beautify* off
-2. First control element (element index 0), **Encoder** event
-    - Remove the LED Intensity block - we set it through midi rx
-3. Select System Events, **Midi Rx** event
-    - Add the `i` variable to the Locals block, this is used to map the incoming MIDI CC number to the encoder's index
-    - Add a [Lookup](/wiki/actions/variables/lookup-variables) action block with the lookup pairs CC and index numbers
-        - By default a single module with encoder's top left CC will be 32 and index is 0 
-    - Add a [Code Block](/wiki/actions/code/code-block) action block
-        - Set the LED intensity with `led_value(i, 2, param2)`
-            - `i` is the index of the encoder
-            - `2` is the encoder layer of the LED
-            - `param2` is the value of the incoming MIDI message
-            ```lua
-            if i ~= nil then
-                led_value(i, 2, param2)
-            end
-            ``` 
+To handle incoming MIDI messages, you need to use the following callback function in the `System` element's `Setup`:
 
-<ImageLightbox imageSrc={encoder_relative_led} citation={"Steps to set LED intensity based on incoming MIDI values on a relative encoder"}/>
+```lua
+self.midirx_cb(self, event, header)
+```
 
-## Set value and LED intensity on buttons
+### `event` Table Structure
 
-Button toggles can be used for solo, mute or other two state functions. This often overridden by mouse or keyboard, so let's make it bidirectional.
+- `event[1]`: **Channel** (0–15)
+- `event[2]`: **Command** (e.g., CC: 176, Note On: 144)
+- `event[3]`: **Param1** (usually the CC or Note number)
+- `event[4]`: **Param2** (usually the value)
 
-1. First control element (element index 0), **Init** event
-    - Set the Button Mode to Toggle (code 1)
-    - The button LED intensity will be set by midi rx, which is layer **1**
-    - Set the LED color to red, that's a common color for mute buttons
-2. First control element (element index 0), **Button** event
-    - Add a Press/Release block to [filter duplicate presses](/docs/guides/grid/grid-basic/3-button.md) while toggle mode is active
-    - Set the MIDI action block to command 176 and an easy to remember CC number, like 60
-3. Select System Events, **Midi Rx** event
-    - Add the `i` variable to the Locals block, this is used to map the incoming MIDI CC number to the button's index
-    - Add a [Lookup](/wiki/actions/variables/lookup-variables) action block with the lookup pairs CC and index numbers
-        - In this example the CC is 60, the index we need for the first element is 0
-    - Add a [Code Block](/wiki/actions/code/code-block) action block
-        - Filter out `nil` values
-        - Set the LED intensity with `led_value(i, 1, param2)`
-            - `i` is the index of the button
-            - `1` is the button layer of the LED
-            - `param2` is the value of the incoming MIDI message
-        - Set the button value with `element[i]:button_value(param2)`
-            - Using [element referencing](/wiki/more/element-referencing), we call `button_value()` on the first control element
-            - `i` is the index of the button
-            - `param2` is the value of the incoming MIDI message
-            ```lua
-            if i ~= nil then
-                led_value(i, 1, param2)
-                element[i]:button_value(param2)
-            end
-            ``` 
+### `header` Parameter
 
-<ImageLightbox imageSrc={button_led_and_value_setting} citation={"Steps to set LED intensity based on incoming MIDI values on a button"}/>
+The `header` parameter is useful for filtering incoming messages.  
+We typically use `header[1] = 13`, which means the message is coming from a DAW, synth, or other external gear.
+
+---
+
+## Simple Examples
+
+### Example: Dynamic MIDI RX Mapping for BU16
+
+You can upload the `BU16 MIDIRX` to the System element, which is ideal for dynamic factory profiles.
+
+When you plug in one BU16 module, the first button (element 0) sends a MIDI Note On message (144) with note G#0 (32).
+
+Since the controller sends note 32 and the DAW responds on the same note, you need to use `element_number` offset set to `-32`.  
+This ensures that the first button (element 0) LED reflects the correct state based on the incoming note value.
+
+
+<ImageLightbox imageSrc={bu} citation={"Button LED intensity based on incoming MIDI values"}/>
+
+---
+
+### Example: EN16
+
+
+You can upload the `EN16 MIDIRX` to the System element, which is ideal for dynamic factory profiles.
+
+The encoder rotation on the EN16 sends **Control Change (CC)** messages with command `176`.
+
+The incoming MIDI message changes the element LED intensity and also the encoder value.
+
+Since the controller sends note 32 and the DAW responds on the same CC, you need to use `element_number` offset set to `-32`.  
+This ensures that the first encoder (element 0) LED reflects the correct state based on the incoming CC value.
+
+
+<ImageLightbox imageSrc={en} citation={"LED intensity and Encoder value based on incoming MIDI values"}/>

@@ -1,76 +1,113 @@
----
+<!-- ---
 title: "More about: Variables"
-slug: element-referencing
-description: How to refer to a Control Element by number.
+slug: element-referencing-simple
+description: A lightweight guide to variables and functions in Grid.
 tags: [Logic, Local, Global, Self, Function, Variables]
+--- -->
+
+# More about: Variables and Functions
+
+In the Grid Editor, **variables and functions** help you store and use data.  
+They always have a **name**, and they live in different places depending on how you create them.
+
 ---
 
-In Grid Editor, both variables and functions have a **place** where they are stored/called, and a way they can be called upon, a **name**.
+## Types of Variables
 
-Variable types are determined by the way they are first defined (created) and this also determines where they live and how they are stored and consequently the way they are named. This results in every function and variable having their own name and these names being made up from two parts: a _prefix_ and a _suffix_.
+There are **3 kinds of variables** in Grid:
 
-So each type of variable has its own way to be created, has their own naming scheme (with a pre- and suffix) and a unqiue way they store and use values in themselves. Neat, so how to create and name variables and call functions?
+- **Local** – for one Event only  
+- **Self** – for one Control Element  
+- **Global** – shared across the whole page
 
-### Variables
+Each one is created differently and used with different naming styles.
 
-**In Grid, there are 3 kinds of variables: [local](/docs/wiki/actions/variables/local-variables.md), [self](/docs/wiki/actions/variables/self-variables.md) and [global](/docs/wiki/actions/variables/global-variables.md).** When they are created, they receive different types of names as well: local and global variables are called by their given name only therefore have no prefix, while self variables are called by using a `self.` prefix in front of their given name.
+---
 
-#### Local Variables
+### Local Variables
 
-Local variables exist on the chosen Event of a Control Element, and can only be called on the Event of that specific control element they are defined on. Everywhere else, they don't exist and their data is discarded after their function has finished running.
+- Exist only during a single Event (e.g. Setup, Timer)
+- Disappear after the Event ends
+- Uses the `local` prefix before the name when created, but can be referenced without it
 
-For example a local variable defined in a Local Block on the Setup Event of a Potentiometer, can only be referenced and used on that Event and not on others, like the Potmeter Event or the Timer Event.
+**Example:**
+```lua
+local myvar = 5 --creating the local variable
 
-:::tip Good practice
-It is good practice to define these in the Locals Block of the Event you want to use them on.
+myvar = myvar + 5 --referencing the local variable
+```
 
-For example, the default `ch` variable is only used on such Events that use them for MIDI channel assignment for MIDI messages.
-:::
+**Tip:** Define them in the **Locals Block** of the Event where you use them.
 
-#### Self Variables
+---
 
-Self variables exist on the Control Element, and their data is stored with the Control Element. They behave similarly to the global variables in that that they are stored indefinitely within memory.
+### Self Variables
 
-They can be called in the following manner: `self.variable` where "variable" is the name of the self variable. You can also call them with `element[x].variable` referring to a self variable of a certain element.
+- Stored inside the Control Element
+- Stay in memory and can be reused anytime
+- Use `self.` or `element[x].` to reference or create them
 
-:::tip Good practice
-It is good practice to define the self variables of a Control Element on their Setup Event in the [Self Block](/docs/wiki/actions/variables/self-variables.md), this can help you save some [characters](/docs/wiki/more/char-limit.md) on Events such as a Control Element Event.
-:::
+**Example:**
+```lua
+self.counter = 0
+```
 
-#### Global Variables
+**Tip:** Define in the **Self Block** of the Control Element's Setup Event.
 
-Global variables exist on the active page of the module and can be called by any control element, without suffix, just by using the name they were named such as `gvariable`.
+---
 
-:::tip Good practice
-It is good practice to define these variables in the Action Chain of the System Events/Setup Event in a [Global Block](/docs/wiki/actions/variables/global-variables.md), this way you can group all the global variables the Page has access to in one place and save some space as this Event is not used much by default.
-:::
+### Global Variables
 
-### Functions
+- Shared across the whole page
+- Just create and reference them without a prefix, but using a Capitalized name for them is good practice
 
-Names of functions have two parts, _prefix_ and _suffix_. Prefix tells the function where to run, suffix defines the function itself that runs.
+**Example:**
+```lua
+Gvalue = 100
+```
 
-When calling a function in a Code Block, their prefix can be either `self:` or `element[x]:`. If no prefix is used, the function will run globally, like the [`module_rotation()`](/docs/reference-manual/grid-functions/module-position.md#module_rotation) function.
+**Tip:** Create in the **Global Block** of the **System Setup Event** to keep things organized.
 
-Prefixes with `self:` will always run on the Control Element the Code Block is put in with the function. Prefixes with `element[x]:`, where `x` is an integer between 0-15 will run the function on the corresponding control element (e.g. the `element[0]:button_value()` function will return the button value of the first control element). If `x` is 16, it will call a global function. Such functions are the for example the timer, where each control element has it's own timer and there is a sixteenth, global timer as well.
+---
 
-The suffix is the name of the function: such as `button_value()` or `midi_send()`.
+## Functions
 
-The suffix has a parentheses at the end. If there is a value between the parentheses brackets, the function will set the values to the given value. If there is no value given, the function will return the value of the function itself. This behavior is further described for each function in this reference manual.
+Functions have two parts:
+- A **prefix** (who runs it)
+- A **suffix** (what it does)
 
-:::caution Be careful!
-When calling variables with a prefix, they'll **always use a full stop** inbetween and **NO parentheses** at the end:
+### Prefixes
 
-`self.echo` &#60;- This is a self variable.
+- `self:` → runs on this Control Element  
+- `element[x]:` → runs on Control Element `x`  
+- *(none)* → global function
 
-When calling functions, they'll **always use a colon** inbetween and **will always use parentheses** after the suffix:
+### Suffix
 
-`self:element_index()` &#60;- This is a self function.
-:::
+The name of the function, like `button_value()` or `midi_send()`
 
-### Notable exceptions
+**Examples:**
+```lua
+self:element_index() --this is a self function, called on that element
+element[3]:button_value() --this is also a self function, but referenced from a different element
+module_rotation() --this is a global function
+```
 
-One exception from the previously described behavior: functions that set the LED parameters have no prefix, but define which LED they correspond to in the function parameters defined between the parentheses. Please see the [LED part of the reference manual](/docs/reference-manual/grid-functions/led.md) for further information.
+---
 
-Another notable exception are generic lua functions, such as the functions starting with `math.`. You can learn more about [lua here](https://www.lua.org/pil/contents.html).
+## Quick Syntax Rules
 
-Other exceptions are described in the [reference manual](/docs/reference-manual/introduction.md) as such and will have no prefix in the "**How:**" part of their description.
+| Type      | Prefix      | Symbol | Ending   |
+|-----------|-------------|--------|----------|
+| Variable  | `self.`     | `.`    | No `()`  |
+| Function  | `self:`     | `:`    | Yes `()` |
+
+---
+
+## Special Cases
+
+- **LED functions** use no prefix. They take the LED number inside `()`.
+- **Lua functions** like `math.random()` are from a LUA library, you can find them on the official LUA documentation page.
+- Other exceptions are noted in the [Reference Manual](/docs/reference-manual/introduction.md).
+
+---
