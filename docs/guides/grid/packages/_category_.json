@@ -1,0 +1,9 @@
+{
+    "label": "Packages",
+    "position": 3,
+    "collapsed": true,
+    "link": {
+        "type": "generated-index",
+        "description": "Choose one of the guides below!"
+      }
+}

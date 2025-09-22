@@ -1,6 +1,6 @@
 ---
-sidebar_position: 8
-title: "3. Packages"
+sidebar_position: 1
+title: "Packages Overview"
 description: More about packages
 slug: Packages
 ---
