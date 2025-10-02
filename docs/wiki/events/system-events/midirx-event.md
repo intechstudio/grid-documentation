@@ -11,6 +11,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ---
+:::info
+> ⚠️ **Note:**  
+> This feature has been deprecated since Editor **1.6.0**.  
+> Please refer to the updated guide for MIDI RX: [MIDI RX Guide](https://docs.intech.studio/wiki/more/midi-rx-new/)
+:::
 
 <Tabs queryString="tab">
   <TabItem value="About MIDI RX Event" label="About MIDI RX event" default>
