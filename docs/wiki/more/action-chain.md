@@ -4,23 +4,6 @@ title: "More about: Action Chain"
 description: Actions under each Event in Grid are called the Action Chain.
 tags: [Workflow, Logic]
 ---
-<!---
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-  <TabItem value="apple" label="Apple" default>
-    This is an apple 🍎
-  </TabItem>
-  <TabItem value="orange" label="Orange">
-    This is an orange 🍊
-  </TabItem>
-  <TabItem value="banana" label="Banana">
-    This is a banana 🍌
-  </TabItem>
-</Tabs>
-
---->
 
 Actions under an Event in Grid are collectively referred to as an Action Chain of that Event.
 
