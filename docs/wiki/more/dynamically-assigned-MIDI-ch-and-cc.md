@@ -23,46 +23,39 @@ You can always return to the default Grid configuration when using the **Clear**
 
 So as an example here's a default MIDI Block from that module:
 
-<ImageLightbox imageSrc={img1} citation={'Observe that 3 out of 4 parameters are set with variables, not with discrete values.'}/>
+<ImageLightbox imageSrc={img1} citation={'-1 is the automatic assign mode'}/>
 
 
 What does this all mean?  
-If you check the MIDI monitor within Grid Editor, you'll see that if you interact with the control element, Grid will send out messages normally, but then how did all these variables become CC messages?
+If you check the MIDI monitor within Grid Editor, you'll see that if you interact with the control element, Grid will send out messages normally.
 
-## What is so dynamic about the default Grid configuration?
+## How is calculated dynamically?
 
-To try and understand how this works, let's dissect the above image to see what these variables mean and how do they influence the behavior of Grid:
 
-- This MIDI Block sends out a MIDI message on MIDI channel `ch`, and this message command will be a **Control Change** type (number 176, commonly also known as CC).
-- That **Control Change** message will have parameters of `cc` (which MIDI Control Change message is being sent out from 0-119) and `val` that will be the value the chosen CC will have to set to.
+### Channel
 
-So we have three names instead of numbers in our block, let's see what they do and how:
+ `(module_position_y()*4+page_current())%16`. 
 
-<ImageLightbox imageSrc={img2} citation={'The Local Variables Action block is where one can define variables to use when the Event is triggered.'}/>
+The outcome of the Auto(-1)  depends on which position is our module in on the y axis AND which Page we're using.
 
-### The MIDI channel
+### Command
 
-Here `ch` is the MIDI Channel the message is being sent on and since it's dynamic, it's not a preset value (although it could be one from 0-15) but a [**variable**](/docs/wiki/more/element-referencing.md#variables) named "ch". 
+The command depends on whether it’s a Button element or another type of element.
 
-This `ch` variable is has a way it behaves and how it behaves is set by the place it's first mentioned, the [Local Action block](/docs/wiki/actions/variables/local-variables.md). In there, as you can see on the picture above `ch` is defined as a complicated line of code: `(module_position_y()*4+page_current())%16`. 
+- A Button sends a Note message (144).
+- Other elements send out Control Change messages (176).
 
-The outcome of the `ch` varible depends on which position is our module in on the y axis AND which Page we're using.
+### parameter 1
 
-### The MIDI parameter 1
+ `(32+module_position_x()*16+self:element_index())%128` 
+ 
+ This means that value based on which position is the module in on the x axis AND on which control element we're interacting with.
 
-Here `cc` is the number of the Control Change message we're sending out for example number 1 is known as the Modulation Wheel message.
+### Message value
 
-This `cc` variable is also defined in the [[Local Block]]. - This one is also defined with a line of code: `(32+module_position_x()*16+self:element_index())%128` This means that the `cc` variable will have a value based on which position is the module in on the x axis AND on which control element we're interacting with.
+`self:controlelement_value()`
 
-### The MIDI message value
-
-Here `val` is the actual value of this MIDI CC, it will always be set by the `self:controlelement_value()` function, meaning that this value will correspond to the status of the control element at all times - minimum state should be 0 and maximum state should be 127, so our `val` will by default be inbetween those values
-
-So based on this, for example if we have only one module plugged in and we interact with the top left control element we should see something like this: `ch`=0, `cc`=32 and the `val` values will range from 0 to 127.
-
-So esentially this is what it means that the values are dynamic. This behavior is default so that connecting multiple modules out of the box will not jumble the MIDI messages.
-
-It's also weird and unintuitive at times, so we hope that this explanation is useful in understanding how it works.
+meaning that this value will correspond to the status of the control element at all times
 
 ## Example of this dymanic behavior
 
