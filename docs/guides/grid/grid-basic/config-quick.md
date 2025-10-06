@@ -19,7 +19,7 @@ Adding a block is possible in different ways:
 
 - Use the **Add Action Block…** button to add an action block to the bottom of the element.  
 - Or select the exact place where you want to insert an action block.  
-- Finally, you can drag and drop the action block to change its order.
+- You can drag and drop an Action Block to change its order or move it to another element.
 
 
 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
