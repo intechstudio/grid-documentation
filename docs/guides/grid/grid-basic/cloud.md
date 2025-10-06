@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: "1.1: Profile Cloud overview"
+sidebar_position: 3
+title: "1.2: Profile Cloud overview"
 description: Uploading your Configurations to the Cloud
 slug: editor-111
 ---
