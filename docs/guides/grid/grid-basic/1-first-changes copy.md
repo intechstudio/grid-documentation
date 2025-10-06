@@ -221,3 +221,4 @@ A Profile is a collection of **all** Actions configured for all Events on a sing
 ## Next steps
 
 After navigating around the app, in the next article we'll change the control element modes and get to know more tools.
+
