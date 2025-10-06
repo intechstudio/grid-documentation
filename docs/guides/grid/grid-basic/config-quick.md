@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: "1.1 Configurate quicker"
+title: "1.1: Configurate quicker"
 description: Often used practices and tools explained
 slug: config-quicker
 ---
