@@ -153,11 +153,6 @@ Each Event can have multiple Actions configured. These Actions are executed in t
 
 The Actions are combinations of Lua functions under the hood on Grid. To learn about action types, check out the [Actions](/category/actions) section.
 
-## MIDI parameter changes
-
-Opening up the MIDI Action block shows (found on each Control Element Event by default), that 3 out of the 4 common MIDI parameters are configured with `words` instead of numbers. These `words` are coming defined by the first **Locals** Action block.
-
-<ImageLightbox imageSrc={midi_default} citation={"The circled values are evaluated by Grid during runtime, thanks to its Lua engine"} styling={'w-3/5 object-contain'}/>
 
 ### Element Mode action block
 
@@ -180,7 +175,9 @@ If you want to send messages to software that doesn’t have MIDI support, such 
 
 ### Wrap up
 
-If you use the **MIDI Action Block**, you can check your messages in the **MIDI Monitor**:
+If you use the **MIDI Action Block**, you can check your messages in the **MIDI Monitor**.  
+**MIDI Monitor** is also a package, so you will need to activate it in the Package Manager.
+
 
 
 <ImageLightbox imageSrc={check_midi_monitor} citation={'Delete the variable with the "x" and hard-code the values in the MIDI Action block'} styling={'w-3/5 object-contain'}/>
