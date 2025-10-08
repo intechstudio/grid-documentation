@@ -28,22 +28,24 @@ _Please visit [**Grid Editor Web App**](https://grid-editor-web.web.app/) - if y
 
 ## Navigating the Editor
 
-Grid Editor has 3 sections, each one responsible for certain functionalities:
+At a glance, Grid Editor has 3 visually distinct panels, each with its own purpose:
 
- - <span style={{ color: "orange", fontWeight: "bold" }}>Left panel</span>: Settings, Profilecloud, Packages and MIDI monitor
-- <span style={{ color: "blue", fontWeight: "bold" }}>Center panel</span>:  Module Interaction
-- <span style={{ color: "red", fontWeight: "bold" }}>Right panel</span>: Configuration
+- <span style={{ color: "orange", fontWeight: "bold" }}>Left panel</span>:  Profile Cloud, MIDI monitor, Package Manager and Preferences on the sidebar
+- <span style={{ color: "blue", fontWeight: "bold" }}>Center panel</span>:  Module layout in the middle
+- <span style={{ color: "red", fontWeight: "bold" }}>Right panel</span>: Configuration of the selected element on the right panel
 
 <ImageLightbox imageSrc={control_main_panels} citation={"Grid Editor breakdown into three main panels"} styling={'w-full max-h-[200px] object-contain'}/>
 
 
 - <span style={{ color: "orange", fontWeight: "bold" }}>Left panel</span>: Choose between:  
 
-  - **Profile Cloud** – Manage your saved configurations or upload release workflow profiles.  
-  - **MIDI Monitor** – Check and troubleshoot MIDI messages.  
-  - **Packages** – Activate and use packages, e.g. Profile Cloud, Lightroom.  
-- <span style={{ color: "blue", fontWeight: "bold" }}>Center panel</span>: Displays your connected or virtual modules. Here you can access pages, interaction tracking mode, and primary module operations.  
-- <span style={{ color: "red", fontWeight: "bold" }}>Right panel</span>: Used for configuring the module.  
+  - **Profile Cloud** – Manage your saved configurations, browse the creations of others. Load and try new configutaions!  
+  - **MIDI Monitor** – Check and troubleshoot MIDI messages.  (You might have to enable this Package in the Package Manager)
+  - **Package Manager** – Activate and use Packages, e.g. Profile Cloud, Lightroom Classic. 
+  - **Preferences** – Change the Preferences of the Grid Editor software. Enable developer options. 
+  
+- <span style={{ color: "blue", fontWeight: "bold" }}>Center panel</span>: Displays your connected or virtual modules. Always highlights the selected Element with a grey overlay. Here you can also access Pages, fiddle with interaction tracking and primary module operations.  
+- <span style={{ color: "red", fontWeight: "bold" }}>Right panel</span>: Shows the configuration of the selected Element. Changing the configuration of the module happens here, one Element at a time.
 
 
 
@@ -57,14 +59,15 @@ You can open and close the left and right panels by clicking their sidebar icon 
 
 To start configuring your module, you can either click on a control element (knob, button or fader) within the Center panel or interact with the hardware control element in the physical world. Both of these actions will cause the control element to receive a highlight and its configuration will appear on the right panel.
 
+By default the interaction tracking will track both physical and digital interactions with the module.
 
-### Setting up interaction tracking
+#### Setting up interaction tracking
 
-Based on the interaction tracking panel setting, the Editor will change the view of the center panel - whenever you interact with the hardware. Interaction tracking settings:
+Based on the interaction tracking panel setting, the Editor will change the active/selected Element - whenever you interact with the hardware. Interaction tracking settings:
 
-- **OFF** mode results in hardware interactions are not being tracked by the Editor, but the MIDI Monitor for example shows changes;
+- **OFF** mode results in hardware interactions are not being tracked by the Editor, the only way to change the selected element is to click on it in Editor.
 - **Element** mode tracks only control element changes, but not event changes.
-- **Event** mode will follow how you interact with the hardware, so a button press will show the button event, an encoder turn will show the encoder event;
+- **Event** mode will follow how you interact with the hardware, so a button press will show the button event, an encoder turn will show the encoder event.
 
 <ImageLightbox imageSrc={interaction_settings} style={{height:150+'px'}} citation={'Interaction settings dropdown'}/>
 
@@ -72,12 +75,14 @@ Based on the interaction tracking panel setting, the Editor will change the view
 
 ## Creating a configuration
 
-Configuration work happens in the right Configuration panel.
+Designing your own configuration is done inside the Configuration panel on the right.
 Whenever Grid is plugged into Grid Editor the configuration of the selected/default control element is loaded into Editor from Grid memory and becomes editable.
 
 When you interact with an element, the config panel lets you easily adjust it thorught the **[Action](/category/actions)** blocks.   
 For example, you can set the Mode, change the Color, and define which MIDI message to send.  
 You can also add action blocks from Lightroom, Photoshop, or other packages if they are activated in the **[Package Manager](/guides/grid/packages/Packages/)**.
+
+Changes made in Editor have to be manually **Stored** or **Saved** to become permanent.
 
 
 ### Store it!
@@ -91,14 +96,17 @@ You can also add action blocks from Lightroom, Photoshop, or other packages if t
 <ImageLightbox imageSrc={primary_module_operations} citation={"The top of the Central Panel showing 2 active changes"} styling={'w-3/5'}/>
 
 ### Save it!
-Use the **[Profile Cloud](/guides/grid/grid-basic/editor-111/)** to save your profile, so you can recall it anytime and never lose your progress.
+Use the **[Profile Cloud](/guides/grid/grid-basic/editor-111/)** to save your configuration, so you can recall it anytime and never lose your progress.
+
+The Cloud stored configurations locally even if you're not logged in, so it's always a good idea to keep saves.
 
 
 ## Changing Grid configurations with Editor
 
 ### Minimalist Mode
 
-**Minimalist Mode** provides a simplified view of the Editor. It hides complex actions and keeps only the most basic and frequently used ones visible, so new users can start building without feeling overwhelmed.  
+**Minimalist Mode** provides a simplified view of the Editor.  
+Turning it on hides complex Actions and Events, keeping only the essential parts of Editor in focus.
 
 <ImageLightbox imageSrc={minimalist} style={{width:550}} citation={''}/>
 
@@ -108,18 +116,20 @@ You can turn it on or off in the top-right corner of the Editor window, and it w
 
 While creating your Grid configurations, your main workspace will utilize the following panels:
 
-- <span style={{ color: "red", fontWeight: "bold" }}>Pages</span> tabs - shows the active Page of the Grid module, chaning Page reloads config from Grid;
-- <span style={{ color: "blue", fontWeight: "bold" }}>Element function</span> - choose between the element function
+- <span style={{ color: "red", fontWeight: "bold" }}>Pages</span> tabs - shows the active Page of your Grid setup, changing the Page reloads config from Grid;
+- <span style={{ color: "blue", fontWeight: "bold" }}>Event tabs</span> - each element has its own Events that usually run on user interaction;
 - <span style={{ color: "green", fontWeight: "bold" }}>Actions</span> - the basic building blocks of Grid profiles, which can be configured under each Event.
 
 <ImageLightbox imageSrc={config_panel} style={{width:80+'%'}} citation={''}/>
 
 ## Events and how to make Grid do things?
 
-Physical interaction with Grid trigger Events. Events make their Action Chains run. Actions in the Action Chain make Grid do things.
+1. Physical interaction (e.g. turn a potentiometer)
+2. Which causes Grid to trigger Events (e.g. Potmeter Event runs)
+3. Events make their Action Chains run (e.g. potmeter triggers MIDI Action)
+4. Actions in the Action Chain make Grid do things. (e.g. MIDI Action sends out a MIDI message)
 
-Each Event has its own corresponding triggers, you can't configure these.
-Each Event has its own Action Chain, you can configure these.
+The configurable part of the process are the Actions under each Event.
 
 <ImageLightbox imageSrc={events } style={{height:100+'px'}} citation={'All events'}/>
 
@@ -131,7 +141,7 @@ After loading a Page - either by connecting the hardware to a power source or ch
 
 #### The Potmeter, Button, Encoder, Endless Events
 
-The _potmeter_, _button_, _encoder_, Endless events are triggered by your interaction with the hardware, with the specific control elements. Like if you rotate an encoder, the encoder event will be triggered. If you press the button, the button event runs.
+The _potmeter_, _button_, _encoder_, Endless events are triggered by your interaction with the hardware, with the specific control elements. Rotating an encoder will cause the encoder event to trigger. If you press the button, the button event runs.
 
 #### The Timer Event
 
@@ -149,18 +159,19 @@ Looking at the system events, _utility_ event is triggered by pressing the side 
 
 ### The configured actions run on these events
 
-Each Event can have multiple Actions configured. These Actions are executed in the order they are configured, from top to bottom. At the moment there is a [400 character limit](/wiki/more/char-limit) for each Action Chain for configuration length.
+Each Event can have multiple Actions configured. These Actions are executed in the order they are configured, from top to bottom. At the moment there is a [390 character limit](/wiki/more/char-limit) for each Action Chain for configuration length.
 
 The Actions are combinations of Lua functions under the hood on Grid. To learn about action types, check out the [Actions](/category/actions) section.
 
 
-### Element Mode action block
+### Element Mode Action block
 
-Each element have a unique Element Mode avtion blocke, where you can change or flip the Min Max value, use relative or absolute mode, Sensitivity, velocity etc
+Each Event has a unique Element Mode Action, where you can change or flip the Min Max value, use relative or absolute mode, change their Sensitivity or Velocity.
 
-### Simple Color action block
+### Simple Color Action block
 
-Simple color is simple to use but you can achive complex settings, for example you can add the minimum max and also the middle position color of an element. [More about the Simple Color...](/wiki/actions/led/simple-led-color/)
+Pick a color that you like or add more colors to the mix with Simple Color.
+Simple Color is simple to use but you can achieve complex settings, for example you can add the minimum max and also the middle position color of an element. [More about the Simple Color...](/wiki/actions/led/simple-led-color/)
 
 ### The Message Action Block
 
@@ -180,7 +191,7 @@ If you use the **MIDI Action Block**, you can check your messages in the **MIDI 
 
 
 
-<ImageLightbox imageSrc={check_midi_monitor} citation={'Delete the variable with the "x" and hard-code the values in the MIDI Action block'} styling={'w-3/5 object-contain'}/>
+<ImageLightbox imageSrc={check_midi_monitor} citation={'Showcasing MIDI messages in the MIDI Monitor sidepanel'}/>
 
 
 ## Completing a configuration

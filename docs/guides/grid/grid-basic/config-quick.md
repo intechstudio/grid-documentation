@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: "1.1: Configurate quicker"
+title: "1.1: Editor tips and tricks"
 description: Often used practices and tools explained
 slug: config-quicker
 ---
@@ -13,13 +13,13 @@ import element_act from './config-quick-img/element_act.png';
 import ab_op from './config-quick-img/ab_op.png';
 
 
-### Add Block and Cahnge the Order
+## Adding Actions in different ways
 
 Adding a block is possible in different ways:
 
-- Use the **Add Action Block…** button to add an action block to the bottom of the element.  
-- Or select the exact place where you want to insert an action block.  
-- You can drag and drop an Action Block to change its order or move it to another element.
+- Use the **Add Action Block…** button to add an action block to the __bottom of the chain__.  
+- Or __select the exact place__ by moving the cursor between Actions.  
+- You can __drag and drop__ an Action Block to change its order or move it to another element.
 
 
 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
@@ -31,10 +31,19 @@ Adding a block is possible in different ways:
 
 
 
-### Navigating and Using Elements Operations
+## Navigating and Using Element and Action Operations
 
-You can select an element in the module and navigate using the arrow keys.  
-If you want to duplicate the configuration of one element to another, you can use the standard shortcuts: **Cmd/Ctrl + C** to copy and **Cmd/Ctrl + V** to paste.  
+### Navigating the Editor
+
+You can select an element in the module and navigate using the arrow keys. You can also use the Tab key to move the cursor around.
+
+:::tip
+Keep in mind that each panel will indicate if its in focus and each Operation will act in different ways depending on which panel is on focus!
+:::
+
+### Element Operations
+
+If you want to duplicate the configuration of one element to another, select the Element on the Grid layout panel in the middle and then **Cmd/Ctrl + C** to copy and **Cmd/Ctrl + V** to paste it to another selected Element.
 
 You can also use the icons to:  
 - <span style={{ color: "green", fontWeight: "bold" }}>Copy</span> – Duplicate the element data to the clipboard.  
@@ -43,6 +52,8 @@ You can also use the icons to:
 - <span style={{ color: "purple", fontWeight: "bold" }}>Clear</span> - the entire element back to the factory preset
 
 <ImageLightbox imageSrc={element_act} style={{ height: '200px' }} citation={'Element Actions'} />
+
+All of theses Operations are also available by right-clicking the element on the Grid layout panel.
 
 ### Action Block Operations
 
