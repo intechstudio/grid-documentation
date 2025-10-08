@@ -168,7 +168,7 @@ In the factory setup, you will see the **MIDI Action Block**, which is mainly us
 
 If you want to send messages to software that doesn’t have MIDI support, such as **Lightroom**, you can add the **Lightroom Action Block** after activating the Lightroom Package in the Package Manager.
 
-<ImageLightbox imageSrc={message_action} style={{width:50+'%'}} citation={"<span style='color:red'>red:</span> MIDI action block<br><span style='color:green'>blue:</span> Add other action block<br> <span style='color:blue'>orange:</span> Lightroom and Photoshop action blocks"}/>
+<ImageLightbox imageSrc={message_action} style={{width:50+'%'}} citation={"<span style='color:red'>red:</span> MIDI action block<br><span style='color:green'>green:</span> Add other action block<br> <span style='color:blue'>blue:</span> Lightroom and Photoshop action blocks"}/>
 
 
 
