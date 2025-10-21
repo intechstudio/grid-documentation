@@ -22,7 +22,7 @@ Before you begin, confirm you have all the necessary components in the box of th
 
 ---
 <video controls width="35%">
-  <source src="" type="video/mp4" />
+  <source src="https://data-crux.intech.studio/pbf4-diy-2-sm.mp4" type="video/mp4" />
 </video>
 
 ### **Assembly Steps**
