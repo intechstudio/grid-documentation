@@ -10,8 +10,7 @@ import pot101_pmo from './img/pot101_pmo.png'
 import pot101_pmin_pmax from './img/pot101_pmin_pmax.png'
 import pot101_cc_change from './img/pot101_cc_change.gif'
 import pot101_14bit_midi from './img/pot101_14bit_midi.png'
-import centering from './img/centering.png'
-import calibrating from './img/calib.png'
+import calibration from './img/calibration.png'
 
 _This article details most settings and adjustments to the default Potentiometer and Fader (i. e. slide potentiometer) behavior on Grid modules._
 
@@ -78,73 +77,61 @@ Let's add an **Potmeter Mode** Action block to the _init_ event of the potentiom
 
 ---
 
-## Centering the Potmeter
+# Calibrating the Potentiometers and Faders
 
-If your potmeter’s center position is not aligned correctly (for example, in 7-bit standard MIDI the center value should be **64**), you can manually calibrate it using the following steps:
+It's easy to calibrate the potentiometers and faders with the Grid Editor. On the bottom bar there is a Calibration toggle—turn it on and the calibration options are shown. Just follow the steps:
 
-1. **Manually move all potmeters to their physical center position.**
+<ImageLightbox imageSrc={calibration} citation={"Calibration Menu"} style={{height:400+'px'}}/>
+
+## Center Position for Potentiometers and Faders
+
+If your potentiometer's or fader's center position is not aligned correctly (for example, in 7-bit standard MIDI the center value should be **64**), you can manually calibrate it using the following steps:
+
+_Note: You need to do this with all potentiometers at once— calibrates all of them together._
+
+1. **Manually move all potentiometers to their physical center position.**
    This is important to ensure proper calibration.
 
-2. **Open the Debug Menu** in Grid Editor.
+2. Press **Center**
 
-3. **Paste the following command into the code input field:**
-
-   ```
-   gpcs(gpcg())
-   ```
-
-4. **Click "Immediate" to send the command.**
-
-After this, all potmeters should snap to the middle. They are now calibrated to recognize the physical center as the correct center MIDI value. That’s it — you’re done!
-
-<ImageLightbox imageSrc={centering} citation={"Potmeter centering"} styling={'w-4/5 max-h-60 object-contain'}/>
+They are now calibrated to recognize the physical center as the correct center MIDI value. That's it — you're done!
 
 ---
 
-# Calibrating the Center Detent Potentiometer
+## Range
 
-Some potentiometers have a **center detent** — a small physical "click" or resistance at the middle position. However, due to analog tolerances, the electrical center might not perfectly match the physical center detent.
+If your potentiometers or faders couldn't reach the minimum or maximum value (7-bit MIDI 0-127), then calibrate the range:
+
+_Note: You need to do this with all potentiometers at once— calibrates all of them together._
+
+1. **Manually move all potentiometers to their physical minimum and maximum positions.**
+   This is important to ensure proper calibration.
+
+2. Press **Range**
+
+They are now calibrated to the minimum and maximum values.
+
+---
+
+## Calibrating the Center Detent Potentiometer
+
+Some potentiometers have a **center detent** — a small physical "click" or resistance at the middle position. Sometimes, due to analog tolerances, the electrical center might not perfectly match the physical center detent.
 For precise control — such as ensuring a pan knob always centers exactly — it's important to **calibrate the center position** once.
-
-### Why Calibration Is Needed
-
-* Analog potentiometers may not send an exact 50% (e.g., value 64 out of 127) at the center detent.
-* Calibration ensures consistent behavior, especially for parameters like:
-
-  * Panning (center = center)
-  * Modulation depth
-  * Bipolar values
 
 ### 🔧 Calibration Steps
 
-_need to do it with all the potmeters, the centering is centering to the all in once_
+_Note: You need to do this with all potentiometers at once—the centering calibrates all of them together._
 
 1. **Turn the knobs to the minimum position** (fully counterclockwise).
 
 2. **Slowly turn the knobs up to the center detent position** (where you feel the physical "click" in the middle).
 
-3. **Open the Debug Menu**, and in the **Immediate** field, enter the following command:
+3. Click **Detent Low**
 
-   ```
-   gpds(gpcg(), false)
-   ```
+4. **Now turn the knobs to the maximum position** (fully clockwise).
 
-4. **Send** the Immediate command.
-   <ImageLightbox imageSrc={calibrating} citation={"Potmeter calibrating"} style={{height:250+'px'}}/>
+5. **Slowly turn the knobs down to the center detent position** again.
 
-5. **Now turn the knobs to the maximum position** (fully clockwise).
+6. Click **Detent High**
 
-6. **Slowly turn the knobs down to the center detent position** again.
-
-7. **Open the Debug Menu** once more, and in the **Immediate** field, enter:
-
-   ```
-   gpds(gpcg(), true)
-   ```
-
-8. **Send** the Immediate command again.
-
-9. ✅ **Done:** All potentiometers should now correctly snap to the middle position when turned to the center detent.
-
-
-
+7. ✅ **Done:** All potentiometers should now correctly snap to the middle position when turned to the center detent.

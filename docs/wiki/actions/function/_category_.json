@@ -1,0 +1,9 @@
+{
+    "label": "Function",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "A function in Lua is a reusable block of code that performs a specific task when you call it. It’s useful because it keeps your Grid Editor scripts cleaner, avoids repeating code, and makes actions easier to organize and reuse."
+    }
+  }
+  
