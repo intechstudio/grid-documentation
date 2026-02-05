@@ -12,18 +12,16 @@ import en from './img/en_midirx.png'
 
 # Bidirectional MIDI communication
 
-Grid modules by default send out MIDI data with the MIDI action blocks, which are configured on the various events. 
+Grid modules by default send out MIDI data with the MIDI action blocks, which are configured on the various events.
 
-In different environments - Digital Audio Workstations, VST Plugins, Host software - usually a MIDI *out*, *transmit* or a similar setting can be found. This setting will send back the changed MIDI data to the device, which has an active mapping with the changed parameter. Sometimes a parameter is not only controlled by Grid, but you change it with your keyboard or mouse. If you want to send back MIDI data to Grid, you have to find and enable this setting.
-
-
+In different environments - Digital Audio Workstations, VST Plugins, Host software - usually a MIDI _out_, _transmit_ or a similar setting can be found. This setting will send back the changed MIDI data to the device, which has an active mapping with the changed parameter. Sometimes a parameter is not only controlled by Grid, but you change it with your keyboard or mouse. If you want to send back MIDI data to Grid, you have to find and enable this setting.
 
 # Using the MIDI RX Callback in the System Element Setup
 
 To handle incoming MIDI messages, you need to use the following callback function in the `System` element's `Setup`:
 
 ```lua
-self.midirx_cb(self, event, header)
+self.midirx_cb(self, header, event)
 ```
 
 ### `event` Table Structure
@@ -51,13 +49,11 @@ When you plug in one BU16 module, the first button (element 0) sends a MIDI Note
 Since the controller sends note 32 and the DAW responds on the same note, you need to use `element_number` offset set to `-32`.  
 This ensures that the first button (element 0) LED reflects the correct state based on the incoming note value.
 
-
 <ImageLightbox imageSrc={bu} citation={"Button LED intensity based on incoming MIDI values"}/>
 
 ---
 
 ### Example: EN16
-
 
 You can upload the `EN16 MIDIRX` to the System element, which is ideal for dynamic factory profiles.
 
@@ -67,7 +63,6 @@ The incoming MIDI message changes the element LED intensity and also the encoder
 
 Since the controller sends note 32 and the DAW responds on the same CC, you need to use `element_number` offset set to `-32`.  
 This ensures that the first encoder (element 0) LED reflects the correct state based on the incoming CC value.
-
 
 <ImageLightbox imageSrc={en} citation={"LED intensity and Encoder value based on incoming MIDI values"}/>
 
