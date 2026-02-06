@@ -1,5 +1,4 @@
 ---
-slug: midirx-event
 title: MIDI RX Event
 tags: [Event, System Event, MIDI, Control Element, All modules]
 description: "The MIDI RX Event is used for recieving MIDI messages from the Host device (computer)."
@@ -11,11 +10,13 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ---
+
 :::info
+
 > ⚠️ **Note:**  
 > This feature has been deprecated since Editor **1.6.0**.  
 > Please refer to the updated guide for MIDI RX: [MIDI RX Guide](https://docs.intech.studio/wiki/more/midi-rx-new/)
-:::
+> :::
 
 <Tabs queryString="tab">
   <TabItem value="About MIDI RX Event" label="About MIDI RX event" default>
@@ -46,39 +47,39 @@ local.cmd=    176   - MIDI COMMAND TYPE
 local.param1= 32    - MIDI COMMAND NUMBER
 local.param2= 127   - MIDI COMMAND VALUE
 ```
+
 The above is how it would look when the values are received and stored as local variables.
 
 A frequent use-case for the MIDI RX event is one where the user wants the changes on the host side to be reflected on the Grid side as well. In this case the host has to send out MIDI CC messages corresponding to the change, and as the MIDI RX event runs each time a message is received, you would have to assign the received MIDI CC values to the correct knob and LED.
 
 In this case this is very simple to do with just a code block containing the following lines:
+
 ```lua
 element[num]:encoder_value(param2)
 led_value(num, 2, param2)
 ```
-Where **num** could be a specific control element you assigned the received values to.
 
+Where **num** could be a specific control element you assigned the received values to.
 
   </TabItem>
   <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
-
 ### midirx enabled
+
 - shortname: mre
 - **How:** `midirx_enabled()`
-  - 
+  -
 - **What:** This function enables or disables MIDI RX functionality of Grid.
-- **Example:**  Enable - `midirx_enabled(1)` , Disable - `midirx_enabled(0)
+- **Example:** Enable - `midirx_enabled(1)` , Disable - `midirx_enabled(0)
 
 ### midirx sync
+
 - shortname: mrs
 - **How:** `midirx_sync()`
-  - 
+  -
 - **What:** This function enables or disables whether Grid sends out a MIDI Clock sync signal to the host device.
-This function is overriden, when MIDI RX is disabled as a whole.
-- **Example:**  Enable - `midirx_sync(1)` , Disable - `midirx_sync(0)
+  This function is overriden, when MIDI RX is disabled as a whole.
+- **Example:** Enable - `midirx_sync(1)` , Disable - `midirx_sync(0)
 
 </TabItem>
 </Tabs>
-
-
-

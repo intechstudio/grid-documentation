@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 The Lookup Action allows you to assign values to different parameters from variables used elsewhere.
 
-It's mostly used in creating a translation layer between the host device and Grid when receiving MIDI values using [MIDI RX](/docs/wiki/events/system-events/midirx-event.md). In this use-case the Lookup takes the MIDI param1 by default (for CC messages this is the CC number) and allows the user to assign those param1 values to be sent to different "destinations", in this case to different knobs on a Grid module.
+It's mostly used in creating a translation layer between the host device and Grid when receiving MIDI values using MIDI RX. In this use-case the Lookup takes the MIDI param1 by default (for CC messages this is the CC number) and allows the user to assign those param1 values to be sent to different "destinations", in this case to different knobs on a Grid module.
 
 <ImageLightbox imageSrc={lookup} citation={'Lookup Action redirecting the values CC 36 and 37 to num 0 and 1'}/>
 
@@ -32,12 +32,9 @@ So in a default MIDI RX setup an EN16 module would send and receive values from 
 
 - shortname: glut
 - **How:** `lookup(parameter1,,,,)`
-  - 
+  -
 - **What:** This function recieves and assigns recieved MIDI values from a computer into variables within Grid memory.
-- **Example:** 
-
+- **Example:**
 
 </TabItem>
 </Tabs>
-
-
