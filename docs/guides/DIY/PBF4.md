@@ -1,6 +1,7 @@
 ---
 title: "GRID PBF4 Assembly Guide"
 description: "DIY Assembly Guide"
+slug: "PBF4-DIY"
 ---
 
 ## **💡 GRID PBF4 Assembly Guide**
