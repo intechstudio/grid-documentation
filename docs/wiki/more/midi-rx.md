@@ -1,6 +1,6 @@
 ---
 title: "More about: Receiving MIDI"
-slug: midi-rx-new
+slug: midi-rx
 tags: [MIDI RX, Workflow]
 description: Listen to MIDI messages on MIDI Rx and set values on control elements.
 ---
