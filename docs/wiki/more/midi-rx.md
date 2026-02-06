@@ -1,5 +1,5 @@
 ---
-title: "More about: Receiving MIDI"
+title: "MIDI RX: Receiving MIDI"
 slug: "midi-rx"
 tags: [MIDI RX, Workflow]
 description: Listen to MIDI messages on MIDI Rx and set values on control elements.
@@ -24,17 +24,17 @@ To handle incoming MIDI messages, you need to use the following callback functio
 self.midirx_cb(self, header, event)
 ```
 
+### `header` Parameter
+
+The `header` parameter is useful for filtering incoming messages.  
+We typically use `header[1] = 13`, which means the message is coming from a DAW, synth, or other external gear.
+
 ### `event` Table Structure
 
 - `event[1]`: **Channel** (0–15)
 - `event[2]`: **Command** (e.g., CC: 176, Note On: 144)
 - `event[3]`: **Param1** (usually the CC or Note number)
 - `event[4]`: **Param2** (usually the value)
-
-### `header` Parameter
-
-The `header` parameter is useful for filtering incoming messages.  
-We typically use `header[1] = 13`, which means the message is coming from a DAW, synth, or other external gear.
 
 ---
 
@@ -51,6 +51,17 @@ This ensures that the first button (element 0) LED reflects the correct state ba
 
 <ImageLightbox imageSrc={bu} citation={"Button LED intensity based on incoming MIDI values"}/>
 
+```
+self.midirx_cb = function(self, header, event)
+  local message, channel, command, number, value = header[1], event[1], event[2], event[3], event[4]
+  local element_num = number - 32
+  if message == 13 and channel == 0 and command == 144 or command == 128 then
+    element[element_num]:led_value(1, value * 2)
+    print(value)
+  end
+end
+```
+
 ---
 
 ### Example: EN16
@@ -66,12 +77,50 @@ This ensures that the first encoder (element 0) LED reflects the correct state b
 
 <ImageLightbox imageSrc={en} citation={"LED intensity and Encoder value based on incoming MIDI values"}/>
 
+```
+self.midirx_cb = function(self, header, event)
+  local message, channel, command, number, value = header[1], event[1], event[2], event[3], event[4]
+  local element_num = number - 32
+  if message == 13 and channel == 0 and command == 176 then
+    element[element_num]:led_value(2, value * 2)
+    element[element_num]:encoder_value(value)
+  end
+end
+```
+
 ## Receiving Sysex
 
 Usually, you have a custom SysEx implementation. You can use this function, which listens to MIDI SysEx messages. From there, you can parse them and, for example, use them to update Element values.
 
 ```
-self.sysexrx_cb = function(self, sysex, grid_headers)
+self.sysexrx_cb = function(self, header, sysex)
     print(sysex)
+end
+```
+
+Example:
+
+```
+self.sysexrx_cb = function(self, header, sysex)
+  -- Convert hex string to bytes
+  local bytes = {}
+  for hex_byte in sysex:gmatch("%x%x") do
+    bytes[#bytes + 1] = tonumber(hex_byte, 16)
+  end
+  -- Extract data
+  local data = {}
+  for i = 5, #bytes - 1 do
+    data[#data + 1] = bytes[i]
+  end
+  print("Manufacturer:", bytes[2])
+  print("Device ID:", bytes[3])
+  print("Command:", bytes[4])
+  print("Data bytes:", #data)
+  -- Print data
+  if #data > 0 then
+    for i = 1, #data do
+      print("Data[" .. i .. "]:", data[i])
+    end
+  end
 end
 ```
