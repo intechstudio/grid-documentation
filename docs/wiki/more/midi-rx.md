@@ -88,6 +88,46 @@ self.midirx_cb = function(self, header, event)
 end
 ```
 
+
+### Example: How to Receive Program Change Messages with Encoder
+
+#### 1. Load the Correct Profile
+- Load the profile from Profile Cloud: **"midi rx program change"**.
+
+#### 2. Enable Advanced Editing
+- In the **editor (top-right corner)**, turn **OFF Minimalist Mode**.
+- Go to:
+  - **Encoder → Setup**
+- You will see the **code blocks**.
+
+#### 3. Understand the Parameters
+- `parameter == 0`  
+  → corresponds to **Program Change (Pgm1)** in Ableton.
+- `self.cc == 1`  
+  → means the encoder sends on **CC 1**.
+
+#### 4. Prepare Ableton Live
+- Open **Preferences → MIDI**.
+- Enable:
+  - ✅ **Track**
+  - ✅ **Sync**
+- Enable these for the MIDI port connected to Grid.
+
+#### 5. Send Program Change from Ableton
+1. Create a **new MIDI Track**.
+2. Create a **MIDI Clip**.
+3. Start the clip.
+4. Insert **Program Change messages**:
+   - Bank: **1 Sub**
+   - Programs: **1 / 2 / 3** (or as needed)
+
+#### 6. Set the MIDI Channel (Optional)
+- In the code:
+channel == 0
+
+means **MIDI Channel 1**.
+- Change this value if you want to receive messages on another channel.
+
 ## Receiving Sysex
 
 Usually, you have a custom SysEx implementation. You can use this function, which listens to MIDI SysEx messages. From there, you can parse them and, for example, use them to update Element values.
