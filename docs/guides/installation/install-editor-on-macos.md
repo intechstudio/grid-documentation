@@ -1,5 +1,5 @@
 ---
-title: Mac OS Guide
+title: MacOS Guide
 sidebar_position: 1
 
 date: 2021-11-26
@@ -16,9 +16,9 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 ## Install requirements
 - Internet access
 - ~150MB disk space
-- Mac OS version 10.15+ (Catalina and up)
+- macOS version Big Sur 11 or later (and up, based on Electron/Chromium version support, more info [here](https://en.wikipedia.org/wiki/Template:Google_Chrome_release_compatibility) and [here](https://en.wikipedia.org/wiki/Electron_(software_framework))).
 
-[Download Grid Editor Mac](https://intech.studio/support-and-downloads#editor-software)
+[Download Grid Editor Mac](https://intech.studio/software-downloads)
 
 The installer files for Mac OS are hosted on GitHub. Throughout the download process, your browser may prompt a warning. Choose to keep the file.
 
