@@ -65,6 +65,7 @@ Follow along with the video for your module type.
 - The interface board pins hold the motherboard in place, so you need to push the small pin holders on each side down while tilting them slightly outward to release it.
 - When removing the motherboard, gently lift the PCB by pulling on one side or by lifting it through the hole in the main PCB. Angle it carefully to avoid damaging the two white buttons next to the hole.
 
+
 <ImageLightbox imageSrc={tilted} styling={'w-3/5'} citation={'push the small pin holders on each side down while tilting them slightly outward'}/>
 <ImageLightbox imageSrc={img11} styling={'w-3/5'} citation={'Disassembly is done, nice job!'}/>
 
