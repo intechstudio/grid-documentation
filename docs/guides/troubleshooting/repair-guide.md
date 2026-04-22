@@ -50,14 +50,10 @@ The tools for this job are listed below, the whole process should not take more 
 Follow along with the video for your module type.
 
 **EF44, PBF4, EN16, PO16**
-<video width="800" controls>
-  <source src="/video/ef-repair.mp4" type="video/mp4" />
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YLPFODnFrg4?si=YvUD4XxbvmOOLYjN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 **TEK2, VSN1, BU16**
-<video width="800" controls>
-  <source src="/video/bu-repair.mp4" type="video/mp4" />
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZA0E2zf7lU0?si=teGTKOZecSc3uuNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Tips
 
