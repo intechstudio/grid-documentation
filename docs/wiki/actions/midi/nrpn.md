@@ -30,12 +30,11 @@ This flexibility exists because manufacturers generally describe one of these me
 
 <ImageLightbox imageSrc={nrpnBlock} style={{width:600+'px'}} citation={'NRPN MIDI block'}/>
 
-To use this feature, **you must change the control element's resolution and maximum possible value**.
-This can be done by dropping an Action Block under the Setup event.
+For the 14bit NRPN, you must cahnge the control element's max value (16383).
 
 <ImageLightbox imageSrc={element14Bit} style={{width:600+'px'}} citation={'On System Event Element settings changed max Value to 14bit and Resolution to 10bit'}/>
 
-Due to the noisy nature of high resolution signal reads from control elements, we recommend to stay below 11-bit resolution.
+Potmeter element: Due to the noisy nature of high resolution signal reads from control elements, we recommend to stay below 11-bit resolution.
 
 - 7-bit resolution (base MIDI): 2^7 = 128
 - 8-bit resolution: 2^8 = 256
