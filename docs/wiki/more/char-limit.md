@@ -8,7 +8,7 @@ tags: [Workflow, LUA, Reference Manual]
 Actions can be freely added to an Action Chain of any Event up to a certain point..
 
 :::caution
-There one limitation on the size of Action Chains. No Action Chain can contain more than 400 characters.
+There one limitation on the size of Action Chains. No Action Chain can contain more than 900 characters.
 :::
 
 When you cross this limit and try to store your configuration or try to commit code, Grid Editor will warn you about it. You can also monitor your current charactercount in the debug window on the left.
