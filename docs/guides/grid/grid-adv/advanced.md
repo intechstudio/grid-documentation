@@ -114,7 +114,7 @@ Here's what the control element does now (we're using the potentiometer one in t
 - These 128 values can be used by the MIDI messages Grid can send out.
 - In this Blank Slate control element preset the potentiometer is configured to send MIDI messages out on **MIDI channel 0** (called channel 0 in Editor, but it's the first channel in other applications like a DAW).
 - And it sends these values as a **Control Change message (commonly a CC) named CC 32 and sets their value to `val`.**
-- The [intensity](/docs/wiki/actions/led/intensity.md) of the corresponding LED is indicative of the potentiometer value, as its intensity uses the same `val` variable.
+- The [intensity](/docs/wiki/actions/led/simple-led-intensity.md) of the corresponding LED is indicative of the potentiometer value, as its intensity uses the same `val` variable.
 - So in essence you have a potmeter that reacts to your knob-turning efforts and **sends out the corresponding MIDI messages as a CC 32 message on MIDI channel 1 or 0**(depending on what software you're using).
 
 Here comes the part where we'll change up the above described behavior to suit our needs.
