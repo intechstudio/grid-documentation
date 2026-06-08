@@ -56,7 +56,7 @@ self:encoder_max(100)
 ```
 
 :::note The `self:` keyword
-`self:` refers to the control element itself. This is useful when you want to change the configuration of the control element, which is currently executing the action chain. You can [learn more](/wiki/more/element-referencing#self-variables) about element referencing here, moving forward we'll use this `self:` code prefix in the examples.
+`self:` refers to the control element itself. This is useful when you want to change the configuration of the control element, which is currently executing the action chain. You can [learn more](/wiki/more/element-referencing-simple) about element referencing here, moving forward we'll use this `self:` code prefix in the examples.
 :::
 
 <ImageLightbox imageSrc={encoder_min_max} citation={"Apply range to an absolute encoder"} styling={'w-4/5 max-h-60 object-contain'}/>
