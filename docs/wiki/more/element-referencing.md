@@ -1,6 +1,6 @@
 ---
-title: "More about: Variables"
 slug: element-referencing-simple
+title: "More about: Variables"
 description: A lightweight guide to variables and functions in Grid.
 tags: [Logic, Local, Global, Self, Function, Variables]
 ---
