@@ -101,7 +101,7 @@ Element 0 → note/CC 0, element 1 → note/CC 1, and so on.
 ## Where to put this code
 
 1. Open **Grid Editor**
-2. Disable **Minimal mode** in the top-right corner — this reveals the Setup action
+2. Disable **Minimalist mode** in the top-right corner — this reveals the Setup action
 3. Open the Element Dropdown and select the **System element**
 4. Paste your overrides into the **Setup** action
 
