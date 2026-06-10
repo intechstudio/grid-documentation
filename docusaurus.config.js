@@ -174,14 +174,14 @@ const config = {
                 <div style="display:flex; flex-direction: column; gap:15px">
 
                   <div style="display:flex; flex-direction: column;">
-                    <strong>Support Email Address</strong>
+                  <strong>Support Email Address</strong>
                     <a href="mailto:support@intech.studio" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">support@intech.studio</a>
                   </div>
 
                   <div style="display:flex; flex-direction: column;">
                     <strong>Business Details</strong>
                       <span>Intech Studio Kft.</span>
-                      <span>1053 Budapest, Kecskeméti u. 13. I/2</span>
+                      <span>1053 Budapest, Veres Pálné u. 33.</span>
                       <span>VAT: HU-26696092</span>
                   </div>
 
