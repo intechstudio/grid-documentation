@@ -11,6 +11,70 @@ You can see written patch notes released here for Grid Editor, the configuration
 
 ---
 
+## Grid Editor version 1.6.6
+
+This version of Grid Editor brings support a no-code way to receive MIDI, a new file system on the module itself, a reworked Debug panel and a long list of fixes and performance improvements. The extensive list of changes is as follows:
+
+### A New Firmware to go with it
+
+As with most feature-heavy Editor releases, this version arrives alongside a **new Firmware version (1.5.2+)**. Many of the headline features below — receiving MIDI without code, the on-module file system, the new modules — depend on the new Firmware, so Editor will prompt you to update when you connect a module running an older version.
+
+*As always, we recommend keeping both Editor and Firmware up to date, as new features increasingly require the latest versions of both. If an older cloud configuration behaves unexpectedly under the new firmware, contact [support@intech.studio](mailto:support@intech.studio) for help.*
+
+### Receiving MIDI without code
+
+Until now, reacting to MIDI sent *back* to Grid from your DAW or hardware meant writing a callback by hand in the System Element's Setup. This release makes MIDI RX a first-class, no-code feature.
+
+- The **MIDI Action block** now has dedicated RX options, so a single block can both send and receive MIDI messages.
+- Added a new **Rx Mode** configuration block for choosing how incoming messages are handled, with clearer validator feedback when something isn't set up correctly.
+- Grid now automatically extends received 7-bit values to 14-bit where appropriate, with matching parameter range limiting on the RX side, so high-resolution controls behave consistently in both directions.
+- Internal and external RX handling have been separated under the hood for more predictable behavior.
+- For advanced users, the `rtmrx_cb` callback now receives a header table as its first argument, and Editor suggests `rtmrx_cb` directly in the Function action block.
+
+You can read more in the new documentation: the [MIDI RX Block](https://docs.intech.studio/wiki/actions/midi/midi-rx) for the no-code workflow, the [MIDI RX miniguide](https://docs.intech.studio/wiki/more/midi-rx) covering the RX and SysEx callbacks, and the [MIDI RX Event](https://docs.intech.studio/wiki/events/system-events/midirx-event/) reference.
+
+### A file system on the module
+
+Grid modules can now store and manage files directly, opening the door to larger and more dynamic configurations.
+
+- Added an initial **File Explorer panel** in Editor for browsing files on the connected module.
+- Added support for working with **large files**, both in Editor and over the connection.
+- On the Firmware side, Lua can now access files through its standard I/O library, and the module supports listing, renaming and recursively removing files.
+
+### Reworked Debug panel
+
+The Debug panel received several practical upgrades for power users and for us when helping you troubleshoot:
+
+- Added a **raw packet send** option for sending packets directly to the module.
+- Added an **EVALUATE** debug panel, backed by a new EVALUATE protocol class in the Firmware, for evaluating expressions on the module.
+- Debug fields are now **selectable and copy-enabled**, so you can pull values straight out of the panel.
+
+#### New Features
+
+- Added a new **Simple Intensity** block, built on the same approachable design as Simple Color, for quick and easy LED intensity adjustments.
+- Improved the **Export Configurations** modal with both raw and human-readable views.
+- Simple Color and Simple Intensity blocks now warn you about the limitations of AUTO values, so behavior is clearer up front.
+- The **Endless** element now supports the Button Step feature, matching the customizable stepping available on other elements.
+- Added an optional variant display field, so module variants are easier to tell apart at a glance.
+- Added Firmware-level event reset and element reset functions for cleaner state handling.
+- Migrated Editor's interface to Svelte 5 and improved reactivity for user input and heartbeat handling, making the UI noticeably snappier.
+- Updated the on-module Lua runtime to Lua 5.5.0.
+
+#### Bugfixes
+
+- Fixed the element selection dropdown so it can correctly select element zero.
+- Fixed MIDI AUTO parameter display for negative values on position-based modules.
+- Fixed expression parsing inside Element Settings action blocks.
+- Fixed several issues with the Variable block.
+- Fixed right-side modifier codes.
+- Editor now detects a missing Web Serial API by feature check rather than by sniffing the browser, improving reliability of the web version.
+- Fixed a case where incorrect nested loop logic caused the decoder to be called multiple times.
+- Fixed memory corruption in SysEx-to-UI decoding.
+- Fixed a case where an empty CONFIG execute was not persisted by STORE.
+- Restored correct SimpleColor segment calculation.
+- LCD initialization now waits until the co-processor has pulled reset high, fixing display init timing.
+
+
 ## Grid Editor version 1.6.0
 
 This version of Grid Editor arrives with shiny new features and useful bug fixes. The extensive list of changes are as follows:
