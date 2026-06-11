@@ -37,9 +37,11 @@ You can read more in the new documentation: the [MIDI RX Block](https://docs.int
 
 Grid modules can now store and manage files directly, opening the door to larger and more dynamic configurations.
 
-- Added an initial **File Explorer panel** in Editor for browsing files on the connected module.
-- Added support for working with **large files**, both in Editor and over the connection.
+- Added an initial **File manager panel** in Editor for browsing files on the connected module.
+- Added support for working with **large files**, in the File Manager.
 - On the Firmware side, Lua can now access files through its standard I/O library, and the module supports listing, renaming and recursively removing files.
+
+You can read the new documentation here: [File Manager](/wiki/more/file-manager)
 
 ### Reworked Debug panel
 
