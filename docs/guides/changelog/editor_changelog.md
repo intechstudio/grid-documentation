@@ -31,7 +31,8 @@ Until now, reacting to MIDI sent *back* to Grid from your DAW or hardware meant 
 - Internal and external RX handling have been separated under the hood for more predictable behavior.
 - For advanced users, the `rtmrx_cb` callback now receives a header table as its first argument, and Editor suggests `rtmrx_cb` directly in the Function action block.
 
-You can read more in the new documentation: the [MIDI RX Block](https://docs.intech.studio/wiki/actions/midi/midi-rx) for the no-code workflow, the [MIDI RX miniguide](https://docs.intech.studio/wiki/more/midi-rx) covering the RX and SysEx callbacks, and the [MIDI RX Event](https://docs.intech.studio/wiki/events/system-events/midirx-event/) reference.
+You can read more in the new documentation: the [MIDI RX Block](/wiki/actions/function/rx-mode) for the no-code workflow, the [MIDI RX miniguide](/wiki/more/midi-rx) covering the RX and SysEx callbacks, the [MIDI Sync Messages (RTM)
+](/wiki/more/midi-sync) reference and the [MIDI RX Sync](/wiki/actions/midi/midi-rx) options.
 
 ### A file system on the module
 
