@@ -11,33 +11,16 @@ import bu from './img/bu_midirx.png'
 import en from './img/en_midirx.png'
 import pc from './img/pc_example.png'
 
-# MIDI Sync Messages (Clock)
+# MIDI Sync Messages (RTM)
 
-MIDI Clock messages are used to synchronize the tempo between Grid and other devices. This allows sequencers, drum machines, DAWs, and other MIDI equipment to stay perfectly in time with each other.
-
-## Receiving MIDI Clock Messages
+MIDI RTM messages are used to synchronize the tempo between Grid and other devices. This allows sequencers, drum machines, DAWs, and other MIDI equipment to stay perfectly in time with each other.
 
 The examples below show how to enable MIDI Clock message handling and how to receive clock messages in a callback.
 
-### Enable Clock Messages from USB
+## Enable Clock Messages
 
-Use this when the MIDI Clock is coming from a USB connection.
+Sync messages are disabled by default. You can enable them using the [RX Mode block](/wiki/actions/function/rx-mode). Add the block to the System Element Setup and enable **MIDI RTM**.
 
-```lua
--- Enable handling and forwarding of clock messages received from USB
--- Note: Add this only to the USB-connected Grid module
-rx_mode(2, 0x01 | 0x02)
-```
-
-### Enable Clock Messages from the Grid Connection
-
-Use this when the MIDI Clock is received through the Grid network.
-
-```lua
--- Enable handling of clock messages received via Grid connection
--- Note: Add this to all modules on the Grid
-rx_mode(2, 0x02)
-```
 
 ## Receiving Clock Messages
 

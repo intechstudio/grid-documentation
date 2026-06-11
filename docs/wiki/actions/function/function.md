@@ -74,6 +74,16 @@ Triggered automatically when a SysEx message is received.
 
 ---
 
+## MIDI RTM (Sync) Callback Handler
+`self.rtmrx_cb(self, header, rtm)`
+Triggered automatically when an RTM (Sync) message is received.
+
+**Parameters**
+- `header` — message source (modules or software)
+- `rtm` → incoming RTM messages (start, stop, clock, continue) 
+
+---
+
 ## Global Default MIDI Calculation Functions
 
 These functions change module behavior globally when used.
