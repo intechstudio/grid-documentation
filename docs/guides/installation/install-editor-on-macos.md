@@ -16,7 +16,7 @@ import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 ## Install requirements
 - Internet access
 - ~150MB disk space
-- macOS version Big Sur 11 or later (and up, based on Electron/Chromium version support, more info [here](https://en.wikipedia.org/wiki/Template:Google_Chrome_release_compatibility) and [here](https://en.wikipedia.org/wiki/Electron_(software_framework))).
+- macOS version Monterey 12 or later (and up, based on Electron/Chromium version support, more info [here](https://en.wikipedia.org/wiki/Template:Google_Chrome_release_compatibility) and [here](https://en.wikipedia.org/wiki/Electron_(software_framework))).
 
 [Download Grid Editor Mac](https://intech.studio/software-downloads)
 
