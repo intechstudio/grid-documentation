@@ -1,7 +1,7 @@
 ---
 layout: docs
-sidebar_position: 4
-title: "Grid: Repair Guide"
+sidebar_position: 3
+title: "Repairing Grid"
 date: 2023-11-07
 slug: repair-guide
 description: Repair- and upgrade guide for modules made after May of 2023.

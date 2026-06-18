@@ -1,5 +1,5 @@
 ---
-title: "Grid: Maintaining your modules"
+title: "Maintainging Grid"
 sidebar_position: 3
 slug: grid-care
 description: Tips for maintaining your Grid modules

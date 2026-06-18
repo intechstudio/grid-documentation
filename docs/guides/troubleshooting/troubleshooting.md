@@ -1,17 +1,56 @@
 ---
-title: "Editor: Known issues"
+title: "Troubleshooting Grid Editor"
 date: 2021-11-26
-sidebar_position: 5
+sidebar_position: 0
 slug: troubleshooting
 description: List of possible troubleshoot resolutions on Mac OS, Windows and Linux.
 ---
 
 
-## OS-independent issues
+## Known Editor- and other software related issues 
 
-### Grid Editor Issues
+Grid modules are designed for seamless connectivity and performance, but sometimes issues can arise. This article provides step-by-step guidance to help you identify and resolve common problems.
 
-#### How to import locally saved profile .JSON files into the Profile Cloud
+
+### Grid can't connect to your computer
+
+If your Grid module is not recognized by the Grid Editor and can't be seen in the list of connected USB devices, that could be due to physical connectivity issues. USB hubs, in particular, are known to cause problems, but a faulty USB cable could be the culprit in these cases too.
+
+**Intech Studio can only vouch for issues that occour with a direct connection to your computer.** Please use a direct connection wherever possible.
+
+
+### DAW or other Software can't detect Grid as a USB device
+
+When your software fails to recognize the Grid module, the issue may lie in the USB connection or MIDI settings. Follow these steps:
+
+- **Check the Connection**: Avoid USB hubs and connect the Grid directly to your computer.
+- **Enable MIDI Settings**: Open the preferences or settings menu in your software and ensure the Grid module is enabled for MIDI communication.
+
+
+### Grid Editor doesn't show connected Grid module(s)
+
+Sometimes, Grid modules don’t connect properly when snapped together. This is often due to incorrect orientation or surface (an uneven desk) issues. To fix this:
+
+- **Flat and solid surface:** Ensure you are using the Grid on a flat, solid surface and align the modules horizontally to ensure proper connection.
+- **Troubleshoot the connectors:** Make sure that the faulty connection isn't exclusive to a specific side of a specific module. If you find that one of the sides seems to have a worse connection, notify Intech Studio support (support@intech.studio) as your hardware might be faulty!
+
+
+### Automatic firmware update fails
+
+If your OS complains as if you've unplugged the module too suddenly after trying to perform a firmware update, don't worry.  
+Check the firmware version of your module in Grid Editor. If the version number changed, your update was a success!
+
+If your firmware update fails in some other way, follow these steps:
+
+1. Perform a [factory reset](./factory-reset.md) on your Grid module.
+2. Close all programs except the Grid Editor.
+3.  Ensure a direct and stable connection (no USB hub) between the Grid and your computer.
+4. While in bootloader mode, check if the Grid appears as a disk in your file browser or Finder.
+5. Try to update automatically again using Editor or perform a [manual firmware update](./firmware.md#updating-the-firmware-manually).
+
+
+
+### Importing locally saved profile .JSON files into the Profile Cloud
 
 If you have old .JSON Grid configuration profile files saved somewhere on your computer here's how you can import into the modern profile cloud interface:
 
@@ -27,14 +66,14 @@ Grid configurations are all stored in `...\grid-userdata\configs\` in new Editor
 
 Reset your controller to the defaults by following the instructions highlighted [here](/docs/guides/troubleshooting/factory-reset.md)
 
-## OS-Specific Issues
 
 
-### Windows System Issues
+
+## Windows System Issues
 
 List of possible windows issues and their resolution.
 
-#### Windows 7 does not recognize your device
+### Windows 7 does not recognize your device
 
 :::caution
 Windows 7 is not supported by Grid Editor.
@@ -46,17 +85,17 @@ Using Windows 7 today is brave! It can be that you will need to install a serial
 
 
 
-### Mac OS Issues
+## Mac OS Issues
 
 List of possible Mac OS issues and their resolution.
 
-#### Grid does not show up as MIDI device
+### Grid does not show up as MIDI device
 
 Your system may have specific MIDI routing or configuration set up with your existing devices. In the Audio MIDI Setup application you can try to add **Intech Studio: AC** as a MIDI device for your config.
 
 [See the Apple Documentation](https://support.apple.com/guide/audio-midi-setup/set-up-midi-devices-ams875bae1e0/mac)
 
-#### Grid interfering with Vodafone ZTE/Huawei driver
+### Grid interfering with Vodafone ZTE/Huawei driver
 
 Your system may have existing preference, configurations, drivers or other software installed which blocks serial device enumeration for Grid.
 
@@ -65,11 +104,11 @@ For debugging sessions:
 
 Extensions are located in `/System/Library/Extensions` or `/Library/Extensions`. Go there and e.g. `kextunload /System/Library/Extensions/de.novamedia.driver.NMUSBCDCACMData.kext` before deleting the .kext directory.
 
-### Linux Issues
+## Linux Issues
 
-List of possible Mac OS issues and their resolution.
+List of possible Linux issues and their resolution.
 
-#### User has no access to serial ports, and therefore to serial devices like Grid | Grid not visible in Editor on Linux
+### User has no access to serial ports, and therefore to serial devices like Grid | Grid not visible in Editor on Linux
 
 If you're using a Linux system, it might be possible you have no access to serial ports and this is why when connecting a Grid module to your system it still isn't visible in Grid Editor.
 
@@ -81,12 +120,18 @@ To enable serial access, try the following steps:
 - Log out and the log in again.
 - Relaunch Grid Editor and the module should be showing up now.
 
+### AppImage executable won't start
+
+On some distributions FUSE libraries are not included and should be installed for AppImages to work properly. 
+
+You can find the instructions for your distribution here: https://github.com/AppImage/AppImageKit/wiki/FUSE#install-fuse.
+
 
 ## Firmware Issues for Intech Studio devices
 
 List of possible firmware update issues and their resolution.
 
-#### Black LEDs after starting Grid
+### Black LEDs after starting Grid
 
 *LEDs are black and Grid doesn't send MIDI data, neither is it visible in Editor.*
 
@@ -96,6 +141,6 @@ If you're using an older Grid module purchased before May of 2023, with a white 
 Otherwise with a firmware crash it's best to send a mail to support@intech.studio!
 
 
-#### Device does not show up as removable device
+### Device does not show up as removable device
 
 Reboot your computer. Make sure you connect your module directly to your computer. Check if the utility side button moves freely and it is not stuck. For each time you connect the module, wait 5 seconds to see the device showing up. Repeat the connection step based on the firmware update document multiple times, it can be that it will show up after a couple tries. Try a different computer.
