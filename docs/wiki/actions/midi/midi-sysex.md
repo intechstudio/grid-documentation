@@ -31,11 +31,8 @@ In example `0xF0, 0x41, 0x10, val, 0xF7` val is a variable declared locally.
 
 ### midi sysex send
 - shortname: gmss
-- **How:** `midi_sysex_send(channel,command,parameter1,parameter2)`
-  - channel: integer, ranging 0...15
-  - command: integer, ranging 128...255
-  - parameter1: integer, ranging 0...127
-  - parameter2 integer, ranging 0...127
+- **How:** `midi_sysex_send(...)`
+  - Send 8bit SysEx data bytes (0-255) as separate arguments. eg: (0xF0, 0x41, 0x10, 0xF7)
 - **What:** This function sends a MIDI sysex message when called.
 - **Example:** 
 
