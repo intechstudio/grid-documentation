@@ -49,7 +49,6 @@ If your firmware update fails in some other way, follow these steps:
 5. Try to update automatically again using Editor or perform a [manual firmware update](./firmware.md#updating-the-firmware-manually).
 
 
-
 ### Importing locally saved profile .JSON files into the Profile Cloud
 
 If you have old .JSON Grid configuration profile files saved somewhere on your computer here's how you can import into the modern profile cloud interface:
@@ -67,6 +66,12 @@ Grid configurations are all stored in `...\grid-userdata\configs\` in new Editor
 Reset your controller to the defaults by following the instructions highlighted [here](/docs/guides/troubleshooting/factory-reset.md)
 
 
+### LuaLS Troubleshooting
+LuaLS is the Lua language server, which enriches the code editing experience in Grid Editor.
+
+It is **only** available in the Desktop version of Editor.
+
+The browser version has a fallback, which equals to the editing experience prior to adding the language server.
 
 
 ## Windows System Issues
@@ -144,3 +149,4 @@ Otherwise with a firmware crash it's best to send a mail to support@intech.studi
 ### Device does not show up as removable device
 
 Reboot your computer. Make sure you connect your module directly to your computer. Check if the utility side button moves freely and it is not stuck. For each time you connect the module, wait 5 seconds to see the device showing up. Repeat the connection step based on the firmware update document multiple times, it can be that it will show up after a couple tries. Try a different computer.
+
