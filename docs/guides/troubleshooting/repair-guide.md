@@ -94,7 +94,7 @@ In most cases the interface board is not actually faulty or completely dead, it'
 If a module is not recognized by Grid Editor, the side connector pins may have become misaligned. Follow the steps below to see how to inspect and gently realign the pins to restore communication.
 
 1. Identify which side is not connecting;
-2. Remove only the faceplate to access the side interface PCBs. [follow the steps here](#disassembly-of-the-ef44-pbf4-en16-po16) [or here;](#disassembly-of-the-tek2-vsn1-bu16)
+2. Remove only the faceplate to access the side interface PCBs. [Follow the steps here until the faceplate is removed:](#disassembly-of-the-ef44-pbf4-en16-po16) [or here;](#disassembly-of-the-tek2-vsn1-bu16) 
 3. Hold the side interface board with one finger and carefully put some distance inbetween the PCB and the plastic cover of the connector (see the GIF below), doing this will gently bend the pins back into place;
 4. Test to see if the connection improved before re-assembly.
 
