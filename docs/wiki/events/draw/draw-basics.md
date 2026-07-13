@@ -56,17 +56,17 @@ Draws a filled rectangle at position (10, 5), with a width of 40 pixels and heig
 ### Colors (RGB Format)
 All drawing functions use RGB color values in the format:
 
-{red, green, blue}
+`{red, green, blue}`
 Each value is from 0 to 255 (8-bit color per channel).
 Examples:
 
-Red: {255, 0, 0}
+Red: `{255, 0, 0}`
 
-Green: {0, 255, 0}
+Green: `{0, 255, 0}`
 
-Blue: {0, 0, 255}
+Blue: `{0, 0, 255}`
 
-White: {255, 255, 255}
+White: `{255, 255, 255}`
 
 Black: {0, 0, 0}
 

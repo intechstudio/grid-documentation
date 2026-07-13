@@ -41,7 +41,7 @@ self:potmeter_min(10)
 self:potmeter_max(100)
 ```
 
-The [**Potmeter Mode**](wiki/actions/element-settings/potmeter-mode) Action block - which was made to help 14-bit MIDI setup - also has the option to set the potmeter maximum from the drop-down to either 127 for standard and 16383 for high resolution MIDI. In the Potmeter Mode action block the maximum can be set to a different maximum as well.
+The [**Potmeter Mode**](/wiki/actions/element-settings/potmeter-mode) Action block - which was made to help 14-bit MIDI setup - also has the option to set the potmeter maximum from the drop-down to either 127 for standard and 16383 for high resolution MIDI. In the Potmeter Mode action block the maximum can be set to a different maximum as well.
 
 <ImageLightbox imageSrc={pot101_pmin_pmax} citation={"Potmeter minimum and maximum setting in Code Block"} styling={'w-4/5 max-h-60 object-contain'}/>
 

@@ -47,7 +47,7 @@ Hogyan kell videót feltenni?
 
 :::caution Old Profiles
 Your earlier Grid configurations from Editor 1.2.34 and earlier won’t appear in the local panel. To access these profiles, you will need to migrate them to the latest version.  
-[Read more about profile migration here.](/docs/guides/troubleshooting/troubleshooting.md#how-to-import-locally-saved-profile-json-files-into-the-profile-cloud) 
+[Read more about profile migration here.](/docs/guides/troubleshooting/troubleshooting.md#importing-locally-saved-profile-json-files-into-the-profile-cloud) 
 :::
 
 ### What happens if I save my configurations without logging in?
