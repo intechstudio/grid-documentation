@@ -4,11 +4,8 @@ import { MeiliSearch } from "meilisearch";
 import { marked } from "marked";
 
 const client = new MeiliSearch({
-  host: "https://meilisearch-1n6r.onrender.com",
-  headers: {
-    Authorization: `Bearer securepassword`,
-    "Content-Type": "application/json",
-  },
+  host: "https://meilisearch.intech.studio",
+  apiKey: "a0e70be8d621ad2054d7c08bed55a9d8c096363d4e907be170ce3597f25eeefc",
 });
 
 export default function Component() {
