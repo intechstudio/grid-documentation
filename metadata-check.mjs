@@ -2,7 +2,6 @@ import fs from "fs";
 import { v4 as uuidv4 } from "uuid";
 import { dirname } from "path";
 import parseMD from "parse-md";
-import { MeiliSearch } from "meilisearch";
 import dotenv from "dotenv";
 import process from "process";
 
