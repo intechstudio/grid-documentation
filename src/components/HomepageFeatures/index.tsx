@@ -5,8 +5,8 @@ import Link from '@docusaurus/Link'
 
 type FeatureItem = {
   title: string
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>
-  description: JSX.Element,
+  Svg: string
+  description: React.JSX.Element,
   linkUrl: string,
   linkTitle: string
 }
@@ -64,7 +64,7 @@ function Feature({ title, Svg, description, linkUrl, linkTitle }: FeatureItem) {
   )
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): React.JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container max-w-screen-4xl md:py-16">

@@ -16,7 +16,7 @@ interface LinkProps {
   downloadLink: string
 }
 
-function DetailedDownloadButton(props) {
+function DetailedDownloadButton(props: LinkProps) {
   let {
     imgPathLight = '',
     imgPathDark = '',
@@ -25,7 +25,7 @@ function DetailedDownloadButton(props) {
     title = 'title',
     description = 'description',
     downloadLink = 'downloadLink',
-  }: LinkProps = props
+  } = props
 
   return (
     <a href={downloadLink} download>

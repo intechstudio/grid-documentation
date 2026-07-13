@@ -5,8 +5,8 @@ interface LinkProps {
     protocolUrl: string
 }
 
-function ProtocolUrl(props) {
-    let { title = 'Download', protocolUrl = 'protocolUrl' }: LinkProps = props
+function ProtocolUrl(props: LinkProps) {
+    let { title = 'Download', protocolUrl = 'protocolUrl' } = props
 
     return (
         <div

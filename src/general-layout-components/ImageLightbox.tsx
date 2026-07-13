@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
-const images = [
-  '//placekitten.com/1500/500',
-  '//placekitten.com/4000/3000',
-  '//placekitten.com/800/1200',
-  '//placekitten.com/1500/1500',
-];
+interface ImageLightboxProps {
+  imageSrc: string;
+  citation: string;
+  style?: React.CSSProperties;
+}
 
-export default class ImageLightbox extends Component {
-  constructor(props) {
+interface ImageLightboxState {
+  isOpen: boolean;
+}
+
+export default class ImageLightbox extends Component<ImageLightboxProps, ImageLightboxState> {
+  static defaultProps = { style: { maxHeight: 50 + 'em' } };
+
+  constructor(props: ImageLightboxProps) {
     super(props);
 
     this.state = {
-      photoIndex: 0,
       isOpen: false,
     };
 
   }
 
   render() {
-    const { photoIndex, isOpen } = this.state;
+    const { isOpen } = this.state;
 
     return (
       <div
@@ -29,24 +33,12 @@ export default class ImageLightbox extends Component {
         <img style={this.props.style} className={" shadow-xl"} src={this.props.imageSrc} onClick={() => this.setState({ isOpen: true })} />
         <div dangerouslySetInnerHTML={{ __html: this.props.citation }} className='italic py-1 mt-2 mb-4 text-sm'>
         </div>
-        {isOpen && (
-          <Lightbox
-            mainSrc={this.props.imageSrc}
-            onCloseRequest={() => this.setState({ isOpen: false })}
-            onMovePrevRequest={() =>
-              this.setState({
-                photoIndex: (photoIndex + images.length - 1) % images.length,
-              })
-            }
-            onMoveNextRequest={() =>
-              this.setState({
-                photoIndex: (photoIndex + 1) % images.length,
-              })
-            }
-          />
-        )}
+        <Lightbox
+          open={isOpen}
+          close={() => this.setState({ isOpen: false })}
+          slides={[{ src: this.props.imageSrc }]}
+        />
       </div>
     );
   }
 }
-ImageLightbox.defaultProps = { style: { 'max-height': 50 + 'em' } }
