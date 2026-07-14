@@ -1,9 +1,9 @@
 ---
-title: Potmeter
-slug: potmeter-control-element
+title: Fader
+slug: fader
 layout: reference_manual
 category: reference-manual
-description: How to set up potentiometer-type control elements.
+description: How to set up fader-type control elements.
 ---
 
 - supers: Element
@@ -19,11 +19,11 @@ description: How to set up potentiometer-type control elements.
 
 ---
 
-> In the Grid editor, when editing code for a PotmeterElement, the variables `self`, `element`, and `ele` are automatically typed as PotmeterElement. This means you can call these functions directly on `self`:
+> In the Grid editor, when editing code for a FaderElement, the variables `self`, `element`, and `ele` are automatically typed as FaderElement. This means you can call these functions directly on `self`:
 >
 > ```lua
-> self:potmeter_value()     -- on the current element
-> element[1]:potmeter_value() -- on a specific element from the array
+> self:fader_value()     -- on the current element
+> element[1]:fader_value() -- on a specific element from the array
 > ```
 
 ## Functions
@@ -37,13 +37,13 @@ function self:potmeter_value(value: integer?) -> value integer
 @param `value` - If provided, sets the value
 
 
-@return `value` - Current potentiometer value
+@return `value` - Current fader value
 
 
 
 
 
-Returns (or sets) the current potentiometer value.
+Returns (or sets) the current fader value.
 
 
 
@@ -66,7 +66,7 @@ function self:potmeter_min(value: integer?) -> min integer
 
 
 
-Returns (or sets) the minimum potentiometer value.
+Returns (or sets) the minimum fader value.
 
 
 
@@ -89,7 +89,7 @@ function self:potmeter_max(value: integer?) -> max integer
 
 
 
-Returns (or sets) the maximum potentiometer value.
+Returns (or sets) the maximum fader value.
 
 
 
@@ -106,13 +106,13 @@ function self:potmeter_resolution(value: integer?) -> resolution integer
 @param `value` - If provided, sets the resolution
 
 
-@return `resolution` - Potentiometer resolution
+@return `resolution` - Fader resolution
 
 
 
 
 
-Returns (or sets) the potentiometer resolution.
+Returns (or sets) the fader resolution.
 
 
 
@@ -133,7 +133,7 @@ function self:potmeter_state() -> state integer
 
 
 
-Returns the potentiometer state.
+Returns the fader state.
 
 
 
@@ -154,7 +154,7 @@ function self:potmeter_elapsed_time() -> ms integer
 
 
 
-Returns the time elapsed since the last potentiometer event (milliseconds).
+Returns the time elapsed since the last fader event (milliseconds).
 
 
 

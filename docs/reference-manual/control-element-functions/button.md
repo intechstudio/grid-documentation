@@ -1,68 +1,190 @@
 ---
-title:    Button
-slug:     button-control-element
-layout:   reference_manual
+title: Button
+slug: button-control-element
+layout: reference_manual
 category: reference-manual
 description: How to set up button-type control elements.
 ---
 
-## Button Press
-
-### button_number
-- shortname: bnu
-- **How:** `self:button_number()` or `self:button_number(number)`
-  - number: signed integer
-- **What:** This function when given no parameter, returns the # number of the control element. These numbers are from the top left, read left to right, top to bottom `0` to `15` OR in the case of the PBF4 from `0` to `11`. 
-  When this function is given a parameter, it will set the # number of the control element to the `number` given.
-- **Example:**
+- supers: Element
 
 
-### button_value
-- shortname: bva
-- **How:** `self:button_value()` or `self:button_value(value)`
-  - value: integer, ranging 0...127
-- **What:** This function returns the value associated to the button. By default, this value is `127` when the button is pressed down and `0` when released.
-  When this function is given a parameter, it will set the value associated with the button state according to the parameter given.
-  When using other types of button modes, described later in this chapter, the button values are evenly spread across the steps: eg. spilt 3 was would be values `0` `63` `127` split 4-way would be `0` `47` `95` and `127`.
-- **Example:** Inputting the code `self:button_value(127)` will make all button press and  button release event return the value `127`.
 
 
-### button_min 
-- shortname: bmi
-- **How:** `self:button_min()` or `self:button_min(value)`
-    - value: integer, ranging 0...127
-- **What:** This function returns the minimum value of the "released" button state. This is `0` by default.
-  When given a parameter, this function changes the minimum value of the button state according to the `value` given as parameter.
-- **Example:** The code `self:button_min(20)` will set the value of the button to `20` when released.
 
 
-### button_max
-- shortname: bma
-- **How:** `self:button_max()` or `self:button_max(value)`
-    - value: integer, ranging 0...127
-- **What:** This function returns the maximum value of the "pressed down" button state. This is `127` by default.
-  When given a parameter, this function changes the maximum value of the button state according to the `value` given as parameter.
-- **Example:** The code `self:button_max(110)` will set the value of the button to `110` when pressed down. This can be useful to set easy to use values for a switch, like `self:button_max(1)` will make it so that there are only two values this button can send out `0` and `1`.
 
 
-### button_mode
-- shortname: bmo
-- **How:** `self:button_mode()` or `self:button_mode(mode)`
-    - mode: integer, ranging 0...127
-- **What:** This function returns the value of the button mode. This is `0` by default. Button mode means how many 'steps' the button has between its maximum and minimum value. For example when the function is used to set this value like this: `self:button_mode(mode)` the resolution parameter will govern the number of steps.
-- **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `127`.
 
 
-### button_elapsed_time
-- shortname: bel
-- **How:** `self:button_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
-- **Example:**
+---
+
+> In the Grid editor, when editing code for a ButtonElement, the variables `self`, `element`, and `ele` are automatically typed as ButtonElement. This means you can call these functions directly on `self`:
+>
+> ```lua
+> self:button_value()     -- on the current element
+> element[1]:button_value() -- on a specific element from the array
+> ```
+
+## Functions
+---
+
+### self:button_value
+---
+```lua
+function self:button_value(value: integer?) -> value integer
+```
+@param `value` - If provided, sets the button value
 
 
-### button_state
-- shortname: bst
-- **How:** `self:button_state()`
-- **What:** This function will return the "state" of the control element. In case of a button this is either "pressed down" `127`  OR "released" `0`. These values independent from value variable of the control element. This means that the button_state() function will always return the values associated with the "pressed" or "released" states, independently from any kind of alterations to the button value functions, such as changing the max or min values.
-- **Example:**
+@return `value` - Current button value
+
+
+
+
+
+Returns (or sets) the current button value.
+
+
+
+
+
+
+
+
+### self:button_min
+---
+```lua
+function self:button_min(value: integer?) -> min integer
+```
+@param `value` - If provided, sets the minimum
+
+
+@return `min` - Minimum value
+
+
+
+
+
+Returns (or sets) the minimum button value.
+
+
+
+
+
+
+
+
+### self:button_max
+---
+```lua
+function self:button_max(value: integer?) -> max integer
+```
+@param `value` - If provided, sets the maximum
+
+
+@return `max` - Maximum value
+
+
+
+
+
+Returns (or sets) the maximum button value.
+
+
+
+
+
+
+
+
+### self:button_mode
+---
+```lua
+function self:button_mode(value: integer?) -> mode integer
+```
+@param `value` - If provided, sets the mode
+
+
+@return `mode` - Button mode
+
+
+
+
+
+Returns (or sets) the button mode. 0 = momentary.
+
+
+
+
+
+
+
+
+### self:button_state
+---
+```lua
+function self:button_state() -> state integer
+```
+
+@return `state` - Button state (0 or 127)
+
+
+
+
+
+Returns the button state. 0 = released, 127 = pressed.
+
+
+
+
+
+
+
+
+### self:button_elapsed_time
+---
+```lua
+function self:button_elapsed_time() -> ms integer
+```
+
+@return `ms` - Elapsed time in milliseconds
+
+
+
+
+
+Returns the time elapsed since the last button event (milliseconds).
+
+
+
+
+
+
+
+
+### self:button_step
+---
+```lua
+function self:button_step() -> step (boolean|integer)
+```
+
+@return `step` - Current step, or false if mode is 0
+
+
+
+
+
+Calculates the button step based on mode, min, max, and value.
+Returns false if button mode is 0 (momentary), otherwise returns the current step number.
+
+
+
+
+
+
+
+
+
+
 

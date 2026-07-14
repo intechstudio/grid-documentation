@@ -6,96 +6,385 @@ category: reference-manual
 description: How to refer to a Control Element by number.
 ---
 
-<!---
-## Calling functions and variables, element referencing
+**THE "self" VARIABLE**
+In Grid Lua, `self` always refers to the specific physical control (button, encoder, fader) 
+that you are currently interacting with. 
 
-In Grid Editor, both variables and functions have a place where they reside in, and can be called from. In practice, every function and some variables has a prefix and a suffix, where the prefix describes where the function is called. And every variable has a way they are first defined (created) and this determines where they live and how they are stored.
-
-### Variables
-
-In Grid, there are 3 kinds of variables: local, self and global. They are called differently as well: local and global variables are called by their name only, while self variables are called by using a `self.` prefix.
-
-Local variables exist on the chosen Event of a control element, and can only be called on the Event of the  control element they are defined on. Everywhere else, they don't exist and their data is discarded after their function has finished running.
-It is good practice to define these in the Locals Block of the Event you want to use them on.
-
-Self variables exist on the Control Element, and their data is stored with the control element. They behave similarly to the Global variables in that that they are stored indefinitely within memory. They can be called in the following manner: `self.variable` where variable is the name of the self variable. You can also call them with `element[x].variable` referring to a self variable of a certain element.
-It is good practice to define the self variables in the Self Block of a Control Element, preferably on their Setup event.
-
-Global variables exist on the active page of the module and can be called by any control element, without suffix.
-It is good practice to define these variables in the System Events/Setup Action Chain, so as to see the variables you have access to on a Page-wide level. You can use the Global Block for these.
+When you use a function with `self:` (like `self:midi_send()`), you are 
+telling the Grid to apply that action specifically to **this exact element**.
 
 
 
-### Functions
 
-Functions have two parts, prefix and suffix. Prefix tells the function where to run, suffix define the function itself that runs.
 
-This prefix can be `self:` or `element[x]:` . Where no prefix is used, the variable will be a global variable.
 
-Prefixes with `self:` will always run on the control element the code block is put in with the function. Prefixes with `element[x]`, where `x` is an integer between 0-15 will run the function on the corresponding control element (e.g. the `element[0]:button_value()` function will return the button value of the first control element). If `x`  is 16, it will call a global function. Such functions are the for example the timer, where each control element has it's own timer and there is a sixteenth, global timer as well.
 
-The suffix is the name of the function: such as `button_value()` or `midi_send()`.
+---
 
-The suffix has a parenthesis at the end. If there is a value between the parentheses brackets, the function will set the values to the given value. If there is no value given, the function will return the value of the function itself. This behavior is further described for each function in this reference manual.
+## Functions
+---
 
-### Notable exceptions
+### self:element_index
+---
+```lua
+function self:element_index(value: integer?) -> index integer
+```
+@param `value` - If provided, sets the index
 
-One exception from the previously described behavior: functions that set the LED parameters have no prefix, but define which LED they correspond to in the function itself. Please see the LED part of this document for further information.
 
-Another notable exception are generic lua functions, such as the functions starting with  `math.`.
+@return `index` - The element index (0–15 for a 16-element module)
 
-Other exceptions are described in the reference manual as such and will have no prefix in the "**How:**" part of their description.
---->
 
-## Functions referring to elements
 
-### element
 
-shortname: ele
 
-- **How:** `self:element_index()`
-- **What:** Returns the value of the element # number.
-- **Example:** Inputting the code `print(self:element_index())` into a Code Block will output the # number of the control element into the debug field. E.g. this Code Block on the top left button will output the message `0`.
-  By default all Grid configurations use this function to define a local variable named `num` on each interactable event, such as a potmeter. This `num` variable is given value based on the `self:element_index()` function.
+Returns (or sets) the 0-based index of this element on the module.
 
-### element name
 
-shortname: gen
 
-- **How:** `self:element_name("name")`
-  - "name": string, put between " " or ' ' symbols
-- **What:** This function gives a name to the control element, or when called without parameters, it returns the name of the control element as a string.
-  IMPORTANT: The name will only work, if it's put in the first place of the action chain.
-- **Example:** The function `self:element_name("helloworld")` in a code block, put in the top of the action chain, will name the control element _helloworld_.
 
-### element name send
 
-shortname: gens
 
-- **How:** `self:element_name_send()`
-- **What:**
-- **Example:**
 
-### Hardware version
 
-- **How:** `hardware_configuration()`
-- **What:** It returns a value corresponding to the module hardware version.
-- **Example:** Open System event Setup and print out the value of your Grid module. You can see the result in the MIDI monitor Debug view: `print(hardware_configuration())`
+### self:led_index
+---
+```lua
+function self:led_index(value: integer?) -> index integer
+```
+@param `value` - If provided, sets the LED index
 
-  "GRID_MODULE_PO16_RevB": "0",
-  "GRID_MODULE_PO16_RevC": "8",
-  "GRID_MODULE_PO16_RevD": "1",
-  "GRID_MODULE_BU16_RevB": "128",
-  "GRID_MODULE_BU16_RevC": "136",
-  "GRID_MODULE_BU16_RevD": "129",
-  "GRID_MODULE_PBF4_RevA": "64",
-  "GRID_MODULE_PBF4_RevD": "65",
-  "GRID_MODULE_EN16_RevA": "192",
-  "GRID_MODULE_EN16_RevD": "193",
-  "GRID_MODULE_EN16_ND_RevA": "200",
-  "GRID_MODULE_EN16_ND_RevD": "201",
-  "GRID_MODULE_EF44_RevA": "32",
-  "GRID_MODULE_EF44_RevD": "33",
-  "GRID_MODULE_TEK1_RevA": "225",
-  "GRID_MODULE_TEK2_RevA": "17",
-  "GRID_MODULE_PB44_RevA": "145",
+
+@return `index` - The LED index
+
+
+
+
+
+Returns (or sets) the LED index for this element.
+
+
+
+
+
+
+
+
+### self:element_name
+---
+```lua
+function self:element_name(name: string?) -> name string
+```
+@param `name` - If provided, sets the name
+
+
+@return `name` - Element name
+
+
+
+
+
+Gets or sets the name of this element.
+
+
+
+
+
+
+
+
+### self:timer_start
+---
+```lua
+function self:timer_start(period: integer)
+```
+@param `period` - Timer period in milliseconds
+
+
+
+
+
+
+Starts a periodic timer for this element.
+
+
+
+
+
+
+
+
+### self:timer_stop
+---
+```lua
+function self:timer_stop()
+```
+
+
+
+
+
+Stops the timer for this element.
+
+
+
+
+
+
+
+
+### self:event_trigger
+---
+```lua
+function self:event_trigger(event_type: integer)
+```
+@param `event_type` - Event type index
+
+
+
+
+
+
+Triggers an event on this element.
+
+
+
+
+
+
+
+
+### self:led_color
+---
+```lua
+function self:led_color(
+  layer: Layer,
+  colors: number[][]
+)
+```
+@param `layer` - integer The LED layer to target (use `-1` for all/active layers).
+
+@param `colors` - Array of color tables. Don't forget the double braces! Example: `{{-1, -1, -1, 1}}`
+
+
+
+
+
+
+Sets the LED color and its value-based transition for this element.  
+
+This function creates smooth color fades based on the element's current value (min to max).  
+You must provide a list of colors, where each color is `{red, green, blue, alpha}`.  
+* **RGB** values are `0-255`. You can also use `-1` for any RGB channel to use the element's auto-configured (factory) color.  
+* **Alpha** (brightness/opacity) is `0.0 - 1.0`.  
+
+**The transition changes based on how many colors you provide:**  
+* **1 Color:** `{{-1, -1, -1, 1}}`
+  Sets the color for the MAX value (using the auto color in this example). The MIN value defaults to transparent (0 alpha).  
+* **2 Colors:** `{{0, 0, 255, 0.5}, {255, 0, 0, 1}}`
+  1st color is MIN value, 2nd color is MAX value.  
+* **3 Colors:** `{{0, 255, 0, 1}, {255, 255, 0, 1}, {255, 0, 0, 1}}`
+  1st color is MIN, 2nd color is MIDDLE, 3rd color is MAX value.
+
+
+
+
+
+
+
+
+### self:led_value
+---
+```lua
+function self:led_value(
+  layer: Layer,
+  value: integer
+) -> current_value integer?
+```
+@param `layer` - integer The LED layer to target (`1`, `2`, or `-1` for auto).
+
+@param `value` - The intensity level (`0-255`, or `-1` for auto).
+
+
+@return `current_value` - Returns the current value if called without parameters, otherwise nothing.
+
+
+
+
+
+Sets or gets the LED light intensity (brightness/phase) for this element.
+
+When parameters are provided, it sets the intensity. The `-1` value is very common and tells the Grid to use the auto-configured setting.
+
+
+
+
+
+
+
+
+### self:midi_send
+---
+```lua
+function self:midi_send(
+  channel: integer,
+  command: integer,
+  param1: integer,
+  param2: integer,
+  resolution: integer?
+)
+```
+@param `channel` - MIDI channel (0-15). Note: Your DAW translates this as channels 1-16! (0 = Channel 1, or -1 for auto).
+
+@param `command` - MIDI command type (e.g., 144 = Note On, 176=CC or -1 for auto).
+
+@param `param1` - Value (0-127). For Notes: Pitch (e.g., 60 = Middle C). For CC: Controller Number (e.g., 7 = Volume). (-1 for auto).
+
+@param `param2` - use -1 (Auto) for the element's min-max range. or provide a specific value.
+
+@param `resolution` - Optional MIDI resolution mode (0=Standard 7-bit, 1=14-bit, 2=NRPN, 3=14-bit NRPN). Defaults to 0.
+
+
+
+
+
+
+Sends a MIDI message from this specific element.  
+Pass -1 for any parameter to use the element's auto-configured value.
+
+
+
+
+
+
+
+
+### self:midirx_register
+---
+```lua
+function self:midirx_register(
+  element_index: integer,
+  channel: integer,
+  command: integer,
+  param1: integer,
+  sync_config: { led_sync: boolean, value_sync: boolean },
+  resolution: integer
+)
+```
+@param `element_index` - Target element index (use `-1` for this specific element).
+
+@param `channel` - MIDI channel (0-15, or -1 for auto).
+
+@param `command` - MIDI command type (e.g., 144 = Note On, 176=CC or -1 for auto).
+
+@param `param1` - Note pitch or CC number (0-127, or -1 for auto).
+
+@param `sync_config` - Synchronization settings. Example: `{value_sync = true, led_sync = true}`.
+
+@param `resolution` - resolution mode (0=Standard 7-bit, 1=14-bit, 2=NRPN, 3=14-bit NRPN).
+
+
+
+
+
+
+Registers a MIDI receive (RX) listener for this element.  
+This allows the element to automatically update its internal value or LED state 
+when the specified MIDI message is received from the host (DAW).
+
+
+
+
+
+
+
+
+### self:midi_sysex_send
+---
+```lua
+function self:midi_sysex_send(...: integer)
+```
+@param `...` - SysEx data bytes
+
+
+
+
+
+
+Sends a MIDI SysEx message from this element.  
+ Send 8bit SysEx data bytes (0-255) as separate arguments. eg: (0xF0, 0x41, 0x10, 0xF7)
+
+
+
+
+
+
+
+
+
+
+
+## fields
+---
+
+### self:post_init_cb
+---
+```lua
+Element.post_init_cb : (fun(self: Element))?
+```
+
+
+
+
+
+
+
+
+
+
+### self:midirx_cb
+---
+```lua
+Element.midirx_cb : (fun(self: Element, header: integer[], data: integer[]))?
+```
+
+
+
+
+
+
+
+
+
+
+### self:sysexrx_cb
+---
+```lua
+Element.sysexrx_cb : (fun(self: Element, header: integer[], data: string))?
+```
+
+
+
+
+
+
+
+
+
+
+### self:eventrx_cb
+---
+```lua
+Element.eventrx_cb : (fun(self: Element, header: integer[], event: integer[], value: integer[], name: string))?
+```
+
+
+
+
+
+
+
+
+
+
+

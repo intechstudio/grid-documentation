@@ -1,136 +1,367 @@
 ---
-title:      Encoder
-slug:       encoder-control-element
-layout:     reference_manual
-category:   reference-manual
+title: Encoder
+slug: encoder-control-element
+layout: reference_manual
+category: reference-manual
 description: How to set up encoder-type control elements.
 ---
 
-## Encoder Button
-
-### button_number
-- shortname: bnu
-- **How:** `self:button_number()` or `self:button_number(number)`
-  - number: signed integer
-- **What:** This function when given no parameter, returns the # number of the control element. These numbers are from the top left, read left to right, top to bottom `0` to `15` OR in the case of the PBF4 from `0` to `11`. 
-  When this function is given a parameter, it will set the # number of the control element to the `number` given.
-- **Example:**
-
-
-### button_value
-- shortname: bva
-- **How:** `self:button_value()` or `self:button_value(value)`
-  - value: integer, ranging 0...127
-- **What:** This function returns the value associated to the button. By default, this value is `127` when the button is pressed down and `0` when released.
-  When this function is given a parameter, it will set the value associated with the button state according to the parameter given.
-  When using other types of button modes, described later in this chapter, the button values are evenly spread across the steps: eg. spilt 3 was would be values `0` `63` `127` split 4-way would be `0` `47` `95` and `127`.
-- **Example:** Inputting the code `self:button_value(127)` will make all button press and  button release event return the value `127`.
-
-
-### button_min 
-- shortname: bmi
-- **How:** `self:button_min()` or `self:button_min(value)`
-    - value: integer, ranging 0...127
-- **What:** This function returns the minimum value of the "released" button state. This is `0` by default.
-  When given a parameter, this function changes the minimum value of the button state according to the `value` given as parameter.
-- **Example:** The code `self:button_min(20)` will set the value of the button to `20` when released.
-
-
-### button_max
-- shortname: bma
-- **How:** `self:button_max()` or `self:button_max(value)`
-    - value: integer, ranging 0...127
-- **What:** This function returns the maximum value of the "pressed down" button state. This is `127` by default.
-  When given a parameter, this function changes the maximum value of the button state according to the `value` given as parameter.
-- **Example:** The code `self:button_max(110)` will set the value of the button to `110` when pressed down. This can be useful to set easy to use values for a switch, like `self:button_max(1)` will make it so that there are only two values this button can send out `0` and `1`.
-
-
-### button_mode
-- shortname: bmo
-- **How:** `self:button_mode()` or `self:button_mode(mode)`
-    - mode: integer, ranging 0...127
-- **What:** This function returns the value of the button mode. This is `0` by default. Button mode means how many 'steps' the button has between its maximum and minimum value. For example when the function is used to set this value like this: `self:button_mode(mode)` the resolution parameter will govern the number of steps.
-- **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `127`.
-
-
-### button_elapsed_time
-- shortname: bel
-- **How:** `self:button_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
-- **Example:**
-
-
-### button_state
-- shortname: bst
-- **How:** `self:button_state()`
-- **What:** This function will return the "state" of the control element. In case of a button this is either "pressed down" `127`  OR "released" `0`. These values independent from value variable of the control element. This means that the button_state() function will always return the values associated with the "pressed" or "released" states, independently from any kind of alterations to the button value functions, such as changing the max or min values.
-- **Example:**
+- supers: Element
 
 
 
-## Encoder Rotation
-
-### encoder_number
-- shortname: enu
-- **How:** `self:encoder_number()` or `self:encoder_number(number)`
-    - number: signed integer
-- **What:** This function, when given no parameter, returns the # number of the control element. These numbers are from the top left, read left to right, top to bottom `0` to `15`. 
-  When this function is given a parameter, it will set the # number of the control element to the `number` given.
-- **Example:**
 
 
-### encoder_value
-- shortname: eva
-- **How:** `self:encoder_value() `or `self:encoder_value(value)`
-    - value: integer, ranging 0...127
-- **What:**  This function returns the value of the encoder state. By default, this value is `0` when the encoder is turned and tops out at `127`.
-  When this function is given a parameter, it will set the value associated with the encoder state according to the parameter given and will output that `value` on each trigger.
-- **Example:** 
 
 
-### encoder_min
-- shortname: emi
-- **How:** `self:encoder_min()` or `self:encoder_min(value)`
-    - value: integer, ranging 0...127
-- **What:** This function returns the minimum value configured to the encoder minimum state. This is `0` by default.
-  When given a parameter, this function changes the minimum value of the encoder state according to the `value` given as parameter.
-- **Example:** The code `self:encoder_min(20)` will set the starting value of the encoder to `20` when rotated.
 
 
-### encoder_max
-- shortname: ema
-- **How:** `self:encoder_max()` or `self:encoder_max(value)`
-    - value: integer, ranging 0...127
-- **What:** This function returns the maximum value configured to the encoder maximum state. This is `127` by default.
-  When given a parameter, this function changes the maximum value of the encoder state according to the `value` given as parameter.
-- **Example:** The code `self:encoder_max(110)` will set the end value of the encoder to `110` when turned.
+
+---
+
+> In the Grid editor, when editing code for a EncoderElement, the variables `self`, `element`, and `ele` are automatically typed as EncoderElement. This means you can call these functions directly on `self`:
+>
+> ```lua
+> self:encoder_value()     -- on the current element
+> element[1]:encoder_value() -- on a specific element from the array
+> ```
+
+## Functions
+---
+
+### self:encoder_value
+---
+```lua
+function self:encoder_value(value: integer?) -> value integer
+```
+@param `value` - If provided, sets the encoder value
 
 
-### encoder_mode
-- shortname: emo
-- **How:** `self:encoder_mode()` or `self:encoder_mode(mode)`
-    - resolution: integer, ranging 0...2
-- **What:** This function returns the value of the encoder mode. This is `0`  or "absolute mode" by default.
-  When function is given `1` as a value, it will change the encoder to "relative mode binary offset". In this mode turning the encoder 'backwards' or counterclockwise will always result in the value `63` and turning it 'forwards' or clockwise will always result in the value `65` .
-  When the function is given `2` as a value, it will change the encoder to "relative mode 2's comp". In this mode turning the encoder 'backwards' or counterclockwise will always result in the value `127` and turning it 'forwards' or clockwise will always result in the value `1` .
-- **Example:** The code `self:encoder_mode(1)` will change the encoder into relative mode. 
+@return `value` - Current encoder value
 
 
-### encoder_velocity
-- shortname: ev0
-- **How:** `self:encoder_velocity()` or `self:encoder_velocity(velocity)`
-  - velocity: integer, ranging 0...100
-- **What:** This function returns the value of the encoder velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set  the encoder velocity to that value. Velocity increases the steps the encoder value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off encoder velocity completely.
-- **Example:**  The code `self:encoder_velocity(0)` will turn off the velocity increase function of the encoder. In this case turning the encoder by one tick, will increase the value of the encoder by 1. 
 
 
-### encoder_elapsed_time
-- shortname: eel
-- **How:** `self:encoder_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
-- **Example:** 
-### encoder_state
-- shortname: est
-- **How:** `self:encoder_state()`
-- **What:** This function will return the "state" of the control element.
-- **Example:** 
+
+Returns (or sets) the current encoder value.
+
+
+
+
+
+
+
+
+### self:encoder_min
+---
+```lua
+function self:encoder_min(value: integer?) -> min integer
+```
+@param `value` - If provided, sets the minimum
+
+
+@return `min` - Minimum value
+
+
+
+
+
+Returns (or sets) the minimum encoder value.
+
+
+
+
+
+
+
+
+### self:encoder_max
+---
+```lua
+function self:encoder_max(value: integer?) -> max integer
+```
+@param `value` - If provided, sets the maximum
+
+
+@return `max` - Maximum value
+
+
+
+
+
+Returns (or sets) the maximum encoder value.
+
+
+
+
+
+
+
+
+### self:encoder_mode
+---
+```lua
+function self:encoder_mode(value: integer?) -> mode integer
+```
+@param `value` - If provided, sets the mode
+
+
+@return `mode` - Encoder mode
+
+
+
+
+
+Returns (or sets) the encoder mode.
+
+
+
+
+
+
+
+
+### self:encoder_state
+---
+```lua
+function self:encoder_state() -> state integer
+```
+
+@return `state` - Encoder state
+
+
+
+
+
+Returns the encoder state (rotation direction). Values <64 = left, >63 = right.
+
+
+
+
+
+
+
+
+### self:encoder_velocity
+---
+```lua
+function self:encoder_velocity() -> velocity integer
+```
+
+@return `velocity` - Rotation velocity
+
+
+
+
+
+Returns the encoder velocity.
+
+
+
+
+
+
+
+
+### self:encoder_sensitivity
+---
+```lua
+function self:encoder_sensitivity(value: integer?) -> sensitivity integer
+```
+@param `value` - If provided, sets the sensitivity
+
+
+@return `sensitivity` - Encoder sensitivity
+
+
+
+
+
+Returns (or sets) the encoder sensitivity.
+
+
+
+
+
+
+
+
+### self:encoder_elapsed_time
+---
+```lua
+function self:encoder_elapsed_time() -> ms integer
+```
+
+@return `ms` - Elapsed time in milliseconds
+
+
+
+
+
+Returns the time elapsed since the last encoder event (milliseconds).
+
+
+
+
+
+
+
+
+### self:button_value
+---
+```lua
+function self:button_value(value: integer?) -> value integer
+```
+@param `value` - If provided, sets the button value
+
+
+@return `value` - Current button value
+
+
+
+
+
+Returns (or sets) the current button value.
+
+
+
+
+
+
+
+
+### self:button_min
+---
+```lua
+function self:button_min(value: integer?) -> min integer
+```
+@param `value` - If provided, sets the minimum
+
+
+@return `min` - Minimum value
+
+
+
+
+
+Returns (or sets) the minimum button value.
+
+
+
+
+
+
+
+
+### self:button_max
+---
+```lua
+function self:button_max(value: integer?) -> max integer
+```
+@param `value` - If provided, sets the maximum
+
+
+@return `max` - Maximum value
+
+
+
+
+
+Returns (or sets) the maximum button value.
+
+
+
+
+
+
+
+
+### self:button_mode
+---
+```lua
+function self:button_mode(value: integer?) -> mode integer
+```
+@param `value` - If provided, sets the mode
+
+
+@return `mode` - Button mode
+
+
+
+
+
+Returns (or sets) the button mode. 0 = momentary.
+
+
+
+
+
+
+
+
+### self:button_state
+---
+```lua
+function self:button_state() -> state integer
+```
+
+@return `state` - Button state (0 or 127)
+
+
+
+
+
+Returns the button state. 0 = released, 127 = pressed.
+
+
+
+
+
+
+
+
+### self:button_elapsed_time
+---
+```lua
+function self:button_elapsed_time() -> ms integer
+```
+
+@return `ms` - Elapsed time in milliseconds
+
+
+
+
+
+Returns the time elapsed since the last button event (milliseconds).
+
+
+
+
+
+
+
+
+### self:button_step
+---
+```lua
+function self:button_step() -> step (boolean|integer)
+```
+
+@return `step` - Current step, or false if mode is 0
+
+
+
+
+
+Calculates the button step based on mode, min, max, and value.
+
+
+
+
+
+
+
+
+
+
+

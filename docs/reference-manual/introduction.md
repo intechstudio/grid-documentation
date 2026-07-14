@@ -10,3 +10,5 @@ Grid controllers run <b>lua</b> scripts for their configurations. It's a Turing 
 Lua is a script language, please <a href="https://www.lua.org/pil/contents.html" rel="external" target="_blank" class="pb-0.5 border-b-2 border-blue-500">check out the official lua page</a> for correct syntax.
 
 This manual is supposed to be used together with the [Wiki](/docs/wiki/introduction.md) section as some functions are explained there in more detail under their respective Action Block (containers that house one or more functions, conveniently grouped together).
+
+The Grid Functions and Control Element Functions pages below are auto-generated from the LuaCATS annotations in grid-editor's `grid-api.lua` and are kept in sync automatically. Please don't edit those pages directly — edit the annotations in grid-editor instead.

@@ -94,11 +94,17 @@ function stripClassHeading(content) {
 // Rewrite class method notation to instance method notation.
 // Before: `function ButtonElement.button_value(value: integer?) -> value integer`
 // After:  `self:button_value(value: integer?) -> value integer`
+// Also rewrites section headings: `### ButtonElement.button_value` -> `### self:button_value`
 function rewriteSignatures(content) {
-  return content.replace(
-    /function\s+([A-Za-z]+)\.([a-zA-Z_][a-zA-Z0-9_]*)\(/g,
-    "function self:$2("
-  );
+  return content
+    .replace(
+      /function\s+([A-Za-z]+)\.([a-zA-Z_][a-zA-Z0-9_]*)\(/g,
+      "function self:$2("
+    )
+    .replace(
+      /^###\s+([A-Za-z]+)\.([a-zA-Z_][a-zA-Z0-9_]*)$/gm,
+      "### self:$2"
+    );
 }
 
 // Rename "## methods" heading to "## Functions" for clarity.
@@ -138,22 +144,23 @@ async function writeDoc(destRelPath, content) {
 function addEditorContextNote(content, className) {
   // Insert explanatory note before the functions list for element types.
   // This helps readers understand how `self` is typed in the editor.
-  const elementTypes = [
-    "ButtonElement",
-    "EncoderElement",
-    "PotmeterElement",
-    "EndlessElement",
-    "FaderElement",
-    "LCDElement",
-  ];
+  const elementTypes = {
+    ButtonElement: "button_value",
+    EncoderElement: "encoder_value",
+    PotmeterElement: "potmeter_value",
+    EndlessElement: "endless_value",
+    FaderElement: "fader_value",
+    LCDElement: "lcd_draw",
+  };
 
-  if (!elementTypes.includes(className)) return content;
+  if (!elementTypes[className]) return content;
 
+  const exampleFunc = elementTypes[className];
   const note = `> In the Grid editor, when editing code for a ${className}, the variables \`self\`, \`element\`, and \`ele\` are automatically typed as ${className}. This means you can call these functions directly on \`self\`:
 >
 > \`\`\`lua
-> self:encoder_value()     -- on the current element
-> element[1]:encoder_value() -- on a specific element from the array
+> self:${exampleFunc}()     -- on the current element
+> element[1]:${exampleFunc}() -- on a specific element from the array
 > \`\`\`
 `;
 
