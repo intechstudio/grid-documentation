@@ -1,0 +1,97 @@
+name: Generate API Docs from grid-editor
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily. grid-editor's grid-api.lua doesn't push events here, so this job checks the
+    # file's hash every run and only rebuilds/deploys when it actually changed (or when
+    # triggered manually) - see the "check for changes" step below.
+    - cron: "0 6 * * *"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: checkout grid-documentation
+        uses: actions/checkout@v4
+
+      - name: checkout grid-editor
+        uses: actions/checkout@v4
+        with:
+          repository: intechstudio/grid-editor
+          ref: stable
+          path: grid-editor
+          sparse-checkout: |
+            build-assets/lua-annotations
+          sparse-checkout-cone-mode: false
+
+      - name: check for changes
+        id: diff
+        run: |
+          NEW_HASH=$(sha256sum grid-editor/build-assets/lua-annotations/grid-api.lua | awk '{print $1}')
+          OLD_HASH=$(cat .github/lua-api-hash.txt 2>/dev/null || echo "")
+          echo "new_hash=$NEW_HASH" >> "$GITHUB_OUTPUT"
+          if [ "$NEW_HASH" = "$OLD_HASH" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: install rust toolchain
+        if: steps.diff.outputs.changed == 'true'
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: cache cargo
+        if: steps.diff.outputs.changed == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo
+          key: cargo-emmylua_doc_cli-0.23.2
+
+      - name: install emmylua_doc_cli
+        if: steps.diff.outputs.changed == 'true'
+        run: cargo install emmylua_doc_cli --version 0.23.2
+
+      - name: generate docs from lua annotations
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          emmylua_doc_cli ./grid-editor/build-assets/lua-annotations/ -o ./gen-temp --site-name "Grid Lua API"
+
+      - name: setup node
+        if: steps.diff.outputs.changed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          # Keep in lockstep with firebase-hosting-merge.yml / firebase-hosting-pull-request.yml.
+          node-version: "24.14.1"
+
+      - name: postprocess generated docs
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          npm ci
+          node scripts/postprocess-generated-docs.mjs
+
+      - name: build docusaurus site
+        if: steps.diff.outputs.changed == 'true'
+        run: npm run build
+
+      - name: deploy to firebase hosting
+        if: steps.diff.outputs.changed == 'true'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_IS_KNOWLEDGE }}"
+          channelId: live
+          projectId: is-knowledge
+
+      - name: persist lua-api hash
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          mkdir -p .github
+          echo "${{ steps.diff.outputs.new_hash }}" > .github/lua-api-hash.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/lua-api-hash.txt docs/reference-manual
+          git commit -m "chore: regenerate reference manual from grid-api.lua [skip ci]" || echo "nothing to commit"
+          git push
