@@ -1,22 +1,12 @@
 ---
-title: Potmeter
+title: PotmeterElement
 slug: potmeter-control-element
 layout: reference_manual
 category: reference-manual
 description: How to set up potentiometer-type control elements.
 ---
 
-- supers: Element
-
-
-
-
-
-
-
-
-
-
+- supers: [Element](element.md)
 ---
 
 > In the Grid editor, when editing code for a PotmeterElement, the variables `self`, `element`, and `ele` are automatically typed as PotmeterElement. This means you can call these functions directly on `self`:
@@ -26,135 +16,120 @@ description: How to set up potentiometer-type control elements.
 > element[1]:potmeter_value() -- on a specific element from the array
 > ```
 
-## Functions
+### `PotmeterElement:potmeter_value`
 ---
-
-### self:potmeter_value
----
-```lua
-function self:potmeter_value(value: integer?) -> value integer
-```
-@param `value` - If provided, sets the value
-
-
-@return `value` - Current potentiometer value
-
-
-
-
-
 Returns (or sets) the current potentiometer value.
 
-
-
-
-
-
-
-
-### self:potmeter_min
----
 ```lua
-function self:potmeter_min(value: integer?) -> min integer
+PotmeterElement:potmeter_value(value: integer?): integer
 ```
-@param `value` - If provided, sets the minimum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the value</div>
 
 
-@return `min` - Minimum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>value</code> — Current potentiometer value</div>
 
 
 
 
 
+
+
+
+
+
+### `PotmeterElement:potmeter_min`
+---
 Returns (or sets) the minimum potentiometer value.
 
-
-
-
-
-
-
-
-### self:potmeter_max
----
 ```lua
-function self:potmeter_max(value: integer?) -> max integer
+PotmeterElement:potmeter_min(value: integer?): integer
 ```
-@param `value` - If provided, sets the maximum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the minimum</div>
 
 
-@return `max` - Maximum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>min</code> — Minimum value</div>
 
 
 
 
 
+
+
+
+
+
+### `PotmeterElement:potmeter_max`
+---
 Returns (or sets) the maximum potentiometer value.
 
-
-
-
-
-
-
-
-### self:potmeter_resolution
----
 ```lua
-function self:potmeter_resolution(value: integer?) -> resolution integer
+PotmeterElement:potmeter_max(value: integer?): integer
 ```
-@param `value` - If provided, sets the resolution
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the maximum</div>
 
 
-@return `resolution` - Potentiometer resolution
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>max</code> — Maximum value</div>
 
 
 
 
 
+
+
+
+
+
+### `PotmeterElement:potmeter_resolution`
+---
 Returns (or sets) the potentiometer resolution.
 
-
-
-
-
-
-
-
-### self:potmeter_state
----
 ```lua
-function self:potmeter_state() -> state integer
+PotmeterElement:potmeter_resolution(value: integer?): integer
 ```
-
-@return `state` - Current state
-
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the resolution</div>
 
 
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>resolution</code> — Potentiometer resolution</div>
 
 
+
+
+
+
+
+
+
+
+### `PotmeterElement:potmeter_state`
+---
 Returns the potentiometer state.
 
-
-
-
-
-
-
-
-### self:potmeter_elapsed_time
----
 ```lua
-function self:potmeter_elapsed_time() -> ms integer
+PotmeterElement:potmeter_state(): integer
 ```
 
-@return `ms` - Elapsed time in milliseconds
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>state</code> — Current state</div>
 
 
 
 
 
+
+
+
+
+
+### `PotmeterElement:potmeter_elapsed_time`
+---
 Returns the time elapsed since the last potentiometer event (milliseconds).
+
+```lua
+PotmeterElement:potmeter_elapsed_time(): integer
+```
+
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>ms</code> — Elapsed time in milliseconds</div>
+
+
 
 
 

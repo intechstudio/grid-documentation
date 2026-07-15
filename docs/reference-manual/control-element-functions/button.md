@@ -1,22 +1,12 @@
 ---
-title: Button
+title: ButtonElement
 slug: button-control-element
 layout: reference_manual
 category: reference-manual
 description: How to set up button-type control elements.
 ---
 
-- supers: Element
-
-
-
-
-
-
-
-
-
-
+- supers: [Element](element.md)
 ---
 
 > In the Grid editor, when editing code for a ButtonElement, the variables `self`, `element`, and `ele` are automatically typed as ButtonElement. This means you can call these functions directly on `self`:
@@ -26,157 +16,140 @@ description: How to set up button-type control elements.
 > element[1]:button_value() -- on a specific element from the array
 > ```
 
-## Functions
+### `ButtonElement:button_value`
 ---
-
-### self:button_value
----
-```lua
-function self:button_value(value: integer?) -> value integer
-```
-@param `value` - If provided, sets the button value
-
-
-@return `value` - Current button value
-
-
-
-
-
 Returns (or sets) the current button value.
 
-
-
-
-
-
-
-
-### self:button_min
----
 ```lua
-function self:button_min(value: integer?) -> min integer
+ButtonElement:button_value(value: integer?): integer
 ```
-@param `value` - If provided, sets the minimum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the button value</div>
 
 
-@return `min` - Minimum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>value</code> — Current button value</div>
 
 
 
 
 
+
+
+
+
+
+### `ButtonElement:button_min`
+---
 Returns (or sets) the minimum button value.
 
-
-
-
-
-
-
-
-### self:button_max
----
 ```lua
-function self:button_max(value: integer?) -> max integer
+ButtonElement:button_min(value: integer?): integer
 ```
-@param `value` - If provided, sets the maximum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the minimum</div>
 
 
-@return `max` - Maximum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>min</code> — Minimum value</div>
 
 
 
 
 
+
+
+
+
+
+### `ButtonElement:button_max`
+---
 Returns (or sets) the maximum button value.
 
-
-
-
-
-
-
-
-### self:button_mode
----
 ```lua
-function self:button_mode(value: integer?) -> mode integer
+ButtonElement:button_max(value: integer?): integer
 ```
-@param `value` - If provided, sets the mode
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the maximum</div>
 
 
-@return `mode` - Button mode
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>max</code> — Maximum value</div>
 
 
 
 
 
+
+
+
+
+
+### `ButtonElement:button_mode`
+---
 Returns (or sets) the button mode. 0 = momentary.
 
-
-
-
-
-
-
-
-### self:button_state
----
 ```lua
-function self:button_state() -> state integer
+ButtonElement:button_mode(value: integer?): integer
 ```
-
-@return `state` - Button state (0 or 127)
-
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the mode</div>
 
 
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>mode</code> — Button mode</div>
 
 
+
+
+
+
+
+
+
+
+### `ButtonElement:button_state`
+---
 Returns the button state. 0 = released, 127 = pressed.
 
-
-
-
-
-
-
-
-### self:button_elapsed_time
----
 ```lua
-function self:button_elapsed_time() -> ms integer
+ButtonElement:button_state(): integer
 ```
 
-@return `ms` - Elapsed time in milliseconds
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>state</code> — Button state (0 or 127)</div>
 
 
 
 
 
+
+
+
+
+
+### `ButtonElement:button_elapsed_time`
+---
 Returns the time elapsed since the last button event (milliseconds).
 
-
-
-
-
-
-
-
-### self:button_step
----
 ```lua
-function self:button_step() -> step (boolean|integer)
+ButtonElement:button_elapsed_time(): integer
 ```
 
-@return `step` - Current step, or false if mode is 0
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>ms</code> — Elapsed time in milliseconds</div>
 
 
 
 
 
+
+
+
+
+
+### `ButtonElement:button_step`
+---
 Calculates the button step based on mode, min, max, and value.
 Returns false if button mode is 0 (momentary), otherwise returns the current step number.
+
+```lua
+ButtonElement:button_step(): boolean | integer
+```
+
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>step</code> — Current step, or false if mode is 0</div>
+
+
 
 
 

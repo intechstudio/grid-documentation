@@ -1,22 +1,12 @@
 ---
-title: Endless potentiometer
+title: EndlessElement
 slug: endless-control-element
 layout: reference_manual
 category: reference-manual
 description: How to set up endless-type control elements.
 ---
 
-- supers: Element
-
-
-
-
-
-
-
-
-
-
+- supers: [Element](element.md)
 ---
 
 > In the Grid editor, when editing code for a EndlessElement, the variables `self`, `element`, and `ele` are automatically typed as EndlessElement. This means you can call these functions directly on `self`:
@@ -26,357 +16,322 @@ description: How to set up endless-type control elements.
 > element[1]:endless_value() -- on a specific element from the array
 > ```
 
-## Functions
+### `EndlessElement:endless_value`
 ---
-
-### self:endless_value
----
-```lua
-function self:endless_value(value: integer?) -> value integer
-```
-@param `value` - If provided, sets the value
-
-
-@return `value` - Current value
-
-
-
-
-
 Returns (or sets) the current endless potentiometer value.
 
-
-
-
-
-
-
-
-### self:endless_min
----
 ```lua
-function self:endless_min(value: integer?) -> min integer
+EndlessElement:endless_value(value: integer?): integer
 ```
-@param `value` - If provided, sets the minimum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the value</div>
 
 
-@return `min` - Minimum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>value</code> — Current value</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:endless_min`
+---
 Returns (or sets) the minimum endless potentiometer value.
 
-
-
-
-
-
-
-
-### self:endless_max
----
 ```lua
-function self:endless_max(value: integer?) -> max integer
+EndlessElement:endless_min(value: integer?): integer
 ```
-@param `value` - If provided, sets the maximum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the minimum</div>
 
 
-@return `max` - Maximum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>min</code> — Minimum value</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:endless_max`
+---
 Returns (or sets) the maximum endless potentiometer value.
 
-
-
-
-
-
-
-
-### self:endless_mode
----
 ```lua
-function self:endless_mode(value: integer?) -> mode integer
+EndlessElement:endless_max(value: integer?): integer
 ```
-@param `value` - If provided, sets the mode
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the maximum</div>
 
 
-@return `mode` - Mode value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>max</code> — Maximum value</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:endless_mode`
+---
 Returns (or sets) the endless potentiometer mode.
 
-
-
-
-
-
-
-
-### self:endless_state
----
 ```lua
-function self:endless_state() -> state integer
+EndlessElement:endless_mode(value: integer?): integer
 ```
-
-@return `state` - Current state
-
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the mode</div>
 
 
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>mode</code> — Mode value</div>
 
 
+
+
+
+
+
+
+
+
+### `EndlessElement:endless_state`
+---
 Returns the endless potentiometer state.
 
-
-
-
-
-
-
-
-### self:endless_velocity
----
 ```lua
-function self:endless_velocity() -> velocity integer
+EndlessElement:endless_state(): integer
 ```
 
-@return `velocity` - Rotation velocity
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>state</code> — Current state</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:endless_velocity`
+---
 Returns the endless potentiometer velocity.
 
-
-
-
-
-
-
-
-### self:endless_direction
----
 ```lua
-function self:endless_direction() -> direction integer
+EndlessElement:endless_velocity(): integer
 ```
 
-@return `direction` - Rotation direction
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>velocity</code> — Rotation velocity</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:endless_direction`
+---
 Returns the endless potentiometer direction.
 
-
-
-
-
-
-
-
-### self:endless_sensitivity
----
 ```lua
-function self:endless_sensitivity(value: integer?) -> sensitivity integer
+EndlessElement:endless_direction(): integer
 ```
-@param `value` - If provided, sets the sensitivity
 
-
-@return `sensitivity` - Sensitivity value
-
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>direction</code> — Rotation direction</div>
 
 
 
 
+
+
+
+
+
+
+### `EndlessElement:endless_sensitivity`
+---
 Returns (or sets) the endless potentiometer sensitivity.
 
-
-
-
-
-
-
-
-### self:led_offset
----
 ```lua
-function self:led_offset(value: integer?) -> offset integer
+EndlessElement:endless_sensitivity(value: integer?): integer
 ```
-@param `value` - If provided, sets the offset
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the sensitivity</div>
 
 
-@return `offset` - LED offset
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>sensitivity</code> — Sensitivity value</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:led_offset`
+---
 Returns the LED offset for this endless element.
 
-
-
-
-
-
-
-
-### self:button_value
----
 ```lua
-function self:button_value(value: integer?) -> value integer
+EndlessElement:led_offset(value: integer?): integer
 ```
-@param `value` - If provided, sets the button value
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the offset</div>
 
 
-@return `value` - Current button value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>offset</code> — LED offset</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:button_value`
+---
 Returns (or sets) the current button value.
 
-
-
-
-
-
-
-
-### self:button_min
----
 ```lua
-function self:button_min(value: integer?) -> min integer
+EndlessElement:button_value(value: integer?): integer
 ```
-@param `value` - If provided, sets the minimum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the button value</div>
 
 
-@return `min` - Minimum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>value</code> — Current button value</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:button_min`
+---
 Returns (or sets) the minimum button value.
 
-
-
-
-
-
-
-
-### self:button_max
----
 ```lua
-function self:button_max(value: integer?) -> max integer
+EndlessElement:button_min(value: integer?): integer
 ```
-@param `value` - If provided, sets the maximum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the minimum</div>
 
 
-@return `max` - Maximum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>min</code> — Minimum value</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:button_max`
+---
 Returns (or sets) the maximum button value.
 
-
-
-
-
-
-
-
-### self:button_mode
----
 ```lua
-function self:button_mode(value: integer?) -> mode integer
+EndlessElement:button_max(value: integer?): integer
 ```
-@param `value` - If provided, sets the mode
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the maximum</div>
 
 
-@return `mode` - Button mode
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>max</code> — Maximum value</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:button_mode`
+---
 Returns (or sets) the button mode. 0 = momentary.
 
-
-
-
-
-
-
-
-### self:button_state
----
 ```lua
-function self:button_state() -> state integer
+EndlessElement:button_mode(value: integer?): integer
 ```
-
-@return `state` - Button state (0 or 127)
-
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the mode</div>
 
 
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>mode</code> — Button mode</div>
 
 
+
+
+
+
+
+
+
+
+### `EndlessElement:button_state`
+---
 Returns the button state. 0 = released, 127 = pressed.
 
-
-
-
-
-
-
-
-### self:button_elapsed_time
----
 ```lua
-function self:button_elapsed_time() -> ms integer
+EndlessElement:button_state(): integer
 ```
 
-@return `ms` - Elapsed time in milliseconds
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>state</code> — Button state (0 or 127)</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:button_elapsed_time`
+---
 Returns the time elapsed since the last button event (milliseconds).
 
-
-
-
-
-
-
-
-### self:button_step
----
 ```lua
-function self:button_step() -> step (boolean|integer)
+EndlessElement:button_elapsed_time(): integer
 ```
 
-@return `step` - Current step, or false if mode is 0
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>ms</code> — Elapsed time in milliseconds</div>
 
 
 
 
 
+
+
+
+
+
+### `EndlessElement:button_step`
+---
 Calculates the button step based on mode, min, max, and value.
+
+```lua
+EndlessElement:button_step(): boolean | integer
+```
+
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>step</code> — Current step, or false if mode is 0</div>
+
+
 
 
 

@@ -1,22 +1,12 @@
 ---
-title: Encoder
+title: EncoderElement
 slug: encoder-control-element
 layout: reference_manual
 category: reference-manual
 description: How to set up encoder-type control elements.
 ---
 
-- supers: Element
-
-
-
-
-
-
-
-
-
-
+- supers: [Element](element.md)
 ---
 
 > In the Grid editor, when editing code for a EncoderElement, the variables `self`, `element`, and `ele` are automatically typed as EncoderElement. This means you can call these functions directly on `self`:
@@ -26,334 +16,303 @@ description: How to set up encoder-type control elements.
 > element[1]:encoder_value() -- on a specific element from the array
 > ```
 
-## Functions
+### `EncoderElement:encoder_value`
 ---
-
-### self:encoder_value
----
-```lua
-function self:encoder_value(value: integer?) -> value integer
-```
-@param `value` - If provided, sets the encoder value
-
-
-@return `value` - Current encoder value
-
-
-
-
-
 Returns (or sets) the current encoder value.
 
-
-
-
-
-
-
-
-### self:encoder_min
----
 ```lua
-function self:encoder_min(value: integer?) -> min integer
+EncoderElement:encoder_value(value: integer?): integer
 ```
-@param `value` - If provided, sets the minimum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the encoder value</div>
 
 
-@return `min` - Minimum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>value</code> — Current encoder value</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:encoder_min`
+---
 Returns (or sets) the minimum encoder value.
 
-
-
-
-
-
-
-
-### self:encoder_max
----
 ```lua
-function self:encoder_max(value: integer?) -> max integer
+EncoderElement:encoder_min(value: integer?): integer
 ```
-@param `value` - If provided, sets the maximum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the minimum</div>
 
 
-@return `max` - Maximum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>min</code> — Minimum value</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:encoder_max`
+---
 Returns (or sets) the maximum encoder value.
 
-
-
-
-
-
-
-
-### self:encoder_mode
----
 ```lua
-function self:encoder_mode(value: integer?) -> mode integer
+EncoderElement:encoder_max(value: integer?): integer
 ```
-@param `value` - If provided, sets the mode
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the maximum</div>
 
 
-@return `mode` - Encoder mode
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>max</code> — Maximum value</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:encoder_mode`
+---
 Returns (or sets) the encoder mode.
 
-
-
-
-
-
-
-
-### self:encoder_state
----
 ```lua
-function self:encoder_state() -> state integer
+EncoderElement:encoder_mode(value: integer?): integer
 ```
-
-@return `state` - Encoder state
-
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the mode</div>
 
 
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>mode</code> — Encoder mode</div>
 
 
+
+
+
+
+
+
+
+
+### `EncoderElement:encoder_state`
+---
 Returns the encoder state (rotation direction). Values <64 = left, >63 = right.
 
-
-
-
-
-
-
-
-### self:encoder_velocity
----
 ```lua
-function self:encoder_velocity() -> velocity integer
+EncoderElement:encoder_state(): integer
 ```
 
-@return `velocity` - Rotation velocity
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>state</code> — Encoder state</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:encoder_velocity`
+---
 Returns the encoder velocity.
 
-
-
-
-
-
-
-
-### self:encoder_sensitivity
----
 ```lua
-function self:encoder_sensitivity(value: integer?) -> sensitivity integer
+EncoderElement:encoder_velocity(value: integer?): integer
 ```
-@param `value` - If provided, sets the sensitivity
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the velocity</div>
 
 
-@return `sensitivity` - Encoder sensitivity
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>velocity</code> — Rotation velocity</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:encoder_sensitivity`
+---
 Returns (or sets) the encoder sensitivity.
 
-
-
-
-
-
-
-
-### self:encoder_elapsed_time
----
 ```lua
-function self:encoder_elapsed_time() -> ms integer
+EncoderElement:encoder_sensitivity(value: integer?): integer
 ```
-
-@return `ms` - Elapsed time in milliseconds
-
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the sensitivity</div>
 
 
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>sensitivity</code> — Encoder sensitivity</div>
 
 
+
+
+
+
+
+
+
+
+### `EncoderElement:encoder_elapsed_time`
+---
 Returns the time elapsed since the last encoder event (milliseconds).
 
-
-
-
-
-
-
-
-### self:button_value
----
 ```lua
-function self:button_value(value: integer?) -> value integer
+EncoderElement:encoder_elapsed_time(): integer
 ```
-@param `value` - If provided, sets the button value
 
-
-@return `value` - Current button value
-
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>ms</code> — Elapsed time in milliseconds</div>
 
 
 
 
+
+
+
+
+
+
+### `EncoderElement:button_value`
+---
 Returns (or sets) the current button value.
 
-
-
-
-
-
-
-
-### self:button_min
----
 ```lua
-function self:button_min(value: integer?) -> min integer
+EncoderElement:button_value(value: integer?): integer
 ```
-@param `value` - If provided, sets the minimum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the button value</div>
 
 
-@return `min` - Minimum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>value</code> — Current button value</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:button_min`
+---
 Returns (or sets) the minimum button value.
 
-
-
-
-
-
-
-
-### self:button_max
----
 ```lua
-function self:button_max(value: integer?) -> max integer
+EncoderElement:button_min(value: integer?): integer
 ```
-@param `value` - If provided, sets the maximum
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the minimum</div>
 
 
-@return `max` - Maximum value
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>min</code> — Minimum value</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:button_max`
+---
 Returns (or sets) the maximum button value.
 
-
-
-
-
-
-
-
-### self:button_mode
----
 ```lua
-function self:button_mode(value: integer?) -> mode integer
+EncoderElement:button_max(value: integer?): integer
 ```
-@param `value` - If provided, sets the mode
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the maximum</div>
 
 
-@return `mode` - Button mode
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>max</code> — Maximum value</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:button_mode`
+---
 Returns (or sets) the button mode. 0 = momentary.
 
-
-
-
-
-
-
-
-### self:button_state
----
 ```lua
-function self:button_state() -> state integer
+EncoderElement:button_mode(value: integer?): integer
 ```
-
-@return `state` - Button state (0 or 127)
-
+<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>value</code> — If provided, sets the mode</div>
 
 
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>mode</code> — Button mode</div>
 
 
+
+
+
+
+
+
+
+
+### `EncoderElement:button_state`
+---
 Returns the button state. 0 = released, 127 = pressed.
 
-
-
-
-
-
-
-
-### self:button_elapsed_time
----
 ```lua
-function self:button_elapsed_time() -> ms integer
+EncoderElement:button_state(): integer
 ```
 
-@return `ms` - Elapsed time in milliseconds
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>state</code> — Button state (0 or 127)</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:button_elapsed_time`
+---
 Returns the time elapsed since the last button event (milliseconds).
 
-
-
-
-
-
-
-
-### self:button_step
----
 ```lua
-function self:button_step() -> step (boolean|integer)
+EncoderElement:button_elapsed_time(): integer
 ```
 
-@return `step` - Current step, or false if mode is 0
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>ms</code> — Elapsed time in milliseconds</div>
 
 
 
 
 
+
+
+
+
+
+### `EncoderElement:button_step`
+---
 Calculates the button step based on mode, min, max, and value.
+
+```lua
+EncoderElement:button_step(): boolean | integer
+```
+
+<div class="doc-tag-line doc-tag-line--return"><span class="doc-tag doc-tag--return">@return</span> <code>step</code> — Current step, or false if mode is 0</div>
+
+
 
 
 

@@ -6,17 +6,7 @@ category: reference-manual
 description: System-wide functions available on every Grid module.
 ---
 
-- supers: Element
-
-
-
-
-
-
-
-
-
-
+- supers: [Element](../control-element-functions/element.md)
 ---
 
 
