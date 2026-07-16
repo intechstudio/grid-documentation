@@ -12,6 +12,7 @@ import export_configurations from './img/export_configurations.png'
 import file_manager from './img/file_manager.png'
 import file_on_module from './img/file_on_module.png'
 import call_test_file_manager from './img/call_test_file_manager.png'
+import file_under_page from './img/file_under_page.png'
 
 
 
@@ -74,6 +75,19 @@ Only files inside a **page folder** — the hexadecimal page directories on the 
 When a profile containing files is loaded onto a module, the target page's existing files are cleared first. The profile's files are then written in their place, ensuring a clean state for the incoming configuration.
 
 In the profile picker, profiles that include files display an indicator showing that they contain additional file data. Loading such a profile will overwrite the module's page-level files with the files stored in the profile.
+
+<ImageLightbox imageSrc={file_under_page} />
+
+### How to write reusable module calls
+
+As files belong now under pages within the Profile Cloud, if you want to create reusable profiles, which can be uploaded onto any pages, you must be mindful about requiring the files. They important bit is to use the current page number to build the path to the file.
+
+```lua
+local pageHex = string.format("%02X", page_current())
+local path = "/" .. pageHex .. "/testfile"
+local M = require(path)
+M.test("howdy") -- assuming the testfile.lua has exported function "test" 
+```
 
 ## Tips
 - During development & testing, we found a sweetspot to create lua files which are under 15000 bytes. You can get away with large lua files, but pay attention to how much memory given module requires during runtime. A module often consumes more memory during initialization, while the luaVM doesn't run garbage collection.
