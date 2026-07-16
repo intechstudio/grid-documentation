@@ -11,6 +11,48 @@ You can see written patch notes released here for Grid Editor, the configuration
 
 ---
 
+## Grid Editor version 1.6.9
+
+This version of Grid Editor brings official Linux support via Flatpak, a greatly improved code editing experience with the LuaLS language server, the ability to save files inside profiles, new system MIDI channel options, and several workflow enhancements.
+
+### Official Linux support
+
+Grid Editor is now available as a Flatpak package for Linux users, providing a native and sandboxed installation experience on any Flatpak-compatible distribution. See the [Linux troubleshooting section](/guides/troubleshooting/troubleshooting#linux-issues) for installation instructions.
+
+### LuaLS language server
+
+The code editor now uses LuaLS as its language server, replacing the previous basic completion provider. This brings significantly improved autocompletion, real-time diagnostics, inline documentation for Grid API functions, and a more responsive editing experience.
+
+### More agile code block edit flow
+
+The code block action block has been improved for a smoother editing workflow. The code can be edited directly in the block, without opening it into the center modal view. A new setting in Preferences lets you adjust the default code block height to suit your needs.
+
+### File saving under profiles
+
+Profiles can now include files from the module's file system. Files located inside a page folder — the hexadecimal page directories on the module root filesystem — are saved into a profile non-recursively (only top-level files within a page folder are included).
+
+When a profile with files is loaded onto a module, the target page's existing files are cleared first before the profile's files are written, ensuring a clean state for the incoming configuration.
+
+See the [File Manager](/wiki/more/file-manager) documentation for more details.
+
+### System MIDI channel
+
+The System Element now has a configurable MIDI channel, giving you direct control over which MIDI channel the module operates on without requiring custom code.
+
+#### New Features
+
+- Added a startup window state preference, so Editor remembers and restores its window size and position across sessions.
+- The profile picker and Clear/Load button in the active changes bar are now combined into a single split button, showing the selected profile name directly.
+- Pressure Sensitive Defaults profiles are now available for the TEK2 and VSN2 modules, in addition to PBF4, VSN1L and BU16.
+- Reordered the categories in the Action Picker for a more logical grouping of action blocks, and the Comment block is now hidden in minimalist mode.
+
+#### Bugfixes
+
+- Fixed configs not loading when the configs folder contains subdirectories.
+- Fixed profile cloud save incorrectly rejecting IMMEDIATE saves for pages without files.
+
+---
+
 ## Grid Editor version 1.6.6
 
 This version of Grid Editor brings support a no-code way to receive MIDI, a new file system on the module itself, a reworked Debug panel and a long list of fixes and performance improvements. The extensive list of changes is as follows:

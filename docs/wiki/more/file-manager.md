@@ -16,14 +16,12 @@ import call_test_file_manager from './img/call_test_file_manager.png'
 
 
 :::note
-Grid Editor v1.6.6 is the first version including File Manager. We recommend version control over files uploaded to your device, as they are not saveable to Profile Cloud yet.
-
-This is a first release, changes may happen.
+Grid Editor v1.6.6 is the first version including File Manager. This is a first release, changes may happen.
 :::
 
 ## Overview
 
-To enable the **File Manger**, go to Package Manager and hit enable.
+To enable the **File Manager**, go to Package Manager and hit enable.
 
 With the **File Manager**, it becomes possible to:
 - Read in files from module
@@ -66,6 +64,16 @@ The largest impact of the File Manager is the ability to **upload configurations
 
 <ImageLightbox imageSrc={call_test_file_manager} />
 
+
+## File saving under profiles
+
+Since Grid Editor v1.6.9, profiles can include files from the module's file system. This lets you bundle Lua modules, data files, or any other file alongside your element configurations in a single profile.
+
+Only files inside a **page folder** — the hexadecimal page directories on the module root filesystem (e.g. `00`, `01`, `1F`) — are saved into the profile, and only at the top level of each page folder (non-recursively).
+
+When a profile containing files is loaded onto a module, the target page's existing files are cleared first. The profile's files are then written in their place, ensuring a clean state for the incoming configuration.
+
+In the profile picker, profiles that include files display an indicator showing that they contain additional file data. Loading such a profile will overwrite the module's page-level files with the files stored in the profile.
 
 ## Tips
 - During development & testing, we found a sweetspot to create lua files which are under 15000 bytes. You can get away with large lua files, but pay attention to how much memory given module requires during runtime. A module often consumes more memory during initialization, while the luaVM doesn't run garbage collection.
