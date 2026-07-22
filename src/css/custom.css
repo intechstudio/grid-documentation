@@ -320,6 +320,12 @@ html {
   background-color: rgba(227, 179, 65, 0.14);
 }
 
+/* docs_lua.svg is a solid black mark with no dark-mode variant - invert it in dark theme
+   rather than maintaining a second asset. */
+[data-theme='dark'] .lua-icon {
+  filter: invert(1);
+}
+
 @media screen and (max-width: 640px) {
   .hero__title {
     font-size: 1.5rem;

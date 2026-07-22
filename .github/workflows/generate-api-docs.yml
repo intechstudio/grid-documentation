@@ -5,7 +5,10 @@ on:
   schedule:
     # Daily. grid-editor's grid-api.lua doesn't push events here, so this job checks the
     # file's hash every run and only rebuilds/deploys when it actually changed (or when
-    # triggered manually) - see the "check for changes" step below.
+    # triggered manually) - see the "check for changes" step below. This is the only trigger
+    # that redeploys the site when grid-api.lua changes upstream with no accompanying
+    # grid-documentation commit - firebase-hosting-merge.yml regenerates fresh docs on every
+    # push to main, but only runs on a grid-documentation push.
     - cron: "0 6 * * *"
 
 jobs:
@@ -39,26 +42,6 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: install rust toolchain
-        if: steps.diff.outputs.changed == 'true'
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: cache cargo
-        if: steps.diff.outputs.changed == 'true'
-        uses: actions/cache@v4
-        with:
-          path: ~/.cargo
-          key: cargo-emmylua_doc_cli-0.23.2
-
-      - name: install emmylua_doc_cli
-        if: steps.diff.outputs.changed == 'true'
-        run: cargo install emmylua_doc_cli --version 0.23.2
-
-      - name: generate docs from lua annotations
-        if: steps.diff.outputs.changed == 'true'
-        run: |
-          emmylua_doc_cli ./grid-editor/build-assets/lua-annotations/ -o ./gen-temp --site-name "Grid Lua API"
-
       - name: setup node
         if: steps.diff.outputs.changed == 'true'
         uses: actions/setup-node@v4
@@ -66,15 +49,13 @@ jobs:
           # Keep in lockstep with firebase-hosting-merge.yml / firebase-hosting-pull-request.yml.
           node-version: "24.14.1"
 
-      - name: postprocess generated docs
+      - name: generate api docs
         if: steps.diff.outputs.changed == 'true'
-        run: |
-          npm ci
-          node scripts/postprocess-generated-docs.mjs
+        uses: ./.github/actions/generate-api-docs
 
       - name: build docusaurus site
         if: steps.diff.outputs.changed == 'true'
-        run: npm run build
+        run: npm ci && npm run build
 
       - name: deploy to firebase hosting
         if: steps.diff.outputs.changed == 'true'
@@ -92,6 +73,6 @@ jobs:
           echo "${{ steps.diff.outputs.new_hash }}" > .github/lua-api-hash.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .github/lua-api-hash.txt docs/reference-manual
-          git commit -m "chore: regenerate reference manual from grid-api.lua [skip ci]" || echo "nothing to commit"
+          git add .github/lua-api-hash.txt
+          git commit -m "chore: record grid-api.lua hash after regenerating reference manual [skip ci]" || echo "nothing to commit"
           git push

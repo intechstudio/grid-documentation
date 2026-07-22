@@ -9,6 +9,26 @@
 .cache-loader
 /gen-temp
 
+# Reference manual pages regenerated from grid-editor's LuaCATS annotations on every build
+# (see scripts/postprocess-generated-docs.mjs and the .github/actions/generate-api-docs
+# step used by the firebase-hosting-*/generate-api-docs workflows) - not hand-authored, so
+# not tracked. Listed explicitly rather than ignoring the whole reference-manual/ tree,
+# since introduction.md and grid-functions/index.md in the same directories *are*
+# hand-authored and must stay tracked.
+/docs/reference-manual/control-element-functions/_category_.json
+/docs/reference-manual/control-element-functions/element.md
+/docs/reference-manual/control-element-functions/button.md
+/docs/reference-manual/control-element-functions/encoder.md
+/docs/reference-manual/control-element-functions/potmeter.md
+/docs/reference-manual/control-element-functions/fader.md
+/docs/reference-manual/control-element-functions/endless.md
+/docs/reference-manual/control-element-functions/lcd.md
+/docs/reference-manual/grid-functions/system.md
+/docs/reference-manual/grid-functions/module.md
+/docs/reference-manual/grid-functions/element-index.md
+/docs/reference-manual/grid-functions/communication.md
+/docs/reference-manual/grid-functions/math-utility.md
+
 # Misc
 .DS_Store
 .env

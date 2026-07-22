@@ -16,6 +16,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "24.14.1"
+      - name: checkout grid-editor
+        uses: actions/checkout@v4
+        with:
+          repository: intechstudio/grid-editor
+          ref: stable
+          path: grid-editor
+          sparse-checkout: |
+            build-assets/lua-annotations
+          sparse-checkout-cone-mode: false
+      - uses: ./.github/actions/generate-api-docs
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
