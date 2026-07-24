@@ -282,6 +282,50 @@ html {
   }
 }
 
+/* Semantic tags for generated Lua API docs (see scripts/postprocess-generated-docs.mjs). */
+.doc-tag-line {
+  margin: 0.5em 0;
+}
+
+.doc-tag-line--return {
+  margin-top: 1em;
+}
+
+.doc-tag {
+  display: inline-block;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.05em 0.45em;
+  border-radius: 4px;
+}
+
+.doc-tag--param {
+  color: #0969da;
+  background-color: rgba(9, 105, 218, 0.1);
+}
+
+.doc-tag--return {
+  color: #9a6700;
+  background-color: rgba(154, 103, 0, 0.1);
+}
+
+[data-theme='dark'] .doc-tag--param {
+  color: #79c0ff;
+  background-color: rgba(121, 192, 255, 0.14);
+}
+
+[data-theme='dark'] .doc-tag--return {
+  color: #e3b341;
+  background-color: rgba(227, 179, 65, 0.14);
+}
+
+/* docs_lua.svg is a solid black mark with no dark-mode variant - invert it in dark theme
+   rather than maintaining a second asset. */
+[data-theme='dark'] .lua-icon {
+  filter: invert(1);
+}
+
 @media screen and (max-width: 640px) {
   .hero__title {
     font-size: 1.5rem;

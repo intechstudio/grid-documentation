@@ -1,0 +1,31 @@
+name: Generate API docs
+description: >-
+  Regenerates docs/reference-manual from grid-editor's LuaCATS annotations into
+  ./docs/reference-manual. Assumes grid-documentation is already checked out at the repo
+  root, grid-editor's build-assets/lua-annotations is already checked out at ./grid-editor
+  (see the "checkout grid-editor" step in the calling workflow), and Node is already set up.
+runs:
+  using: composite
+  steps:
+    - name: install rust toolchain
+      uses: dtolnay/rust-toolchain@stable
+
+    - name: cache cargo
+      uses: actions/cache@v4
+      with:
+        path: ~/.cargo
+        key: cargo-emmylua_doc_cli-0.23.2
+
+    - name: install emmylua_doc_cli
+      shell: bash
+      run: cargo install emmylua_doc_cli --version 0.23.2
+
+    - name: generate docs from lua annotations
+      shell: bash
+      run: |
+        emmylua_doc_cli ./grid-editor/build-assets/lua-annotations/ -o ./gen-temp --site-name "Grid Lua API"
+        emmylua_doc_cli ./grid-editor/build-assets/lua-annotations/ -o ./gen-temp --output-format json --site-name "Grid Lua API"
+
+    - name: postprocess generated docs
+      shell: bash
+      run: node scripts/postprocess-generated-docs.mjs
