@@ -2,7 +2,7 @@ import fs from 'fs';
 import {v4 as uuidv4} from 'uuid';
 import { dirname } from "path";
 import parseMD from 'parse-md';
-import { MeiliSearch } from 'meilisearch';
+import { Meilisearch } from 'meilisearch';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -10,7 +10,7 @@ let data = [];
 
 console.log(process.env.MEILI_ADMIN_KEY)
 
-const meiliClient = new MeiliSearch({
+const meiliClient = new Meilisearch({
   host: process.env['MEILI_ADMIN_HOST'],
   apiKey: process.env['MEILI_ADMIN_KEY'],
   headers: {'Access-Control-Allow-Origin': '*'}

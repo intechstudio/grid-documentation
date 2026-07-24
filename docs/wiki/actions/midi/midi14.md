@@ -33,12 +33,11 @@ Potmeter element: Due to the noisy nature of high resolution signal reads from c
 - 10-bit resolution: 2^10 = 1024
 - 11-bit resolution: 2^11 = 2048
 - 12-bit resolution: 2^12 = 4096
-  
 
-  </TabItem>
-  <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
+</TabItem>
+<TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
 There is no Reference Manual Entry for this article.
 
-  </TabItem>
+</TabItem>
 </Tabs>

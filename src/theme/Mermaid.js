@@ -2,12 +2,12 @@ import React, { useEffect } from 'react'
 import mermaid from 'mermaid'
 
 mermaid.initialize({
-  startOnLoad: true,
+  startOnLoad: false,
 })
 
 const Mermaid = ({ chart }) => {
   useEffect(() => {
-    mermaid.contentLoaded()
+    mermaid.run()
   }, [])
   return <div className="mermaid">{chart}</div>
 }

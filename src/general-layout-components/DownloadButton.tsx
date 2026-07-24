@@ -12,8 +12,8 @@ interface LinkProps {
   downloadLink: string
 }
 
-function DownloadButton(props) {
-  let { title = 'Download', downloadLink = 'downloadLink' }: LinkProps = props
+function DownloadButton(props: LinkProps) {
+  let { title = 'Download', downloadLink = 'downloadLink' } = props
 
   return (
     <div

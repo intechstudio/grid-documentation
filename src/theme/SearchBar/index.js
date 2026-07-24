@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import { MeiliSearch } from "meilisearch";
-import { marked } from "marked";
+import { Meilisearch } from "meilisearch";
 
-const client = new MeiliSearch({
+const client = new Meilisearch({
   host: "https://meilisearch.intech.studio",
   apiKey: "a0e70be8d621ad2054d7c08bed55a9d8c096363d4e907be170ce3597f25eeefc",
 });

@@ -46,32 +46,36 @@ Actions within the Else condition will only run when the event trigger happens A
 
 An if statement tests its condition and executes its then-part or its else-part accordingly. The else-part is optional.
 
-    if a<0 then a = 0 end
+```lua
+if a<0 then a = 0 end
 
-    if a<b then return a else return b end
+if a<b then return a else return b end
 
-    if a == false then
-      led_value(num,1,128)
-      a = true
-    end
+if a == false then
+  led_value(num,1,128)
+  a = true
+end
+```
 
 When you write nested ifs, you can use elseif. It is similar to an else followed by an if, but it avoids the need for multiple ends:
 <ImageLightbox imageSrc={ifelse} citation={"Nested ifs in Codeblock"} style={{height:400+'px'}}/>
 
-    if op == 1 then
-      led_value(1,1,128)
-    elseif op == 2 then
-      led_value(2,1,128)
-    elseif op == 3 then
-      led_value(3,1,128)
-    elseif op == 4 then
-      led_value(4,1,128)
-    else
-      led_value(1,1,0)
-      led_value(2,1,0)
-      led_value(3,1,0)
-      led_value(4,1,0)
-    end
+```lua
+if op == 1 then
+  led_value(1,1,128)
+elseif op == 2 then
+  led_value(2,1,128)
+elseif op == 3 then
+  led_value(3,1,128)
+elseif op == 4 then
+  led_value(4,1,128)
+else
+  led_value(1,1,0)
+  led_value(2,1,0)
+  led_value(3,1,0)
+  led_value(4,1,0)
+end
+```
 
 </TabItem>
 </Tabs>

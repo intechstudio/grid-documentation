@@ -50,9 +50,11 @@ The MIDI Block includes an LED and element value sync feature. If your DAW or ha
 </TabItem>
 <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
 
+```lua
 self:midirx_register(-1, ch, command, param1, { value_sync = true/false, led_sync = true/false }, 0)
 -- value_sync: enables value synchronization
--- led_sync: enables LED synchronization  
+-- led_sync: enables LED synchronization
+```
   
 
 

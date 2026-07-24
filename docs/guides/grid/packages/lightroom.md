@@ -27,7 +27,7 @@ import block from './img/LRblock.png'
 6. Select the Plug-in location
   - **macOS**: from User/Documents/grid-userdata/packages/lightroom-package
 File name is: lightroom-plugin.lrplugin
- - **Windows**: Select the C:\Users\\{Username}\Documents\grid-userdata\packages\package-lightroom-classic\lightroom-plugin.lrplugin folder
+ - **Windows**: Select the `C:\Users\{Username}\Documents\grid-userdata\packages\package-lightroom-classic\lightroom-plugin.lrplugin` folder
 7. Now the plugin might throw a connection error, but it should work.
   - In the Editor, now transmit should be true.
 8. From the action block picker, add a “Set Image Property” LRc action block to quickly confirm everything is connected. Upon executing the action, LRc should for example receive image rating change messages
