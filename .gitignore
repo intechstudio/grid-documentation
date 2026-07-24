@@ -9,6 +9,10 @@
 .cache-loader
 /gen-temp
 
+# Symlink to a local grid-editor checkout, created by scripts/link-grid-editor.sh
+# (npm run gen-docs:local / build:local) to reproduce the reference manual pipeline locally.
+/grid-editor
+
 # Reference manual pages regenerated from grid-editor's LuaCATS annotations on every build
 # (see scripts/postprocess-generated-docs.mjs and the .github/actions/generate-api-docs
 # step used by the firebase-hosting-*/generate-api-docs workflows) - not hand-authored, so

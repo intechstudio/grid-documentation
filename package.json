@@ -15,7 +15,9 @@
     "typecheck": "tsc",
     "index": "node meili-indexer.mjs",
     "meta-check": "node metadata-check.mjs",
-    "gen-docs": "node scripts/postprocess-generated-docs.mjs"
+    "gen-docs": "node scripts/postprocess-generated-docs.mjs",
+    "gen-docs:local": "bash scripts/generate-api-docs-local.sh",
+    "build:local": "npm run gen-docs:local && docusaurus build"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",

@@ -316,6 +316,19 @@ function toInlineHtml(text) {
   return escapeBraces(text).replace(/`([^`]+)`/g, "<code>$1</code>");
 }
 
+// MDX parses a bare `<` in prose as the start of a JSX tag/expression, so an upstream Lua
+// doc comment like EncoderElement's "Values <64 = left, >63 = right." breaks the whole
+// build with a cryptic mdx-jsx parse error. Escape stray `<`/`>` to HTML entities wherever
+// free-flowing description text lands (renderMember's JSON path, and the markdown path
+// below), skipping fenced/inline code - a ```lua signature or `code` span's own `<`/`>`
+// (e.g. `(boolean|integer)`) renders fine as-is and doesn't need protecting.
+function escapeStrayAngleBrackets(content) {
+  return content
+    .split(/(```[\s\S]*?```|`[^`\n]*`)/)
+    .map((part, i) => (i % 2 === 1 ? part : part.replace(/</g, "&lt;").replace(/>/g, "&gt;")))
+    .join("");
+}
+
 function paramTagDiv(name, desc) {
   return `<div class="doc-tag-line"><span class="doc-tag doc-tag--param">@param</span> <code>${escapeBraces(
     name
@@ -465,7 +478,7 @@ function renderMember(className, member) {
   return [
     `### \`${className}:${member.name}\``,
     "---",
-    (member.description || "").trim(),
+    escapeStrayAngleBrackets((member.description || "").trim()),
     "",
     "```lua",
     signature,
@@ -510,6 +523,7 @@ async function writeClassPageFromMarkdown(file, meta) {
   body = removeStructuralHeadings(body);
   body = addEditorContextNote(body, file.replace(/\.md$/, ""));
   body = rewriteLinks(body);
+  body = escapeStrayAngleBrackets(body);
   body = colorizeDocTags(body);
   await writeDoc(meta.dest, toFrontmatter(meta) + body);
 }
@@ -543,6 +557,7 @@ async function processGlobalPages() {
     body = rewriteReturnArrow(body);
     body = reorderDescriptionBeforeSignature(body);
     body = rewriteLinks(body);
+    body = escapeStrayAngleBrackets(body);
     body = colorizeDocTags(body);
     sectionByFunction.set(name, body.trim());
   }
