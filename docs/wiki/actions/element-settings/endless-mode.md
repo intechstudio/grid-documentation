@@ -63,7 +63,7 @@ Sensitivity refers to how responsive the encoder or endless controller is to cha
 - shortname:
 - **How:** `self:endless_velocity()` or `self:endless_velocity(velocity)`
   - velocity: integer, ranging 0...100
-- **What:** This function returns the value of the endless velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set the endless velocity to that value. Velocity increases the value, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off endless velocity completely.
+- **What:** This function returns the value of the endless velocity parameter. This is `50` by default. When the function is given a value for the `velocity` parameter, it will set the endless velocity to that value. Velocity increases the value, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off endless velocity completely.
 - **Example:** The code `self:endless_velocity(0)` will turn off the velocity increase function of the endless. In this case turning the endless, will increase or decrase the value of the value always by 1.
 
 ### endless_sendsitivity

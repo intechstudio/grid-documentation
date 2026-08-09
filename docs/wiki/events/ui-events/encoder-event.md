@@ -138,7 +138,7 @@ Encoders have a Velocity setting to them accessible in their [Encoder Mode Block
 - shortname: ev0
 - **How:** `self:encoder_velocity()` or `self:encoder_velocity(velocity)`
   - velocity: integer, ranging 0...100
-- **What:** This function returns the value of the encoder velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set  the encoder velocity to that value. Velocity increases the steps the encoder value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off encoder velocity completely.
+- **What:** This function returns the value of the encoder velocity parameter. This is `50` by default. When the function is given a value for the `velocity` parameter, it will set  the encoder velocity to that value. Velocity increases the steps the encoder value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off encoder velocity completely.
 - **Example:**  The code `self:encoder_velocity(0)` will turn off the velocity increase function of the encoder. In this case turning the encoder by one tick, will increase the value of the encoder by 1. 
 
 
