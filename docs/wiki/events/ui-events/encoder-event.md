@@ -75,7 +75,7 @@ Encoders have a Velocity setting to them accessible in their [Encoder Mode Block
 ### button_elapsed_time
 - shortname: bel
 - **How:** `self:button_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:**
 
 
@@ -145,7 +145,7 @@ Encoders have a Velocity setting to them accessible in their [Encoder Mode Block
 ### encoder_elapsed_time
 - shortname: eel
 - **How:** `self:encoder_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:** 
 ### encoder_state
 - shortname: est

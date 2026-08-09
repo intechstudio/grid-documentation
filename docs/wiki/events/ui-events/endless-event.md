@@ -74,7 +74,7 @@ Endless potentiometers are versatile and can be used in various ways. Due to the
 ### button_elapsed_time
 - shortname: bel
 - **How:** `self:button_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:**
 
 
@@ -155,7 +155,7 @@ When using either relative mode, setting the endless potentiometer to a 7bit by 
 ### endless_elapsed_time
 - shortname:
 - **How:** `self:endless_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:** 
 ### endless_state
 - shortname: est

@@ -73,7 +73,7 @@ Increasing potmeter resolution could be useful for using 14-bit MIDI usage.
 ### potmeter_elapsed_time
 - shortname: pel
 - **How:** `self:potmeter_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:**
 
 ### potmeter_state

@@ -73,7 +73,7 @@ These button triggers and events are applicable to all encoders and buttons on a
 ### button_elapsed_time
 - shortname: bel
 - **How:** `self:button_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:**
 
 
