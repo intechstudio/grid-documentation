@@ -37,7 +37,7 @@ A cyclical timer is what we call such a Timer Event that is countinuously retrig
 - **How:** `timer_stop(element_index[element_number])` 
   
   - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4 or 0...7 if using EF44
-    - if you call `-1` for the timer it will stop the system timer
+    - if you call the index one above that range (16, 12 or 8 in these examples) it will stop the system timer
   
 - **What:** When this function is called, the timer function (if there is one running) will stop immediately.
   
