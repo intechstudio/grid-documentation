@@ -86,18 +86,18 @@ An other way is to use the button special **Press/Release** Action block. This A
 
 You can achieve a long press button behaviour by checking the button state and the elapsed time since the button has been used. For this, we utilize the `button_state()` and `button_elapsed_time()` functions with some condition logic, to trigger the **timer** event on the button. When the button is not held down for the specified time, the timer is stopped. Check out [how timer works here](/wiki/events/ui-events/timer-event).
 
-In the following long press configuration example, when the button is held down for more than 1000 miliseconds, the button's color will change to green, and the LED intensity will be set to 127.
+In the following long press configuration example, when the button is held down for more than 1000 milliseconds, the button's color will change to green, and the LED intensity will be set to 127.
 
 The following steps are happening in the configuration on the *button* event:
 1. When the button is pressed down and state changes to 127
     1. A **Timer Start** Action block starts
     2. Normal buttton color is set (which is otherwise overwritten for a short time on the timer Event)
     3. The LED intensity is changed with the button press
-2. The *elif* branch checks if the button is released and if it's been pressed for less than 1000 miliseconds
-    1. When the button has been pressed for less than 1000 miliseconds, the **Timer Stop** Action block stops the timer
+2. The *elif* branch checks if the button is released and if it's been pressed for less than 1000 milliseconds
+    1. When the button has been pressed for less than 1000 milliseconds, the **Timer Stop** Action block stops the timer
     2. The LED intensity is changed with the button release
 
-The *timer* Event runs when the press is longer than 1000 miliseconds: 
+The *timer* Event runs when the press is longer than 1000 milliseconds:
 1. The Event sets green color for the LED
 2. LED intensity is also set to 127 to make the result visible
 

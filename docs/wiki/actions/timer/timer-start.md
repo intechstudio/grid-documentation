@@ -25,7 +25,7 @@ The Timer Start Block allows you to create a timed trigger for the Timer Event. 
 
 The parameters of this Block are rather simple:
 - `element number` sets which Timer Event the timer will trigger after the clock runs out
-- `time` sets the clock for the timer in miliseconds
+- `time` sets the clock for the timer in milliseconds
 
 Timers can be ended early with the use of a [timer stop](../timer/timer-stop) action.
 
