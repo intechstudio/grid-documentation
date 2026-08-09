@@ -70,7 +70,7 @@ Sensitivity refers to how responsive the encoder or endless controller is to cha
 
 - **How:** `self:endless_senitivity()` or `self:endless_senitivity(senitivity)`
   - velocity: integer, ranging 0...100
-- **What:** Returns the value of the endless sensitivity, which is 100 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
+- **What:** Returns the value of the endless sensitivity, which is 50 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
 - **Example:** Set the sensitivity to a new value `self:endless_sensitivity(1) > Max amount of rotation` to send out the value
 
 </TabItem>

@@ -147,7 +147,7 @@ When using either relative mode, setting the endless potentiometer to a 7bit by 
 
 ### endless_sensitivity
 - **How:** `self:endless_sensitivity()` or `self:endless_sensitivity(sensitivity)`
-- **What:** Returns the value of the endless sensitivity, which is 100 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
+- **What:** Returns the value of the endless sensitivity, which is 50 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
 - **Example:** Set the sensitivity to a new value `self:endless_sensitivity(1)`  > Max amount of rotation to send out the value
 
 
