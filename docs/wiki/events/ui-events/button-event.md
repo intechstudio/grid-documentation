@@ -67,13 +67,13 @@ These button triggers and events are applicable to all encoders and buttons on a
 - **How:** `self:button_mode()` or `self:button_mode(mode)`
     - mode: integer, ranging 0...127
 - **What:** This function returns the value of the button mode. This is `0` by default. Button mode means how many 'steps' the button has between its maximum and minimum value. For example when the function is used to set this value like this: `self:button_mode(mode)` the resolution parameter will govern the number of steps.
-- **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `127`.
+- **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `126`.
 
 
 ### button_elapsed_time
 - shortname: bel
 - **How:** `self:button_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:**
 
 

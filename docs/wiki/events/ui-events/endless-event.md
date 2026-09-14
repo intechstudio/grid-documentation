@@ -68,13 +68,13 @@ Endless potentiometers are versatile and can be used in various ways. Due to the
 - **How:** `self:button_mode()` or `self:button_mode(mode)`
     - mode: integer, ranging 0...127
 - **What:** This function returns the value of the button mode. This is `0` by default. Button mode means how many 'steps' the button has between its maximum and minimum value. For example when the function is used to set this value like this: `self:button_mode(mode)` the resolution parameter will govern the number of steps.
-- **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `127`.
+- **Example:** The code `self:button_mode(2)` will make the button a 3-step switch. The three states will be `0` , `63` and `126`.
 
 
 ### button_elapsed_time
 - shortname: bel
 - **How:** `self:button_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:**
 
 
@@ -142,12 +142,12 @@ When using either relative mode, setting the endless potentiometer to a 7bit by 
 <!-- ### endless_velocity
 - **How:** `self:endless_velocity()` or `self:endless_velocity(velocity)`
   - velocity: integer, ranging 0...100
-- **What:** This function returns the value of the endless velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set  the endless velocity to that value. Velocity increases the steps the endless value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off endless velocity completely.
+- **What:** This function returns the value of the endless velocity parameter. This is `50` by default. When the function is given a value for the `velocity` parameter, it will set  the endless velocity to that value. Velocity increases the steps the endless value increases on each tick, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off endless velocity completely.
 - **Example:**  The code `self:endless_velocity(0)` will turn off the velocity increase function of the endless. In this case turning the endless by one tick, will increase the value of the endless by 1.  -->
 
 ### endless_sensitivity
 - **How:** `self:endless_sensitivity()` or `self:endless_sensitivity(sensitivity)`
-- **What:** Returns the value of the endless sensitivity, which is 100 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
+- **What:** Returns the value of the endless sensitivity, which is 50 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
 - **Example:** Set the sensitivity to a new value `self:endless_sensitivity(1)`  > Max amount of rotation to send out the value
 
 
@@ -155,7 +155,7 @@ When using either relative mode, setting the endless potentiometer to a 7bit by 
 ### endless_elapsed_time
 - shortname:
 - **How:** `self:endless_elapsed_time()`
-- **What:** This function returns the time elapsed since the last trigger in frames.
+- **What:** This function returns the approximate time elapsed since the last trigger in milliseconds.
 - **Example:** 
 ### endless_state
 - shortname: est

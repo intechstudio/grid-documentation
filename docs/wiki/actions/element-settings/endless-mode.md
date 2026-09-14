@@ -63,14 +63,14 @@ Sensitivity refers to how responsive the encoder or endless controller is to cha
 - shortname:
 - **How:** `self:endless_velocity()` or `self:endless_velocity(velocity)`
   - velocity: integer, ranging 0...100
-- **What:** This function returns the value of the endless velocity parameter. This is `100` by default. When the function is given a value for the `velocity` parameter, it will set the endless velocity to that value. Velocity increases the value, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off endless velocity completely.
+- **What:** This function returns the value of the endless velocity parameter. This is `50` by default. When the function is given a value for the `velocity` parameter, it will set the endless velocity to that value. Velocity increases the value, depending on the speed of rotation. Setting the `velocity` parameter to `0` turns off endless velocity completely.
 - **Example:** The code `self:endless_velocity(0)` will turn off the velocity increase function of the endless. In this case turning the endless, will increase or decrase the value of the value always by 1.
 
 ### endless_sendsitivity
 
 - **How:** `self:endless_senitivity()` or `self:endless_senitivity(senitivity)`
   - velocity: integer, ranging 0...100
-- **What:** Returns the value of the endless sensitivity, which is 100 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
+- **What:** Returns the value of the endless sensitivity, which is 50 by default. When given a value for the sensitivity parameter, it changes the sensitivity of the endless potentiometer. It adjusts how much rotation is needed to send out a value; a lower number means more rotation is required to send the value.
 - **Example:** Set the sensitivity to a new value `self:endless_sensitivity(1) > Max amount of rotation` to send out the value
 
 </TabItem>

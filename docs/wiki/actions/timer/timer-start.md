@@ -25,7 +25,7 @@ The Timer Start Block allows you to create a timed trigger for the Timer Event. 
 
 The parameters of this Block are rather simple:
 - `element number` sets which Timer Event the timer will trigger after the clock runs out
-- `time` sets the clock for the timer in miliseconds
+- `time` sets the clock for the timer in milliseconds
 
 Timers can be ended early with the use of a [timer stop](../timer/timer-stop) action.
 
@@ -47,7 +47,7 @@ With a timer you can create cyclical timers that trigger themselves, creating ps
 
 - **How:** `timer_start(element_index[element_number], timer)`
   - element_index[element_number]: integer, ranging 0...15 or 0...11 if using PBF4 or 0...7 if using EF44
-    - if you call 16 for the timer it will start the global timer
+    - if you call the index one above that range (16, 12 or 8 in these examples) it will start the global timer
   - timer: integer, ranging 0...65535
 - **What:** This function starts a timer when called, when the timer runs out (defined by the `timer` parameter, given apx. in milliseconds) the Timer UI event will run.
 - **Example:** Using the code `timer_start(num, 500)` on a BU16 button will start the timer when the button is pressed down and the defined Action Chain under the Timer event on this Control Element will run after ~ 500 ms have passed. This is useful if you want to have effects timeout independent from physically triggered events, like a button being pushed.

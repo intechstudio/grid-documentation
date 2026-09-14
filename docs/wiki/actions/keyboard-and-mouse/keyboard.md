@@ -27,7 +27,7 @@ The Keyboard Block differentiates between button presses and releases, please de
 
 The Keyboard Block layout can also differentiate between different languange layouts. At the moment En, Hu and De layouts are supported.
 
-There is also a value of input delay, which changes how much time Grid will wait between sending out each keystroke message. You can add delays to your own message or just define the default one which will exist between each message by default. This delay is defined in miliseconds.
+There is also a value of input delay, which changes how much time Grid will wait between sending out each keystroke message. You can add delays to your own message or just define the default one which will exist between each message by default. This delay is defined in milliseconds.
 
 </TabItem>
   <TabItem value="Reference Manual Entry" label="Reference Manual Entry">
