@@ -23,4 +23,12 @@
   // Cloudflare creates the DNS record and issues the certificate itself,
   // replacing the proxied record that pointed at Firebase Hosting.
   "routes": [{ "pattern": "docs.intech.studio", "custom_domain": true }],
+  // Production is reachable only at docs.intech.studio, not a duplicate copy
+  // on grid-documentation.<subdomain>.workers.dev...
+  "workers_dev": false,
+  // ...but pull requests still need their pr-<number> preview alias. With a
+  // route set, Wrangler leaves Preview URLs off unless this says otherwise.
+  // Applied by `wrangler deploy`, so it takes effect from the next push to
+  // main.
+  "preview_urls": true,
 }
