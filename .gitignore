@@ -6,6 +6,7 @@
 
 # Generated files
 .docusaurus
+.wrangler
 .cache-loader
 /gen-temp
 
@@ -15,7 +16,7 @@
 
 # Reference manual pages regenerated from grid-editor's LuaCATS annotations on every build
 # (see scripts/postprocess-generated-docs.mjs and the .github/actions/generate-api-docs
-# step used by the firebase-hosting-*/generate-api-docs workflows) - not hand-authored, so
+# step used by the cloudflare-workers/generate-api-docs workflows) - not hand-authored, so
 # not tracked. Listed explicitly rather than ignoring the whole reference-manual/ tree,
 # since introduction.md and grid-functions/index.md in the same directories *are*
 # hand-authored and must stay tracked.

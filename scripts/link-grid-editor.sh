@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Points ./grid-editor at a local grid-editor checkout so emmylua_doc_cli can read
 # build-assets/lua-annotations from it - mirrors the "checkout grid-editor" step in
-# .github/workflows/generate-api-docs.yml / firebase-hosting-merge.yml for local dev.
+# .github/workflows/generate-api-docs.yml / cloudflare-workers.yml for local dev.
 #
 # emmylua_doc_cli only picks up types/globals when the input path is canonically inside
 # the cwd - pointing it at a `../grid-editor` sibling path silently yields an empty

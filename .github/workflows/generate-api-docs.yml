@@ -7,7 +7,7 @@ on:
     # file's hash every run and only rebuilds/deploys when it actually changed (or when
     # triggered manually) - see the "check for changes" step below. This is the only trigger
     # that redeploys the site when grid-api.lua changes upstream with no accompanying
-    # grid-documentation commit - firebase-hosting-merge.yml regenerates fresh docs on every
+    # grid-documentation commit - cloudflare-workers.yml regenerates fresh docs on every
     # push to main, but only runs on a grid-documentation push.
     - cron: "0 6 * * *"
 
@@ -46,7 +46,7 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         uses: actions/setup-node@v4
         with:
-          # Keep in lockstep with firebase-hosting-merge.yml / firebase-hosting-pull-request.yml.
+          # Keep in lockstep with cloudflare-workers.yml.
           node-version: "24.14.1"
 
       - name: generate api docs
@@ -57,14 +57,13 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         run: npm ci && npm run build
 
-      - name: deploy to firebase hosting
+      - name: deploy to cloudflare workers
         if: steps.diff.outputs.changed == 'true'
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_IS_KNOWLEDGE }}"
-          channelId: live
-          projectId: is-knowledge
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        # Keep the wrangler version in lockstep with cloudflare-workers.yml.
+        run: npx --yes wrangler@4.138.0 deploy
 
       - name: persist lua-api hash
         if: steps.diff.outputs.changed == 'true'

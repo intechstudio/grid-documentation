@@ -1,0 +1,26 @@
+{
+  // docs.intech.studio, served as a static-assets-only Worker.
+  //
+  // No `main`: nothing runs server side, so every request is a free static
+  // asset request. The site is built in GitHub Actions (see
+  // .github/workflows/cloudflare-workers.yml) and only build/ is uploaded.
+  //
+  //   push to main        deploy                       -> docs.intech.studio
+  //   pull request        versions upload --preview-alias pr-<number>
+  //                       -> pr-<number>-grid-documentation.<subdomain>.workers.dev
+  //   grid-api.lua change deploy (generate-api-docs.yml) -> docs.intech.studio
+  "name": "grid-documentation",
+  "compatibility_date": "2026-10-05",
+  "assets": {
+    "directory": "./build",
+    // Docusaurus writes build/404.html; serve it for unknown paths, as
+    // Firebase Hosting did.
+    "not_found_handling": "404-page",
+    // Left at the default "auto-trailing-slash": Docusaurus emits
+    // <route>/index.html, so /foo redirects to /foo/ -- the same URLs Firebase
+    // Hosting served.
+  },
+  // Cloudflare creates the DNS record and issues the certificate itself,
+  // replacing the proxied record that pointed at Firebase Hosting.
+  "routes": [{ "pattern": "docs.intech.studio", "custom_domain": true }],
+}
