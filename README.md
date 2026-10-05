@@ -26,16 +26,10 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-Using SSH:
+The site is served from Cloudflare Workers (static assets only) at https://docs.intech.studio, configured in `wrangler.jsonc`.
 
-```
-$ USE_SSH=true yarn deploy
-```
+- Push to `main`: `.github/workflows/cloudflare-workers.yml` builds and deploys it.
+- Pull request: the same workflow uploads a preview version and comments its URL on the PR.
+- `grid-api.lua` changes in grid-editor: `.github/workflows/generate-api-docs.yml` regenerates the reference manual and deploys daily.
 
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Cloudflare Workers rejects any single asset over 25 MiB, so keep files in `static/` (videos especially) below that.
