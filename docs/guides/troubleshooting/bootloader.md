@@ -30,7 +30,7 @@ Even so, if you encounter any unexpected behavior, please drop us a mail to supp
 
 ## Bootloader update step-by-step
 
-1. Download the new bootloader update <a target="_blank" href="/presets/update-bootloader-intech_grid-v1.23.4.uf2" download="update-bootloader-intech_grid-v1.23.4.uf2"> by clicking here</a> (release on GitHub [here](https://github.com/intechstudio/uf2-samdx1/releases)).
+1. Download the latest bootloader release from [GitHub](https://github.com/intechstudio/uf2-samdx1/releases).
 <!---2. Decompress the archive and find the file named "update-bootloader-intech_grid-v1.23.4.uf2".--->
 2. Plug in the module **while holding the small button** on the side and wait for it to boot with **green LEDs**
 
