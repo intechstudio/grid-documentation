@@ -34,5 +34,6 @@ For example, when Spotify is active, the controller can switch to the Spotify pr
 
 - Lightroom  
 - Photoshop  
+- [OSC](./osc.md)
 - Discord  
 - Spotify
