@@ -11,6 +11,7 @@ import img2 from './img/bootloader_detected_update_start.png'
 import img3 from './img/update_success.png'
 import img4 from './img/utility_conn.gif'
 import img5 from './img/fw_down.gif'
+import update_running from './img/update_running.png'
 
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 
@@ -20,7 +21,7 @@ Grid Firmware is often updated. We introduce new features, stability improvement
 
 ## Updating the firmware using Editor
 
-Whenever you're prompted with the `Oops, firmware mismatch detected` message while running Grid Editor means you have a module plugged in with an outdated firmware version compared to Editor.
+Whenever you're prompted with the `Firmware mismatch detected` message while running Grid Editor means you have a module plugged in with an outdated firmware version compared to Editor.
 
 :::tip Firmware Mismatch
 When encountering a firmware mismatch, you could update your module firmware for each module as we believe that each firmware version is better than the last one.
@@ -36,13 +37,17 @@ Gird Editor can update your module firmware automatically if you follow the on-s
 
 Reconnect the mismatched module (and that module only) while holding down the utility button on the side of the module.
 
-After connecting you'll be prompted with a message in blue, asking whether you want to start the update. Press `Update Firmware`.
+After connecting you'll a popup appears. Press `Release`.
 
 <ImageLightbox imageSrc={img2} style={{height:450+'px'}} citation={'Updating the firmware using Editor'}/>
 
 Don't disconnect the module while the update is running or the update will fail.
 
-When the update is complete, you will be prompted with a message in green color and the module will show up again in the Editor.
+<ImageLightbox imageSrc={update_running} style={{height:250+'px'}} citation={'Update running'}/>
+
+When the update is complete, the module will disconnect automatically, and your OS may display a “Disk Not Ejected Properly” warning.
+
+The module should then appear without a red border.
 
 <ImageLightbox imageSrc={img3} style={{height:450+'px'}} citation={'A freshly updated module'}/>
 
