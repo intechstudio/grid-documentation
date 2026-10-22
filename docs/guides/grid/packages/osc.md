@@ -6,6 +6,7 @@ slug: osc
 ---
 import ImageLightbox from '@site/src/general-layout-components/ImageLightbox';
 import block from './img/osc_blocks.png'
+import settings from './img/oscsettings.png'
 
 The OSC package lets your Grid modules talk to any software that speaks **OSC (Open Sound Control)** — synths, DAWs, lighting desks, visuals, TouchOSC layouts.
 
@@ -14,6 +15,9 @@ Grid sends OSC when you use a control, and can receive OSC to update a control's
 ## Setup
 
 Install the package from the **Package Manager**, then select it in the left sidebar to open the **OSC Preference** panel.
+
+<ImageLightbox imageSrc={settings} citation={"OSC Blocks"} style={{height:550+'px'}}/>
+
 
 | Setting         | Default     | Meaning               |
 | --------------- | ----------- | --------------------- |
@@ -40,6 +44,7 @@ Sends the **current value of the control** it sits on — encoders, faders, potm
 The control's own range and element type are detected automatically, so a fader with a `0–127` range still sends `0.0–1.0`.
 
 ## Send OSC Command
+
 
 Sends one **fixed message** instead of a control's value — transport commands, cues, mutes, mode changes, labels.
 

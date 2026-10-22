@@ -152,7 +152,7 @@ const config = {
               <img src="/img/icon/facebook.svg" alt="Facebook icon" width="16"   /><span>Facebook</span>
             </a>
 
-                                 <a style="display: flex; align-items: center; gap: 0.3rem;" href="https://https://github.com/intechstudio" target="_blank" rel="noreferrer noopener" aria-label="Github icon">
+                                 <a style="display: flex; align-items: center; gap: 0.3rem;" href="https://github.com/intechstudio" target="_blank" rel="noreferrer noopener" aria-label="Github icon">
               <img src="/img/icon/github.svg" alt="Github icon" width="16"   /><span>Github</span>
             </a>
                         <a style="display: flex; align-items: center; gap: 0.3rem;" href="https://x.com/intechstudio" target="_blank" rel="noreferrer noopener" aria-label="Twitter icon">
