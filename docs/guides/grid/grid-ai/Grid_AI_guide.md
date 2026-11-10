@@ -171,7 +171,7 @@ A profile file that Profile Cloud accepts looks like this. Every top-level line 
     {
       "controlElementNumber": 255,
       "events": [
-        {"event": 0, "config": "--[[@cb]] ...settings... MYC = require(...) MYC.init(self)"},
+        {"event": 0, "config": "--[[@gcfg]] MIDI_CH=1 --[[slider,1,16,1]]--[[@cb]] MYC = require(...) MYC.init(self)"},
         {"event": 4, "config": "--[[@cb]] gpl(gpn())"},
         {"event": 6, "config": "--[[@cb]] MYC.tick(self)"}
       ]
@@ -238,13 +238,39 @@ MYC.init(self)
 
 The control events then hold one short line each, like `--[[@cb]] MYC.press(self, 3)`. Keep a file small (around 15 KB or less).
 
-### Rule 4: Main settings in the System Setup, shown to the user
+### Rule 4: Main settings in a Global Config block (strict format)
 
-Everything the user may want to change (MIDI channels, brightness, ranges, speeds, root note, on/off options) goes at the top of the **System element's Setup event**, with readable UPPER_CASE names, for example `MIDI_CH`, `LED_DIM`, `ROOT_NOTE`. Use a **Global Config** block for them as described on the Global Config docs page, so the user gets sliders and toggles instead of code. If you aren't sure how the block is stored in the JSON, ask the user to create a small one in Grid Editor and export it, then copy that format.
+This is the most important rule for the user, and the easiest one to get wrong. Everything the user may want to change (MIDI channels, brightness, ranges, speeds, root note, on/off options) goes into **one Global Config block, as the first block of the System element's (255) Setup event (event 0)**. Grid Editor then shows these values as sliders, drop-downs and toggles. If the format is even slightly wrong, the editor shows an error instead of the controls, so follow it exactly. Read https://docs.intech.studio/wiki/actions/variables/global-config for the current rules.
 
-In your reply, **tell the user where the settings are**: "Open System → Setup, the values at the top are your fine-tuning."
+**What the user sees in the editor** (one variable per line):
 
-Show MIDI channels to the user as 1–16. Check in the docs whether the send function expects 0–15 and convert in code.
+```lua
+MIDI_CH = 1 --[[slider,1,16,1]] --[[MIDI channel]]
+LED_DIM = 80 --[[slider,0,100,1]] --[[LED brightness in percent]]
+MODE = "relative" --[[select,"absolute","relative"]] --[[How the knobs send]]
+SEND_CC = true --[[toggle]] --[[Send CC messages]]
+```
+
+**How it must be stored in the JSON** `config` string: one line, starting with `--[[@gcfg]]`, no line breaks, no spaces around `=`, each variable directly after the previous one's comment. The code block comes right after it:
+
+```json
+{"event": 0, "config": "--[[@gcfg]] MIDI_CH=1 --[[slider,1,16,1]] --[[MIDI channel]]LED_DIM=80 --[[slider,0,100,1]] --[[LED brightness in percent]]MODE=\"relative\" --[[select,\"absolute\",\"relative\"]] --[[How the knobs send]]SEND_CC=true --[[toggle]] --[[Send CC messages]]--[[@cb]] local p = string.format(\"/%02X/myc\", gpc()) package.loaded[p] = nil MYC = require(p) MYC.init(self)"}
+```
+
+Rules, no exceptions:
+
+1. Every variable is `NAME=value --[[control]]`, optionally followed by **one** description `--[[text]]`. Nothing else is allowed in the block: no `print`, no `local`, no `--` line comments, no code.
+2. The controls are exactly: `--[[slider,min,max]]` or `--[[slider,min,max,step]]` (number, min < max, step > 0), `--[[select,"a","b"]]` (the value must be one of the quoted options), `--[[toggle]]` (value `true` or `false`), `--[[input]]` (any Lua value).
+3. The value must match its control and be inside the slider range.
+4. Each name only once. Use readable UPPER_CASE names: `MIDI_CH`, `LED_DIM`, `ROOT_NOTE`.
+5. **No commas in descriptions** (Grid strips the space after a comma and the text breaks). Keep descriptions short.
+6. Inside JSON, the quotes of `select` values are escaped: `\"relative\"`.
+7. The variables are globals: the code after `--[[@cb]]` and the Lua file use them directly (`MIDI_CH`, `LED_DIM` …). Don't redefine them anywhere else.
+8. Count the whole Setup string (Global Config + code block) into the 908-character limit. If it gets long, shorten the descriptions or move code into the file.
+
+In your reply, **tell the user where the settings are**: "Open System → Setup: the sliders at the top are your fine-tuning. Change a value, try it, then press Store."
+
+Show MIDI channels to the user as 1–16 and convert in code if the send function expects 0–15 (check the docs).
 
 ### Rule 5: Updates replace the old file, no version numbers
 
